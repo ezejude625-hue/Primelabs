@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Web &amp; App Development | Primelabs Limited</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/web.css">
+
+</head>
+
+<body class="bg-background-light text-primary font-display selection:bg-accent-teal/30">
+
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md shadow-sm border-b border-[#e5e7eb]">
+
+        <!-- Top bar -->
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="bg-primary p-1.5 rounded-lg">
+                    <!-- logo svg -->
+                    <svg class="w-6 h-6 text-white" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                            d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
+                            fill="currentColor" fill-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <span class="text-xl font-extrabold tracking-tight text-primary">
+                    Primelabs <span class="text-gray-400 font-light">Limited</span>
+                </span>
+            </div>
+
+            <!-- Desktop menu -->
+            <div class="hidden md:flex items-center gap-10">
+                <a class="text-sm font-semibold hover:text-accent-teal transition-colors" href="#">Services</a>
+                <a class="text-sm font-semibold hover:text-accent-teal transition-colors" href="#">Portfolio</a>
+                <a class="text-sm font-semibold hover:text-accent-teal transition-colors" href="#">Process</a>
+                <a class="text-sm font-semibold hover:text-accent-teal transition-colors" href="#">About</a>
+            </div>
+            <div class="hidden md:flex items-center gap-4">
+                <button
+                    class="hidden lg:block text-sm font-bold px-5 py-2.5 rounded-lg border-2 border-primary hover:bg-primary hover:text-white transition-all">Log
+                    In</button>
+                <button
+                    class="bg-primary text-white text-sm font-bold px-6 py-2.5 rounded-lg hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
+                    id="ripple">
+                    Start Your Project
+                </button>
+            </div>
+
+            <!-- Hamburger -->
+            <div class="md:hidden cursor-pointer" id="menuBtn">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobileMenu"
+            class="md:hidden overflow-hidden max-h-0 transition-all duration-500 ease-in-out border-t border-gray-200">
+
+            <div class="px-6 py-6 flex flex-col gap-6 bg-white">
+                <a class="text-sm font-semibold hover:text-accent-teal transition-colors" href="#">Services</a>
+                <a class="text-sm font-semibold hover:text-accent-teal transition-colors" href="#">Portfolio</a>
+                <a class="text-sm font-semibold hover:text-accent-teal transition-colors" href="#">Process</a>
+                <a class="text-sm font-semibold hover:text-accent-teal transition-colors" href="#">About</a>
+                <button
+                    class="lg:block text-sm font-bold px-5 py-2.5 rounded-lg border-2 border-primary hover:bg-primary hover:text-white transition-all">Log
+                    In</button>
+                <button
+                    class="bg-primary text-white text-sm font-bold px-6 py-2.5 rounded-lg hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
+                    id="ripple">
+                    Start Your Project
+                </button>
+            </div>
+        </div>
+
+    </nav>
+
+
+    <!-- Main -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden bg-white py-20 lg:py-32">
+            <div class="absolute inset-0 grid-pattern"></div>
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="flex flex-col gap-8" data-aos="fade-right" data-aos-easing="ease-out"
+                        data-aos-duration="1000">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 border border-primary/10 w-fit">
+                            <span class="size-2 rounded-full bg-accent-teal animate-pulse"></span>
+                            <span class="text-xs font-bold uppercase tracking-widest text-primary/60">Enterprise
+                                Solutions</span>
+                        </div>
+                        <h1 class="text-5xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight">
+                            Custom Web &amp; <br /><span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent-teal">Mobile
+                                App</span> Development
+                        </h1>
+                        <p class="text-lg text-primary/70 leading-relaxed max-w-xl">
+                            Building high-performance, scalable digital products for enterprises with cutting-edge
+                            technology and enterprise-grade security. From SaaS portals to native mobile experiences.
+                        </p>
+                        <div class="flex flex-wrap gap-4 pt-4">
+                            <button
+                                class="bg-primary text-white text-lg font-bold px-8 py-4 rounded-xl hover:scale-105 transition-all shadow-xl shadow-primary/20"
+                                id="ripple">
+                                Start Your Project
+                            </button>
+                            <button
+                                class="flex items-center gap-2 text-primary font-bold px-8 py-4 rounded-xl border-2 border-primary/10 hover:border-primary transition-all">
+                                <span class="material-symbols-outlined">play_circle</span>
+                                View Our Work
+                            </button>
+                        </div>
+                    </div>
+                    <div class="relative group" data-aos="fade-left" data-aos-easing="ease-out"
+                        data-aos-duration="1000">
+                        <div
+                            class="absolute -inset-4 bg-gradient-to-tr from-accent-teal/20 to-primary/20 rounded-3xl blur-2xl opacity-50 group-hover:opacity-100 transition duration-1000">
+                        </div>
+                        <div class="relative aspect-square rounded-3xl overflow-hidden shadow-2xl border border-white/20 bg-primary/5"
+                            data-alt="Modern tech office with developers working on code"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAOZ1i1nMixmGb-KgU7GwP8QMzUsz4zvAPmy-KDR4tqZNFbzMdywWh8K_zLApkPhUg7Yxcf48r5_06Yu1rKH3CNjPr09F1xa0VM_TBtQZDW4t4ggEbSrlrsuyeXotuYRHM939HiHYJUBLKFmspTGe5Vykt9CEdC9k4C6ILE5eCxDaJ6-zC6BppY3JB0feIFlKeSxfZ6a6VaTlMIOc1Qxqe7TCl4UmYUWeHLGIpLfQS3RmI9Dg946pt7DfRbiAdX0QqD-oxU_iHnIsc')">
+                            <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+                            <div
+                                class="absolute bottom-8 left-8 p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 text-white max-w-[280px]">
+                                <div class="flex gap-1 mb-2">
+                                    <span class="material-symbols-outlined text-yellow-400 text-sm">star</span>
+                                    <span class="material-symbols-outlined text-yellow-400 text-sm">star</span>
+                                    <span class="material-symbols-outlined text-yellow-400 text-sm">star</span>
+                                    <span class="material-symbols-outlined text-yellow-400 text-sm">star</span>
+                                    <span class="material-symbols-outlined text-yellow-400 text-sm">star</span>
+                                </div>
+                                <p class="text-sm font-medium italic">"Primelabs transformed our legacy system into a
+                                    scalable SaaS platform in record time."</p>
+                                <p class="text-xs font-bold mt-2 opacity-70">— CTO, Global FinTech</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Capabilities Section -->
+        <section class="py-24 bg-background-light" data-aos="fade-up" data-aos-easing="ease-out"
+            data-aos-duration="1000">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h3 class="text-accent-teal font-extrabold tracking-widest uppercase text-sm mb-4">Core Competencies
+                    </h3>
+                    <h2 class="text-4xl font-extrabold tracking-tight mb-6">Our Development Capabilities</h2>
+                    <p class="text-primary/60 max-w-2xl mx-auto text-lg">We deliver end-to-end digital engineering
+                        services tailored for modern business challenges.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Card 1 -->
+                    <div
+                        class="bg-white p-8 rounded-2xl border border-primary/5 hover:border-accent-teal/30 hover:shadow-xl transition-all group">
+                        <div
+                            class="size-14 bg-primary/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-3xl">laptop_mac</span>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Custom Web Apps</h4>
+                        <p class="text-primary/60 text-sm leading-relaxed mb-4">High-performance SaaS platforms,
+                            enterprise portals, and complex dashboard systems.</p>
+                        <ul class="space-y-2">
+                            <li class="text-xs font-bold flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-accent-teal text-base">check_circle</span>
+                                React/Next.js</li>
+                            <li class="text-xs font-bold flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-accent-teal text-base">check_circle</span>
+                                Enterprise Security</li>
+                        </ul>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="bg-white p-8 rounded-2xl border border-primary/5 hover:border-accent-teal/30 hover:shadow-xl transition-all group">
+                        <div
+                            class="size-14 bg-primary/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-3xl">smartphone</span>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Mobile Apps</h4>
+                        <p class="text-primary/60 text-sm leading-relaxed mb-4">Native &amp; Cross-Platform (iOS,
+                            Android) development with pixel-perfect UI.</p>
+                        <ul class="space-y-2">
+                            <li class="text-xs font-bold flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-accent-teal text-base">check_circle</span>
+                                Flutter &amp; React Native</li>
+                            <li class="text-xs font-bold flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-accent-teal text-base">check_circle</span>
+                                Swift / Kotlin</li>
+                        </ul>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="bg-white p-8 rounded-2xl border border-primary/5 hover:border-accent-teal/30 hover:shadow-xl transition-all group">
+                        <div
+                            class="size-14 bg-primary/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-3xl">language</span>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Progressive Web</h4>
+                        <p class="text-primary/60 text-sm leading-relaxed mb-4">Building high-performance PWAs that work
+                            offline and feel like native apps.</p>
+                        <ul class="space-y-2">
+                            <li class="text-xs font-bold flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-accent-teal text-base">check_circle</span> Low
+                                Latency</li>
+                            <li class="text-xs font-bold flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-accent-teal text-base">check_circle</span>
+                                Service Workers</li>
+                        </ul>
+                    </div>
+                    <!-- Card 4 -->
+                    <div
+                        class="bg-white p-8 rounded-2xl border border-primary/5 hover:border-accent-teal/30 hover:shadow-xl transition-all group">
+                        <div
+                            class="size-14 bg-primary/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-3xl">hub</span>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Cloud Architecture</h4>
+                        <p class="text-primary/60 text-sm leading-relaxed mb-4">Scalable backend systems, API
+                            integration, and AWS cloud infrastructure.</p>
+                        <ul class="space-y-2">
+                            <li class="text-xs font-bold flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-accent-teal text-base">check_circle</span>
+                                Serverless AWS</li>
+                            <li class="text-xs font-bold flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-accent-teal text-base">check_circle</span>
+                                REST/GraphQL</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section class="py-24 bg-white" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="1000">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-20 items-center">
+                    <div>
+                        <h3 class="text-primary font-extrabold text-3xl mb-6">Our Modern Technology Stack</h3>
+                        <p class="text-primary/60 text-lg mb-8 leading-relaxed">
+                            We use industry-leading tools and frameworks to ensure your product is fast, secure, and
+                            ready for future scale.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <span class="px-4 py-2 bg-primary/5 rounded-lg font-bold text-sm">React / Next.js</span>
+                            <span class="px-4 py-2 bg-primary/5 rounded-lg font-bold text-sm">Node.js</span>
+                            <span class="px-4 py-2 bg-primary/5 rounded-lg font-bold text-sm">Flutter</span>
+                            <span class="px-4 py-2 bg-primary/5 rounded-lg font-bold text-sm">PostgreSQL</span>
+                            <span class="px-4 py-2 bg-primary/5 rounded-lg font-bold text-sm">Docker</span>
+                            <span class="px-4 py-2 bg-primary/5 rounded-lg font-bold text-sm">AWS</span>
+                            <span class="px-4 py-2 bg-primary/5 rounded-lg font-bold text-sm">Kubernetes</span>
+                            <span class="px-4 py-2 bg-primary/5 rounded-lg font-bold text-sm">Go</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-8">
+                        <!-- Icons Placeholder (Simulating Logos) -->
+                        <div class="flex flex-col items-center gap-3">
+                            <div
+                                class="size-20 bg-primary/5 rounded-2xl flex items-center justify-center border border-primary/10 grayscale hover:grayscale-0 transition-all cursor-default">
+                                <span class="material-symbols-outlined text-4xl text-primary">data_object</span>
+                            </div>
+                            <p class="text-xs font-bold opacity-60">Backend</p>
+                        </div>
+                        <div class="flex flex-col items-center gap-3">
+                            <div
+                                class="size-20 bg-primary/5 rounded-2xl flex items-center justify-center border border-primary/10 grayscale hover:grayscale-0 transition-all cursor-default">
+                                <span class="material-symbols-outlined text-4xl text-primary">cloud</span>
+                            </div>
+                            <p class="text-xs font-bold opacity-60">AWS Cloud</p>
+                        </div>
+                        <div class="flex flex-col items-center gap-3">
+                            <div
+                                class="size-20 bg-primary/5 rounded-2xl flex items-center justify-center border border-primary/10 grayscale hover:grayscale-0 transition-all cursor-default">
+                                <span class="material-symbols-outlined text-4xl text-primary">database</span>
+                            </div>
+                            <p class="text-xs font-bold opacity-60">PostgreSQL</p>
+                        </div>
+                        <div class="flex flex-col items-center gap-3">
+                            <div
+                                class="size-20 bg-primary/5 rounded-2xl flex items-center justify-center border border-primary/10 grayscale hover:grayscale-0 transition-all cursor-default">
+                                <span class="material-symbols-outlined text-4xl text-primary">code</span>
+                            </div>
+                            <p class="text-xs font-bold opacity-60">React</p>
+                        </div>
+                        <div class="flex flex-col items-center gap-3">
+                            <div
+                                class="size-20 bg-primary/5 rounded-2xl flex items-center justify-center border border-primary/10 grayscale hover:grayscale-0 transition-all cursor-default">
+                                <span class="material-symbols-outlined text-4xl text-primary">terminal</span>
+                            </div>
+                            <p class="text-xs font-bold opacity-60">Docker</p>
+                        </div>
+                        <div class="flex flex-col items-center gap-3">
+                            <div
+                                class="size-20 bg-primary/5 rounded-2xl flex items-center justify-center border border-primary/10 grayscale hover:grayscale-0 transition-all cursor-default">
+                                <span class="material-symbols-outlined text-4xl text-primary">animation</span>
+                            </div>
+                            <p class="text-xs font-bold opacity-60">Flutter</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Approach -->
+        <section class="py-24 bg-primary text-white overflow-hidden relative" data-aos="fade-up"
+            data-aos-easing="ease-out" data-aos-duration="1000">
+            <div class="absolute inset-0 grid-pattern opacity-10"></div>
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-extrabold tracking-tight mb-4">Our Agile Approach</h2>
+                    <p class="text-white/60 max-w-xl mx-auto">A streamlined 3-step process to bring your digital vision
+                        to life.</p>
+                </div>
+                <div class="relative grid md:grid-cols-3 gap-12">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col items-center text-center group">
+                        <div
+                            class="size-20 bg-white/10 rounded-full flex items-center justify-center mb-8 border border-white/20 group-hover:bg-accent-teal group-hover:text-primary transition-all relative">
+                            <span class="text-2xl font-black italic">01</span>
+                            <div
+                                class="hidden md:block absolute w-[calc(100%+3rem)] h-[1px] bg-white/20 left-[100%] top-1/2">
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4">Strategic Planning</h4>
+                        <p class="text-white/50 text-sm leading-relaxed">Discovery workshops, user journey mapping, and
+                            technical architecture design.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="flex flex-col items-center text-center group">
+                        <div
+                            class="size-20 bg-white/10 rounded-full flex items-center justify-center mb-8 border border-white/20 group-hover:bg-accent-teal group-hover:text-primary transition-all relative">
+                            <span class="text-2xl font-black italic">02</span>
+                            <div
+                                class="hidden md:block absolute w-[calc(100%+3rem)] h-[1px] bg-white/20 left-[100%] top-1/2">
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4">Agile Development</h4>
+                        <p class="text-white/50 text-sm leading-relaxed">Sprints-based coding with continuous
+                            integration and real-time client feedback.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="flex flex-col items-center text-center group">
+                        <div
+                            class="size-20 bg-white/10 rounded-full flex items-center justify-center mb-8 border border-white/20 group-hover:bg-accent-teal group-hover:text-primary transition-all">
+                            <span class="text-2xl font-black italic">03</span>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4">Quality &amp; Launch</h4>
+                        <p class="text-white/50 text-sm leading-relaxed">Rigorous QA testing, security audits, and
+                            deployment to production environments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Benefits -->
+        <section class="py-24 bg-background-light" data-aos="fade-up" data-aos-easing="ease-out"
+            data-aos-duration="1000">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-primary/5">
+                            <span class="material-symbols-outlined text-primary mb-4">bolt</span>
+                            <h5 class="font-bold text-lg mb-2">Performance</h5>
+                            <p class="text-xs text-primary/60">Optimized for sub-second load times and high throughput.
+                            </p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-primary/5">
+                            <span class="material-symbols-outlined text-primary mb-4">security</span>
+                            <h5 class="font-bold text-lg mb-2">Security</h5>
+                            <p class="text-xs text-primary/60">Enterprise-grade encryption and compliance standards.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-primary/5">
+                            <span class="material-symbols-outlined text-primary mb-4">person_search</span>
+                            <h5 class="font-bold text-lg mb-2">User UX</h5>
+                            <p class="text-xs text-primary/60">Intuitive interfaces designed for conversion and
+                                retention.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-primary/5">
+                            <span class="material-symbols-outlined text-primary mb-4">query_stats</span>
+                            <h5 class="font-bold text-lg mb-2">Scalability</h5>
+                            <p class="text-xs text-primary/60">Built to handle millions of users without downtime.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="text-4xl font-extrabold mb-6 tracking-tight">Built for the Future of Business</h2>
+                        <p class="text-primary/60 text-lg mb-8">
+                            We don't just build code; we build assets. Our products are engineered with the future in
+                            mind, ensuring your investment pays off as your business evolves.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3 font-bold">
+                                <span
+                                    class="size-6 rounded-full bg-accent-teal/20 text-accent-teal flex items-center justify-center"><span
+                                        class="material-symbols-outlined text-sm">done</span></span>
+                                99.9% System Uptime Guarantees
+                            </li>
+                            <li class="flex items-center gap-3 font-bold">
+                                <span
+                                    class="size-6 rounded-full bg-accent-teal/20 text-accent-teal flex items-center justify-center"><span
+                                        class="material-symbols-outlined text-sm">done</span></span>
+                                Modern Microservices Architecture
+                            </li>
+                            <li class="flex items-center gap-3 font-bold">
+                                <span
+                                    class="size-6 rounded-full bg-accent-teal/20 text-accent-teal flex items-center justify-center"><span
+                                        class="material-symbols-outlined text-sm">done</span></span>
+                                SOC2 &amp; GDPR Compliance Ready
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Quick View -->
+        <section class="py-24 bg-white" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="1000">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex justify-between items-end mb-16">
+                    <div>
+                        <h2 class="text-4xl font-extrabold tracking-tight mb-2">Selected Works</h2>
+                        <p class="text-primary/60">Recent web and mobile projects delivered by Primelabs.</p>
+                    </div>
+                    <button
+                        class="text-primary font-bold border-b-2 border-primary hover:text-accent-teal hover:border-accent-teal transition-all pb-1">View
+                        All Projects</button>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="group cursor-pointer">
+                        <div
+                            class="aspect-[4/3] rounded-2xl overflow-hidden mb-6 bg-primary/5 border border-primary/10">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                data-alt="Fintech mobile app user interface mockup"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1MzZEKguxVoKJ-8zCw59sjA_X_A2aKO5aZitM-eklbG3Qc9B3WcQ2KAxo5_c1HJELEz_sFsNqXcSQkIFQnInfo1zkCleLF3ZF38ez6QcwT_jTGGbB4Jo9X9yVrREcUbarK5CJGC2j0MYA55lZOP5lJe3wFLO_aC76_TNygBvwJ1M0NWGQU4f7-c7WmmIKf2tLGXu8svdFpHZRZzrpebwWg7PODgzegxQPF7v-VnvrbenyDuZ9V2RAmOSmS6kmfqxuSHh2DzIWkR0" />
+                        </div>
+                        <h5 class="text-lg font-bold mb-1 group-hover:text-accent-teal transition-colors">NeoBank Mobile
+                        </h5>
+                        <p class="text-xs font-bold text-primary/40 uppercase tracking-widest">Fintech • Mobile App</p>
+                    </div>
+                    <div class="group cursor-pointer">
+                        <div
+                            class="aspect-[4/3] rounded-2xl overflow-hidden mb-6 bg-primary/5 border border-primary/10">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                data-alt="SaaS dashboard for logistics and analytics"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW-y998DBkJdFerOPtY1c0UAgCs8Y_lW3swUt9f9-rMZw8Hx9G-Wf6TjwjzQqyaIDk0EpS0EEl5ki9Z4gU_EcS8KpD0qU4LkhYBzKAfageV_whMjEGtHgMXudfstJKPEfzpWUvZqDFgUVwpyP7IvxXFcdfDiAcc4iMuz8bU51J2xkXyA5nh8VThpsnYzJ2v2YF08KouRikB9Ttn59KLFr0kc7K-7CLeparLAyQjUjp9u_O3afnAaP1fAMovkLuyjUDNQGSckOK-Jg" />
+                        </div>
+                        <h5 class="text-lg font-bold mb-1 group-hover:text-accent-teal transition-colors">LogiTrack SaaS
+                        </h5>
+                        <p class="text-xs font-bold text-primary/40 uppercase tracking-widest">Logistics • Web Platform
+                        </p>
+                    </div>
+                    <div class="group cursor-pointer">
+                        <div
+                            class="aspect-[4/3] rounded-2xl overflow-hidden mb-6 bg-primary/5 border border-primary/10">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                data-alt="Data visualization portal for enterprise health"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWcWcW4ddXg9j1sUsYb-COz6wNRK5TDIqD0gPUNe72cYeqTaxt0NB73E-o6eD7v8IWt6BLUrUWystuHQ8KDZEofKHOxfp7nSt8_3HVsI_uPU8pGLRarU5RWGKbvod-Ut5dbEAEcyLPP72cgFqRb5Mu6pG8BFjnkjTbvwjBNoTKM32PEOwqehmEgEi-1I6FC4nmkmDgOzAvZDY1qz5sG4jinAKNovwcldx6prGhLUFYnwQVT-G7QZOfM-UdtFYUvZF9TQQwasSI6IM" />
+                        </div>
+                        <h5 class="text-lg font-bold mb-1 group-hover:text-accent-teal transition-colors">HealthHub
+                            Portal</h5>
+                        <p class="text-xs font-bold text-primary/40 uppercase tracking-widest">Healthcare • Web App</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-24 max-w-7xl mx-auto px-6 mb-24" data-aos="fade-in" data-aos-easing="ease-out"
+            data-aos-duration="1000">
+            <div class="bg-primary rounded-[32px] p-12 lg:p-20 relative overflow-hidden text-center">
+                <div class="absolute inset-0 grid-pattern opacity-10"></div>
+                <div class="absolute -top-24 -left-24 size-64 bg-accent-teal/20 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-24 -right-24 size-64 bg-accent-teal/10 rounded-full blur-3xl"></div>
+                <div class="relative z-10">
+                    <h2 class="text-3xl lg:text-5xl font-extrabold text-white mb-8 leading-tight">Ready to build your
+                        next <br />digital product?</h2>
+                    <p class="text-white/60 text-lg mb-12 max-w-2xl mx-auto">Contact us today for a free consultation
+                        and project estimation. Let's create something extraordinary together.</p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <button
+                            class="bg-accent-teal text-primary text-lg font-bold px-10 py-5 rounded-2xl hover:scale-105 transition-all w-full sm:w-auto">
+                            Get a Free Quote
+                        </button>
+                        <button
+                            class="bg-white/10 text-white border border-white/20 text-lg font-bold px-10 py-5 rounded-2xl hover:bg-white/20 transition-all w-full sm:w-auto">
+                            Talk to an Expert
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-primary/10 py-20" data-aos="fade-out" data-aos-easing="ease-out"
+        data-aos-duration="1000">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="size-8 bg-primary flex items-center justify-center rounded-lg text-white">
+                            <span class="material-symbols-outlined text-xl">diamond</span>
+                        </div>
+                        <h2 class="text-lg font-extrabold tracking-tight">Primelabs Limited</h2>
+                    </div>
+                    <p class="text-primary/60 max-w-xs mb-8 text-sm leading-relaxed">
+                        Leading provider of enterprise-grade software solutions, helping businesses navigate the digital
+                        transformation with confidence.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="size-10 rounded-full bg-primary/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-primary/60"
+                            href="#">
+                            <span class="material-symbols-outlined text-lg">public</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-primary/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-primary/60"
+                            href="#">
+                            <span class="material-symbols-outlined text-lg">alternate_email</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-6">Services</h5>
+                    <ul class="space-y-4 text-sm text-primary/60 font-medium">
+                        <li><a class="hover:text-primary transition-colors" href="#">Web Development</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Mobile Development</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Cloud Solutions</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-6">Company</h5>
+                    <ul class="space-y-4 text-sm text-primary/60 font-medium">
+                        <li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="pt-8 border-t border-primary/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-bold text-primary/40 uppercase tracking-widest">
+                <p>© 2024 Primelabs Limited. All rights reserved.</p>
+                <div class="flex gap-8">
+                    <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+                    <a class="hover:text-primary transition-colors" href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/js/web.js"></script>
+</body>
+
+</html>
