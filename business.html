@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Business Management Systems | Primelabs Limited</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <!-- Owl Carousel Theme CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+    <!-- Slick Slider JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/carousel.css">
+    <link rel="stylesheet" href="/css/business.css">
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-primary font-display transition-colors duration-300">
+
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md shadow-sm border-b border-[#e5e7eb]">
+
+        <!-- Top bar -->
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="bg-primary p-1.5 rounded-lg">
+                    <!-- logo svg -->
+                    <svg class="w-6 h-6 text-white" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                            d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
+                            fill="currentColor" fill-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <span class="text-xl font-extrabold tracking-tight text-primary">
+                    Primelabs <span class="text-gray-400 font-light">Limited</span>
+                </span>
+            </div>
+
+            <!-- Desktop menu -->
+            <div class="hidden md:flex items-center gap-10">
+                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
+                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/service.html">Solutions</a>
+                <a class="text-sm font-semibold hover:text-accent transition-colors" href="#industries">Industries</a>
+                <a class="text-sm font-semibold hover:text-accent transition-colors"
+                    href="/casestudy.html">Casestudies</a>
+                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/about.html">About</a>
+                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/contact.html">Contact</a>
+                <button
+                    class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
+                    id="ripple">
+                    Book a Demo
+                </button>
+            </div>
+
+            <!-- Hamburger -->
+            <div class="md:hidden cursor-pointer" id="menuBtn">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobileMenu"
+            class="md:hidden overflow-hidden max-h-0 transition-all duration-500 ease-in-out border-t border-gray-200">
+
+            <div class="px-6 py-6 flex flex-col gap-6 bg-white">
+                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
+                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/service.html">Solutions</a>
+                <a class="text-sm font-semibold hover:text-accent transition-colors" href="#industries">Industries</a>
+                <a class="text-sm font-semibold hover:text-accent transition-colors"
+                    href="/casestudy.html">Casestudies</a>
+                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/about.html">About</a>
+                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/contact.html">Contact</a>
+                <button
+                    class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
+                    id="ripple">
+                    Book a Demo
+                </button>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- main -->
+    <main>
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden pt-16 pb-24 lg:pt-32 lg:pb-40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="max-w-2xl" data-aos="fade-right" data-aos-easing="ease-out" data-aos-duration="1000">
+                        <div
+                            class="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 dark:bg-white/10 text-primary dark:text-white text-xs font-bold uppercase tracking-wider mb-6">
+                            Enterprise Solutions
+                        </div>
+                        <h1
+                            class="text-5xl lg:text-7xl font-black text-primary dark:text-white leading-[1.1] mb-8 tracking-tight">
+                            Custom Business <span class="text-accent-blue">Management</span> Systems
+                        </h1>
+                        <p class="text-lg lg:text-xl text-text-muted dark:text-gray-400 leading-relaxed mb-10">
+                            Empower your enterprise with bespoke ERP, CRM, and workflow automation solutions tailored
+                            for sustainable growth and operational excellence. We build the architecture of your
+                            success.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button
+                                class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
+                                id="ripple">
+                                Explore Solutions
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                            <button
+                                class="bg-white dark:bg-white/5 border border-neutral-black dark:border-white/10 text-primary dark:text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-50 dark:hover:bg-white/10 transition-all">
+                                View Case Studies
+                            </button>
+                        </div>
+                    </div>
+                    <div class="relative group" data-aos="fade-left" data-aos-easing="ease-out"
+                        data-aos-duration="1000">
+                        <div
+                            class="absolute -inset-4 bg-accent-blue/20 rounded-3xl blur-3xl opacity-30 group-hover:opacity-50 transition-opacity">
+                        </div>
+                        <div
+                            class="relative rounded-2xl overflow-hidden shadow-2xl border border-white dark:border-primary/30">
+                            <img alt="Dashboard Interface" class="w-full h-full object-cover aspect-video"
+                                data-alt="Modern business dashboard showing data analytics and growth charts"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfKEeQi74PcHRbreRtf7LEBoGkdDTLQ8n7YcZ8hA4n6tupgU66DMIDPKD8M_MYPx-hju6zwDb_-Jk-DU71eboSISMPItfi9VnRjf7kUyhHywrEiyHdYCFOMeSmNocyGhaU6MPW0CAgf2UjHz_eiA1Fq3fGNNftDBHtHbeRwXhoTbW2YGwk2FfutkgHpcVKWBLYDG5Iw-1p8RYgJrI0irJnt7v-_uF66gHR3nB4g_OSHbtSU2vGnAYSJNV028WmQBZufaEO4Y0MaQ4" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Core Features -->
+        <section class="py-24 bg-white dark:bg-primary/5" data-aos="fade-up" data-aos-easing="ease-out"
+            data-aos-duration="1000">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-20">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-primary dark:text-white mb-6">Core Infrastructure
+                        Features</h2>
+                    <p class="text-text-muted dark:text-gray-400 text-lg">Every Primelabs system is built with modular
+                        flexibility, ensuring your core operations are streamlined and interconnected.</p>
+                </div>
+                <div class="carousel-wrap">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 owl-carousel owl-theme">
+                        <!-- Feature 1 -->
+                        <div
+                            class="group p-8 bg-background-light dark:bg-background-dark rounded-2xl border border-transparent hover:border-accent-blue/30 transition-all duration-300 shadow-sm hover:shadow-xl">
+                            <div
+                                class="w-14 h-14 bg-primary text-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-3xl">inventory_2</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-primary dark:text-white mb-4">Inventory Management</h3>
+                            <p class="text-text-muted dark:text-gray-400 text-sm leading-relaxed">Real-time tracking and
+                                automated reordering systems that eliminate supply chain bottlenecks.</p>
+                        </div>
+                        <!-- Feature 2 -->
+                        <div
+                            class="group p-8 bg-background-light dark:bg-background-dark rounded-2xl border border-transparent hover:border-accent-blue/30 transition-all duration-300 shadow-sm hover:shadow-xl">
+                            <div
+                                class="w-14 h-14 bg-primary text-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-3xl">account_balance_wallet</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-primary dark:text-white mb-4">Financial Tracking</h3>
+                            <p class="text-text-muted dark:text-gray-400 text-sm leading-relaxed">Comprehensive digital
+                                ledger and automated expense reporting for crystal-clear fiscal oversight.</p>
+                        </div>
+                        <!-- Feature 3 -->
+                        <div
+                            class="group p-8 bg-background-light dark:bg-background-dark rounded-2xl border border-transparent hover:border-accent-blue/30 transition-all duration-300 shadow-sm hover:shadow-xl">
+                            <div
+                                class="w-14 h-14 bg-primary text-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-3xl">diversity_3</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-primary dark:text-white mb-4">CRM Solutions</h3>
+                            <p class="text-text-muted dark:text-gray-400 text-sm leading-relaxed">Lead management and
+                                360-degree customer lifecycle tracking to drive loyalty and sales.</p>
+                        </div>
+                        <!-- Feature 4 -->
+                        <div
+                            class="group p-8 bg-background-light dark:bg-background-dark rounded-2xl border border-transparent hover:border-accent-blue/30 transition-all duration-300 shadow-sm hover:shadow-xl">
+                            <div
+                                class="w-14 h-14 bg-primary text-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-3xl">badge</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-primary dark:text-white mb-4">Human Resources</h3>
+                            <p class="text-text-muted dark:text-gray-400 text-sm leading-relaxed">Streamlined onboarding
+                                and
+                                global payroll automation for the modern workforce.</p>
+                        </div>
+                    </div>
+                    <!-- Custom nav buttons (placed at carousel edges) -->
+                    <button class="custom-prev" aria-label="Previous">&lt;</button>
+                    <button class="custom-next" aria-label="Next">&gt;</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="py-24" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="1000">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    <div class="lg:w-1/2">
+                        <h2 class="text-4xl font-extrabold text-primary dark:text-white mb-8">Why Enterprises Choose
+                            Primelabs Infrastructure</h2>
+                        <div class="space-y-8">
+                            <div class="flex gap-6">
+                                <div
+                                    class="shrink-0 w-12 h-12 rounded-full bg-accent-blue/10 flex items-center justify-center text-accent-blue">
+                                    <span class="material-symbols-outlined">insights</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-primary dark:text-white mb-2">Data-Driven
+                                        Decisions</h4>
+                                    <p class="text-text-muted dark:text-gray-400">Leverage advanced analytics and
+                                        predictive modeling to make informed business choices with confidence.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6">
+                                <div
+                                    class="shrink-0 w-12 h-12 rounded-full bg-accent-blue/10 flex items-center justify-center text-accent-blue">
+                                    <span class="material-symbols-outlined">bolt</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-primary dark:text-white mb-2">Increased Efficiency
+                                    </h4>
+                                    <p class="text-text-muted dark:text-gray-400">Automate repetitive manual tasks
+                                        across all departments to focus your team on high-value operations.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6">
+                                <div
+                                    class="shrink-0 w-12 h-12 rounded-full bg-accent-blue/10 flex items-center justify-center text-accent-blue">
+                                    <span class="material-symbols-outlined">expand</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-primary dark:text-white mb-2">Infinite Scalability
+                                    </h4>
+                                    <p class="text-text-muted dark:text-gray-400">Our cloud-native systems are designed
+                                        to grow seamlessly alongside your company's expansion.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 relative">
+                        <div class="bg-primary rounded-3xl p-8 lg:p-12 shadow-2xl relative overflow-hidden">
+                            <div
+                                class="absolute top-0 right-0 w-64 h-64 bg-accent-blue/20 rounded-full -mr-32 -mt-32 blur-3xl">
+                            </div>
+                            <div class="relative z-10">
+                                <h3 class="text-2xl font-bold text-white mb-8">Performance Impact</h3>
+                                <div class="space-y-10">
+                                    <div class="space-y-2">
+                                        <div class="flex justify-between text-white text-sm font-bold">
+                                            <span>Operational Speed</span>
+                                            <span>+85%</span>
+                                        </div>
+                                        <div class="w-full bg-white/10 h-2 rounded-full overflow-hidden">
+                                            <div class="bg-accent-blue h-full w-[85%]"></div>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <div class="flex justify-between text-white text-sm font-bold">
+                                            <span>Cost Reduction</span>
+                                            <span>-40%</span>
+                                        </div>
+                                        <div class="w-full bg-white/10 h-2 rounded-full overflow-hidden">
+                                            <div class="bg-accent-blue h-full w-[40%]"></div>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <div class="flex justify-between text-white text-sm font-bold">
+                                            <span>Data Accuracy</span>
+                                            <span>99.9%</span>
+                                        </div>
+                                        <div class="w-full bg-white/10 h-2 rounded-full overflow-hidden">
+                                            <div class="bg-accent-blue h-full w-[99%]"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Integration Section -->
+        <section class="py-24 bg-neutral-gray dark:bg-background-dark/50" data-aos="fade-up" data-aos-easing="ease-out"
+            data-aos-duration="1000">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold text-primary dark:text-white mb-16">Connects With Your Entire Ecosystem
+                </h2>
+                <div
+                    class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-60 grayscale hover:grayscale-0 transition-all duration-500 tech-stack">
+                    <div>
+                        <img alt="Partner" class="h-12 w-auto" data-alt="Abstract technology company logo grayscale"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsSHiqP-nnd0Ptn2HiggtqtUt86RjrLrzI8FzkUqq0xdVdPRGtB7HbxePwY3MBpoSH5KM7Dg1UipwzMphPaGAsveuvGSf5j9w1n1F9RoBF_ea9S85EVhx18TDKJy3NmDZ0TyixxkZ4TMJK8nbmVr9IS5cN_5DgFIk5Lp_IVWtxW85zDAWzgZv-UvMP9LUlHfARYH19p75mSO9ePDdJeUkvx51P_KY-NifQ9RMq_NNL9A0Q_Vx0-cFwopYqoTrRRrpi7F0dQMf6q2g" />
+                    </div>
+                    <div>
+                        <img alt="Partner" class="h-12 w-auto" data-alt="Corporate logo concept for integration partner"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_ccWbGgHrciA1CwbYaDFUy2-_aqFMmBx4eZ21ysilbLPooVfyG3uDFn8n1zUggQuH5tCdSm7MpQXeKnzaRrvpMHgpg812KPFjn0Wkb3oKYvIOo7We1RIu-aTqkIl_kbFWphVsgDG1TDFSLM6Z5cnKU13e076kH_EtHV8sovT88oqOS2IolVfoQQ9BEavh1Ep7n_IOxlvPshN0pVUSkgD6Bhv133OGDRCcm3v_SODZgGbSIES7GCIdz6xdZiOegWeW1QnUAnRDr3M" />
+                    </div>
+                    <div>
+                        <img alt="Partner" class="h-12 w-auto" data-alt="Well-known cloud platform logo placeholder"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdHaNRV8PruQs3gskS8Hof2ccZPXeghU9fwNV-nmo5bo7ObfjrE-nVo2Ff9onXuJ8_4Xn9bueQG_KpkBxG1ga_I6vk0QdccWYlLiMk7eSUv3pjlGItrHrELk61zx7Rp0p80-oK3J_ojsq-5IRB4U6plT3Q4dNskQPXw7Kv0KPG1DacIwYhn7iGd3jxn3U8qVCWxZVJ8GOBSby1qLHMBc_EKjBWxVnq2ywY_HoIQk3Os-bhOvrg7I3aWDq0qd6JV5T7sez8LHZwJk4" />
+                    </div>
+                    <div>
+                        <img alt="Partner" class="h-12 w-auto" data-alt="Modern software company logo grayscale"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVwwe903UOC3FUiAOQr99fHWdVKG3F4jU6WqsjxUx6_5DSdjZ1YRcPJgLtOt8l08T7jLyPNE_A8YmJhRWQ2tIok22yR61zxO9G31hp-CJrmAxtmInjufu2oTcCpOyncPpLv8bFNPAsPd1OypzhAGraYdupxkpz4u5yEizQOY-qycZO6Q7GmnuSRf49cuNxmXZxeVOSSPw7aAg9yKy0iq6UI6K3OnbfbtFVrFCxYm9l2g8EJ_pP199TTioBBVHsgqdzjCc89CYNDys" />
+                    </div>
+                </div>
+                <p class="mt-12 text-text-muted dark:text-gray-400 font-medium italic">Native integrations for 500+
+                    enterprise tools including Salesforce, SAP, and AWS.</p>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="py-24 bg-white dark:bg-background-dark" data-aos="fade-up" data-aos-easing="ease-out"
+            data-aos-duration="1000">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <h2 class="text-4xl font-bold text-primary dark:text-white mb-4">Our Seamless Delivery Process</h2>
+                    <p class="text-text-muted dark:text-gray-400">From initial audit to final optimization, we work as
+                        your strategic technology partner.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-12 relative">
+                    <div
+                        class="hidden md:block absolute top-1/4 left-0 w-full h-px bg-neutral-gray dark:bg-primary/20 -z-10">
+                    </div>
+                    <!-- Step 1 -->
+                    <div class="flex flex-col items-center text-center">
+                        <div
+                            class="w-16 h-16 rounded-full bg-accent-blue text-white flex items-center justify-center text-2xl font-black mb-8 border-8 border-white dark:border-background-dark shadow-xl">
+                            1</div>
+                        <h3 class="text-2xl font-bold text-primary dark:text-white mb-4">Audit</h3>
+                        <p class="text-text-muted dark:text-gray-400 leading-relaxed px-4">Deep dive into your existing
+                            workflows, identifying friction points and optimization opportunities.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="flex flex-col items-center text-center">
+                        <div
+                            class="w-16 h-16 rounded-full bg-accent-blue text-white flex items-center justify-center text-2xl font-black mb-8 border-8 border-white dark:border-background-dark shadow-xl">
+                            2</div>
+                        <h3 class="text-2xl font-bold text-primary dark:text-white mb-4">Implementation</h3>
+                        <p class="text-text-muted dark:text-gray-400 leading-relaxed px-4">Seamless deployment of custom
+                            software modules with comprehensive staff training and support.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="flex flex-col items-center text-center">
+                        <div
+                            class="w-16 h-16 rounded-full bg-accent-blue text-white flex items-center justify-center text-2xl font-black mb-8 border-8 border-white dark:border-background-dark shadow-xl">
+                            3</div>
+                        <h3 class="text-2xl font-bold text-primary dark:text-white mb-4">Optimization</h3>
+                        <p class="text-text-muted dark:text-gray-400 leading-relaxed px-4">Continuous refinement based
+                            on live performance data to ensure peak operational ROI.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-in" data-aos-easing="ease-out"
+                data-aos-duration="1000">
+                <div class="bg-primary rounded-[2.5rem] p-12 lg:p-20 relative overflow-hidden shadow-2xl">
+                    <div
+                        class="absolute bottom-0 right-0 w-1/2 h-1/2 bg-accent-blue opacity-10 rounded-full translate-x-1/4 translate-y-1/4 blur-[120px]">
+                    </div>
+                    <div class="relative z-10 max-w-3xl">
+                        <h2 class="text-4xl lg:text-5xl font-black text-white leading-tight mb-8">Ready to transform
+                            your business infrastructure?</h2>
+                        <p class="text-xl text-white/70 mb-12">Join hundreds of global enterprises that rely on
+                            Primelabs for their mission-critical business systems.</p>
+                        <div class="flex flex-wrap gap-6">
+                            <button
+                                class="bg-white text-primary px-10 py-5 rounded-2xl font-black text-lg hover:shadow-2xl hover:scale-105 transition-all">
+                                Get a Custom Quote
+                            </button>
+                            <button
+                                class="bg-primary border-2 border-white/20 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/5 transition-all">
+                                Schedule a Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-primary pt-20 pb-12 text-white/80 border-t border-white/10" data-aos="fade-out"
+        data-aos-easing="ease-out" data-aos-duration="1000">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-8 text-white">
+                        <svg class="w-8 h-8" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd"
+                                d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
+                                fill="currentColor" fill-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-2xl font-black tracking-tighter">Primelabs</span>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-8">Driving enterprise transformation through custom business
+                        management systems and workflow automation since 2015.</p>
+                    <div class="flex gap-4">
+                        <a class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-accent-blue transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined">public</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-accent-blue transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined">mail</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-8">Solutions</h5>
+                    <ul class="space-y-4 text-sm">
+                        <li><a class="hover:text-accent-blue transition-colors" href="#">ERP Systems</a></li>
+                        <li><a class="hover:text-accent-blue transition-colors" href="#">Custom CRM</a></li>
+                        <li><a class="hover:text-accent-blue transition-colors" href="#">HRM Platforms</a></li>
+                        <li><a class="hover:text-accent-blue transition-colors" href="#">Supply Chain Automation</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-8">Company</h5>
+                    <ul class="space-y-4 text-sm">
+                        <li><a class="hover:text-accent-blue transition-colors" href="#">About Us</a></li>
+                        <li><a class="hover:text-accent-blue transition-colors" href="#">Our Team</a></li>
+                        <li><a class="hover:text-accent-blue transition-colors" href="#">Careers</a></li>
+                        <li><a class="hover:text-accent-blue transition-colors" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-8">Newsletter</h5>
+                    <p class="text-sm mb-6">Stay updated with the latest in enterprise technology.</p>
+                    <div class="flex gap-2">
+                        <input
+                            class="bg-white/5 border-white/10 rounded-lg px-4 py-2 w-full text-sm focus:ring-accent-blue focus:border-accent-blue"
+                            placeholder="Email address" type="email" />
+                        <button
+                            class="bg-accent-blue text-white px-4 py-2 rounded-lg font-bold hover:bg-accent-blue/80 transition-all">Join</button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-medium">
+                <p>© 2024 Primelabs Limited. All rights reserved.</p>
+                <div class="flex gap-8">
+                    <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+                    <a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+                    <a class="hover:text-white transition-colors" href="#">SLA Agreement</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/carousel.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/js/business.js"></script>
+</body>
+
+</html>

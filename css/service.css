@@ -1,0 +1,49 @@
+body {
+    font-family: 'Manrope', sans-serif;
+}
+
+.glass-nav {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    transition: all 0.3s ease;
+}
+
+#ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+#ripple::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+}
+
+#ripple:hover::before {
+    animation: ripple 1s ease-out;
+}
+
+/* Animation */
+@keyframes ripple {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+
+    100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
