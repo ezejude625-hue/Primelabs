@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Senior Full Stack Engineer - Primelabs Limited</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="/css/fullstack.css">
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+
+            <!-- Navigation -->
+            <nav class="sticky top-0 z-50 backdrop-blur-md shadow-sm border-b border-[#e5e7eb]">
+
+                <!-- Top bar -->
+                <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-primary p-1.5 rounded-lg">
+                            <!-- logo svg -->
+                            <svg class="w-6 h-6 text-white" fill="none" viewbox="0 0 48 48"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path clip-rule="evenodd"
+                                    d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
+                                    fill="currentColor" fill-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-extrabold tracking-tight text-primary">
+                            Primelabs
+                        </span>
+                    </div>
+
+                    <!-- Desktop menu -->
+                    <div class="hidden md:flex items-center gap-10">
+                        <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/service.html">Solutions</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/index.html#industries">Industries</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/casestudy.html">Casestudies</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/career.html">Career</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/about.html">About</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/contact.html">Contact</a>
+                        <button
+                            class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
+                            id="ripple">
+                            Book a Demo
+                        </button>
+                    </div>
+
+                    <!-- Hamburger -->
+                    <div class="md:hidden cursor-pointer" id="menuBtn">
+                        <span class="material-symbols-outlined text-3xl">menu</span>
+                    </div>
+                </div>
+
+                <!-- Mobile menu -->
+                <div id="mobileMenu"
+                    class="md:hidden overflow-hidden max-h-0 transition-all duration-500 ease-in-out border-t border-gray-200">
+
+                    <div class="px-6 py-6 flex flex-col gap-6 bg-white">
+                        <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/service.html">Solutions</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/index.html#industries">Industries</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/casestudy.html">Casestudies</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/career.html">Career</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/about.html">About</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/contact.html">Contact</a>
+                        <button
+                            class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
+                            id="ripple">
+                            Book a Demo
+                        </button>
+                    </div>
+                </div>
+
+            </nav>
+
+            <!-- main -->
+            <main class="flex-1 max-w-[1200px] mx-auto w-full px-6 md:px-20 py-8">
+                <div class="flex flex-wrap gap-2 mb-8">
+                    <a class="text-slate-500 text-sm font-medium" href="#">Home</a>
+                    <span class="text-slate-400 text-sm"><span
+                            class="material-symbols-outlined text-xs">chevron_right</span></span>
+                    <a class="text-slate-500 text-sm font-medium" href="#">Careers</a>
+                    <span class="text-slate-400 text-sm"><span
+                            class="material-symbols-outlined text-xs">chevron_right</span></span>
+                    <span class="text-primary dark:text-slate-100 text-sm font-bold">Senior Full Stack Engineer</span>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    <div class="lg:col-span-2 space-y-10">
+                        <section>
+                            <h1
+                                class="text-primary dark:text-slate-100 text-4xl md:text-5xl font-black leading-tight tracking-tight mb-4">
+                                Senior Full Stack Engineer</h1>
+                            <div class="flex flex-wrap items-center gap-4 text-slate-600 dark:text-slate-400">
+                                <div class="flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-lg">business</span>
+                                    <span>Primelabs Limited</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-lg">location_on</span>
+                                    <span>Remote / Hybrid</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-lg">schedule</span>
+                                    <span>Full-time</span>
+                                </div>
+                            </div>
+                        </section>
+                        <section
+                            class="bg-white dark:bg-slate-900 p-8 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm">
+                            <h2 class="text-2xl font-bold mb-4">Role Overview</h2>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                As a Senior Full Stack Engineer at Primelabs, you will be a key contributor to our core
+                                enterprise platforms. You will design, develop, and scale mission-critical applications
+                                that serve millions of users, working with a modern tech stack and a high-performing
+                                engineering team. We are looking for someone who balances technical excellence with a
+                                product-focused mindset.
+                            </p>
+                        </section>
+                        <section>
+                            <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">task_alt</span>
+                                Key Responsibilities
+                            </h2>
+                            <ul class="space-y-4">
+                                <li class="flex gap-4">
+                                    <div class="mt-1 flex-shrink-0 size-2 rounded-full bg-primary"></div>
+                                    <p class="text-slate-600 dark:text-slate-400">Architect and maintain scalable web
+                                        applications using React, Node.js, and TypeScript.</p>
+                                </li>
+                                <li class="flex gap-4">
+                                    <div class="mt-1 flex-shrink-0 size-2 rounded-full bg-primary"></div>
+                                    <p class="text-slate-600 dark:text-slate-400">Collaborate with product managers and
+                                        designers to translate requirements into technical specifications.</p>
+                                </li>
+                                <li class="flex gap-4">
+                                    <div class="mt-1 flex-shrink-0 size-2 rounded-full bg-primary"></div>
+                                    <p class="text-slate-600 dark:text-slate-400">Lead code reviews and mentor junior
+                                        engineers to foster a culture of quality and growth.</p>
+                                </li>
+                                <li class="flex gap-4">
+                                    <div class="mt-1 flex-shrink-0 size-2 rounded-full bg-primary"></div>
+                                    <p class="text-slate-600 dark:text-slate-400">Optimize application performance and
+                                        ensure high availability across distributed systems.</p>
+                                </li>
+                                <li class="flex gap-4">
+                                    <div class="mt-1 flex-shrink-0 size-2 rounded-full bg-primary"></div>
+                                    <p class="text-slate-600 dark:text-slate-400">Implement security best practices and
+                                        data protection measures across the stack.</p>
+                                </li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">psychology</span>
+                                Qualifications &amp; Experience
+                            </h2>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-lg flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-primary">code</span>
+                                    <span class="text-sm font-semibold">5+ years of software engineering</span>
+                                </div>
+                                <div class="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-lg flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-primary">layers</span>
+                                    <span class="text-sm font-semibold">React &amp; TypeScript expertise</span>
+                                </div>
+                                <div class="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-lg flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-primary">database</span>
+                                    <span class="text-sm font-semibold">Node.js &amp; PostgreSQL</span>
+                                </div>
+                                <div class="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-lg flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-primary">cloud</span>
+                                    <span class="text-sm font-semibold">AWS (Lambda, S3, RDS)</span>
+                                </div>
+                                <div class="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-lg flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-primary">terminal</span>
+                                    <span class="text-sm font-semibold">Docker &amp; CI/CD Pipelines</span>
+                                </div>
+                                <div class="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-lg flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-primary">group</span>
+                                    <span class="text-sm font-semibold">Agile Methodology experience</span>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="border-t border-slate-200 dark:border-slate-800 pt-10">
+                            <h2 class="text-2xl font-bold mb-4">Why Join Primelabs?</h2>
+                            <p class="text-slate-600 dark:text-slate-400 mb-6">
+                                We're not just building software; we're building the infrastructure of the future. At
+                                Primelabs, you'll join a culture of radical transparency, rapid growth, and meaningful
+                                impact. We empower our engineers to take ownership and innovate without boundaries.
+                            </p>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                                <div class="text-center">
+                                    <div
+                                        class="size-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mx-auto mb-3">
+                                        <span class="material-symbols-outlined">health_and_safety</span>
+                                    </div>
+                                    <span class="text-xs font-bold uppercase tracking-wider">Health Care</span>
+                                </div>
+                                <div class="text-center">
+                                    <div
+                                        class="size-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mx-auto mb-3">
+                                        <span class="material-symbols-outlined">savings</span>
+                                    </div>
+                                    <span class="text-xs font-bold uppercase tracking-wider">401(k) Matching</span>
+                                </div>
+                                <div class="text-center">
+                                    <div
+                                        class="size-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mx-auto mb-3">
+                                        <span class="material-symbols-outlined">distance</span>
+                                    </div>
+                                    <span class="text-xs font-bold uppercase tracking-wider">Remote First</span>
+                                </div>
+                                <div class="text-center">
+                                    <div
+                                        class="size-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mx-auto mb-3">
+                                        <span class="material-symbols-outlined">travel</span>
+                                    </div>
+                                    <span class="text-xs font-bold uppercase tracking-wider">Unlimited PTO</span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="lg:col-span-1">
+                        <div
+                            class="sticky top-24 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-xl shadow-primary/5">
+                            <h3 class="text-xl font-bold mb-6">Apply for this position</h3>
+                            <form action="#" class="space-y-4">
+                                <div>
+                                    <label
+                                        class="block text-sm font-semibold mb-1.5 text-slate-700 dark:text-slate-300">Full
+                                        Name</label>
+                                    <input
+                                        class="w-full px-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                        placeholder="John Doe" type="text" />
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-sm font-semibold mb-1.5 text-slate-700 dark:text-slate-300">Email
+                                        Address</label>
+                                    <input
+                                        class="w-full px-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                        placeholder="john@example.com" type="email" />
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-sm font-semibold mb-1.5 text-slate-700 dark:text-slate-300">Resume
+                                        / CV</label>
+                                    <div
+                                        class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-slate-200 dark:border-slate-700 border-dashed rounded-lg hover:border-primary transition-colors cursor-pointer">
+                                        <div class="space-y-1 text-center">
+                                            <span
+                                                class="material-symbols-outlined text-slate-400 text-3xl">upload_file</span>
+                                            <div class="flex text-sm text-slate-600 dark:text-slate-400">
+                                                <span
+                                                    class="relative cursor-pointer bg-transparent rounded-md font-medium text-primary hover:underline">Upload
+                                                    a file</span>
+                                                <p class="pl-1">or drag and drop</p>
+                                            </div>
+                                            <p class="text-xs text-slate-500">PDF, DOC up to 10MB</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-sm font-semibold mb-1.5 text-slate-700 dark:text-slate-300">Portfolio/GitHub
+                                        Link (Optional)</label>
+                                    <input
+                                        class="w-full px-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                        placeholder="https://github.com/username" type="text" />
+                                </div>
+                                <button
+                                    class="w-full bg-primary text-white font-bold py-3 px-4 rounded-lg hover:opacity-90 transition-opacity mt-4"
+                                    type="submit">
+                                    Submit Application
+                                </button>
+                                <p class="text-[10px] text-center text-slate-500 mt-4 leading-relaxed">
+                                    By clicking "Submit Application", you agree to our privacy policy and terms of
+                                    service regarding applicant data processing.
+                                </p>
+                            </form>
+                        </div>
+                        <div class="mt-8 p-6 bg-primary/5 rounded-xl border border-primary/10">
+                            <h4 class="font-bold text-primary dark:text-slate-200 mb-2">Hiring Process</h4>
+                            <ul class="text-sm space-y-3 text-slate-600 dark:text-slate-400">
+                                <li class="flex items-start gap-2">
+                                    <span class="font-bold text-primary">1.</span> Initial Screening Call
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="font-bold text-primary">2.</span> Technical Assessment
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="font-bold text-primary">3.</span> Panel Interview
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="font-bold text-primary">4.</span> Final Offer
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="bg-white border-t border-[#dae0e7] pt-20 pb-10" data-aos="fade-out"
+                data-aos-easing="ease-out" data-aos-duration="1000">
+                <div class="max-w-7xl mx-auto px-6 lg:px-20">
+                    <div class="grid md:grid-cols-4 gap-12 mb-20">
+                        <div class="flex flex-col gap-6">
+                            <div class="flex items-center gap-3">
+                                <div class="text-primary">
+                                    <svg class="size-6" fill="none" viewbox="0 0 48 48"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path clip-rule="evenodd"
+                                            d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
+                                            fill="currentColor" fill-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <h2 class="text-primary text-lg font-extrabold">Primelabs</h2>
+                            </div>
+                            <p class="text-primary text-md leading-relaxed">
+                                Leading enterprise-grade technology and automation solutions for high-growth businesses.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-primary font-bold mb-6">Services</h4>
+                            <ul class="flex flex-col gap-4 text-md text-primary">
+                                <li><a class="hover:text-[#000f1d] transition-colors"
+                                        href="/casesstudy/bmt-casestudy.html">Business Management Systems</a>
+                                </li>
+                                <li><a class="hover:text-[#000f1d] transition-colors" href="/casesstudy/web.html">Web &
+                                        App
+                                        Development</a></li>
+                                <li><a class="hover:text-[#000f1d] transition-colors"
+                                        href="/casesstudy/branding.html">Branding
+                                        & Digital Presence</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-primary font-bold mb-6">Company</h4>
+                            <ul class="flex flex-col gap-4 text-md text-primary">
+                                <li><a class="hover:text-[#000f1d] transition-colors" href="/about.html">About Us</a>
+                                </li>
+                                <li><a class="hover:text-[#000f1d] transition-colors" href="/casestudy.html">Case
+                                        Studies</a>
+                                </li>
+                                <li><a class="hover:text-[#000f1d] transition-colors"
+                                        href="/index.html#industries">Industries</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-primary font-bold mb-6">Contact</h4>
+                            <ul class="flex flex-col gap-4 text-md text-primary">
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-sm">mail</span>
+                                    info@priemlabsbusinesssolution.com
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-sm">phone</span>
+                                    09066363260
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="material-symbols-outlined text-sm mt-0.5">location_on</span>
+                                    <span>Shop S9/10, Last Floor, Cozyez Mall, 43 Presidential Rd, Asata, Enugu
+                                        400102,Enugu,
+                                        Nigeria</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div
+                        class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-[#dae0e7] gap-4">
+                        <p class="text-mds text-primary">© 2024 Primelabs Limited. All rights reserved.</p>
+                        <div class="flex gap-6">
+                            <a class="text-md text-primary hover:text-[#000f1d] transition-colors" href="#">Privacy
+                                Policy</a>
+                            <a class="text-md text-primary hover:text-[#000f1d] transition-colors" href="#">Terms of
+                                Service</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+<script src="/js/fullstack.js"></script>
+
+</html>

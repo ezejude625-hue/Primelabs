@@ -37,5 +37,3 @@ document.addEventListener("click", (e) => {
     mobileMenu.classList.remove("max-h-[500px]");
   }
 });
-
-AOS.init();

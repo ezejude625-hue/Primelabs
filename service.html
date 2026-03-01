@@ -32,7 +32,8 @@
 <body class="bg-background-light text-[#101418] antialiased">
 
 
-    <nav class="sticky top-0 z-50 glass-nav shadow-sm border-b border-[#e5e7eb] backdrop-blur-md">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md shadow-sm border-b border-[#e5e7eb]">
 
         <!-- Top bar -->
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -46,7 +47,7 @@
                     </svg>
                 </div>
                 <span class="text-xl font-extrabold tracking-tight text-primary">
-                    Primelabs <span class="text-gray-400 font-light">Limited</span>
+                    Primelabs
                 </span>
             </div>
 
@@ -54,9 +55,11 @@
             <div class="hidden md:flex items-center gap-10">
                 <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
                 <a class="text-sm font-semibold hover:text-accent transition-colors" href="/service.html">Solutions</a>
-                <a class="text-sm font-semibold hover:text-accent transition-colors" href="#industries">Industries</a>
+                <a class="text-sm font-semibold hover:text-accent transition-colors"
+                    href="/index.html#industries">Industries</a>
                 <a class="text-sm font-semibold hover:text-accent transition-colors"
                     href="/casestudy.html">Casestudies</a>
+                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/career.html">Career</a>
                 <a class="text-sm font-semibold hover:text-accent transition-colors" href="/about.html">About</a>
                 <a class="text-sm font-semibold hover:text-accent transition-colors" href="/contact.html">Contact</a>
                 <button
@@ -79,9 +82,11 @@
             <div class="px-6 py-6 flex flex-col gap-6 bg-white">
                 <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
                 <a class="text-sm font-semibold hover:text-accent transition-colors" href="/service.html">Solutions</a>
-                <a class="text-sm font-semibold hover:text-accent transition-colors" href="#industries">Industries</a>
+                <a class="text-sm font-semibold hover:text-accent transition-colors"
+                    href="/index.html#industries">Industries</a>
                 <a class="text-sm font-semibold hover:text-accent transition-colors"
                     href="/casestudy.html">Casestudies</a>
+                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/career.html">Career</a>
                 <a class="text-sm font-semibold hover:text-accent transition-colors" href="/about.html">About</a>
                 <a class="text-sm font-semibold hover:text-accent transition-colors" href="/contact.html">Contact</a>
                 <button
@@ -120,11 +125,12 @@
                 <div class="flex flex-wrap gap-4">
                     <button
                         class="bg-accent text-primary px-8 py-4 rounded-xl font-bold text-lg hover:brightness-110 transition-all"
-                        id="ripple">
+                        id="ripple" onclick="window.location.href='#service'">
                         Explore Our Services
                     </button>
                     <button
-                        class="bg-transparent border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all">
+                        class="bg-transparent border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all"
+                        onclick="window.location.href='/casestudy.html'">
                         View Case Studies
                     </button>
                 </div>
@@ -134,7 +140,7 @@
 
 
     <!-- Core Services Grid -->
-    <section class="py-24 bg-white" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="1000">
+    <section class="py-24 bg-white" id="service" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="1000">
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Core Enterprise Services</h2>
@@ -166,7 +172,7 @@
                             Automation &amp; AI</li>
                     </ul>
                     <a class="inline-flex items-center gap-2 text-primary font-bold hover:text-accent transition-colors uppercase text-xs tracking-wider"
-                        href="#">
+                        href="/casesstudy/bmt-casestudy.html">
                         Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
                     </a>
                 </div>
@@ -195,7 +201,7 @@
                             SaaS Platforms</li>
                     </ul>
                     <a class="inline-flex items-center gap-2 text-primary font-bold hover:text-accent transition-colors uppercase text-xs tracking-wider"
-                        href="#">
+                        href="/casesstudy/web.html">
                         Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
                     </a>
                 </div>
@@ -224,7 +230,7 @@
                             Growth-Oriented Marketing</li>
                     </ul>
                     <a class="inline-flex items-center gap-2 text-primary font-bold hover:text-accent transition-colors uppercase text-xs tracking-wider"
-                        href="#">
+                        href="/casesstudy/branding.html">
                         Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
                     </a>
                 </div>
@@ -358,80 +364,72 @@
 
 
     <!-- Footer -->
-    <footer class="bg-primary text-white pt-20 pb-10" data-aos="fade-out" data-aos-easing="ease-out"
+    <footer class="bg-white border-t border-[#dae0e7] pt-20 pb-10" data-aos="fade-out" data-aos-easing="ease-out"
         data-aos-duration="1000">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-                <div class="col-span-1 md:col-span-1">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="bg-white/10 p-1.5 rounded-lg border border-white/10">
-                            <svg class="w-5 h-5 text-white" fill="none" viewbox="0 0 48 48"
-                                xmlns="http://www.w3.org/2000/svg">
+        <div class="max-w-7xl mx-auto px-6 lg:px-20">
+            <div class="grid md:grid-cols-4 gap-12 mb-20">
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-center gap-3">
+                        <div class="text-primary">
+                            <svg class="size-6" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                                 <path clip-rule="evenodd"
                                     d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
                                     fill="currentColor" fill-rule="evenodd"></path>
                             </svg>
                         </div>
-                        <span class="text-xl font-extrabold tracking-tight">Primelabs</span>
+                        <h2 class="text-primary text-lg font-extrabold">Primelabs</h2>
                     </div>
-                    <p class="text-white/60 text-sm leading-relaxed mb-6">
-                        High-performance technology solutions for the modern enterprise. We build the future of
-                        business.
+                    <p class="text-primary text-md leading-relaxed">
+                        Leading enterprise-grade technology and automation solutions for high-growth businesses.
                     </p>
-                    <div class="flex gap-4">
-                        <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:text-primary transition-all"
-                            href="#">
-                            <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
-                                <path
-                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
-                                </path>
-                            </svg>
-                        </a>
-                        <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:text-primary transition-all"
-                            href="#">
-                            <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
-                                <path
-                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
-                                </path>
-                            </svg>
-                        </a>
-                    </div>
                 </div>
                 <div>
-                    <h4 class="font-bold text-lg mb-6 text-white">Services</h4>
-                    <ul class="space-y-4 text-white/60 text-sm">
-                        <li><a class="hover:text-accent transition-colors" href="#">Business Systems</a></li>
-                        <li><a class="hover:text-accent transition-colors" href="#">Custom Software</a></li>
-                        <li><a class="hover:text-accent transition-colors" href="#">Mobile Solutions</a></li>
-                        <li><a class="hover:text-accent transition-colors" href="#">Digital Strategy</a></li>
+                    <h4 class="text-primary font-bold mb-6">Services</h4>
+                    <ul class="flex flex-col gap-4 text-md text-primary">
+                        <li><a class="hover:text-[#000f1d] transition-colors"
+                                href="/casesstudy/bmt-casestudy.html">Business Management Systems</a>
+                        </li>
+                        <li><a class="hover:text-[#000f1d] transition-colors" href="/casesstudy/web.html">Web & App
+                                Development</a></li>
+                        <li><a class="hover:text-[#000f1d] transition-colors" href="/casesstudy/branding.html">Branding
+                                & Digital Presence</a>
+                        </li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold text-lg mb-6 text-white">Company</h4>
-                    <ul class="space-y-4 text-white/60 text-sm">
-                        <li><a class="hover:text-accent transition-colors" href="#">About Us</a></li>
-                        <li><a class="hover:text-accent transition-colors" href="#">Our Portfolio</a></li>
-                        <li><a class="hover:text-accent transition-colors" href="#">Career</a></li>
-                        <li><a class="hover:text-accent transition-colors" href="#">Contact</a></li>
+                    <h4 class="text-primary font-bold mb-6">Company</h4>
+                    <ul class="flex flex-col gap-4 text-md text-primary">
+                        <li><a class="hover:text-[#000f1d] transition-colors" href="/about.html">About Us</a></li>
+                        <li><a class="hover:text-[#000f1d] transition-colors" href="/casestudy.html">Case Studies</a>
+                        </li>
+                        <li><a class="hover:text-[#000f1d] transition-colors"
+                                href="/index.html#industries">Industries</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold text-lg mb-6 text-white">Subscribe</h4>
-                    <p class="text-white/60 text-sm mb-4">Get the latest business insights.</p>
-                    <div class="flex gap-2">
-                        <input
-                            class="bg-white/5 border-white/10 rounded-lg px-4 py-2 text-sm w-full focus:ring-accent focus:border-accent"
-                            placeholder="Email address" type="email" />
-                        <button class="bg-accent text-primary px-4 py-2 rounded-lg font-bold text-sm">Go</button>
-                    </div>
+                    <h4 class="text-primary font-bold mb-6">Contact</h4>
+                    <ul class="flex flex-col gap-4 text-md text-primary">
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">mail</span>
+                            info@priemlabsbusinesssolution.com
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">phone</span>
+                            09066363260
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-sm mt-0.5">location_on</span>
+                            <span>Shop S9/10, Last Floor, Cozyez Mall, 43 Presidential Rd, Asata, Enugu 400102,Enugu,
+                                Nigeria</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div
-                class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
-                <p>© 2024 Primelabs Limited. All rights reserved.</p>
+            <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-[#dae0e7] gap-4">
+                <p class="text-mds text-primary">© 2024 Primelabs Limited. All rights reserved.</p>
                 <div class="flex gap-6">
-                    <a class="hover:text-white" href="#">Privacy Policy</a>
-                    <a class="hover:text-white" href="#">Terms of Service</a>
+                    <a class="text-md text-primary hover:text-[#000f1d] transition-colors" href="#">Privacy Policy</a>
+                    <a class="text-md text-primary hover:text-[#000f1d] transition-colors" href="#">Terms of Service</a>
                 </div>
             </div>
         </div>

@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="/css/branding.css">
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+    <div class="relative flex h-auto min-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+
+            <!-- Navigation -->
+            <nav class="sticky top-0 z-50 backdrop-blur-md shadow-sm border-b border-[#e5e7eb]">
+
+                <!-- Top bar -->
+                <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-primary p-1.5 rounded-lg">
+                            <!-- logo svg -->
+                            <svg class="w-6 h-6 text-white" fill="none" viewbox="0 0 48 48"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path clip-rule="evenodd"
+                                    d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
+                                    fill="currentColor" fill-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-extrabold tracking-tight text-primary">
+                            Primelabs
+                        </span>
+                    </div>
+
+                    <!-- Desktop menu -->
+                    <div class="hidden md:flex items-center gap-10">
+                        <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/service.html">Solutions</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/index.html#industries">Industries</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/casestudy.html">Casestudies</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/career.html">Career</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/about.html">About</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/contact.html">Contact</a>
+                        <button
+                            class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
+                            id="ripple">
+                            Book a Demo
+                        </button>
+                    </div>
+
+                    <!-- Hamburger -->
+                    <div class="md:hidden cursor-pointer" id="menuBtn">
+                        <span class="material-symbols-outlined text-3xl">menu</span>
+                    </div>
+                </div>
+
+                <!-- Mobile menu -->
+                <div id="mobileMenu"
+                    class="md:hidden overflow-hidden max-h-0 transition-all duration-500 ease-in-out border-t border-gray-200">
+
+                    <div class="px-6 py-6 flex flex-col gap-6 bg-white">
+                        <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/service.html">Solutions</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/index.html#industries">Industries</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/casestudy.html">Casestudies</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/career.html">Career</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/about.html">About</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/contact.html">Contact</a>
+                        <button
+                            class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
+                            id="ripple">
+                            Book a Demo
+                        </button>
+                    </div>
+                </div>
+
+            </nav>
+
+            <!-- main -->
+            <main class="flex-1">
+                <!-- Hero Section -->
+                <section class="max-w-[1280px] mx-auto px-6 md:px-20 py-12 md:py-24">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div class="flex flex-col gap-8">
+                            <div class="flex flex-col gap-4">
+                                <span class="text-accent font-bold tracking-widest uppercase text-xs">Enterprise
+                                    Creative Solutions</span>
+                                <h1 class="text-primary text-4xl md:text-6xl font-black leading-tight tracking-tight">
+                                    Branding, Digital Presence &amp; Creative Content that Drives Growth
+                                </h1>
+                                <p class="text-slate-600 text-lg md:text-xl leading-relaxed max-w-xl">
+                                    We build cohesive identities and high-impact digital campaigns that resonate with
+                                    your audience and drive exponential growth.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-4">
+                                <button
+                                    class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-lg h-14 px-6 bg-primary text-white text-base font-bold shadow-xl hover:translate-y-[-2px] transition-all">
+                                    Book a Free Consultation
+                                </button>
+                                <button
+                                    class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-lg h-14 px-6 border-2 border-primary text-primary text-base font-bold hover:bg-primary/5 transition-all">
+                                    View Our Work
+                                </button>
+                            </div>
+                        </div>
+                        <div class="relative group">
+                            <div
+                                class="absolute -inset-1 bg-gradient-to-r from-accent to-primary rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200">
+                            </div>
+                            <div
+                                class="relative w-full aspect-video md:aspect-square bg-slate-200 rounded-xl overflow-hidden shadow-2xl">
+                                <div class="w-full h-full bg-cover bg-center"
+                                    data-alt="Abstract 3D digital creativity composition with flowing neon shapes"
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDPQSOhria-ywHTyrB7nRqd9aylIcnQHByLlSL4lvXj0jAbaOJfdX2HGKRDM5Wdo197GImF9eErwDztbEpKedIHmStOZhm8pmyHL5xuO7YXaKKIR4rA0o8lDyfSB7PiO8Xj4BELbDmbvBKsNNH5rnsRC9XptmnOF-vwA97FS867giAaohOh2XAd-qhdK25oc_G3KpafwKUhwjHthBtR0lfGoiRS_-0Nk2LX7K2ti4RwcO4cNpNb7NaqL5iQzq4dlaahw7q7eZMo7iM')">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="bg-background-light py-20 border-y border-slate-100">
+                    <div class="max-w-[1280px] mx-auto px-6 md:px-20">
+                        <div class="mb-16 text-center">
+                            <h2 class="text-primary text-3xl md:text-4xl font-bold mb-4">What We Help You Achieve</h2>
+                            <div class="w-20 h-1 bg-accent mx-auto"></div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                            <div
+                                class="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-sm border border-slate-50 hover:shadow-md transition-shadow">
+                                <div
+                                    class="size-12 rounded-full bg-primary/5 flex items-center justify-center text-primary mb-4">
+                                    <span class="material-symbols-outlined">verified_user</span>
+                                </div>
+                                <p class="text-sm font-semibold text-primary leading-tight">Strong brand identity
+                                    customers recognize</p>
+                            </div>
+                            <div
+                                class="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-sm border border-slate-50 hover:shadow-md transition-shadow">
+                                <div
+                                    class="size-12 rounded-full bg-primary/5 flex items-center justify-center text-primary mb-4">
+                                    <span class="material-symbols-outlined">devices</span>
+                                </div>
+                                <p class="text-sm font-semibold text-primary leading-tight">Professional online presence
+                                    across platforms</p>
+                            </div>
+                            <div
+                                class="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-sm border border-slate-50 hover:shadow-md transition-shadow">
+                                <div
+                                    class="size-12 rounded-full bg-primary/5 flex items-center justify-center text-primary mb-4">
+                                    <span class="material-symbols-outlined">visibility</span>
+                                </div>
+                                <p class="text-sm font-semibold text-primary leading-tight">More visibility on Google
+                                    and social media</p>
+                            </div>
+                            <div
+                                class="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-sm border border-slate-50 hover:shadow-md transition-shadow">
+                                <div
+                                    class="size-12 rounded-full bg-primary/5 flex items-center justify-center text-primary mb-4">
+                                    <span class="material-symbols-outlined">sentiment_satisfied</span>
+                                </div>
+                                <p class="text-sm font-semibold text-primary leading-tight">Better customer trust and
+                                    engagement</p>
+                            </div>
+                            <div
+                                class="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-sm border border-slate-50 hover:shadow-md transition-shadow">
+                                <div
+                                    class="size-12 rounded-full bg-primary/5 flex items-center justify-center text-primary mb-4">
+                                    <span class="material-symbols-outlined">shopping_cart_checkout</span>
+                                </div>
+                                <p class="text-sm font-semibold text-primary leading-tight">Content that converts
+                                    viewers into buyers</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Core Services Grid -->
+                <section class="bg-white py-24">
+                    <div class="max-w-[1280px] mx-auto px-6 md:px-20">
+                        <div class="mb-16 text-center">
+                            <h2 class="text-primary text-3xl md:text-4xl font-bold mb-4">Our Core Services</h2>
+                            <p class="text-slate-500 max-w-2xl mx-auto">Comprehensive digital solutions tailored for
+                                high-growth enterprises and ambitious brands.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <!-- Card 1 -->
+                            <div
+                                class="group p-8 rounded-xl border border-slate-100 bg-background-light hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:shadow-xl">
+                                <div
+                                    class="size-14 rounded-lg bg-primary/10 group-hover:bg-white/20 flex items-center justify-center mb-6">
+                                    <span
+                                        class="material-symbols-outlined text-primary group-hover:text-accent text-3xl">palette</span>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3">Logo &amp; Brand Identity Design</h3>
+                                <ul
+                                    class="text-slate-500 group-hover:text-slate-300 text-sm leading-relaxed mb-4 list-disc list-inside">
+                                    <li>Custom logo design</li>
+                                    <li>Brand colors &amp; typography</li>
+                                    <li>Business cards &amp; brand assets</li>
+                                    <li>Consistent brand guidelines</li>
+                                </ul>
+                                <p class="text-slate-500 group-hover:text-white text-sm font-semibold">Outcome: <span
+                                        class="font-normal opacity-90">Your business looks professional, trustworthy,
+                                        and memorable.</span></p>
+                            </div>
+                            <!-- Card 2 -->
+                            <div
+                                class="group p-8 rounded-xl border border-slate-100 bg-background-light hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:shadow-xl">
+                                <div
+                                    class="size-14 rounded-lg bg-primary/10 group-hover:bg-white/20 flex items-center justify-center mb-6">
+                                    <span
+                                        class="material-symbols-outlined text-primary group-hover:text-accent text-3xl">draw</span>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3">Graphic Design</h3>
+                                <ul
+                                    class="text-slate-500 group-hover:text-slate-300 text-sm leading-relaxed mb-4 list-disc list-inside">
+                                    <li>Social media posts &amp; banners</li>
+                                    <li>Flyers, posters &amp; promotional designs</li>
+                                    <li>Product &amp; service visuals</li>
+                                    <li>Digital and print-ready designs</li>
+                                </ul>
+                                <p class="text-slate-500 group-hover:text-white text-sm font-semibold">Outcome: <span
+                                        class="font-normal opacity-90">Eye-catching visuals that attract attention and
+                                        drive engagement.</span></p>
+                            </div>
+                            <!-- Card 3 -->
+                            <div
+                                class="group p-8 rounded-xl border border-slate-100 bg-background-light hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:shadow-xl">
+                                <div
+                                    class="size-14 rounded-lg bg-primary/10 group-hover:bg-white/20 flex items-center justify-center mb-6">
+                                    <span
+                                        class="material-symbols-outlined text-primary group-hover:text-accent text-3xl">store</span>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3">Google Business Profile Setup</h3>
+                                <ul
+                                    class="text-slate-500 group-hover:text-slate-300 text-sm leading-relaxed mb-4 list-disc list-inside">
+                                    <li>Google Business account creation</li>
+                                    <li>Business verification support</li>
+                                    <li>Profile optimization</li>
+                                    <li>Local SEO optimization</li>
+                                </ul>
+                                <p class="text-slate-500 group-hover:text-white text-sm font-semibold">Outcome: <span
+                                        class="font-normal opacity-90">Your business appears on Google Search and Maps
+                                        when customers look for your services.</span></p>
+                            </div>
+                            <!-- Card 4 -->
+                            <div
+                                class="group p-8 rounded-xl border border-slate-100 bg-background-light hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:shadow-xl">
+                                <div
+                                    class="size-14 rounded-lg bg-primary/10 group-hover:bg-white/20 flex items-center justify-center mb-6">
+                                    <span
+                                        class="material-symbols-outlined text-primary group-hover:text-accent text-3xl">ads_click</span>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3">Meta Ad Account &amp; Audience Targeting Setup</h3>
+                                <ul
+                                    class="text-slate-500 group-hover:text-slate-300 text-sm leading-relaxed mb-4 list-disc list-inside">
+                                    <li>Facebook &amp; Instagram ad account setup</li>
+                                    <li>Pixel installation &amp; tracking setup</li>
+                                    <li>Custom audience creation</li>
+                                    <li>Ad campaign structure planning</li>
+                                </ul>
+                                <p class="text-slate-500 group-hover:text-white text-sm font-semibold">Outcome: <span
+                                        class="font-normal opacity-90">Your ads reach the right people, not random
+                                        viewers.</span></p>
+                            </div>
+                            <!-- Card 5 -->
+                            <div
+                                class="group p-8 rounded-xl border border-slate-100 bg-background-light hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:shadow-xl">
+                                <div
+                                    class="size-14 rounded-lg bg-primary/10 group-hover:bg-white/20 flex items-center justify-center mb-6">
+                                    <span
+                                        class="material-symbols-outlined text-primary group-hover:text-accent text-3xl">videocam</span>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3">Promotional &amp; Advertising Videos</h3>
+                                <ul
+                                    class="text-slate-500 group-hover:text-slate-300 text-sm leading-relaxed mb-4 list-disc list-inside">
+                                    <li>Business promo videos</li>
+                                    <li>Social media ads (short-form &amp; reels)</li>
+                                    <li>Product and service explainer videos</li>
+                                    <li>Video editing &amp; optimization</li>
+                                </ul>
+                                <p class="text-slate-500 group-hover:text-white text-sm font-semibold">Outcome: <span
+                                        class="font-normal opacity-90">Videos that grab attention, explain your offer
+                                        clearly, and increase conversions.</span></p>
+                            </div>
+                            <!-- Card 6 -->
+                        </div>
+                    </div>
+                </section>
+                <!-- Strategic Process Section -->
+                <section class="py-24 bg-primary text-white overflow-hidden">
+                    <div class="max-w-[1280px] mx-auto px-6 md:px-20">
+                        <div class="mb-20 text-center">
+                            <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Strategic Process</h2>
+                            <p class="text-slate-400">A proven framework for delivering excellence at scale.</p>
+                        </div>
+                        <div class="relative flex flex-col md:flex-row justify-between gap-12">
+                            <!-- Line (desktop only) -->
+                            <div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-accent/20"></div>
+                            <!-- Step 1 -->
+                            <div class="relative flex-1 text-center group">
+                                <div
+                                    class="size-24 bg-accent/10 border-2 border-accent text-accent rounded-full flex items-center justify-center mx-auto mb-8 bg-primary relative z-10 transition-transform group-hover:scale-110">
+                                    <span class="material-symbols-outlined text-4xl">search</span>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4">01. Discovery &amp; Audit</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed">We analyze your current market
+                                    position, audience behavior, and competitive landscape to find growth gaps.</p>
+                            </div>
+                            <!-- Step 2 -->
+                            <div class="relative flex-1 text-center group">
+                                <div
+                                    class="size-24 bg-accent/10 border-2 border-accent text-accent rounded-full flex items-center justify-center mx-auto mb-8 bg-primary relative z-10 transition-transform group-hover:scale-110">
+                                    <span class="material-symbols-outlined text-4xl">architecture</span>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4">02. Strategic Design</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed">Crafting high-fidelity concepts and
+                                    narrative strategies that bridge your brand vision with market needs.</p>
+                            </div>
+                            <!-- Step 3 -->
+                            <div class="relative flex-1 text-center group">
+                                <div
+                                    class="size-24 bg-accent/10 border-2 border-accent text-accent rounded-full flex items-center justify-center mx-auto mb-8 bg-primary relative z-10 transition-transform group-hover:scale-110">
+                                    <span class="material-symbols-outlined text-4xl">rocket_launch</span>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4">03. Execution &amp; Growth</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed">Deploying precision campaigns and
+                                    cinematic content while monitoring real-time data for continuous scaling.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="py-24 bg-background-light border-b border-slate-100">
+                    <div class="max-w-[1280px] mx-auto px-6 md:px-20">
+                        <div class="mb-16 text-center">
+                            <h2 class="text-primary text-3xl md:text-4xl font-bold mb-4">Tools &amp; Platforms We Work
+                                With</h2>
+                            <p class="text-slate-500 max-w-2xl mx-auto">We leverage industry-leading technologies to
+                                ensure your brand stands out and performs at its best.</p>
+                            <div class="w-20 h-1 bg-accent mx-auto mt-6"></div>
+                        </div>
+                        <div
+                            class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 items-center justify-items-center opacity-60 hover:opacity-100 transition-opacity">
+                            <div class="flex flex-col items-center gap-2 group cursor-default">
+                                <span
+                                    class="material-symbols-outlined text-4xl text-primary group-hover:text-accent transition-colors">store</span>
+                                <span
+                                    class="text-[10px] font-bold uppercase tracking-tight text-slate-400 group-hover:text-primary">Google
+                                    Business</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2 group cursor-default">
+                                <span
+                                    class="material-symbols-outlined text-4xl text-primary group-hover:text-accent transition-colors">facebook</span>
+                                <span
+                                    class="text-[10px] font-bold uppercase tracking-tight text-slate-400 group-hover:text-primary">Facebook</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2 group cursor-default">
+                                <span
+                                    class="material-symbols-outlined text-4xl text-primary group-hover:text-accent transition-colors">photo_camera</span>
+                                <span
+                                    class="text-[10px] font-bold uppercase tracking-tight text-slate-400 group-hover:text-primary">Instagram</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2 group cursor-default">
+                                <span
+                                    class="material-symbols-outlined text-4xl text-primary group-hover:text-accent transition-colors">photo</span>
+                                <span
+                                    class="text-[10px] font-bold uppercase tracking-tight text-slate-400 group-hover:text-primary">Photoshop</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2 group cursor-default">
+                                <span
+                                    class="material-symbols-outlined text-4xl text-primary group-hover:text-accent transition-colors">draw</span>
+                                <span
+                                    class="text-[10px] font-bold uppercase tracking-tight text-slate-400 group-hover:text-primary">Illustrator</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2 group cursor-default">
+                                <span
+                                    class="material-symbols-outlined text-4xl text-primary group-hover:text-accent transition-colors">movie</span>
+                                <span
+                                    class="text-[10px] font-bold uppercase tracking-tight text-slate-400 group-hover:text-primary">Premiere
+                                    Pro</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2 group cursor-default">
+                                <span
+                                    class="material-symbols-outlined text-4xl text-primary group-hover:text-accent transition-colors">analytics</span>
+                                <span
+                                    class="text-[10px] font-bold uppercase tracking-tight text-slate-400 group-hover:text-primary">Analytics</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2 group cursor-default">
+                                <span
+                                    class="material-symbols-outlined text-4xl text-primary group-hover:text-accent transition-colors">ads_click</span>
+                                <span
+                                    class="text-[10px] font-bold uppercase tracking-tight text-slate-400 group-hover:text-primary">Meta
+                                    Ads</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="py-24 bg-white">
+                    <div class="max-w-[1280px] mx-auto px-6 md:px-20">
+                        <div class="mb-16 text-center">
+                            <h2 class="text-primary text-3xl md:text-4xl font-bold mb-4">Results You Can Expect</h2>
+                            <p class="text-slate-500 max-w-2xl mx-auto">Our data-driven approach ensures measurable
+                                outcomes that propel your business forward.</p>
+                            <div class="w-20 h-1 bg-accent mx-auto mt-6"></div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                            <div
+                                class="flex flex-col items-center text-center p-8 bg-background-light rounded-2xl border border-slate-100 hover:border-accent/30 transition-all group">
+                                <div
+                                    class="size-14 rounded-full bg-primary text-white flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-primary transition-colors">
+                                    <span class="material-symbols-outlined">auto_awesome</span>
+                                </div>
+                                <h4 class="text-primary font-bold leading-tight">Stronger brand identity</h4>
+                            </div>
+                            <div
+                                class="flex flex-col items-center text-center p-8 bg-background-light rounded-2xl border border-slate-100 hover:border-accent/30 transition-all group">
+                                <div
+                                    class="size-14 rounded-full bg-primary text-white flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-primary transition-colors">
+                                    <span class="material-symbols-outlined">trending_up</span>
+                                </div>
+                                <h4 class="text-primary font-bold leading-tight">Increased online visibility</h4>
+                            </div>
+                            <div
+                                class="flex flex-col items-center text-center p-8 bg-background-light rounded-2xl border border-slate-100 hover:border-accent/30 transition-all group">
+                                <div
+                                    class="size-14 rounded-full bg-primary text-white flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-primary transition-colors">
+                                    <span class="material-symbols-outlined">forum</span>
+                                </div>
+                                <h4 class="text-primary font-bold leading-tight">Better customer engagement</h4>
+                            </div>
+                            <div
+                                class="flex flex-col items-center text-center p-8 bg-background-light rounded-2xl border border-slate-100 hover:border-accent/30 transition-all group">
+                                <div
+                                    class="size-14 rounded-full bg-primary text-white flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-primary transition-colors">
+                                    <span class="material-symbols-outlined">ads_click</span>
+                                </div>
+                                <h4 class="text-primary font-bold leading-tight">Higher conversion from ads</h4>
+                            </div>
+                            <div
+                                class="flex flex-col items-center text-center p-8 bg-background-light rounded-2xl border border-slate-100 hover:border-accent/30 transition-all group">
+                                <div
+                                    class="size-14 rounded-full bg-primary text-white flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-primary transition-colors">
+                                    <span class="material-symbols-outlined">verified</span>
+                                </div>
+                                <h4 class="text-primary font-bold leading-tight">Professional content that builds trust
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="py-24 bg-background-light border-y border-slate-100">
+                    <div class="max-w-[800px] mx-auto px-6">
+                        <div class="mb-16 text-center">
+                            <h2 class="text-primary text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+                            <p class="text-slate-500">Find answers to common questions about our services and process.
+                            </p>
+                            <div class="w-20 h-1 bg-accent mx-auto mt-6"></div>
+                        </div>
+                        <div class="space-y-4">
+                            <!-- FAQ 1 -->
+                            <details class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                                <summary
+                                    class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition-colors group cursor-pointer">
+                                    <span class="font-bold text-primary">What is the typical timeline for a branding
+                                        project?</span>
+                                    <span
+                                        class="material-symbols-outlined text-primary group-hover:text-accent transition-colors">expand_more</span>
+                                </summary>
+                                <div class="px-6 pb-5">
+                                    <p class="text-slate-500 text-sm leading-relaxed">Most branding projects are
+                                        completed within 3 to 6 weeks, depending on the scope and number of
+                                        deliverables.</p>
+                                </div>
+                            </details>
+                            <!-- FAQ 2 -->
+                            <details class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                                <summary
+                                    class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition-colors group cursor-pointer">
+                                    <span class="font-bold text-primary">Do you provide source files for graphic
+                                        designs?</span>
+                                    <span
+                                        class="material-symbols-outlined text-primary group-hover:text-accent transition-colors">expand_more</span>
+                                </summary>
+                                <div class="px-6 pb-5">
+                                    <p class="text-slate-500 text-sm leading-relaxed">Yes, we provide all
+                                        high-resolution source files (AI, PSD, EPS) along with print-ready and digital
+                                        formats.</p>
+                                </div>
+                            </details>
+                            <!-- FAQ 3 -->
+                            <details class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                                <summary
+                                    class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition-colors group cursor-pointer">
+                                    <span class="font-bold text-primary">How long does it take to see results from Meta
+                                        Ads?</span>
+                                    <span
+                                        class="material-symbols-outlined text-primary group-hover:text-accent transition-colors">expand_more</span>
+                                </summary>
+                                <div class="px-6 pb-5">
+                                    <p class="text-slate-500 text-sm leading-relaxed">While initial traffic starts
+                                        immediately, we typically recommend a 2-4 week optimization period to gather
+                                        data and refine targeting for the best ROI.</p>
+                                </div>
+                            </details>
+                            <!-- FAQ 4 -->
+                            <details class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                                <summary
+                                    class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition-colors group cursor-pointer">
+                                    <span class="font-bold text-primary">Can you manage our Google Business Profile
+                                        monthly?</span>
+                                    <span
+                                        class="material-symbols-outlined text-primary group-hover:text-accent transition-colors">expand_more</span>
+                                </summary>
+                                <div class="px-6 pb-5">
+                                    <p class="text-slate-500 text-sm leading-relaxed">Yes, we offer ongoing management
+                                        packages that include posting updates, responding to reviews, and local SEO
+                                        optimization.</p>
+                                </div>
+                            </details>
+                            <!-- FAQ 5 -->
+                            <details class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                                <summary
+                                    class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition-colors group cursor-pointer">
+                                    <span class="font-bold text-primary">What do I need to provide for a promotional
+                                        video?</span>
+                                    <span
+                                        class="material-symbols-outlined text-primary group-hover:text-accent transition-colors">expand_more</span>
+                                </summary>
+                                <div class="px-6 pb-5">
+                                    <p class="text-slate-500 text-sm leading-relaxed">We'll start with a discovery call.
+                                        Generally, we need your brand assets, key messaging points, and any specific
+                                        footage or products you want to feature. We handle the scripting, filming, and
+                                        editing.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </section>
+                <!-- Recent Projects Gallery -->
+                <section class="py-24 bg-white">
+                    <div class="max-w-[1280px] mx-auto px-6 md:px-20">
+                        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+                            <div>
+                                <h2 class="text-primary text-3xl md:text-4xl font-bold mb-4">Recent Projects</h2>
+                                <p class="text-slate-500">Take a look at how we've helped other enterprises transform.
+                                </p>
+                            </div>
+                            <a class="text-primary font-bold flex items-center gap-2 hover:text-accent transition-colors"
+                                href="#">
+                                View Full Portfolio <span class="material-symbols-outlined">arrow_right_alt</span>
+                            </a>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <!-- Project 1 -->
+                            <div class="group cursor-pointer">
+                                <div class="relative aspect-[4/3] rounded-xl overflow-hidden mb-6 shadow-lg">
+                                    <div
+                                        class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                        <button
+                                            class="bg-white text-primary px-6 py-2 rounded-lg font-bold scale-90 group-hover:scale-100 transition-transform">View
+                                            Project</button>
+                                    </div>
+                                    <div class="w-full h-full bg-cover bg-center"
+                                        data-alt="Corporate branding project for a modern technology firm"
+                                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBSLTZIWFDkF-VkaL3S9TmdjHeq2aPI3dQUwh8Z2ZdZOVYnJCnKqoY5XUdCSqwEPYwxDrGPAkGx3DqvnMqbpj7ongjC4TQosozEBoWch50t_48E3a2aLYYpTFNWL7jBuUGcDBYd33ywOzUPBwMkfDXC-a0qSN0YCVTs5QTkENgrpDFog1GUUvkbJy89gSXl5v4q70w5zP3hSrDAfop_pO-Mn5K8QUYGDMr7ITOdg_qv8RhjjIYNdkgSReuUCMXTZNkGwf9agQ_zfHM')">
+                                    </div>
+                                </div>
+                                <h4 class="text-xl font-bold text-primary">NeoFintech Rebrand</h4>
+                                <p class="text-slate-500 text-sm">Brand Identity &amp; Digital Strategy</p>
+                            </div>
+                            <!-- Project 2 -->
+                            <div class="group cursor-pointer">
+                                <div class="relative aspect-[4/3] rounded-xl overflow-hidden mb-6 shadow-lg">
+                                    <div
+                                        class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                        <button
+                                            class="bg-white text-primary px-6 py-2 rounded-lg font-bold scale-90 group-hover:scale-100 transition-transform">View
+                                            Project</button>
+                                    </div>
+                                    <div class="w-full h-full bg-cover bg-center"
+                                        data-alt="SaaS marketing campaign dashboard and assets"
+                                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB6fx9MkhntnS0p8zycpr_A-PjD_9hUIET9W8wPn5Br1yzOwWjaoV4L7daSykzqUT2zHrMprwMdg-pRLHuYk_N6gsUuUom5EfW3dSguBHArz0hWUEztfYFI9qOPXLfQpSSYGBq--LO4QUKzlFTZ4FFkOsiVAvMSuOdc4psfYpKhQZmvv4UZ5n2t7xMHU9gwh3zyu42cstKaT2EAbSmPqfzPzpTOZ1fvRU3cxnX140BSTMRW0fN1sUc-_CFdA30AYM7m4aWZngd7dkg')">
+                                    </div>
+                                </div>
+                                <h4 class="text-xl font-bold text-primary">Skyline SaaS Launch</h4>
+                                <p class="text-slate-500 text-sm">Campaign Strategy &amp; Lead Gen</p>
+                            </div>
+                            <!-- Project 3 -->
+                            <div class="group cursor-pointer">
+                                <div class="relative aspect-[4/3] rounded-xl overflow-hidden mb-6 shadow-lg">
+                                    <div
+                                        class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                        <button
+                                            class="bg-white text-primary px-6 py-2 rounded-lg font-bold scale-90 group-hover:scale-100 transition-transform">View
+                                            Project</button>
+                                    </div>
+                                    <div class="w-full h-full bg-cover bg-center"
+                                        data-alt="Team creative brainstorming session in modern office"
+                                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBNDOaAmdN38dHUtG3hYQX2B29eZg82U9w5exKLUJjtEyGyokBbyB6xpC80yC4zZO6YfktpjJiGTB_dwXghvzdG8DPv8EsLIsf0Prlh-0RAGLdoFyq501qSlKyVbyU77gDH5q6XDr7GJbpV1sTVeMI0By6wYXcOozmIq19p5LjnA21ig-0Pw6OdRQU6wd1Bg6BvIFiH8qIV142pXrJzjLx41WDoa7z6117v8vdFDRwIpQf_gKfCHTAArFLjgAeJQUl7VvIB1o_Yusg')">
+                                    </div>
+                                </div>
+                                <h4 class="text-xl font-bold text-primary">Global Reach 2024</h4>
+                                <p class="text-slate-500 text-sm">Creative Direction &amp; Video Production</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Call to Action -->
+                <section class="py-20 px-6">
+                    <div
+                        class="max-w-[1100px] mx-auto bg-primary rounded-3xl p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
+                        <!-- Decorative background element -->
+                        <div class="absolute -top-24 -right-24 size-96 bg-accent/20 rounded-full blur-3xl"></div>
+                        <div class="absolute -bottom-24 -left-24 size-96 bg-accent/10 rounded-full blur-3xl"></div>
+                        <div class="relative z-10">
+                            <h2 class="text-white text-3xl md:text-5xl font-black mb-6">Ready to Transform Your Digital
+                                Identity?</h2>
+                            <p class="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto mb-10">
+                                Join dozens of market-leading brands that leverage our expertise for explosive digital
+                                growth.
+                            </p>
+                            <div class="flex flex-wrap justify-center gap-6">
+                                <button
+                                    class="flex min-w-[200px] cursor-pointer items-center justify-center rounded-lg h-14 px-8 bg-accent text-primary text-base font-bold shadow-lg hover:bg-white transition-all">
+                                    Start Your Project
+                                </button>
+                                <button
+                                    class="flex min-w-[200px] cursor-pointer items-center justify-center rounded-lg h-14 px-8 border-2 border-white/30 text-white text-base font-bold hover:bg-white/10 transition-all">
+                                    Contact Sales
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer -->
+            <footer class="bg-white border-t border-[#dae0e7] pt-20 pb-10" data-aos="fade-out"
+                data-aos-easing="ease-out" data-aos-duration="1000">
+                <div class="max-w-7xl mx-auto px-6 lg:px-20">
+                    <div class="grid md:grid-cols-4 gap-12 mb-20">
+                        <div class="flex flex-col gap-6">
+                            <div class="flex items-center gap-3">
+                                <div class="text-primary">
+                                    <svg class="size-6" fill="none" viewbox="0 0 48 48"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path clip-rule="evenodd"
+                                            d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
+                                            fill="currentColor" fill-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <h2 class="text-primary text-lg font-extrabold">Primelabs</h2>
+                            </div>
+                            <p class="text-primary text-md leading-relaxed">
+                                Leading enterprise-grade technology and automation solutions for high-growth businesses.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-primary font-bold mb-6">Services</h4>
+                            <ul class="flex flex-col gap-4 text-md text-primary">
+                                <li><a class="hover:text-[#000f1d] transition-colors"
+                                        href="/casesstudy/bmt-casestudy.html">Business Management Systems</a>
+                                </li>
+                                <li><a class="hover:text-[#000f1d] transition-colors" href="/casesstudy/web.html">Web &
+                                        App
+                                        Development</a></li>
+                                <li><a class="hover:text-[#000f1d] transition-colors"
+                                        href="/casesstudy/branding.html">Branding
+                                        & Digital Presence</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-primary font-bold mb-6">Company</h4>
+                            <ul class="flex flex-col gap-4 text-md text-primary">
+                                <li><a class="hover:text-[#000f1d] transition-colors" href="/about.html">About Us</a>
+                                </li>
+                                <li><a class="hover:text-[#000f1d] transition-colors" href="/casestudy.html">Case
+                                        Studies</a>
+                                </li>
+                                <li><a class="hover:text-[#000f1d] transition-colors"
+                                        href="/index.html#industries">Industries</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-primary font-bold mb-6">Contact</h4>
+                            <ul class="flex flex-col gap-4 text-md text-primary">
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-sm">mail</span>
+                                    info@priemlabsbusinesssolution.com
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-sm">phone</span>
+                                    09066363260
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="material-symbols-outlined text-sm mt-0.5">location_on</span>
+                                    <span>Shop S9/10, Last Floor, Cozyez Mall, 43 Presidential Rd, Asata, Enugu
+                                        400102,Enugu,
+                                        Nigeria</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div
+                        class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-[#dae0e7] gap-4">
+                        <p class="text-mds text-primary">© 2024 Primelabs Limited. All rights reserved.</p>
+                        <div class="flex gap-6">
+                            <a class="text-md text-primary hover:text-[#000f1d] transition-colors" href="#">Privacy
+                                Policy</a>
+                            <a class="text-md text-primary hover:text-[#000f1d] transition-colors" href="#">Terms of
+                                Service</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+<script src="/js/branding.js"></script>
+
+</html>

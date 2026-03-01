@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contact Us - Primelabs Limited</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="/css/contact.css">
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+
+            <!-- Navigation -->
+            <nav class="sticky top-0 z-50 backdrop-blur-md shadow-sm border-b border-[#e5e7eb]">
+
+                <!-- Top bar -->
+                <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-primary p-1.5 rounded-lg">
+                            <!-- logo svg -->
+                            <svg class="w-6 h-6 text-white" fill="none" viewbox="0 0 48 48"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path clip-rule="evenodd"
+                                    d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
+                                    fill="currentColor" fill-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-extrabold tracking-tight text-primary">
+                            Primelabs
+                        </span>
+                    </div>
+
+                    <!-- Desktop menu -->
+                    <div class="hidden md:flex items-center gap-10">
+                        <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/service.html">Solutions</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/index.html#industries">Industries</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/casestudy.html">Casestudies</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/career.html">Career</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/about.html">About</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/contact.html">Contact</a>
+                        <button
+                            class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
+                            id="ripple">
+                            Book a Demo
+                        </button>
+                    </div>
+
+                    <!-- Hamburger -->
+                    <div class="md:hidden cursor-pointer" id="menuBtn">
+                        <span class="material-symbols-outlined text-3xl">menu</span>
+                    </div>
+                </div>
+
+                <!-- Mobile menu -->
+                <div id="mobileMenu"
+                    class="md:hidden overflow-hidden max-h-0 transition-all duration-500 ease-in-out border-t border-gray-200">
+
+                    <div class="px-6 py-6 flex flex-col gap-6 bg-white">
+                        <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/service.html">Solutions</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/index.html#industries">Industries</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/casestudy.html">Casestudies</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/career.html">Career</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/about.html">About</a>
+                        <a class="text-sm font-semibold hover:text-accent transition-colors"
+                            href="/contact.html">Contact</a>
+                        <button
+                            class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
+                            id="ripple">
+                            Book a Demo
+                        </button>
+                    </div>
+                </div>
+
+            </nav>
+
+            <!-- main -->
+            <main class="flex-1">
+                <section class="max-w-7xl mx-auto px-6 py-12 md:py-20">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="flex flex-col gap-6">
+                            <span
+                                class="text-primary bg-primary/10 rounded-full px-3 w-fit mb-4 py-1 font-bold tracking-widest uppercase text-xs">Reach
+                                Out to
+                                Us</span>
+                            <h1
+                                class="text-slate-900 dark:text-white text-4xl md:text-6xl font-black leading-tight tracking-tight">
+                                Let's Build Something Together
+                            </h1>
+                            <p class="text-slate-600 dark:text-slate-400 text-lg max-w-lg">
+                                Have a vision for a digital product? Our team of experts is ready to help you bring it
+                                to life with cutting-edge technology and human-centered design.
+                            </p>
+                            <div class="flex flex-col gap-4 mt-4">
+                                <div
+                                    class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-800/50 shadow-sm border border-slate-100 dark:border-slate-700">
+                                    <span
+                                        class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">mail</span>
+                                    <div>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400 font-semibold uppercase">
+                                            Email Us</p>
+                                        <p class="text-slate-900 dark:text-white font-medium">hello@primelabs.limited
+                                        </p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-800/50 shadow-sm border border-slate-100 dark:border-slate-700">
+                                    <span
+                                        class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">call</span>
+                                    <div>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400 font-semibold uppercase">
+                                            Call Us</p>
+                                        <p class="text-slate-900 dark:text-white font-medium">+1 (555) 000-1234</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-slate-800/40 p-8 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700">
+                            <form class="flex flex-col gap-5">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                    <label class="flex flex-col gap-2">
+                                        <span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">First
+                                            Name</span>
+                                        <input
+                                            class="rounded-xl border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 focus:ring-primary focus:border-primary p-3 text-slate-900 dark:text-white"
+                                            placeholder="John" type="text" />
+                                    </label>
+                                    <label class="flex flex-col gap-2">
+                                        <span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Last
+                                            Name</span>
+                                        <input
+                                            class="rounded-xl border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 focus:ring-primary focus:border-primary p-3 text-slate-900 dark:text-white"
+                                            placeholder="Doe" type="text" />
+                                    </label>
+                                </div>
+                                <label class="flex flex-col gap-2">
+                                    <span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Email
+                                        Address</span>
+                                    <input
+                                        class="rounded-xl border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 focus:ring-primary focus:border-primary p-3 text-slate-900 dark:text-white"
+                                        placeholder="john@example.com" type="email" />
+                                </label>
+                                <label class="flex flex-col gap-2">
+                                    <span
+                                        class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Subject</span>
+                                    <select
+                                        class="rounded-xl border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 focus:ring-primary focus:border-primary p-3 text-slate-900 dark:text-white">
+                                        <option>Project Inquiry</option>
+                                        <option>Partnership</option>
+                                        <option>Career Opportunities</option>
+                                        <option>General Support</option>
+                                    </select>
+                                </label>
+                                <label class="flex flex-col gap-2">
+                                    <span
+                                        class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Message</span>
+                                    <textarea
+                                        class="rounded-xl border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 focus:ring-primary focus:border-primary p-3 text-slate-900 dark:text-white"
+                                        placeholder="Tell us about your vision..." rows="4"></textarea>
+                                </label>
+                                <button
+                                    class="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
+                                    type="submit">
+                                    <span class="material-symbols-outlined">send</span>
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section class="bg-primary/5 dark:bg-primary/10 py-20">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                            <div class="flex flex-col justify-center">
+                                <h2 class="text-slate-900 dark:text-white text-3xl font-bold mb-6">Visit Our Creative
+                                    Hub</h2>
+                                <p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                                    We believe in the power of face-to-face collaboration. If you're in the
+                                    neighborhood, stop by for a coffee and let's discuss your next big idea in person.
+                                </p>
+                                <div class="space-y-6">
+                                    <div class="flex gap-4">
+                                        <span class="material-symbols-outlined text-primary">location_on</span>
+                                        <div>
+                                            <h4 class="font-bold text-slate-900 dark:text-white">Headquarters</h4>
+                                            <p class="text-slate-600 dark:text-slate-400">123 Innovation Drive, Tech
+                                                District<br />San Francisco, CA 94103</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-4">
+                                        <span class="material-symbols-outlined text-primary">schedule</span>
+                                        <div>
+                                            <h4 class="font-bold text-slate-900 dark:text-white">Office Hours</h4>
+                                            <p class="text-slate-600 dark:text-slate-400">Monday - Friday: 9:00 AM -
+                                                6:00 PM PST<br />Saturday: By Appointment</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="relative w-full aspect-video md:aspect-square overflow-hidden rounded-2xl shadow-2xl border-4 border-white dark:border-slate-800">
+                                <div class="absolute inset-0 bg-slate-200 animate-pulse"></div>
+                                <img class="w-full h-full object-cover relative z-10"
+                                    data-alt="Stylized map showing Primelabs office location in San Francisco"
+                                    data-location="San Francisco"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmKU16GoSZ_56dMGiY8oLwqa15yddjuAV5OLXSFgz5wIvkvhf_9bJ2E8g4ydJ7i7l34gTej6JupYrPGa4ZzFNOYGSZnqnT-4uV7ZjiEAnS-cY2qwACpEJHyImSWJ5NnKHIu3fRsXBkYXceFn6EybeRuztzp4bV8gtkywLbiPVonh67NAh-IHvIA2gAh6eccokYQUgzu7s1C8xMFY5bnjQpNmKIzVV1IfhXN1UTVZeN1I8DuepRO9hjnfjFX_mBH7FM0W7LDRi4Lw8" />
+                                <div
+                                    class="absolute bottom-4 left-4 z-20 bg-white/90 dark:bg-slate-900/90 p-4 rounded-xl backdrop-blur-sm shadow-lg flex items-center gap-3">
+                                    <div class="w-3 h-3 rounded-full bg-primary animate-ping"></div>
+                                    <span class="text-sm font-bold text-slate-900 dark:text-white">Live Office Status:
+                                        Open</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="max-w-4xl mx-auto px-6 py-20">
+                    <div class="text-center mb-12">
+                        <h2 class="text-slate-900 dark:text-white text-3xl font-bold">What to Expect Next</h2>
+                        <p class="text-slate-600 dark:text-slate-400 mt-2">Our journey together begins with a single
+                            step</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div
+                            class="flex flex-col items-center text-center p-6 bg-white dark:bg-slate-800/40 rounded-2xl border border-slate-100 dark:border-slate-700">
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/20 text-primary flex items-center justify-center mb-4 font-black text-xl">
+                                1</div>
+                            <h4 class="font-bold text-slate-900 dark:text-white mb-2">Review</h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">Our team reviews your inquiry within
+                                24 business hours.</p>
+                        </div>
+                        <div
+                            class="flex flex-col items-center text-center p-6 bg-white dark:bg-slate-800/40 rounded-2xl border border-slate-100 dark:border-slate-700">
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/20 text-primary flex items-center justify-center mb-4 font-black text-xl">
+                                2</div>
+                            <h4 class="font-bold text-slate-900 dark:text-white mb-2">Discovery Call</h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">We schedule a 15-minute call to dive
+                                deeper into your requirements.</p>
+                        </div>
+                        <div
+                            class="flex flex-col items-center text-center p-6 bg-white dark:bg-slate-800/40 rounded-2xl border border-slate-100 dark:border-slate-700">
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/20 text-primary flex items-center justify-center mb-4 font-black text-xl">
+                                3</div>
+                            <h4 class="font-bold text-slate-900 dark:text-white mb-2">Proposal</h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">You'll receive a tailored strategy and
+                                project quote.</p>
+                        </div>
+                    </div>
+                    <div class="mt-20">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-8 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">help</span>
+                            Frequently Asked Questions
+                        </h3>
+                        <div class="space-y-4">
+                            <details
+                                class="group bg-white dark:bg-slate-800/40 rounded-xl border border-slate-100 dark:border-slate-700 overflow-hidden"
+                                open="">
+                                <summary
+                                    class="flex items-center justify-between p-4 cursor-pointer font-semibold text-slate-800 dark:text-slate-200">
+                                    How quickly can we start the project?
+                                    <span
+                                        class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                                </summary>
+                                <div class="px-4 pb-4 text-slate-600 dark:text-slate-400 text-sm">
+                                    Typical onboarding takes about 1-2 weeks from the signed proposal. We prioritize
+                                    project fit and team availability to ensure high-quality delivery.
+                                </div>
+                            </details>
+                            <details
+                                class="group bg-white dark:bg-slate-800/40 rounded-xl border border-slate-100 dark:border-slate-700 overflow-hidden">
+                                <summary
+                                    class="flex items-center justify-between p-4 cursor-pointer font-semibold text-slate-800 dark:text-slate-200">
+                                    Do you offer ongoing maintenance?
+                                    <span
+                                        class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                                </summary>
+                                <div class="px-4 pb-4 text-slate-600 dark:text-slate-400 text-sm">
+                                    Yes, we provide several post-launch support tiers ranging from security updates to
+                                    dedicated scaling teams.
+                                </div>
+                            </details>
+                            <details
+                                class="group bg-white dark:bg-slate-800/40 rounded-xl border border-slate-100 dark:border-slate-700 overflow-hidden">
+                                <summary
+                                    class="flex items-center justify-between p-4 cursor-pointer font-semibold text-slate-800 dark:text-slate-200">
+                                    What industries do you specialize in?
+                                    <span
+                                        class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                                </summary>
+                                <div class="px-4 pb-4 text-slate-600 dark:text-slate-400 text-sm">
+                                    While we are generalists in technology, we have deep expertise in FinTech,
+                                    Healthcare, and E-commerce platforms.
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer -->
+            <footer class="bg-white border-t border-[#dae0e7] pt-20 pb-10" data-aos="fade-out"
+                data-aos-easing="ease-out" data-aos-duration="1000">
+                <div class="max-w-7xl mx-auto px-6 lg:px-20">
+                    <div class="grid md:grid-cols-4 gap-12 mb-20">
+                        <div class="flex flex-col gap-6">
+                            <div class="flex items-center gap-3">
+                                <div class="text-primary">
+                                    <svg class="size-6" fill="none" viewbox="0 0 48 48"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path clip-rule="evenodd"
+                                            d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
+                                            fill="currentColor" fill-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <h2 class="text-primary text-lg font-extrabold">Primelabs</h2>
+                            </div>
+                            <p class="text-primary text-md leading-relaxed">
+                                Leading enterprise-grade technology and automation solutions for high-growth businesses.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-primary font-bold mb-6">Services</h4>
+                            <ul class="flex flex-col gap-4 text-md text-primary">
+                                <li><a class="hover:text-[#000f1d] transition-colors"
+                                        href="/casesstudy/bmt-casestudy.html">Business Management Systems</a>
+                                </li>
+                                <li><a class="hover:text-[#000f1d] transition-colors" href="/casesstudy/web.html">Web &
+                                        App
+                                        Development</a></li>
+                                <li><a class="hover:text-[#000f1d] transition-colors"
+                                        href="/casesstudy/branding.html">Branding
+                                        & Digital Presence</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-primary font-bold mb-6">Company</h4>
+                            <ul class="flex flex-col gap-4 text-md text-primary">
+                                <li><a class="hover:text-[#000f1d] transition-colors" href="/about.html">About Us</a>
+                                </li>
+                                <li><a class="hover:text-[#000f1d] transition-colors" href="/casestudy.html">Case
+                                        Studies</a>
+                                </li>
+                                <li><a class="hover:text-[#000f1d] transition-colors"
+                                        href="/index.html#industries">Industries</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-primary font-bold mb-6">Contact</h4>
+                            <ul class="flex flex-col gap-4 text-md text-primary">
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-sm">mail</span>
+                                    info@priemlabsbusinesssolution.com
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-sm">phone</span>
+                                    09066363260
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="material-symbols-outlined text-sm mt-0.5">location_on</span>
+                                    <span>Shop S9/10, Last Floor, Cozyez Mall, 43 Presidential Rd, Asata, Enugu
+                                        400102,Enugu,
+                                        Nigeria</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div
+                        class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-[#dae0e7] gap-4">
+                        <p class="text-mds text-primary">© 2024 Primelabs Limited. All rights reserved.</p>
+                        <div class="flex gap-6">
+                            <a class="text-md text-primary hover:text-[#000f1d] transition-colors" href="#">Privacy
+                                Policy</a>
+                            <a class="text-md text-primary hover:text-[#000f1d] transition-colors" href="#">Terms of
+                                Service</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+<script src="/js/contact.js"></script>
+
+</html>
