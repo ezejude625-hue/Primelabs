@@ -21,19 +21,13 @@ tailwind.config = {
   },
 };
 
-const btn = document.getElementById("menu-btn");
-const menu = document.getElementById("mobile-menu");
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
 
-btn.addEventListener("click", (e) => {
+menuBtn.addEventListener("click", (e) => {
   e.stopPropagation();
-
-  if (menu.classList.contains("max-h-0")) {
-    menu.classList.remove("max-h-0", "opacity-0");
-    menu.classList.add("max-h-[500px]", "opacity-100");
-  } else {
-    menu.classList.add("max-h-0", "opacity-0");
-    menu.classList.remove("max-h-[500px]", "opacity-100");
-  }
+  mobileMenu.classList.toggle("max-h-0");
+  mobileMenu.classList.toggle("max-h-[500px]");
 });
 
 // Prevent inside clicks from closing
