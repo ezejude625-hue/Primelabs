@@ -37,3 +37,10 @@ document.addEventListener("click", (e) => {
     mobileMenu.classList.remove("max-h-[500px]");
   }
 });
+
+AOS.init({
+  duration: 1000,
+  once: true,
+  offset: 80,
+  easing: "ease-out-cubic",
+});

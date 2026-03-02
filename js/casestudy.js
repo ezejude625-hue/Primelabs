@@ -47,4 +47,9 @@ document.addEventListener("click", () => {
   menu.classList.remove("max-h-[500px]", "opacity-100");
 });
 
-AOS.init();
+AOS.init({
+  duration: 1000,
+  once: true,
+  offset: 80,
+  easing: "ease-out-cubic",
+});

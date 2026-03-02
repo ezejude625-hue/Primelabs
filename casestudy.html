@@ -15,18 +15,20 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/casestudy.css">
 </head>
 
-<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
-    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<body
+    class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 overflow-x-hidden antialiased">
+    <div class="relative flex h-full w-full flex-col">
 
         <!-- Navigation -->
-        <nav class="sticky top-0 z-50 backdrop-blur-md shadow-sm border-b border-[#e5e7eb]">
+        <nav class="sticky top-0 z-50 backdrop-blur-md shadow-sm border-b border-[#e5e7eb]" data-aos="fade-down">
 
             <!-- Top bar -->
             <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-                <div class="flex items-center gap-3">
+                <div class="flex items-center gap-3" data-aos="fade-right">
                     <div class="bg-primary p-1.5 rounded-lg">
                         <!-- logo svg -->
                         <svg class="w-6 h-6 text-white" fill="none" viewbox="0 0 48 48"
@@ -42,7 +44,7 @@
                 </div>
 
                 <!-- Desktop menu -->
-                <div class="hidden md:flex items-center gap-10">
+                <div class="hidden md:flex items-center gap-10" data-aos="fade-left">
                     <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
                     <a class="text-sm font-semibold hover:text-accent transition-colors"
                         href="/service.html">Solutions</a>
@@ -92,11 +94,11 @@
             </div>
 
         </nav>
-
+        <div class="h-10"></div>
         <!-- main -->
         <main class="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-12">
             <!-- Hero Section -->
-            <div class="mb-12">
+            <div class="mb-12" data-aos="fade-up">
                 <h1 class="text-4xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight mb-4">Case
                     Studies Hub</h1>
                 <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
@@ -105,7 +107,7 @@
                 </p>
             </div>
             <!-- Filter Tabs -->
-            <div class="mb-10 overflow-x-auto">
+            <div class="mb-10 overflow-x-auto" data-aos="fade-up" data-aos-delay="100">
                 <div class="flex border-b border-slate-200 dark:border-slate-800 min-w-max">
                     <button class="px-6 py-4 text-sm font-bold border-b-2 border-primary text-primary transition-all">
                         All Projects
@@ -130,8 +132,8 @@
             <!-- Premium Grid Layout -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Card 1 -->
-                <div
-                    class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300">
+                <div class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="100">
                     <div class="relative aspect-[16/10] overflow-hidden">
                         <img alt="Logistics"
                             class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
@@ -164,8 +166,8 @@
                     </div>
                 </div>
                 <!-- Card 2 -->
-                <div
-                    class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300">
+                <div class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="200">
                     <div class="relative aspect-[16/10] overflow-hidden">
                         <img alt="Retail"
                             class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
@@ -193,8 +195,8 @@
                     </div>
                 </div>
                 <!-- Card 3 -->
-                <div
-                    class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300">
+                <div class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="relative aspect-[16/10] overflow-hidden">
                         <img alt="Fintech"
                             class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
@@ -222,8 +224,8 @@
                     </div>
                 </div>
                 <!-- Card 4 -->
-                <div
-                    class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300">
+                <div class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="400">
                     <div class="relative aspect-[16/10] overflow-hidden">
                         <img alt="Real Estate"
                             class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
@@ -251,8 +253,8 @@
                     </div>
                 </div>
                 <!-- Card 5 -->
-                <div
-                    class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300">
+                <div class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="500">
                     <div class="relative aspect-[16/10] overflow-hidden">
                         <img alt="SaaS"
                             class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
@@ -279,8 +281,8 @@
                     </div>
                 </div>
                 <!-- Card 6 -->
-                <div
-                    class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300">
+                <div class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="600">
                     <div class="relative aspect-[16/10] overflow-hidden">
                         <img alt="Branding"
                             class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
@@ -308,7 +310,7 @@
                 </div>
             </div>
             <!-- Pagination -->
-            <div class="mt-16 flex items-center justify-center gap-2">
+            <div class="mt-16 flex items-center justify-center gap-2" data-aos="fade-up">
                 <button
                     class="w-10 h-10 flex items-center justify-center rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
                     <span class="material-symbols-outlined text-lg">chevron_left</span>
@@ -327,8 +329,7 @@
         </main>
 
         <!-- Footer -->
-        <footer class="bg-white border-t border-[#dae0e7] pt-20 pb-10" data-aos="fade-out" data-aos-easing="ease-out"
-            data-aos-duration="1000">
+        <footer class="bg-white border-t border-[#dae0e7] pt-20 pb-10" data-aos="fade-up">
             <div class="max-w-7xl mx-auto px-6 lg:px-20">
                 <div class="grid md:grid-cols-4 gap-12 mb-20">
                     <div class="flex flex-col gap-6">
@@ -404,7 +405,16 @@
             </div>
         </footer>
     </div>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="/js/casestudy.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 80,
+            easing: "ease-out-cubic",
+        });
+    </script>
 </body>
-<script src="/js/casestudy.js"></script>
 
 </html>

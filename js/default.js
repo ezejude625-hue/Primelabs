@@ -38,4 +38,9 @@ document.addEventListener("click", (e) => {
   }
 });
 
-AOS.init();
+AOS.init({
+  duration: 1000,
+  once: true,
+  offset: 80,
+  easing: "ease-out-cubic",
+});
