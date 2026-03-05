@@ -41,6 +41,32 @@ document.addEventListener("click", () => {
   menu.classList.remove("max-h-[500px]", "opacity-100");
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".filter-btn");
+  const cards = document.querySelectorAll(".project-card");
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      buttons.forEach((b) => {
+        b.classList.remove("border-primary", "text-primary", "font-bold");
+        b.classList.add("border-transparent");
+      });
+
+      btn.classList.add("border-primary", "text-primary", "font-bold");
+
+      const filter = btn.dataset.filter;
+
+      cards.forEach((card) => {
+        if (filter === "all" || card.dataset.category === filter) {
+          card.style.display = "flex";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+});
+
 AOS.init({
   duration: 1000,
   once: true,
