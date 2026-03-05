@@ -1,447 +1,611 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html class="light scroll-smooth" lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/about.css">
     <title>About Us | Primelabs Limited</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/about.css">
+
 </head>
 
-<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 backdrop-blur-md shadow-sm border-b border-[#e5e7eb]">
+<body class="bg-background-light font-display text-slate-900 antialiased">
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden">
 
-        <!-- Top bar -->
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="bg-primary p-1.5 rounded-lg">
-                    <!-- logo svg -->
-                    <svg class="w-6 h-6 text-white" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                        <path clip-rule="evenodd"
-                            d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
-                            fill="currentColor" fill-rule="evenodd"></path>
-                    </svg>
+        <!-- NAV -->
+        <nav class="sticky top-0 z-50 bg-white shadow-sm border-b border-[#e5e7eb]">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <a href="/index.html" class="flex items-center gap-3">
+                    <div class="bg-primary p-1.5 rounded-lg"><svg class="w-6 h-6 text-white" fill="none"
+                            viewBox="0 0 48 48">
+                            <path clip-rule="evenodd"
+                                d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
+                                fill="currentColor" fill-rule="evenodd" />
+                        </svg></div>
+                    <span class="text-xl font-extrabold tracking-tight text-primary">Primelabs</span>
+                </a>
+                <div class="hidden md:flex items-center gap-10">
+                    <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/service.html">Solutions</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/index.html#industries">Industries</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/casestudy.html">Casestudies</a>
+                    <a class="text-sm font-semibold text-accent" href="/about.html">About</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/contact.html">Contact</a>
+                    <button
+                        class="btn-ripple bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">Book
+                        a Demo</button>
                 </div>
-                <span class="text-xl font-extrabold tracking-tight text-primary">
-                    Primelabs
-                </span>
+                <div class="md:hidden cursor-pointer" id="menuBtn"><span
+                        class="material-symbols-outlined text-3xl text-primary">menu</span></div>
             </div>
-
-            <!-- Desktop menu -->
-            <div class="hidden md:flex items-center gap-10">
-                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
-                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/service.html">Solutions</a>
-                <a class="text-sm font-semibold hover:text-accent transition-colors"
-                    href="/index.html#industries">Industries</a>
-                <a class="text-sm font-semibold hover:text-accent transition-colors"
-                    href="/casestudy.html">Casestudies</a>
-                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/career.html">Career</a>
-                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/about.html">About</a>
-                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/contact.html">Contact</a>
-                <button
-                    class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
-                    id="ripple">
-                    Book a Demo
-                </button>
+            <div id="mobileMenu"
+                class="md:hidden overflow-hidden max-h-0 transition-all duration-500 ease-in-out border-t border-gray-200">
+                <div class="px-6 py-6 flex flex-col gap-5 bg-white">
+                    <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/service.html">Solutions</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/index.html#industries">Industries</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/casestudy.html">Casestudies</a>
+                    <a class="text-sm font-semibold text-accent" href="/about.html">About</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/contact.html">Contact</a>
+                    <button
+                        class="btn-ripple bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold w-full">Book a
+                        Demo</button>
+                </div>
             </div>
+        </nav>
 
-            <!-- Hamburger -->
-            <div class="md:hidden cursor-pointer" id="menuBtn">
-                <span class="material-symbols-outlined text-3xl">menu</span>
-            </div>
-        </div>
+        <main>
 
-        <!-- Mobile menu -->
-        <div id="mobileMenu"
-            class="md:hidden overflow-hidden max-h-0 transition-all duration-500 ease-in-out border-t border-gray-200">
+            <!-- HERO — Desktop -->
+            <section class="hidden md:flex relative py-20 overflow-hidden min-h-[82vh] items-center">
+                <div class="absolute inset-0">
+                    <img src="/asset/about.jpeg" alt="Primelabs about" class="w-full h-full object-cover" />
+                    <div class="absolute inset-0"
+                        style="background:linear-gradient(110deg,rgba(0,12,26,.90) 0%,rgba(0,31,61,.74) 48%,rgba(0,31,61,.40) 100%)">
+                    </div>
+                    <div class="absolute inset-0"
+                        style="background:radial-gradient(circle at 30% 40%,rgba(0,209,255,.08),transparent 50%)"></div>
+                </div>
+                <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full">
+                    <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                        <div data-aos="fade-right">
+                            <span
+                                class="inline-block px-3 py-1 text-xs font-bold tracking-widest backdrop-blur-md uppercase text-white bg-white/10 rounded-full mb-6">Our
+                                Story</span>
+                            <h1 class="text-4xl md:text-6xl font-black text-white leading-tight mb-6">Building Growth
+                                &amp; Control Systems for <span class="text-accent">Modern Businesses</span></h1>
+                            <p class="text-lg text-slate-200 mb-8 max-w-xl leading-relaxed">PrimeLabs helps businesses
+                                grow revenue, gain visibility, and operate with clarity by combining digital growth
+                                strategies with structured operational systems.</p>
+                            <a href="/contact.html"
+                                class="btn-ripple inline-flex items-center gap-2 bg-accent text-primary px-8 py-4 rounded-xl font-black hover:-translate-y-1 transition-all"
+                                style="box-shadow:0 12px 36px rgba(0,209,255,.3)">
+                                Book a Free Consultation <span
+                                    class="material-symbols-outlined text-lg">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            <div class="px-6 py-6 flex flex-col gap-6 bg-white">
-                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
-                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/service.html">Solutions</a>
-                <a class="text-sm font-semibold hover:text-accent transition-colors"
-                    href="/index.html#industries">Industries</a>
-                <a class="text-sm font-semibold hover:text-accent transition-colors"
-                    href="/casestudy.html">Casestudies</a>
-                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/career.html">Career</a>
-                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/about.html">About</a>
-                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/contact.html">Contact</a>
-                <button
-                    class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
-                    id="ripple">
-                    Book a Demo
-                </button>
-            </div>
-        </div>
-
-    </nav>
-
-    <!-- main -->
-    <main>
-        <!-- Hero Section -->
-        <section class="relative py-20 overflow-hidden">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+            <!-- HERO — Mobile -->
+            <section class="relative py-20 overflow-hidden md:hidden min-h-screen flex items-center">
+                <div class="absolute inset-0">
+                    <img src="/asset/about_mobile.jpeg" alt="Primelabs about" class="w-full h-full object-cover" />
+                    <div class="absolute inset-0"
+                        style="background:linear-gradient(180deg,rgba(0,12,26,.88) 0%,rgba(0,31,61,.80) 100%)"></div>
+                </div>
+                <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
                     <div data-aos="fade-right">
                         <span
-                            class="inline-block px-3 py-1 text-xs font-bold tracking-widest uppercase text-primary bg-primary/10 rounded-full mb-4">Our
+                            class="inline-block px-3 py-1 text-xs font-bold tracking-widest uppercase text-white bg-white/10 rounded-full mb-6">Our
                             Story</span>
-                        <h1 class="text-4xl md:text-6xl font-black text-slate-900 dark:text-white leading-tight mb-6">
-                            Empowering Businesses <br />Through <span class="text-primary">Tech.</span>
-                        </h1>
-                        <p class="text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-xl">
-                            Primelabs Limited was founded on the belief that technology should be an enabler, not a
-                            barrier. We bridge the gap between complex innovation and practical business growth.
-                        </p>
-                    </div>
-                    <div class="mt-12 lg:mt-0" data-aos="fade-left">
-                        <div class="relative h-96 w-full rounded-2xl overflow-hidden shadow-2xl"
-                            data-alt="Modern office building with glass facade reflection">
-                            <img alt="Corporate office interior" class="w-full h-full object-cover"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB18eDUmfsiYFXLHh2LaPDZvKI4fl5sJfNiL8T1p7b3v9wfqnytzYTmJA6W0Eg67GzfPAxbgMXHxUktOxO3MlsyrA2cPHSo6C69Iz58PPfwCCwwm_mtpZRhvmJ0TqhKD8sNIAexafQUnmxNkFDyrnnNe3W-mtwhvXulf2O1hb40P-dBWGsnnQEmOjfeyXAh7viRMyhI_O1lsMr8MZgnQnV4UcCvQwXimXB4vecjvdt0YK3c17HkMg6Mtp4ez-03cjn6dvdneuVGt9g" />
-                        </div>
+                        <h1 class="text-4xl font-black text-white leading-tight mb-6">Building Growth &amp; Control
+                            Systems for <span class="text-accent">Modern Businesses</span></h1>
+                        <p class="text-lg text-slate-200 mb-8 leading-relaxed">PrimeLabs helps businesses grow revenue,
+                            gain visibility, and operate with clarity by combining digital growth strategies with
+                            structured operational systems.</p>
+                        <a href="/contact.html"
+                            class="btn-ripple inline-flex items-center gap-2 bg-accent text-primary px-7 py-4 rounded-xl font-black">
+                            Book a Free Consultation <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- Mission & Vision -->
-        <section class="py-20 bg-slate-50 dark:bg-slate-900/50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="p-8 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm"
-                        data-aos="fade-up" data-aos-delay="150">
-                        <div
-                            class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
-                            <span class="material-symbols-outlined">rocket_launch</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
-                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
-                            To provide scalable, cutting-edge software solutions that allow businesses to automate,
-                            innovate, and grow without limits. We strive to make high-end enterprise technology
-                            accessible to the modern global market.
-                        </p>
-                    </div>
-                    <div class="p-8 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm"
-                        data-aos="fade-up" data-aos-delay="300">
-                        <div
-                            class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
-                            <span class="material-symbols-outlined">visibility</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">Our Vision</h3>
-                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
-                            To be the premier global partner for digital transformation, setting the standard for how
-                            technology is integrated into the core of sustainable business success and human-centric
-                            innovation.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Core Values -->
-        <section class="py-20">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Our Core Values</h2>
-                    <div class="w-20 h-1.5 bg-primary mx-auto rounded-full"></div>
-                </div>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Innovation -->
-                    <div class="flex flex-col gap-4 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark hover:border-primary/50 transition-colors group"
-                        data-aos="zoom-in" data-aos-delay="100">
-                        <div class="text-primary" data-icon="Lightbulb">
-                            <span
-                                class="material-symbols-outlined text-4xl group-hover:scale-110 transition-transform">lightbulb</span>
-                        </div>
-                        <h4 class="text-xl font-bold">Innovation</h4>
-                        <p class="text-slate-600 dark:text-slate-400">
-                            We don't just follow trends; we set them. Our team is constantly pushing the boundaries of
-                            what's possible with AI, cloud, and edge computing.
-                        </p>
-                    </div>
-                    <!-- Integrity -->
-                    <div class="flex flex-col gap-4 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark hover:border-primary/50 transition-colors group"
-                        data-aos="zoom-in" data-aos-delay="200">
-                        <div class="text-primary" data-icon="ShieldCheck">
-                            <span
-                                class="material-symbols-outlined text-4xl group-hover:scale-110 transition-transform">verified_user</span>
-                        </div>
-                        <h4 class="text-xl font-bold">Integrity</h4>
-                        <p class="text-slate-600 dark:text-slate-400">
-                            Transparency is at our core. We build long-term trust through ethical data practices and
-                            honest, clear communication with every partner.
-                        </p>
-                    </div>
-                    <!-- Scalability -->
-                    <div class="flex flex-col gap-4 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark hover:border-primary/50 transition-colors group"
-                        data-aos="zoom-in" data-aos-delay="300">
-                        <div class="text-primary" data-icon="TrendUp">
-                            <span
-                                class="material-symbols-outlined text-4xl group-hover:scale-110 transition-transform">trending_up</span>
-                        </div>
-                        <h4 class="text-xl font-bold">Scalability</h4>
-                        <p class="text-slate-600 dark:text-slate-400">
-                            Every line of code we write and every strategy we design is built to grow. We ensure your
-                            tech stack evolves as fast as your business does.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Leadership Section -->
-        <section class="py-20 bg-slate-100 dark:bg-slate-900">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col md:flex-row justify-between items-end mb-12">
-                    <div class="max-w-xl">
-                        <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Leadership Team</h2>
-                        <p class="text-slate-600 dark:text-slate-400">The visionaries behind Primelabs Limited, bringing
-                            decades of collective experience from world-class tech firms.</p>
-                    </div>
-                </div>
-                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Member 1 -->
-                    <div class="bg-background-light dark:bg-background-dark rounded-xl overflow-hidden shadow-sm group border border-slate-200 dark:border-slate-800"
-                        data-aos="fade-up" data-aos-delay="150">
-                        <div class="aspect-square relative overflow-hidden"
-                            data-alt="Professional headshot of male CEO in a suit">
-                            <img alt="CEO Portrait"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX3EvZHQIT5J7_FDTp5prmGXDEsE6zgcJbM6czoMOqljrJQEqVriqkK4d0BXxc7sE1E3X_4PQTfGue-PQ9RPdwhgsYNN3TjL7ACA9tpiTwBZxzfyPm-OP7lRwYia7ouOmAdHIbKv16C29ASBrd6UtgXMF1WMdun65dRiUpSmhsjs85wVh6MWi39OZWX9mH1qQxA_1cbpKxxNiOboh1GVODOpXnG1rZ_p_3KWUAviF_CSo3dE_EcVPTlgFqzDQIPT_WGeOIdazOapg" />
-                        </div>
-                        <div class="p-5">
-                            <h5 class="font-bold text-lg">Arthur Sterling</h5>
-                            <p class="text-primary text-sm font-semibold mb-2">Founder &amp; CEO</p>
-                            <p class="text-xs text-slate-500 dark:text-slate-400">Former Tech Lead at Global Cloud
-                                Systems with 15+ years in architecture.</p>
-                        </div>
-                    </div>
-                    <!-- Member 2 -->
-                    <div class="bg-background-light dark:bg-background-dark rounded-xl overflow-hidden shadow-sm group border border-slate-200 dark:border-slate-800"
-                        data-aos="fade-up" data-aos-delay="300">
-                        <div class="aspect-square relative overflow-hidden"
-                            data-alt="Professional headshot of female CTO in modern office">
-                            <img alt="CTO Portrait"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-j4GlJMFffGvx8AXBpsbFgMBouH3XDZadv4mmfKbDLTdgkqlGb7L6S42KTr_fyx7QyKd8XrKMhupr-GO7zF-CqaN-FuUO25ewo8-sFLuAu8bOg7tNdXxmEJDbL6bcJ0TC14NR0DN95ZKtXoHVdmZCQbri17uobpUlfrsM4ZY8e0begf29JFh7Xalqba7zn9Vhx0i4W3dBhwaFN23SVm-E49BOFE4QBoBqMt9Reonwlbg0LvgBGqBCtbSJmmGSSB-VhSLO5b30aIQ" />
-                        </div>
-                        <div class="p-5">
-                            <h5 class="font-bold text-lg">Sarah Chen</h5>
-                            <p class="text-primary text-sm font-semibold mb-2">Chief Tech Officer</p>
-                            <p class="text-xs text-slate-500 dark:text-slate-400">Expert in AI integration and neural
-                                network optimization.</p>
-                        </div>
-                    </div>
-                    <!-- Member 3 -->
-                    <div class="bg-background-light dark:bg-background-dark rounded-xl overflow-hidden shadow-sm group border border-slate-200 dark:border-slate-800"
-                        data-aos="fade-up" data-aos-delay="450">
-                        <div class="aspect-square relative overflow-hidden"
-                            data-alt="Professional headshot of male COO in creative studio">
-                            <img alt="COO Portrait"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMQBii4ilf4e6uqF2CxLqGBqRuMVj0vuuJJfNHGiPAcOKh-vknCke5pkPMMtofEb95wrVgrWCjlxH7LwoN57MI5TOmgedmMnnPzGspCpKTCfZ26PcyhhF6XuqotyGPAGKrEPfFD0DqnZOGcvMJ_NapqJxlfQfY9ajRB-cug1_T3t1fy7oxFDbE3CDzTr-qmorlsT6gD254xpz0aBEeczy0nsyTmNnEkD3jZF42t5hAOABjnZk6FpdrG2ZbL4PwUcwMWvQEVSdRz-A" />
-                        </div>
-                        <div class="p-5">
-                            <h5 class="font-bold text-lg">Marcus Wright</h5>
-                            <p class="text-primary text-sm font-semibold mb-2">Operations Director</p>
-                            <p class="text-xs text-slate-500 dark:text-slate-400">Streamlining agile methodologies for
-                                rapid deployment cycles.</p>
-                        </div>
-                    </div>
-                    <!-- Member 4 -->
-                    <div class="bg-background-light dark:bg-background-dark rounded-xl overflow-hidden shadow-sm group border border-slate-200 dark:border-slate-800"
-                        data-aos="fade-up" data-aos-delay="600">
-                        <div class="aspect-square relative overflow-hidden"
-                            data-alt="Professional headshot of female Head of Design">
-                            <img alt="Design Lead Portrait"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYZ0uH8Hw18xAST9iuPLwEJNGFRs2NokAbKggLVZa7naHbihWAueXFfbeMB4u5dircYdGD54Lha7E2is5RzQ1xIgNw4_dkHbyXfZB4i1ch-4u-vBIy2pE-itZFOxhIzoWTk1h0MBvm3TNKwHGrJaCeMVByDYWpC9CLHrLu4dmKeQaN0w4zqHDi5vSbTEPvwhjPLStX9mq3wWNV1tO0chxMV0GTMzgXQjsB3RBIqgBz8NIb8dRfvmEXkvFP4Gri_DlvwzDkAKOSUyM" />
-                        </div>
-                        <div class="p-5">
-                            <h5 class="font-bold text-lg">Elena Rodriguez</h5>
-                            <p class="text-primary text-sm font-semibold mb-2">Head of Product</p>
-                            <p class="text-xs text-slate-500 dark:text-slate-400">Dedicated to crafting intuitive user
-                                experiences and interfaces.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Brief History / Journey -->
-        <section class="py-20">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12" data-aos="fade-up">
-                    <h2 class="text-3xl font-bold mb-2">Our Journey</h2>
-                    <p class="text-slate-500">Milestones that shaped Primelabs Limited</p>
-                </div>
-                <div class="space-y-12">
-                    <div class="flex gap-6 items-start relative" data-aos="fade-left" data-aos-delay="150">
-                        <div class="absolute top-10 bottom-0 left-6 w-0.5 bg-slate-200 dark:bg-slate-800"></div>
-                        <div
-                            class="z-10 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0 shadow-lg shadow-primary/20">
-                            2018
-                        </div>
-                        <div class="pt-2">
-                            <h4 class="text-xl font-bold mb-2">The Spark</h4>
-                            <p class="text-slate-600 dark:text-slate-400">Founded in a small workshop in Palo Alto,
-                                Primelabs began as a specialized consultancy for cloud infrastructure, helping startups
-                                scale their MVP architectures.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-6 items-start relative" data-aos="fade-right" data-aos-delay="300">
-                        <div class="absolute top-10 bottom-0 left-6 w-0.5 bg-slate-200 dark:bg-slate-800"></div>
-                        <div
-                            class="z-10 w-12 h-12 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold flex-shrink-0 border-2 border-primary">
-                            2020
-                        </div>
-                        <div class="pt-2">
-                            <h4 class="text-xl font-bold mb-2">Global Pivot</h4>
-                            <p class="text-slate-600 dark:text-slate-400">Expansion into enterprise-grade SaaS. We
-                                launched our flagship automation platform which served over 50 Fortune 500 companies
-                                within its first year.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-6 items-start" data-aos="fade-left" data-aos-delay="450">
-                        <div
-                            class="z-10 w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold flex-shrink-0 border-2 border-primary/30">
-                            2024
-                        </div>
-                        <div class="pt-2">
-                            <h4 class="text-xl font-bold mb-2">The Future Now</h4>
-                            <p class="text-slate-600 dark:text-slate-400">Primelabs Limited now operates in 4
-                                continents, leading the charge in sustainable AI and decentralized business solutions.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- CTA Section -->
-        <section class="py-20 bg-slate-50 dark:bg-slate-900/50" data-aos="flip-up">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div
-                    class="bg-white dark:bg-slate-800 rounded-3xl p-8 md:p-16 border border-slate-200 dark:border-slate-700 shadow-xl overflow-hidden relative">
-                    <div class="relative z-10 max-w-2xl">
-                        <span class="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">We're
-                            Hiring</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-6">Want to build
-                            the future of tech? Join our team.</h2>
-                        <p class="text-lg text-slate-600 dark:text-slate-400 mb-8">
-                            At Primelabs, we're always looking for visionaries, creators, and problem-solvers who want
-                            to make a real impact on the global tech landscape. Check out our open roles and find your
-                            fit.
-                        </p>
-                        <div class="flex flex-wrap gap-4">
-                            <a class="bg-primary text-white px-8 py-4 rounded-xl font-bold hover:opacity-90 transition-all shadow-lg shadow-primary/25 flex items-center gap-2"
-                                href="#">
-                                View Openings
-                                <span class="material-symbols-outlined text-xl">arrow_forward</span>
-                            </a>
-                            <a class="bg-white dark:bg-slate-700 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-600 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 dark:hover:bg-slate-600 transition-colors"
-                                href="#">
-                                Our Culture
-                            </a>
-                        </div>
-                    </div>
-                    <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-                    <div class="absolute -right-10 top-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
-                </div>
-            </div>
-        </section>
-        <section class="py-16 bg-primary" data-aos="zoom-in">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl font-black text-white mb-6">Ready to scale your business?</h2>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <button
-                        class="bg-white text-primary px-8 py-3 rounded-xl font-bold hover:bg-slate-50 transition-colors">Contact
-                        Sales</button>
-                    <button
-                        class="bg-primary-dark/20 border-2 border-white/30 text-white px-8 py-3 rounded-xl font-bold hover:bg-white/10 transition-colors">See
-                        Our Solutions</button>
-                </div>
-            </div>
-        </section>
-    </main>
+            </section>
 
-    <!-- Footer -->
-    <footer class="bg-white border-t border-[#dae0e7] pt-20 pb-10" data-aos="fade-up">
-        <div class="max-w-7xl mx-auto px-6 lg:px-20">
-            <div class="grid md:grid-cols-4 gap-12 mb-20">
-                <div class="flex flex-col gap-6">
-                    <div class="flex items-center gap-3">
-                        <div class="text-primary">
-                            <svg class="size-6" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                                <path clip-rule="evenodd"
-                                    d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
-                                    fill="currentColor" fill-rule="evenodd"></path>
-                            </svg>
+            <!-- SECTION 1 — WHO WE ARE -->
+            <section class="py-20 bg-slate-50">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="grid md:grid-cols-2 gap-8 items-start">
+                        <div class="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm" data-aos="fade-up"
+                            data-aos-delay="150">
+                            <div
+                                class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
+                                <span class="material-symbols-outlined">corporate_fare</span>
+                            </div>
+                            <h3 class="text-2xl font-black mb-4">A Systems-Driven Business Solutions Company</h3>
+                            <p class="text-slate-600 leading-relaxed mb-6">PrimeLabs is a digital business solutions
+                                company focused on helping businesses grow sustainably and operate efficiently.</p>
+                            <p class="text-slate-600 font-semibold mb-4">We specialize in building two core systems:</p>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-start gap-3 p-4 rounded-xl"
+                                    style="background:rgba(0,209,255,.06);border:1px solid rgba(0,209,255,.2)">
+                                    <span class="material-symbols-outlined text-accent flex-shrink-0 mt-0.5">hub</span>
+                                    <div>
+                                        <p class="text-primary font-bold text-sm">Growth Systems</p>
+                                        <p class="text-slate-600 text-sm leading-relaxed">Designed to increase
+                                            visibility, attract customers, and convert attention into revenue.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3 p-4 rounded-xl"
+                                    style="background:rgba(0,31,61,.04);border:1px solid rgba(0,31,61,.1)">
+                                    <span
+                                        class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5">settings_input_component</span>
+                                    <div>
+                                        <p class="text-primary font-bold text-sm">Control Systems</p>
+                                        <p class="text-slate-600 text-sm leading-relaxed">Designed to track operations,
+                                            reduce losses, and provide clear business data.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <h2 class="text-primary text-lg font-extrabold">Primelabs</h2>
+                        <div class="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm" data-aos="fade-up"
+                            data-aos-delay="300">
+                            <div
+                                class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
+                                <span class="material-symbols-outlined">flag</span>
+                            </div>
+                            <h3 class="text-2xl font-black mb-4">Our Focus</h3>
+                            <p class="text-slate-600 leading-relaxed mb-6">Our focus is not tools or trends.</p>
+                            <div class="p-5 rounded-xl bg-primary text-white mb-6">
+                                <p class="font-black text-lg leading-snug">Our focus is <span
+                                        class="text-accent">measurable business outcomes.</span></p>
+                            </div>
+                            <p class="text-slate-600 leading-relaxed">Every Growth System and Control System we build is
+                                designed around one question: <strong class="text-primary">what result does your
+                                    business actually need?</strong></p>
+                            <a href="/service.html"
+                                class="inline-flex items-center gap-2 mt-6 text-accent font-bold text-sm hover:gap-3 transition-all">
+                                Explore our systems <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                            </a>
+                        </div>
                     </div>
-                    <p class="text-primary text-md leading-relaxed">
-                        Leading enterprise-grade technology and automation solutions for high-growth businesses.
-                    </p>
                 </div>
-                <div>
-                    <h4 class="text-primary font-bold mb-6">Services</h4>
-                    <ul class="flex flex-col gap-4 text-md text-primary">
-                        <li><a class="hover:text-[#000f1d] transition-colors" href="/casesstudy/business.html">Business
-                                Management Systems</a>
-                        </li>
-                        <li><a class="hover:text-[#000f1d] transition-colors" href="/casesstudy/web.html">Web & App
-                                Development</a></li>
-                        <li><a class="hover:text-[#000f1d] transition-colors" href="/casesstudy/branding.html">Branding
-                                & Digital Presence</a>
-                        </li>
-                    </ul>
+            </section>
+
+            <!-- SECTION 2 — PHILOSOPHY -->
+            <section class="py-20">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="text-center mb-16" data-aos="fade-up">
+                        <h2 class="text-3xl font-black text-slate-900 mb-4">Structure Creates Growth. <span
+                                class="text-accent">Data Creates Control.</span></h2>
+                        <p class="text-slate-500 max-w-2xl mx-auto leading-relaxed">We believe most businesses
+                            don&apos;t fail because they lack effort &mdash; they fail because they lack systems.</p>
+                        <div class="w-20 h-1.5 bg-accent mx-auto rounded-full mt-5"></div>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+                        <div class="value-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="text-primary v-icon"><span
+                                    class="material-symbols-outlined text-4xl">account_tree</span></div>
+                            <h4 class="text-lg font-black">Unstructured Marketing</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">Content without strategy creates noise,
+                                not customers. Structure turns effort into real results.</p>
+                        </div>
+                        <div class="value-card" data-aos="zoom-in" data-aos-delay="175">
+                            <div class="text-primary v-icon"><span
+                                    class="material-symbols-outlined text-4xl">edit_note</span></div>
+                            <h4 class="text-lg font-black">Manual Operations</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">Paper and memory-based tracking creates
+                                errors, delays, and invisible losses every day.</p>
+                        </div>
+                        <div class="value-card" data-aos="zoom-in" data-aos-delay="250">
+                            <div class="text-primary v-icon"><span
+                                    class="material-symbols-outlined text-4xl">visibility_off</span></div>
+                            <h4 class="text-lg font-black">Poor Tracking</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">Without data, you can&apos;t spot problems
+                                early or replicate what&apos;s working in your business.</p>
+                        </div>
+                        <div class="value-card" data-aos="zoom-in" data-aos-delay="325">
+                            <div class="text-primary v-icon"><span
+                                    class="material-symbols-outlined text-4xl">query_stats</span></div>
+                            <h4 class="text-lg font-black">Unclear Performance Data</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">Decisions without analytics lead to wasted
+                                budgets and missed growth opportunities.</p>
+                        </div>
+                    </div>
+                    <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
+                        <div class="p-7 rounded-2xl border border-slate-200 bg-white shadow-sm">
+                            <span class="material-symbols-outlined text-accent text-4xl mb-3 block">bolt</span>
+                            <p class="text-primary font-black text-xl mb-2">At PrimeLabs, we don&apos;t just deliver
+                                services.</p>
+                            <p class="text-slate-600 leading-relaxed">We design structured systems that remove
+                                guesswork, reduce inefficiency, and support long-term growth.</p>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <h4 class="text-primary font-bold mb-6">Company</h4>
-                    <ul class="flex flex-col gap-4 text-md text-primary">
-                        <li><a class="hover:text-[#000f1d] transition-colors" href="/about.html">About Us</a></li>
-                        <li><a class="hover:text-[#000f1d] transition-colors" href="/casestudy.html">Case Studies</a>
-                        </li>
-                        <li><a class="hover:text-[#000f1d] transition-colors"
-                                href="/index.html#industries">Industries</a></li>
-                    </ul>
+            </section>
+
+            <!-- SECTION 3 — HOW WE THINK -->
+            <section class="py-20 bg-slate-100">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                        <div class="max-w-xl">
+                            <h2 class="text-3xl font-black text-slate-900 mb-3">Business First. Technology Second.</h2>
+                            <p class="text-slate-600 leading-relaxed">Every solution we build starts with understanding
+                                your business — before we ever touch technology.</p>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm" data-aos="fade-up"
+                            data-aos-delay="100">
+                            <h3 class="text-xl font-black text-primary mb-6 flex items-center gap-3">
+                                <span class="material-symbols-outlined text-accent text-2xl">search</span>Every solution
+                                starts with understanding:
+                            </h3>
+                            <div class="flex flex-col gap-4">
+                                <div class="flex items-center gap-3 p-3 rounded-xl" style="background:#f5f7f8"><span
+                                        class="material-symbols-outlined text-accent">attach_money</span>
+                                    <p class="font-semibold text-primary text-sm">How your business makes money</p>
+                                </div>
+                                <div class="flex items-center gap-3 p-3 rounded-xl" style="background:#f5f7f8"><span
+                                        class="material-symbols-outlined text-accent">explore</span>
+                                    <p class="font-semibold text-primary text-sm">Where opportunities are being missed
+                                    </p>
+                                </div>
+                                <div class="flex items-center gap-3 p-3 rounded-xl" style="background:#f5f7f8"><span
+                                        class="material-symbols-outlined text-accent">leak_add</span>
+                                    <p class="font-semibold text-primary text-sm">Where time or revenue is leaking</p>
+                                </div>
+                            </div>
+                            <div class="mt-6 p-4 rounded-xl border-l-4 border-accent"
+                                style="background:rgba(0,209,255,.05)">
+                                <p class="text-primary font-semibold text-sm">Technology is simply the tool.
+                                    <strong>Results are the goal.</strong>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm" data-aos="fade-up"
+                            data-aos-delay="250">
+                            <h3 class="text-xl font-black text-primary mb-6 flex items-center gap-3">
+                                <span
+                                    class="material-symbols-outlined text-accent text-2xl">align_items_stretch</span>Every
+                                system we build is aligned with:
+                            </h3>
+                            <div class="flex flex-col gap-4">
+                                <div class="flex items-center gap-3 p-4 rounded-xl bg-primary text-white">
+                                    <span class="material-symbols-outlined text-accent">trending_up</span>
+                                    <div>
+                                        <p class="font-black text-sm">Revenue Impact</p>
+                                        <p class="text-white/60 text-xs mt-0.5">Every decision traces back to money in,
+                                            money out.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3 p-4 rounded-xl bg-primary text-white">
+                                    <span class="material-symbols-outlined text-accent">visibility</span>
+                                    <div>
+                                        <p class="font-black text-sm">Operational Clarity</p>
+                                        <p class="text-white/60 text-xs mt-0.5">You always know what&apos;s happening in
+                                            your business.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3 p-4 rounded-xl" style="background:#00d1ff">
+                                    <span class="material-symbols-outlined text-primary">scale</span>
+                                    <div>
+                                        <p class="font-black text-sm text-primary">Scalability</p>
+                                        <p class="text-primary/70 text-xs mt-0.5">Built to grow with you, not break
+                                            under pressure.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <h4 class="text-primary font-bold mb-6">Contact</h4>
-                    <ul class="flex flex-col gap-4 text-md text-primary">
-                        <li class="flex items-center gap-2">
-                            <span class="material-symbols-outlined text-sm">mail</span>
-                            info@priemlabsbusinesssolution.com
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="material-symbols-outlined text-sm">phone</span>
-                            09066363260
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="material-symbols-outlined text-sm mt-0.5">location_on</span>
-                            <span>Shop S9/10, Last Floor, Cozyez Mall, 43 Presidential Rd, Asata, Enugu 400102,Enugu,
-                                Nigeria</span>
-                        </li>
-                    </ul>
+            </section>
+
+            <!-- SECTION 4 — WHY CHOOSE US -->
+            <section class="py-20">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="text-center mb-16" data-aos="fade-up">
+                        <h2 class="text-3xl font-black text-slate-900 mb-4">Why Choose PrimeLabs?</h2>
+                        <div class="w-20 h-1.5 bg-accent mx-auto rounded-full"></div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="why-item" data-aos="zoom-in" data-aos-delay="100">
+                            <div
+                                class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="material-symbols-outlined">category</span>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-black text-slate-900 mb-2">Systems, Not Random Services</h4>
+                                <p class="text-slate-600 text-sm leading-relaxed">We don&apos;t sell isolated tasks. We
+                                    build connected systems that work together to drive your business forward as a
+                                    whole.</p>
+                            </div>
+                        </div>
+                        <div class="why-item" data-aos="zoom-in" data-aos-delay="175">
+                            <div
+                                class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="material-symbols-outlined">show_chart</span>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-black text-slate-900 mb-2">Revenue-Focused Approach</h4>
+                                <p class="text-slate-600 text-sm leading-relaxed">Every strategy or system is designed
+                                    to impact growth or efficiency. We measure our success by your business outcomes.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="why-item" data-aos="zoom-in" data-aos-delay="250">
+                            <div
+                                class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="material-symbols-outlined">public</span>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-black text-slate-900 mb-2">Local Market Understanding</h4>
+                                <p class="text-slate-600 text-sm leading-relaxed">We understand the realities,
+                                    challenges, and opportunities in the Nigerian business environment — and build for
+                                    it.</p>
+                            </div>
+                        </div>
+                        <div class="why-item" data-aos="zoom-in" data-aos-delay="325">
+                            <div
+                                class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="material-symbols-outlined">handshake</span>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-black text-slate-900 mb-2">Ongoing Partnership</h4>
+                                <p class="text-slate-600 text-sm leading-relaxed">We don&apos;t disappear after setup.
+                                    We provide continuous support, optimization, and guidance as your business evolves.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 5 — CASE EXPERIENCE -->
+            <section class="py-20 bg-slate-50">
+                <div class="max-w-4xl mx-auto px-6">
+                    <div class="text-center mb-12" data-aos="fade-up">
+                        <h2 class="text-3xl font-black mb-2">Proven in Real Business Environments</h2>
+                        <p class="text-slate-500">Milestones that shaped PrimeLabs</p>
+                    </div>
+                    <div class="space-y-12">
+                        <div class="flex gap-6 items-start relative" data-aos="fade-left" data-aos-delay="150">
+                            <div class="absolute top-12 bottom-0 left-6 w-0.5 bg-slate-200"></div>
+                            <div class="tl-dot bg-primary text-white shadow-lg shadow-primary/25">Est.</div>
+                            <div class="pt-2">
+                                <h4 class="text-xl font-black mb-2">PrimeLabs Founded</h4>
+                                <p class="text-slate-600 leading-relaxed">PrimeLabs was established with a clear focus:
+                                    help Nigerian businesses grow and operate efficiently through structured digital
+                                    Growth and Control Systems &mdash; not random services.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start relative" data-aos="fade-right" data-aos-delay="300">
+                            <div class="absolute top-12 bottom-0 left-6 w-0.5 bg-slate-200"></div>
+                            <div class="tl-dot border-2 border-primary text-primary font-black"
+                                style="background:rgba(0,31,61,.08)">2024</div>
+                            <div class="pt-2">
+                                <h4 class="text-xl font-black mb-3">Qodebyte Academy</h4>
+                                <p class="text-slate-600 leading-relaxed mb-4">We helped Qodebyte Academy implement a
+                                    structured Growth System. Strategic content and visibility systems led to consistent
+                                    growth in enrollments &mdash; demonstrating the measurable impact of a properly
+                                    structured digital strategy.</p>
+                                <span
+                                    class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold"
+                                    style="background:rgba(0,209,255,.1);color:#00a8cc;border:1px solid rgba(0,209,255,.3)"><span
+                                        class="material-symbols-outlined" style="font-size:14px">info</span>Detailed
+                                    results available during consultation</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start" data-aos="fade-left" data-aos-delay="450">
+                            <div class="tl-dot border-2 font-black"
+                                style="background:rgba(0,209,255,.1);border-color:rgba(0,209,255,.4);color:#00d1ff">Now
+                            </div>
+                            <div class="pt-2">
+                                <h4 class="text-xl font-black mb-2">Expanding Across Industries</h4>
+                                <p class="text-slate-600 leading-relaxed">PrimeLabs now serves gyms, retail stores,
+                                    hotels, clinics, educational institutions, and service businesses across Nigeria
+                                    &mdash; building systems that create real operational clarity and revenue growth.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 6 — OUR TEAM -->
+            <section class="py-20 bg-slate-100">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                        <div class="max-w-xl">
+                            <h2 class="text-3xl font-black text-slate-900 mb-3">Our Team</h2>
+                            <p class="text-slate-600">PrimeLabs is powered by a multidisciplinary team focused on
+                                execution and results.</p>
+                        </div>
+                    </div>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="team-card" data-aos="fade-up" data-aos-delay="150">
+                            <div
+                                class="aspect-square relative overflow-hidden bg-primary/5 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-primary/20"
+                                    style="font-size:90px">person</span>
+                            </div>
+                            <div class="p-5">
+                                <h5 class="font-black text-lg">Founder / Director</h5>
+                                <p class="text-accent text-sm font-semibold mb-2">Business Strategy &amp; Oversight</p>
+                                <p class="text-xs text-slate-500">Business systems, strategy, and growth oversight
+                                    across all client engagements.</p>
+                            </div>
+                        </div>
+                        <div class="team-card" data-aos="fade-up" data-aos-delay="250">
+                            <div
+                                class="aspect-square relative overflow-hidden bg-primary/5 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-primary/20"
+                                    style="font-size:90px">code</span>
+                            </div>
+                            <div class="p-5">
+                                <h5 class="font-black text-lg">Software &amp; Systems Team</h5>
+                                <p class="text-accent text-sm font-semibold mb-2">Control Systems Engineering</p>
+                                <p class="text-xs text-slate-500">Builds and maintains scalable control systems for
+                                    business operations and data tracking.</p>
+                            </div>
+                        </div>
+                        <div class="team-card" data-aos="fade-up" data-aos-delay="350">
+                            <div
+                                class="aspect-square relative overflow-hidden bg-primary/5 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-primary/20"
+                                    style="font-size:90px">campaign</span>
+                            </div>
+                            <div class="p-5">
+                                <h5 class="font-black text-lg">Growth &amp; Content Team</h5>
+                                <p class="text-accent text-sm font-semibold mb-2">Visibility &amp; Acquisition</p>
+                                <p class="text-xs text-slate-500">Executes visibility and customer acquisition
+                                    strategies across digital channels.</p>
+                            </div>
+                        </div>
+                        <div class="team-card" data-aos="fade-up" data-aos-delay="450">
+                            <div
+                                class="aspect-square relative overflow-hidden bg-primary/5 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-primary/20"
+                                    style="font-size:90px">headset_mic</span>
+                            </div>
+                            <div class="p-5">
+                                <h5 class="font-black text-lg">Support &amp; Operations Team</h5>
+                                <p class="text-accent text-sm font-semibold mb-2">Client Delivery</p>
+                                <p class="text-xs text-slate-500">Ensures smooth delivery and client support for all
+                                    active engagements.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-center text-slate-400 text-sm mt-8">Professional photos can be included to strengthen
+                        trust and credibility.</p>
+                </div>
+            </section>
+
+            <!-- SECTION 7 — CALL TO ACTION -->
+            <section class="py-20 bg-slate-50" data-aos="flip-left">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div
+                        class="bg-white rounded-3xl p-8 md:p-16 border border-slate-200 shadow-xl overflow-hidden relative">
+                        <div class="relative z-10 max-w-2xl">
+                            <span class="text-accent font-bold tracking-widest uppercase text-sm mb-4 block">Let&apos;s
+                                Get Started</span>
+                            <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-6">Let&apos;s Build Systems
+                                That Work for Your Business</h2>
+                            <p class="text-lg text-slate-600 mb-8 leading-relaxed">If you want better visibility,
+                                stronger operations, and clearer data &mdash; we&apos;re ready to help. Book a free
+                                business audit and let&apos;s start with the right diagnosis.</p>
+                            <div class="flex flex-wrap gap-4">
+                                <a href="/contact.html"
+                                    class="btn-ripple bg-primary text-white px-8 py-4 rounded-xl font-black hover:opacity-90 transition-all shadow-lg shadow-primary/25 flex items-center gap-2">
+                                    Book Your Free Business Audit
+                                    <span class="material-symbols-outlined text-xl">arrow_forward</span>
+                                </a>
+                                <a href="/contact.html"
+                                    class="bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 transition-colors">Contact
+                                    Us</a>
+                            </div>
+                        </div>
+                        <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+                        <div class="absolute -right-10 top-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-16 bg-primary" data-aos="zoom-in">
+                <div class="max-w-7xl mx-auto px-6 text-center">
+                    <h2 class="text-3xl font-black text-white mb-6">Ready to take control of your business?</h2>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="/contact.html"
+                            class="btn-ripple bg-white text-primary px-8 py-3.5 rounded-xl font-black hover:bg-slate-50 transition-colors">Book
+                            a Free Consultation</a>
+                        <a href="/service.html"
+                            class="border-2 border-white/30 text-white px-8 py-3.5 rounded-xl font-bold hover:bg-white/10 transition-colors">See
+                            Our Solutions</a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="bg-white border-t border-[#dae0e7] pt-20 pb-10">
+            <div class="max-w-7xl mx-auto px-6 lg:px-20">
+                <div class="grid md:grid-cols-4 gap-12 mb-20">
+                    <div class="flex flex-col gap-6">
+                        <div class="flex items-center gap-3">
+                            <div class="text-primary"><svg class="size-6" fill="none" viewBox="0 0 48 48">
+                                    <path clip-rule="evenodd"
+                                        d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
+                                        fill="currentColor" fill-rule="evenodd" />
+                                </svg></div>
+                            <h2 class="text-primary text-lg font-extrabold">Primelabs</h2>
+                        </div>
+                        <p class="text-primary text-sm leading-relaxed">Leading enterprise-grade technology and
+                            automation solutions for high-growth businesses.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-primary font-bold mb-6 text-xs uppercase tracking-wider">Services</h4>
+                        <ul class="flex flex-col gap-4 text-sm text-primary/80">
+                            <li><a class="hover:text-primary transition-colors" href="/service/control.html">Control
+                                    Systems</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="/service/growth.html">Growth
+                                    Systems</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="/service.html">All Solutions</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-primary font-bold mb-6 text-xs uppercase tracking-wider">Company</h4>
+                        <ul class="flex flex-col gap-4 text-sm text-primary/80">
+                            <li><a class="hover:text-primary transition-colors" href="/about.html">About Us</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="/casestudy.html">Case Studies</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors"
+                                    href="/index.html#industries">Industries</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-primary font-bold mb-6 text-xs uppercase tracking-wider">Contact</h4>
+                        <ul class="flex flex-col gap-4 text-sm text-primary/80">
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-sm text-primary">mail</span>info@primelabsbusinesssolution.com
+                            </li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-sm text-primary">phone</span>09066363260</li>
+                            <li class="flex items-start gap-2"><span
+                                    class="material-symbols-outlined text-sm text-primary mt-0.5">location_on</span><span>Shop
+                                    S9/10, Cozyez Mall, 43 Presidential Rd, Asata, Enugu, Nigeria</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-[#dae0e7] gap-4">
+                    <p class="text-sm text-primary">&copy; 2024 Primelabs Limited. All rights reserved.</p>
+                    <div class="flex gap-6"><a class="text-sm text-primary/80 hover:text-primary transition-colors"
+                            href="#">Privacy Policy</a><a
+                            class="text-sm text-primary/80 hover:text-primary transition-colors" href="#">Terms of
+                            Service</a></div>
                 </div>
             </div>
-            <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-[#dae0e7] gap-4">
-                <p class="text-mds text-primary">© 2024 Primelabs Limited. All rights reserved.</p>
-                <div class="flex gap-6">
-                    <a class="text-md text-primary hover:text-[#000f1d] transition-colors" href="#">Privacy Policy</a>
-                    <a class="text-md text-primary hover:text-[#000f1d] transition-colors" href="#">Terms of Service</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        </footer>
+
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/js/about.js"></script>
 </body>
 

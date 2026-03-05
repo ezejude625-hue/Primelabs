@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Growth Systems | Primelabs Limited</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/growth.css">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav class="sticky top-0 z-50 bg-white shadow-sm border-b border-[#e5e7eb]">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="/index.html" class="flex items-center gap-3">
+                <div class="bg-primary p-1.5 rounded-lg">
+                    <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                            d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
+                            fill="currentColor" fill-rule="evenodd" />
+                    </svg>
+                </div>
+                <span class="text-xl font-extrabold tracking-tight text-primary">Primelabs</span>
+            </a>
+            <div class="hidden md:flex items-center gap-10">
+                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
+                <a class="text-sm font-semibold text-accent" href="/service.html">Solutions</a>
+                <a class="text-sm font-semibold hover:text-accent transition-colors"
+                    href="/index.html#industries">Industries</a>
+                <a class="text-sm font-semibold hover:text-accent transition-colors"
+                    href="/casestudy.html">Casestudies</a>
+                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/career.html">Career</a>
+                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/about.html">About</a>
+                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/contact.html">Contact</a>
+                <button
+                    class="btn-ripple bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">Book
+                    a Demo</button>
+            </div>
+            <div class="md:hidden cursor-pointer" id="menuBtn">
+                <span class="material-symbols-outlined text-3xl text-primary">menu</span>
+            </div>
+        </div>
+        <div id="mobileMenu"
+            class="md:hidden overflow-hidden max-h-0 transition-all duration-500 ease-in-out border-t border-gray-200">
+            <div class="px-6 py-6 flex flex-col gap-5 bg-white">
+                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
+                <a class="text-sm font-semibold text-accent" href="/service.html">Solutions</a>
+                <a class="text-sm font-semibold hover:text-accent transition-colors"
+                    href="/index.html#industries">Industries</a>
+                <a class="text-sm font-semibold hover:text-accent transition-colors"
+                    href="/casestudy.html">Casestudies</a>
+                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/career.html">Career</a>
+                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/about.html">About</a>
+                <a class="text-sm font-semibold hover:text-accent transition-colors" href="/contact.html">Contact</a>
+                <button class="btn-ripple bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold w-full">Book a
+                    Demo</button>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero-bg min-h-[94vh] flex items-center">
+        <div class="hero-grid"></div>
+        <div class="relative max-w-7xl mx-auto px-6 lg:px-20 w-full py-24">
+            <div class="absolute inset-0">
+                <img src="/asset/2.png" alt="Primelabs about" class="w-full h-full object-cover" />
+                <div class="absolute inset-0"
+                    style="background:linear-gradient(110deg,rgba(0,12,26,.90) 0%,rgba(0,31,61,.74) 48%,rgba(0,31,61,.40) 100%)">
+                </div>
+                <div class="absolute inset-0"
+                    style="background:radial-gradient(circle at 30% 40%,rgba(0,209,255,.08),transparent 50%)"></div>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <!-- Left: Copy -->
+                <div class="flex flex-col gap-7 text-white" data-aos="fade-right" data-aos-duration="800">
+                    <div class="flex items-center gap-2 text-xs font-semibold text-white/40 uppercase tracking-widest">
+                        <a href="/index.html" class="hover:text-accent transition-colors">Home</a>
+                        <span class="material-symbols-outlined" style="font-size:14px">chevron_right</span>
+                        <a href="/service.html" class="hover:text-accent transition-colors">Solutions</a>
+                        <span class="material-symbols-outlined" style="font-size:14px">chevron_right</span>
+                        <span class="text-accent">Growth Systems</span>
+                    </div>
+                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full w-fit"
+                        style="background:rgba(0,209,255,.1);border:1px solid rgba(0,209,255,.3)">
+                        <span class="pulse-dot inline-flex rounded-full h-2.5 w-2.5 bg-accent"></span>
+                        <span class="text-xs font-bold uppercase tracking-wider text-accent">Growth Systems</span>
+                    </div>
+                    <h1 class="text-4xl lg:text-6xl font-black leading-[1.08] tracking-tight">
+                        Attract More Customers With a <span class="text-accent">Structured Growth System</span>
+                    </h1>
+                    <p class="text-lg text-white/70 leading-relaxed max-w-lg">
+                        PrimeLabs helps businesses increase visibility, build authority, and convert attention into
+                        paying customers using proven digital growth systems.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <button
+                            class="btn-ripple bg-accent text-primary px-8 py-4 rounded-xl text-base font-black hover:-translate-y-1 transition-all shadow-2xl shadow-accent/30 flex items-center gap-2">
+                            Book a Free Growth Audit
+                            <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                        </button>
+                        <button style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2)"
+                            class="text-white px-8 py-4 rounded-xl text-base font-bold hover:bg-white/15 transition-all">
+                            See Case Studies
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right: Stat cards -->
+                <div class="hidden lg:grid grid-cols-2 gap-4" data-aos="fade-left" data-aos-duration="900"
+                    data-aos-delay="100">
+                    <div class="stat-card col-span-2">
+                        <p class="text-white/40 text-xs font-bold uppercase tracking-widest mb-1">What You'll Get</p>
+                        <p class="text-white font-bold text-lg">A system — not just content</p>
+                        <p class="text-white/55 text-sm mt-1">Visibility, credibility, and consistent lead flow built
+                            around your business goals.</p>
+                    </div>
+                    <div class="stat-card">
+                        <p class="text-accent text-3xl font-black">8+</p>
+                        <p class="text-white/60 text-sm font-semibold mt-1">Growth channels covered</p>
+                    </div>
+                    <div class="stat-card">
+                        <p class="text-accent text-3xl font-black">4-step</p>
+                        <p class="text-white/60 text-sm font-semibold mt-1">Proven delivery process</p>
+                    </div>
+                    <div class="stat-card col-span-2 flex items-center gap-4">
+                        <div class="size-10 rounded-full flex items-center justify-center flex-shrink-0"
+                            style="background:rgba(0,209,255,.15)">
+                            <span class="material-symbols-outlined text-accent text-xl">trending_up</span>
+                        </div>
+                        <div>
+                            <p class="text-white font-bold text-sm">Ongoing optimization every month</p>
+                            <p class="text-white/45 text-xs">We don't set it and forget it — we track, measure, and
+                                improve continuously.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 1: THE PROBLEM -->
+    <section class="py-28 bg-white" id="problem" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto px-6 lg:px-20">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+
+                <!-- Visual side -->
+                <div data-aos="fade-right" data-aos-delay="100">
+                    <div class="bg-[#f5f7f8] rounded-3xl p-8 border border-[#dae0e7] relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-40"
+                            style="background-image:linear-gradient(rgba(0,31,61,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,31,61,.05) 1px,transparent 1px);background-size:32px 32px">
+                        </div>
+                        <div class="relative flex flex-col gap-3">
+                            <p class="text-xs font-bold uppercase tracking-widest text-primary/35 mb-1">Common pain
+                                points</p>
+                            <div
+                                class="flex items-center gap-3 p-4 bg-white rounded-xl border border-[#dae0e7] shadow-sm">
+                                <span class="material-symbols-outlined text-xl" style="color:#f87171">cancel</span>
+                                <span class="text-sm font-semibold text-primary">No content strategy in place</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 p-4 bg-white rounded-xl border border-[#dae0e7] shadow-sm">
+                                <span class="material-symbols-outlined text-xl" style="color:#f87171">cancel</span>
+                                <span class="text-sm font-semibold text-primary">Inconsistent brand presence</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 p-4 bg-white rounded-xl border border-[#dae0e7] shadow-sm">
+                                <span class="material-symbols-outlined text-xl" style="color:#f87171">cancel</span>
+                                <span class="text-sm font-semibold text-primary">Low engagement and poor reach</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 p-4 bg-white rounded-xl border border-[#dae0e7] shadow-sm">
+                                <span class="material-symbols-outlined text-xl" style="color:#f87171">cancel</span>
+                                <span class="text-sm font-semibold text-primary">Invisible on Google search</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 p-4 bg-white rounded-xl border border-[#dae0e7] shadow-sm">
+                                <span class="material-symbols-outlined text-xl" style="color:#f87171">cancel</span>
+                                <span class="text-sm font-semibold text-primary">No lead or conversion tracking</span>
+                            </div>
+                            <div class="flex justify-center py-1">
+                                <span class="material-symbols-outlined text-3xl text-primary/25">arrow_downward</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-5 bg-primary rounded-xl">
+                                <span class="material-symbols-outlined text-accent text-xl">warning</span>
+                                <span class="text-sm font-bold text-white">Slow growth, wasted budget, poor
+                                    decisions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copy side -->
+                <div class="flex flex-col gap-6" data-aos="fade-left" data-aos-delay="150">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full w-fit"
+                        style="background:#fef2f2;border:1px solid #fee2e2">
+                        <span class="material-symbols-outlined text-sm" style="color:#f87171">error_outline</span>
+                        <span class="text-xs font-bold uppercase tracking-wider" style="color:#ef4444">The
+                            Problem</span>
+                    </div>
+                    <h2 class="text-primary text-4xl font-black tracking-tight leading-tight">
+                        Visibility Without Structure Does Not <span class="accent-underline">Create Growth</span>
+                    </h2>
+                    <p class="text-primary/65 text-lg leading-relaxed">
+                        Many businesses invest time and money into marketing but see little or no return because there's
+                        no system behind the effort.
+                    </p>
+                    <div class="flex flex-col gap-3">
+                        <div class="flex items-start gap-3"><span
+                                class="material-symbols-outlined text-accent text-lg mt-0.5">radio_button_checked</span>
+                            <p class="text-primary">No clear content or growth strategy</p>
+                        </div>
+                        <div class="flex items-start gap-3"><span
+                                class="material-symbols-outlined text-accent text-lg mt-0.5">radio_button_checked</span>
+                            <p class="text-primary">Weak or inconsistent brand positioning</p>
+                        </div>
+                        <div class="flex items-start gap-3"><span
+                                class="material-symbols-outlined text-accent text-lg mt-0.5">radio_button_checked</span>
+                            <p class="text-primary">Low engagement and poor reach</p>
+                        </div>
+                        <div class="flex items-start gap-3"><span
+                                class="material-symbols-outlined text-accent text-lg mt-0.5">radio_button_checked</span>
+                            <p class="text-primary">No Google visibility when customers search</p>
+                        </div>
+                        <div class="flex items-start gap-3"><span
+                                class="material-symbols-outlined text-accent text-lg mt-0.5">radio_button_checked</span>
+                            <p class="text-primary">No tracking of leads or conversions</p>
+                        </div>
+                    </div>
+                    <div class="mt-2 p-5 rounded-r-xl"
+                        style="background:rgba(0,31,61,.05);border-left:4px solid #00d1ff">
+                        <p class="text-primary font-semibold leading-relaxed">Posting content alone does not create
+                            customers. <strong>Growth requires a system.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 2: WHAT WE DO -->
+    <section class="py-28 bg-[#f5f7f8]" id="what-we-do" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto px-6 lg:px-20">
+            <div class="max-w-2xl mb-16" data-aos="fade-up">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full w-fit mb-5"
+                    style="background:rgba(0,209,255,.1);border:1px solid rgba(0,209,255,.25)">
+                    <span class="material-symbols-outlined text-accent text-sm">hub</span>
+                    <span class="text-xs font-bold text-accent uppercase tracking-wider">What We Do</span>
+                </div>
+                <h2 class="text-primary text-4xl font-black tracking-tight leading-tight mb-4">We Build Growth Systems
+                    That Drive Visibility and Revenue</h2>
+                <p class="text-primary/60 text-lg leading-relaxed">Our Growth Systems are designed to make your business
+                    discoverable, credible, and consistently visible to the right audience.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+                <div class="service-card bg-white rounded-2xl p-6 cursor-default" data-aos="fade-up" data-aos-delay="0">
+                    <div class="card-icon size-12 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300"
+                        style="background:rgba(0,31,61,.05)">
+                        <span class="material-symbols-outlined text-primary">groups</span>
+                    </div>
+                    <h3 class="text-primary font-bold mb-2">Social Media Management</h3>
+                    <p class="text-primary/55 text-sm leading-relaxed">Consistent, strategic posting across the
+                        platforms your customers use most.</p>
+                </div>
+                <div class="service-card bg-white rounded-2xl p-6 cursor-default" data-aos="fade-up"
+                    data-aos-delay="60">
+                    <div class="card-icon size-12 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300"
+                        style="background:rgba(0,31,61,.05)">
+                        <span class="material-symbols-outlined text-primary">edit_note</span>
+                    </div>
+                    <h3 class="text-primary font-bold mb-2">Content Strategy & Planning</h3>
+                    <p class="text-primary/55 text-sm leading-relaxed">A structured monthly content calendar aligned to
+                        your growth goals.</p>
+                </div>
+                <div class="service-card bg-white rounded-2xl p-6 cursor-default" data-aos="fade-up"
+                    data-aos-delay="120">
+                    <div class="card-icon size-12 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300"
+                        style="background:rgba(0,31,61,.05)">
+                        <span class="material-symbols-outlined text-primary">palette</span>
+                    </div>
+                    <h3 class="text-primary font-bold mb-2">Graphic Design</h3>
+                    <p class="text-primary/55 text-sm leading-relaxed">On-brand visuals that build recognition and stop
+                        the scroll.</p>
+                </div>
+                <div class="service-card bg-white rounded-2xl p-6 cursor-default" data-aos="fade-up"
+                    data-aos-delay="180">
+                    <div class="card-icon size-12 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300"
+                        style="background:rgba(0,31,61,.05)">
+                        <span class="material-symbols-outlined text-primary">videocam</span>
+                    </div>
+                    <h3 class="text-primary font-bold mb-2">Short-form Video Content</h3>
+                    <p class="text-primary/55 text-sm leading-relaxed">Reels and Shorts that grow reach and showcase
+                        your business authentically.</p>
+                </div>
+                <div class="service-card bg-white rounded-2xl p-6 cursor-default" data-aos="fade-up" data-aos-delay="0">
+                    <div class="card-icon size-12 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300"
+                        style="background:rgba(0,31,61,.05)">
+                        <span class="material-symbols-outlined text-primary">location_on</span>
+                    </div>
+                    <h3 class="text-primary font-bold mb-2">Google Business Profile</h3>
+                    <p class="text-primary/55 text-sm leading-relaxed">Setup and optimization so customers find you when
+                        they search locally.</p>
+                </div>
+                <div class="service-card bg-white rounded-2xl p-6 cursor-default" data-aos="fade-up"
+                    data-aos-delay="60">
+                    <div class="card-icon size-12 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300"
+                        style="background:rgba(0,31,61,.05)">
+                        <span class="material-symbols-outlined text-primary">ads_click</span>
+                    </div>
+                    <h3 class="text-primary font-bold mb-2">Paid Advertising Strategy</h3>
+                    <p class="text-primary/55 text-sm leading-relaxed">Optional paid campaigns that amplify your organic
+                        growth intelligently.</p>
+                </div>
+                <div class="service-card bg-white rounded-2xl p-6 cursor-default" data-aos="fade-up"
+                    data-aos-delay="120">
+                    <div class="card-icon size-12 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300"
+                        style="background:rgba(0,31,61,.05)">
+                        <span class="material-symbols-outlined text-primary">web</span>
+                    </div>
+                    <h3 class="text-primary font-bold mb-2">Website Design & Conversion</h3>
+                    <p class="text-primary/55 text-sm leading-relaxed">High-converting websites and landing pages that
+                        turn visitors into leads.</p>
+                </div>
+                <div class="service-card bg-white rounded-2xl p-6 cursor-default" data-aos="fade-up"
+                    data-aos-delay="180">
+                    <div class="card-icon size-12 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300"
+                        style="background:rgba(0,31,61,.05)">
+                        <span class="material-symbols-outlined text-primary">verified</span>
+                    </div>
+                    <h3 class="text-primary font-bold mb-2">Brand Positioning Support</h3>
+                    <p class="text-primary/55 text-sm leading-relaxed">Complete brand identity design including custom
+                        logo creation, brand colors, typography, business assets, and cohesive brand guidelines.</p>
+                </div>
+            </div>
+
+            <!-- Bottom callout -->
+            <div class="bg-primary rounded-2xl p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
+                data-aos="fade-up">
+                <div class="flex items-start gap-4">
+                    <div class="size-12 rounded-xl flex items-center justify-center flex-shrink-0"
+                        style="background:rgba(0,209,255,.15)">
+                        <span class="material-symbols-outlined text-accent text-2xl">bolt</span>
+                    </div>
+                    <div>
+                        <p class="text-white font-bold text-lg">We don't just create content.</p>
+                        <p class="text-white/55 text-sm mt-1">We build growth infrastructure aligned with your business
+                            goals.</p>
+                    </div>
+                </div>
+                <button
+                    class="btn-ripple bg-accent text-primary px-7 py-3.5 rounded-xl font-black text-sm whitespace-nowrap hover:-translate-y-0.5 transition-transform">
+                    Book a Free Growth Audit
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 3: HOW IT WORKS -->
+    <section class="py-28 bg-white" id="process" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto px-6 lg:px-20">
+            <div class="text-center max-w-xl mx-auto mb-20" data-aos="fade-up">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full w-fit mb-5"
+                    style="background:rgba(0,31,61,.05);border:1px solid rgba(0,31,61,.1)">
+                    <span class="material-symbols-outlined text-primary text-sm">route</span>
+                    <span class="text-xs font-bold text-primary uppercase tracking-wider">How It Works</span>
+                </div>
+                <h2 class="text-primary text-4xl font-black tracking-tight mb-4">A Clear Process. Predictable Results.
+                </h2>
+                <p class="text-primary/55 leading-relaxed">Four focused steps from where you are now to consistent
+                    customer growth.</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6 relative">
+                <div class="relative flex flex-col gap-5" data-aos="fade-up" data-aos-delay="0">
+                    <div class="hidden md:block"></div>
+                    <div class="flex items-center gap-3">
+                        <div class="size-14 rounded-2xl bg-primary flex items-center justify-center flex-shrink-0 shadow-lg"
+                            style="box-shadow:0 8px 24px rgba(0,31,61,.25)">
+                            <span class="material-symbols-outlined text-accent text-2xl">analytics</span>
+                        </div>
+                        <div class="step-num">Step 01</div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-black text-primary mb-3">Growth Audit</h3>
+                        <p class="text-primary/60 text-sm leading-relaxed">We analyze your current visibility,
+                            positioning, and customer acquisition channels to find the biggest growth gaps.</p>
+                    </div>
+                </div>
+                <div class="relative flex flex-col gap-5" data-aos="fade-up" data-aos-delay="80">
+                    <div class="hidden md:block"></div>
+                    <div class="flex items-center gap-3">
+                        <div class="size-14 rounded-2xl bg-primary flex items-center justify-center flex-shrink-0 shadow-lg"
+                            style="box-shadow:0 8px 24px rgba(0,31,61,.25)">
+                            <span class="material-symbols-outlined text-accent text-2xl">design_services</span>
+                        </div>
+                        <div class="step-num">Step 02</div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-black text-primary mb-3">Strategy Design</h3>
+                        <p class="text-primary/60 text-sm leading-relaxed">We create a structured monthly plan covering
+                            content, Google visibility, and conversion flow tailored to your goals.</p>
+                    </div>
+                </div>
+                <div class="relative flex flex-col gap-5" data-aos="fade-up" data-aos-delay="160">
+                    <div class="hidden md:block"></div>
+                    <div class="flex items-center gap-3">
+                        <div class="size-14 rounded-2xl bg-primary flex items-center justify-center flex-shrink-0 shadow-lg"
+                            style="box-shadow:0 8px 24px rgba(0,31,61,.25)">
+                            <span class="material-symbols-outlined text-accent text-2xl">rocket_launch</span>
+                        </div>
+                        <div class="step-num">Step 03</div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-black text-primary mb-3">Execution</h3>
+                        <p class="text-primary/60 text-sm leading-relaxed">We handle content creation, publishing,
+                            optimization, and platform management — you focus on running your business.</p>
+                    </div>
+                </div>
+                <div class="relative flex flex-col gap-5" data-aos="fade-up" data-aos-delay="240">
+                    <div class="flex items-center gap-3">
+                        <div class="hidden md:block"></div>
+                        <div class="size-14 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg"
+                            style="background:#00d1ff;box-shadow:0 8px 24px rgba(0,209,255,.35)">
+                            <span class="material-symbols-outlined text-2xl" style="color:#001f3d">show_chart</span>
+                        </div>
+                        <div class="step-num">Step 04</div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-black text-primary mb-3">Performance Review</h3>
+                        <p class="text-primary/60 text-sm leading-relaxed">We track results, refine strategy, and
+                            improve performance continuously every single month.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline bar
+            <div class="hidden md:flex items-center mt-10 px-7" data-aos="fade-up" data-aos-delay="300">
+                <div class="h-1 flex-1 rounded-full" style="background:linear-gradient(90deg,#001f3d,#00d1ff)"></div>
+                <div class="size-3 rounded-full flex-shrink-0" style="background:#00d1ff"></div>
+            </div> -->
+        </div>
+    </section>
+
+
+    <!-- SECTION 4: WHO THIS IS FOR -->
+    <section class="py-28 bg-[#f5f7f8]" id="who" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto px-6 lg:px-20">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full w-fit mb-6"
+                        style="background:rgba(0,209,255,.1);border:1px solid rgba(0,209,255,.25)">
+                        <span class="material-symbols-outlined text-accent text-sm">business</span>
+                        <span class="text-xs font-bold text-accent uppercase tracking-wider">Who This Is For</span>
+                    </div>
+                    <h2 class="text-primary text-4xl font-black tracking-tight leading-tight mb-6">Built for Businesses
+                        That Need Consistent Visibility &amp; Lead Flow</h2>
+                    <p class="text-primary/60 text-lg leading-relaxed mb-8">If your business depends on customers
+                        finding you — online or locally — this system is built for you.</p>
+                    <div class="p-5 bg-primary rounded-2xl">
+                        <p class="text-white/65 text-sm leading-relaxed">If your business needs <strong
+                                class="text-accent">consistent visibility and lead flow</strong>, this system is for
+                            you.</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-3" data-aos="fade-left" data-aos-delay="100">
+                    <div class="industry-pill"><span
+                            class="material-symbols-outlined text-accent text-xl">fitness_center</span>Gyms &amp;
+                        Fitness Centers</div>
+                    <div class="industry-pill"><span
+                            class="material-symbols-outlined text-accent text-xl">shopping_bag</span>Retail Businesses
+                    </div>
+                    <div class="industry-pill"><span
+                            class="material-symbols-outlined text-accent text-xl">hotel</span>Hotels &amp; Hospitality
+                    </div>
+                    <div class="industry-pill"><span
+                            class="material-symbols-outlined text-accent text-xl">medical_services</span>Clinics &amp;
+                        Healthcare</div>
+                    <div class="industry-pill"><span
+                            class="material-symbols-outlined text-accent text-xl">school</span>Educational &amp;
+                        Training Centers</div>
+                    <div class="industry-pill"><span
+                            class="material-symbols-outlined text-accent text-xl">home_repair_service</span>Service-Based
+                        Businesses</div>
+                    <div class="industry-pill"><span
+                            class="material-symbols-outlined text-accent text-xl">restaurant</span>Food &amp;
+                        Hospitality</div>
+                    <div class="industry-pill"><span
+                            class="material-symbols-outlined text-accent text-xl">domain</span>Professional Services
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 5: CTA -->
+    <section class="cta-section py-32 px-6 lg:px-20" data-aos="fade-up">
+        <div class="relative max-w-4xl mx-auto text-center" style="z-index:10">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full w-fit mb-8 mx-auto"
+                style="background:rgba(255,255,255,.08);border:1px solid rgba(0,209,255,.3)">
+                <span class="pulse-dot inline-flex rounded-full h-2 w-2 bg-accent"></span>
+                <span class="text-xs font-bold uppercase tracking-wider text-accent">Ready to Grow?</span>
+            </div>
+            <h2 class="text-white text-5xl lg:text-7xl font-black leading-[1.05] tracking-tight mb-6">
+                Ready to Grow<br><span class="text-accent">the Right Way?</span>
+            </h2>
+            <p class="text-white/60 text-xl leading-relaxed max-w-xl mx-auto mb-12">
+                Stop guessing. Start building a structured growth system that brings real, paying customers to your
+                business.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                    class="btn-ripple bg-accent text-primary px-10 py-5 rounded-2xl text-lg font-black hover:-translate-y-1 transition-all shadow-2xl flex items-center justify-center gap-2"
+                    style="box-shadow:0 20px 50px rgba(0,209,255,.3)">
+                    Book a Free Consultation
+                    <span class="material-symbols-outlined text-xl">arrow_forward</span>
+                </button>
+                <button style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2)"
+                    class="text-white px-10 py-5 rounded-2xl text-lg font-bold hover:bg-white/15 transition-all">
+                    Send Us a Message
+                </button>
+            </div>
+            <p class="text-white/30 text-sm mt-10 flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined text-sm fill-1 text-accent">verified</span>
+                Free audit &middot; No commitment &middot; Results-focused
+            </p>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-[#dae0e7] pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-20">
+            <div class="grid md:grid-cols-4 gap-12 mb-20">
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-center gap-3">
+                        <div class="text-primary"><svg class="size-6" fill="none" viewBox="0 0 48 48">
+                                <path clip-rule="evenodd"
+                                    d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
+                                    fill="currentColor" fill-rule="evenodd" />
+                            </svg></div>
+                        <h2 class="text-primary text-lg font-extrabold">Primelabs</h2>
+                    </div>
+                    <p class="text-primary text-sm leading-relaxed">Leading enterprise-grade technology and
+                        automation solutions for high-growth businesses.</p>
+                </div>
+                <div>
+                    <h4 class="text-primary font-bold mb-6 text-xs uppercase tracking-wider">Services</h4>
+                    <ul class="flex flex-col gap-4 text-sm text-primary/80">
+                        <li><a class="hover:text-primary transition-colors" href="/service/control.html">Control
+                                Systems</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="/service/growth.html">Growth
+                                Systems</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="/service.html">All Solutions</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-primary font-bold mb-6 text-xs uppercase tracking-wider">Company</h4>
+                    <ul class="flex flex-col gap-4 text-sm text-primary/80">
+                        <li><a class="hover:text-primary transition-colors" href="/about.html">About Us</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="/casestudy.html">Case Studies</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="/index.html#industries">Industries</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-primary font-bold mb-6 text-xs uppercase tracking-wider">Contact</h4>
+                    <ul class="flex flex-col gap-4 text-sm text-primary/80">
+                        <li class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-sm text-primary">mail</span>info@primelabsbusinesssolution.com
+                        </li>
+                        <li class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-sm text-primary">phone</span>09066363260</li>
+                        <li class="flex items-start gap-2"><span
+                                class="material-symbols-outlined text-sm text-primary mt-0.5">location_on</span><span>Shop
+                                S9/10, Cozyez Mall, 43 Presidential Rd, Asata, Enugu, Nigeria</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-[#dae0e7] gap-4">
+                <p class="text-sm text-primary">&copy; 2024 Primelabs Limited. All rights reserved.</p>
+                <div class="flex gap-6"><a class="text-sm text-primary/80 hover:text-primary transition-colors"
+                        href="#">Privacy Policy</a><a
+                        class="text-sm text-primary/80 hover:text-primary transition-colors" href="#">Terms of
+                        Service</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/js/growth.js"></script>
+</body>
+
+</html>

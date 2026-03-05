@@ -12,6 +12,36 @@ body {
     transition: all 0.3s ease;
 }
 
+.hero-bg {
+    background: linear-gradient(160deg, #000d1a 0%, #001f3d 50%, #00172e 100%);
+    position: relative;
+    overflow: hidden
+}
+
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 50% 70% at 100% 0%, rgba(0, 209, 255, .13) 0%, transparent 65%), radial-gradient(ellipse 35% 45% at 0% 100%, rgba(0, 209, 255, .07) 0%, transparent 60%)
+}
+
+.hero-lines {
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(-55deg, transparent, transparent 48px, rgba(0, 209, 255, .025) 48px, rgba(0, 209, 255, .025) 50px)
+}
+
+/* .slant-b {
+    clip-path: polygon(0 0, 100% 0, 100% 91%, 0 100%);
+    padding-bottom: 9rem
+}
+
+.slant-t {
+    clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 100%);
+    padding-top: 8rem;
+    margin-top: -2rem
+} */
+
 #ripple {
     position: relative;
     overflow: hidden;

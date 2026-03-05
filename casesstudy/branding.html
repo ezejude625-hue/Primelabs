@@ -22,7 +22,7 @@
         <div class="layout-container flex h-full grow flex-col">
 
             <!-- Navigation -->
-            <nav class="sticky top-0 z-50 backdrop-blur-md shadow-sm border-b border-[#e5e7eb]">
+            <nav class="sticky top-0 z-50 bg-background-light shadow-sm border-b border-[#e5e7eb]">
 
                 <!-- Top bar -->
                 <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -100,45 +100,71 @@
             <!-- main -->
             <main class="flex-1">
                 <!-- Hero Section -->
-                <section class="max-w-[1280px] mx-auto px-6 md:px-20 py-12 md:py-24">
-                    <div class="grid lg:grid-cols-2 gap-12 items-center">
-                        <div class="flex flex-col gap-8">
-                            <div class="flex flex-col gap-4">
+                <section class="relative overflow-hidden min-h-[70vh] flex items-center pt-12 pb-12">
+
+                    <!-- Background Image -->
+                    <div class="absolute inset-0">
+                        <img src="/asset/pixel2.jpg" alt="Primelabs banner"
+                            class="w-full h-full object-cover rendering-auto" />
+
+                        <!-- Bright overlay for text visibility -->
+                        <div class="absolute inset-0 bg-white/0"></div>
+
+                        <!-- Soft premium glow -->
+                        <div
+                            class="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(56,189,248,0.15),transparent_50%)]">
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="relative max-w-7xl mx-auto px-6 lg:px-20 grid lg:grid-cols-2 gap-12 items-center">
+
+                        <!-- Left: Text + Buttons -->
+                        <div class="flex flex-col gap-6 text-left text-white">
+
+                            <div
+                                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 w-fit backdrop-blur">
+                                <span class="relative flex h-2 w-2">
+                                    <span
+                                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-blue opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-2 w-2 bg-accent-blue"></span>
+                                </span>
                                 <span class="text-accent font-bold tracking-widest uppercase text-xs">Enterprise
                                     Creative Solutions</span>
-                                <h1 class="text-primary text-4xl md:text-6xl font-black leading-tight tracking-tight">
-                                    Branding, Digital Presence &amp; Creative Content that Drives Growth
-                                </h1>
-                                <p class="text-slate-600 text-lg md:text-xl leading-relaxed max-w-xl">
-                                    We build cohesive identities and high-impact digital campaigns that resonate with
-                                    your audience and drive exponential growth.
-                                </p>
                             </div>
+
+                            <h1 class="text-white text-4xl md:text-6xl font-black leading-tight tracking-tight">
+                                Branding, Digital Presence &amp; Creative Content that Drives Growth
+                            </h1>
+
+                            <p class="text-white text-lg md:text-xl leading-relaxed max-w-xl">
+                                We build cohesive identities and high-impact digital campaigns that resonate with
+                                your audience and drive exponential growth.
+                            </p>
+
                             <div class="flex flex-wrap gap-4">
                                 <button
                                     class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-lg h-14 px-6 bg-primary text-white text-base font-bold shadow-xl hover:translate-y-[-2px] transition-all">
                                     Book a Free Consultation
                                 </button>
                                 <button
-                                    class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-lg h-14 px-6 border-2 border-primary text-primary text-base font-bold hover:bg-primary/5 transition-all">
+                                    class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-lg h-14 px-6 border-2 border-white text-white text-base font-bold hover:bg-primary/5 transition-all">
                                     View Our Work
                                 </button>
                             </div>
                         </div>
-                        <div class="relative group">
-                            <div
-                                class="absolute -inset-1 bg-gradient-to-r from-accent to-primary rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200">
-                            </div>
-                            <div
-                                class="relative w-full aspect-video md:aspect-square bg-slate-200 rounded-xl overflow-hidden shadow-2xl">
-                                <div class="w-full h-full bg-cover bg-center"
-                                    data-alt="Abstract 3D digital creativity composition with flowing neon shapes"
-                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDPQSOhria-ywHTyrB7nRqd9aylIcnQHByLlSL4lvXj0jAbaOJfdX2HGKRDM5Wdo197GImF9eErwDztbEpKedIHmStOZhm8pmyHL5xuO7YXaKKIR4rA0o8lDyfSB7PiO8Xj4BELbDmbvBKsNNH5rnsRC9XptmnOF-vwA97FS867giAaohOh2XAd-qhdK25oc_G3KpafwKUhwjHthBtR0lfGoiRS_-0Nk2LX7K2ti4RwcO4cNpNb7NaqL5iQzq4dlaahw7q7eZMo7iM')">
-                                </div>
-                            </div>
-                        </div>
+
+                        <!-- Right: Optional image/empty -->
+                        <div class="hidden lg:block"></div>
+
                     </div>
+
                 </section>
+
+
+
+
+
                 <section class="bg-background-light py-20 border-y border-slate-100">
                     <div class="max-w-[1280px] mx-auto px-6 md:px-20">
                         <div class="mb-16 text-center">
@@ -654,83 +680,67 @@
                 </section>
             </main>
 
-            <!-- Footer -->
-            <footer class="bg-white border-t border-[#dae0e7] pt-20 pb-10" data-aos="fade-out"
-                data-aos-easing="ease-out" data-aos-duration="1000">
+            <!-- FOOTER -->
+            <footer class="bg-white border-t border-[#dae0e7] pt-20 pb-10">
                 <div class="max-w-7xl mx-auto px-6 lg:px-20">
                     <div class="grid md:grid-cols-4 gap-12 mb-20">
                         <div class="flex flex-col gap-6">
                             <div class="flex items-center gap-3">
-                                <div class="text-primary">
-                                    <svg class="size-6" fill="none" viewbox="0 0 48 48"
-                                        xmlns="http://www.w3.org/2000/svg">
+                                <div class="text-primary"><svg class="size-6" fill="none" viewBox="0 0 48 48">
                                         <path clip-rule="evenodd"
                                             d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
-                                            fill="currentColor" fill-rule="evenodd"></path>
-                                    </svg>
-                                </div>
+                                            fill="currentColor" fill-rule="evenodd" />
+                                    </svg></div>
                                 <h2 class="text-primary text-lg font-extrabold">Primelabs</h2>
                             </div>
-                            <p class="text-primary text-md leading-relaxed">
-                                Leading enterprise-grade technology and automation solutions for high-growth businesses.
-                            </p>
+                            <p class="text-primary text-sm leading-relaxed">Leading enterprise-grade technology and
+                                automation solutions for high-growth businesses.</p>
                         </div>
                         <div>
-                            <h4 class="text-primary font-bold mb-6">Services</h4>
-                            <ul class="flex flex-col gap-4 text-md text-primary">
-                                <li><a class="hover:text-[#000f1d] transition-colors"
-                                        href="/casesstudy/business.html">Business Management Systems</a>
-                                </li>
-                                <li><a class="hover:text-[#000f1d] transition-colors" href="/casesstudy/web.html">Web &
-                                        App
-                                        Development</a></li>
-                                <li><a class="hover:text-[#000f1d] transition-colors"
-                                        href="/casesstudy/branding.html">Branding
-                                        & Digital Presence</a>
+                            <h4 class="text-primary font-bold mb-6 text-xs uppercase tracking-wider">Services</h4>
+                            <ul class="flex flex-col gap-4 text-sm text-primary/80">
+                                <li><a class="hover:text-primary transition-colors" href="/service/control.html">Control
+                                        Systems</a></li>
+                                <li><a class="hover:text-primary transition-colors" href="/service/growth.html">Growth
+                                        Systems</a></li>
+                                <li><a class="hover:text-primary transition-colors" href="/service.html">All
+                                        Solutions</a>
                                 </li>
                             </ul>
                         </div>
                         <div>
-                            <h4 class="text-primary font-bold mb-6">Company</h4>
-                            <ul class="flex flex-col gap-4 text-md text-primary">
-                                <li><a class="hover:text-[#000f1d] transition-colors" href="/about.html">About Us</a>
-                                </li>
-                                <li><a class="hover:text-[#000f1d] transition-colors" href="/casestudy.html">Case
+                            <h4 class="text-primary font-bold mb-6 text-xs uppercase tracking-wider">Company</h4>
+                            <ul class="flex flex-col gap-4 text-sm text-primary/80">
+                                <li><a class="hover:text-primary transition-colors" href="/about.html">About Us</a></li>
+                                <li><a class="hover:text-primary transition-colors" href="/casestudy.html">Case
                                         Studies</a>
                                 </li>
-                                <li><a class="hover:text-[#000f1d] transition-colors"
+                                <li><a class="hover:text-primary transition-colors"
                                         href="/index.html#industries">Industries</a></li>
                             </ul>
                         </div>
                         <div>
-                            <h4 class="text-primary font-bold mb-6">Contact</h4>
-                            <ul class="flex flex-col gap-4 text-md text-primary">
-                                <li class="flex items-center gap-2">
-                                    <span class="material-symbols-outlined text-sm">mail</span>
-                                    info@priemlabsbusinesssolution.com
+                            <h4 class="text-primary font-bold mb-6 text-xs uppercase tracking-wider">Contact</h4>
+                            <ul class="flex flex-col gap-4 text-sm text-primary/80">
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-sm text-primary">mail</span>info@primelabsbusinesssolution.com
                                 </li>
-                                <li class="flex items-center gap-2">
-                                    <span class="material-symbols-outlined text-sm">phone</span>
-                                    09066363260
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-sm text-primary">phone</span>09066363260
                                 </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="material-symbols-outlined text-sm mt-0.5">location_on</span>
-                                    <span>Shop S9/10, Last Floor, Cozyez Mall, 43 Presidential Rd, Asata, Enugu
-                                        400102,Enugu,
-                                        Nigeria</span>
-                                </li>
+                                <li class="flex items-start gap-2"><span
+                                        class="material-symbols-outlined text-sm text-primary mt-0.5">location_on</span><span>Shop
+                                        S9/10, Cozyez Mall, 43 Presidential Rd, Asata, Enugu, Nigeria</span></li>
                             </ul>
                         </div>
                     </div>
                     <div
                         class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-[#dae0e7] gap-4">
-                        <p class="text-mds text-primary">© 2024 Primelabs Limited. All rights reserved.</p>
-                        <div class="flex gap-6">
-                            <a class="text-md text-primary hover:text-[#000f1d] transition-colors" href="#">Privacy
-                                Policy</a>
-                            <a class="text-md text-primary hover:text-[#000f1d] transition-colors" href="#">Terms of
-                                Service</a>
-                        </div>
+                        <p class="text-sm text-primary">&copy; 2024 Primelabs Limited. All rights reserved.</p>
+                        <div class="flex gap-6"><a class="text-sm text-primary/80 hover:text-primary transition-colors"
+                                href="#">Privacy Policy</a><a
+                                class="text-sm text-primary/80 hover:text-primary transition-colors" href="#">Terms of
+                                Service</a></div>
                     </div>
                 </div>
             </footer>
