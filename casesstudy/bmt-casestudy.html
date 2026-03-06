@@ -34,15 +34,9 @@
         <!-- ═══ NAV ═══ -->
         <nav class="sticky top-0 z-50 bg-white shadow-sm border-b border-[#e5e7eb]">
             <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-                <a href="/index.html" class="flex items-center gap-3">
-                    <div class="bg-primary p-1.5 rounded-lg"><svg class="w-6 h-6 text-white" fill="none"
-                            viewBox="0 0 48 48">
-                            <path clip-rule="evenodd"
-                                d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
-                                fill="currentColor" fill-rule="evenodd" />
-                        </svg></div>
-                    <span class="text-xl font-extrabold tracking-tight text-primary">Primelabs</span>
-                </a>
+                <!-- Logo -->
+                <img src="/asset/header.png" alt="logo" class="h-30 w-40 mb-6 mt-5 bg-cover">
+
                 <div class="hidden md:flex items-center gap-10">
                     <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
                     <a class="text-sm font-semibold hover:text-accent transition-colors"
@@ -85,7 +79,7 @@
             <section class="relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-32 bg-white">
                 <!-- Background Image -->
                 <div class="absolute inset-0">
-                    <img src="/asset/bmt/2.png" alt="Primelabs about" class="w-full h-full object-cover" />
+                    <img src="/asset/2.png" alt="Primelabs about" class="w-full h-full object-cover" />
                     <div class="absolute inset-0"
                         style="background:linear-gradient(110deg,rgba(0,12,26,.90) 0%,rgba(0,31,61,.74) 48%,rgba(0,31,61,.40) 100%)">
                     </div>
@@ -110,7 +104,8 @@
                         </div>
                         <h1
                             class="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.08] tracking-tight text-slate-100">
-                            How a Fashion Retail Store Streamlined Sales &amp; Inventory with a Custom POS System
+                            How a Fashion Retail Store Streamlined Sales &amp; Inventory with a <span
+                                class="text-accent">Custom POS System</span>
                         </h1>
                         <p class="text-lg text-slate-300 max-w-xl leading-relaxed">
                             Streamlining operations and maximizing efficiency with a tailored point-of-sale solution
@@ -118,7 +113,7 @@
                         </p>
                         <div class="flex flex-wrap gap-4">
                             <a href="/contact.html"
-                                class="btn-ripple bg-primary text-white px-8 py-4 rounded-xl font-black text-base hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-0.5 transition-all">
+                                class="btn-ripple bg-accent text-primary px-8 py-4 rounded-xl font-black text-base hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-0.5 transition-all">
                                 Book a Consultation
                             </a>
                             <button
@@ -706,16 +701,12 @@
         <footer class="bg-white border-t border-[#dae0e7] pt-20 pb-10">
             <div class="max-w-7xl mx-auto px-6 lg:px-20">
                 <div class="grid md:grid-cols-4 gap-12 mb-20">
-                    <div class="flex flex-col gap-6">
-                        <div class="flex items-center gap-3">
-                            <div class="text-primary"><svg class="size-6" fill="none" viewBox="0 0 48 48">
-                                    <path clip-rule="evenodd"
-                                        d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
-                                        fill="currentColor" fill-rule="evenodd" />
-                                </svg></div>
-                            <h2 class="text-primary text-lg font-extrabold">Primelabs</h2>
+                    <div class="flex flex-col justify-start gap-4">
+                        <!-- Logo -->
+                        <div class="w-36 inline"> <!-- width container -->
+                            <img src="/asset/header.png" alt="logo" class="w-full h-auto object-contain">
                         </div>
-                        <p class="text-primary text-sm leading-relaxed">Leading enterprise-grade technology and
+                        <p class="text-primary text-sm leading-relaxed max-w-xs">Leading enterprise-grade technology and
                             automation solutions for high-growth businesses.</p>
                     </div>
                     <div>

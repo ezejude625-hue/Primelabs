@@ -26,20 +26,8 @@
 
                 <!-- Top bar -->
                 <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                        <div class="bg-primary p-1.5 rounded-lg">
-                            <!-- logo svg -->
-                            <svg class="w-6 h-6 text-white" fill="none" viewbox="0 0 48 48"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path clip-rule="evenodd"
-                                    d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
-                                    fill="currentColor" fill-rule="evenodd"></path>
-                            </svg>
-                        </div>
-                        <span class="text-xl font-extrabold tracking-tight text-primary">
-                            Primelabs
-                        </span>
-                    </div>
+                    <!-- Logo -->
+                    <img src="/asset/header.png" alt="logo" class="h-30 w-40 mb-6 mt-5 bg-cover">
 
                     <!-- Desktop menu -->
                     <div class="hidden md:flex items-center gap-10">
@@ -684,16 +672,13 @@
             <footer class="bg-white border-t border-[#dae0e7] pt-20 pb-10">
                 <div class="max-w-7xl mx-auto px-6 lg:px-20">
                     <div class="grid md:grid-cols-4 gap-12 mb-20">
-                        <div class="flex flex-col gap-6">
-                            <div class="flex items-center gap-3">
-                                <div class="text-primary"><svg class="size-6" fill="none" viewBox="0 0 48 48">
-                                        <path clip-rule="evenodd"
-                                            d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
-                                            fill="currentColor" fill-rule="evenodd" />
-                                    </svg></div>
-                                <h2 class="text-primary text-lg font-extrabold">Primelabs</h2>
+                        <div class="flex flex-col justify-start gap-4">
+                            <!-- Logo -->
+                            <div class="w-36 inline"> <!-- width container -->
+                                <img src="/asset/header.png" alt="logo" class="w-full h-auto object-contain">
                             </div>
-                            <p class="text-primary text-sm leading-relaxed">Leading enterprise-grade technology and
+                            <p class="text-primary text-sm leading-relaxed max-w-xs">Leading enterprise-grade technology
+                                and
                                 automation solutions for high-growth businesses.</p>
                         </div>
                         <div>
