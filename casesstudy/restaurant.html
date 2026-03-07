@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Case Study: Restaurant & Bar POS with KDS | PrimeLabs</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/restaurant.css">
+</head>
+
+<body class="bg-background-light font-display antialiased">
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+
+        <!-- Navigation -->
+        <nav class="sticky top-0 z-50 bg-background-light shadow-sm border-b border-[#e5e7eb]">
+
+            <!-- Top bar -->
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <!-- Logo -->
+                <img src="/asset/header.png" alt="logo" class="h-30 w-40 mb-6 mt-5 bg-cover">
+
+                <!-- Desktop menu -->
+                <div class="hidden md:flex items-center gap-10">
+                    <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/service.html">Solutions</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/index.html#industries">Industries</a>
+                    <a class="text-sm font-semibold text-accent hover:text-accent transition-colors"
+                        href="/casestudy.html">Casestudies</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors" href="/about.html">About</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/contact.html">Contact</a>
+                    <button
+                        class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
+                        id="ripple">
+                        Book a Demo
+                    </button>
+                </div>
+
+                <!-- Hamburger -->
+                <div class="md:hidden cursor-pointer" id="menuBtn">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobileMenu"
+                class="md:hidden overflow-hidden max-h-0 transition-all duration-500 ease-in-out border-t border-gray-200">
+
+                <div class="px-6 py-6 flex flex-col gap-6 bg-white">
+                    <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/service.html">Solutions</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/index.html#industries">Industries</a>
+                    <a class="text-sm font-semibold text-accent hover:text-accent transition-colors"
+                        href="/casestudy.html">Casestudies</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors" href="/about.html">About</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/contact.html">Contact</a>
+                    <button
+                        class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
+                        id="ripple">
+                        Book a Demo
+                    </button>
+                </div>
+            </div>
+
+        </nav>
+
+        <main>
+
+            <!-- HERO -->
+            <section class="relative overflow-hidden py-20 lg:py-28"
+                style="background:linear-gradient(135deg,#000d1a 0%,#001f3d 60%,#003a6b 100%)">
+                <div class="absolute inset-0 pointer-events-none"
+                    style="background-image:radial-gradient(circle at 60% 30%,rgba(0,209,255,.08),transparent 55%),linear-gradient(rgba(0,209,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,209,255,.03) 1px,transparent 1px);background-size:auto,60px 60px,60px 60px">
+                </div>
+                <div class="max-w-7xl mx-auto px-6 text-center relative" data-aos="fade-up">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-6 w-fit mx-auto"
+                        style="background:rgba(0,209,255,.12);border:1px solid rgba(0,209,255,.3)">
+                        <span class="material-symbols-outlined text-accent text-sm">restaurant</span>
+                        <span class="text-xs font-bold uppercase tracking-wider text-accent">Restaurant & Bar Case
+                            Study</span>
+                    </div>
+                    <h1
+                        class="text-4xl md:text-6xl lg:text-7xl font-black leading-none tracking-tight text-white max-w-5xl mx-auto">
+                        Restaurant &amp; Bar POS with <span class="text-accent">Kitchen Display System</span></h1>
+                    <p class="text-white/60 text-lg mt-6 max-w-2xl mx-auto leading-relaxed">One unified platform
+                        connecting waiters, kitchen, and bar — eliminating verbal errors, reducing delays, and
+                        increasing service speed during peak hours.</p>
+                </div>
+                <!-- ORDER FLOW DIAGRAM -->
+                <div class="max-w-5xl mx-auto px-6 mt-16 relative" data-aos="fade-up" data-aos-delay="100">
+                    <div class="block space-y-6 md:space-y-0 md:grid grid-cols-3 lg:grid-cols-5 gap-3 items-center">
+                        <div class="flow-card"
+                            style="background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.15)"><span
+                                class="material-symbols-outlined text-accent text-3xl mb-2 block">tablet_android</span>
+                            <p class="font-black text-white text-sm">Waiter Tablet</p>
+                            <p class="text-xs text-white/40 mt-1">Takes order</p>
+                        </div>
+                        <div class="text-center hidden lg:block">
+                            <div class="flex items-center justify-center gap-1">
+                                <div class="h-0.5 flex-1 bg-accent"></div><span
+                                    class="material-symbols-outlined text-accent">arrow_forward</span>
+                            </div>
+                            <p class="text-xs text-accent font-bold mt-1">Instant</p>
+                        </div>
+                        <div class="flow-card" style="background:rgba(0,209,255,.1);border-color:rgba(0,209,255,.4)">
+                            <span class="material-symbols-outlined text-accent text-3xl mb-2 block">receipt_long</span>
+                            <p class="font-black text-white text-sm">POS System</p>
+                            <p class="text-xs text-white/40 mt-1">Routes order</p>
+                        </div>
+                        <div class="text-center hidden lg:block">
+                            <div class="flex items-center justify-center gap-1">
+                                <div class="h-0.5 flex-1 bg-accent"></div><span
+                                    class="material-symbols-outlined text-accent">arrow_forward</span>
+                            </div>
+                            <p class="text-xs text-accent font-bold mt-1">Real-time</p>
+                        </div>
+                        <div class="flow-card"
+                            style="background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.15)">
+                            <div class="grid grid-cols-2 gap-2">
+                                <div><span
+                                        class="material-symbols-outlined text-orange-400 text-2xl mb-1 block">soup_kitchen</span>
+                                    <p class="text-xs font-black text-white">Kitchen KDS</p>
+                                </div>
+                                <div><span
+                                        class="material-symbols-outlined text-purple-400 text-2xl mb-1 block">local_bar</span>
+                                    <p class="text-xs font-black text-white">Bar Display</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROBLEM -->
+            <section class="py-20 bg-[#f5f7f8]">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div data-aos="fade-right">
+                            <h2 class="text-3xl font-black text-primary mb-4">The Operational Problem</h2>
+                            <p class="text-slate-500 mb-8 leading-relaxed">Manual communication between floor, kitchen,
+                                and bar created a cascade of errors, delays, and lost revenue.</p>
+                            <div class="bg-white rounded-2xl border border-[#e8edf2] p-6">
+                                <div class="feat-row"><span
+                                        class="material-symbols-outlined text-red-400 flex-shrink-0">edit_off</span>
+                                    <div>
+                                        <h5 class="font-black text-primary text-sm">Manual Order Taking</h5>
+                                        <p class="text-xs text-slate-500 mt-0.5">Frequent mistakes from handwritten or
+                                            verbal orders</p>
+                                    </div>
+                                </div>
+                                <div class="feat-row"><span
+                                        class="material-symbols-outlined text-red-400 flex-shrink-0">record_voice_over</span>
+                                    <div>
+                                        <h5 class="font-black text-primary text-sm">Verbal Communication Errors</h5>
+                                        <p class="text-xs text-slate-500 mt-0.5">Between waiters, bar, and kitchen
+                                            causing constant mix-ups</p>
+                                    </div>
+                                </div>
+                                <div class="feat-row"><span
+                                        class="material-symbols-outlined text-red-400 flex-shrink-0">schedule</span>
+                                    <div>
+                                        <h5 class="font-black text-primary text-sm">Peak Hour Delays</h5>
+                                        <p class="text-xs text-slate-500 mt-0.5">Slow preparation during busy periods
+                                            causing customer frustration</p>
+                                    </div>
+                                </div>
+                                <div class="feat-row"><span
+                                        class="material-symbols-outlined text-red-400 flex-shrink-0">bar_chart</span>
+                                    <div>
+                                        <h5 class="font-black text-primary text-sm">No Sales Visibility</h5>
+                                        <p class="text-xs text-slate-500 mt-0.5">Limited insight into daily performance
+                                            and item popularity</p>
+                                    </div>
+                                </div>
+                                <div class="feat-row"><span
+                                        class="material-symbols-outlined text-red-400 flex-shrink-0">receipt_long</span>
+                                    <div>
+                                        <h5 class="font-black text-primary text-sm">Slow Billing Process</h5>
+                                        <p class="text-xs text-slate-500 mt-0.5">Inconsistent records for orders and
+                                            revenue</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Screen mockup -->
+                        <div class="space-y-4" data-aos="fade-left" data-aos-delay="80">
+                            <div class="screen-mock">
+                                <div class="flex items-center justify-between mb-4">
+                                    <p class="text-xs font-bold text-accent uppercase tracking-wider">Kitchen Display
+                                    </p><span class="text-xs text-white/40">Live Orders</span>
+                                </div>
+                                <div class="space-y-2">
+                                    <div class="flex items-center justify-between bg-white/10 rounded-lg px-3 py-2">
+                                        <span class="text-sm text-white">Table 4 — Grilled Chicken</span><span
+                                            class="text-xs text-green-400 font-bold">Preparing</span>
+                                    </div>
+                                    <div class="flex items-center justify-between bg-white/10 rounded-lg px-3 py-2">
+                                        <span class="text-sm text-white">Table 7 — Jollof Rice x2</span><span
+                                            class="text-xs text-yellow-400 font-bold">Queued</span>
+                                    </div>
+                                    <div class="flex items-center justify-between bg-white/10 rounded-lg px-3 py-2">
+                                        <span class="text-sm text-white">Table 2 — Peppered Fish</span><span
+                                            class="text-xs text-accent font-bold">Ready</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="screen-mock">
+                                <div class="flex items-center justify-between mb-4">
+                                    <p class="text-xs font-bold text-purple-300 uppercase tracking-wider">Bar Display
+                                    </p><span class="text-xs text-white/40">Drink Orders</span>
+                                </div>
+                                <div class="space-y-2">
+                                    <div class="flex items-center justify-between bg-white/10 rounded-lg px-3 py-2">
+                                        <span class="text-sm text-white">Table 4 — Heineken x2</span><span
+                                            class="text-xs text-green-400 font-bold">Ready</span>
+                                    </div>
+                                    <div class="flex items-center justify-between bg-white/10 rounded-lg px-3 py-2">
+                                        <span class="text-sm text-white">Table 6 — Chapman</span><span
+                                            class="text-xs text-yellow-400 font-bold">Mixing</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FEATURES 2x4 grid -->
+            <section class="py-24 bg-white">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="text-center mb-14" data-aos="fade-up">
+                        <h2 class="text-3xl font-black text-primary mb-2">Key Features Implemented</h2>
+                        <div class="w-12 h-1 bg-accent mx-auto rounded-full mt-3"></div>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+                        <div class="bg-[#f5f7f8] rounded-2xl p-6 border border-[#e8edf2]" data-aos="fade-up"
+                            data-aos-delay="0"><span
+                                class="material-symbols-outlined text-accent text-3xl mb-3 block">tablet_android</span>
+                            <h4 class="font-black text-primary mb-1 text-sm">Tablet Waiter Entry</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">Orders placed tableside for speed and
+                                accuracy</p>
+                        </div>
+                        <div class="bg-[#f5f7f8] rounded-2xl p-6 border border-[#e8edf2]" data-aos="fade-up"
+                            data-aos-delay="40"><span
+                                class="material-symbols-outlined text-accent text-3xl mb-3 block">soup_kitchen</span>
+                            <h4 class="font-black text-primary mb-1 text-sm">Kitchen Display (KDS)</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">Food orders on kitchen screen immediately
+                            </p>
+                        </div>
+                        <div class="bg-[#f5f7f8] rounded-2xl p-6 border border-[#e8edf2]" data-aos="fade-up"
+                            data-aos-delay="80"><span
+                                class="material-symbols-outlined text-accent text-3xl mb-3 block">local_bar</span>
+                            <h4 class="font-black text-primary mb-1 text-sm">Bar Order Management</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">Drinks instantly sent to bar screen</p>
+                        </div>
+                        <div class="bg-[#f5f7f8] rounded-2xl p-6 border border-[#e8edf2]" data-aos="fade-up"
+                            data-aos-delay="120"><span
+                                class="material-symbols-outlined text-accent text-3xl mb-3 block">table_restaurant</span>
+                            <h4 class="font-black text-primary mb-1 text-sm">Table Management</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">Track table status and active orders in
+                                real time</p>
+                        </div>
+                        <div class="bg-[#f5f7f8] rounded-2xl p-6 border border-[#e8edf2]" data-aos="fade-up"
+                            data-aos-delay="0"><span
+                                class="material-symbols-outlined text-accent text-3xl mb-3 block">receipt</span>
+                            <h4 class="font-black text-primary mb-1 text-sm">Fast POS Billing</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">Accurate bills with professional receipts
+                            </p>
+                        </div>
+                        <div class="bg-[#f5f7f8] rounded-2xl p-6 border border-[#e8edf2]" data-aos="fade-up"
+                            data-aos-delay="40"><span
+                                class="material-symbols-outlined text-accent text-3xl mb-3 block">trending_up</span>
+                            <h4 class="font-black text-primary mb-1 text-sm">Item Performance</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">Monitor top-selling food and drink items
+                            </p>
+                        </div>
+                        <div class="bg-[#f5f7f8] rounded-2xl p-6 border border-[#e8edf2]" data-aos="fade-up"
+                            data-aos-delay="80"><span
+                                class="material-symbols-outlined text-accent text-3xl mb-3 block">dashboard</span>
+                            <h4 class="font-black text-primary mb-1 text-sm">Sales Dashboard</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">Daily sales, food vs drink revenue, order
+                                volume</p>
+                        </div>
+                        <div class="bg-[#f5f7f8] rounded-2xl p-6 border border-[#e8edf2]" data-aos="fade-up"
+                            data-aos-delay="120"><span
+                                class="material-symbols-outlined text-accent text-3xl mb-3 block">cloud_off</span>
+                            <h4 class="font-black text-primary mb-1 text-sm">Offline Operation</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">Syncs automatically when reconnected</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RESULTS + CTA -->
+            <section class="py-20 bg-primary text-white">
+                <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+                    <div data-aos="fade-right">
+                        <h2 class="text-4xl font-black mb-8">Results After Deployment</h2>
+                        <div class="space-y-3">
+                            <div class="flex gap-3"><span
+                                    class="material-symbols-outlined fill-icon text-accent flex-shrink-0">check_circle</span><span
+                                    class="text-white/80">Significantly reduced verbal order errors</span></div>
+                            <div class="flex gap-3"><span
+                                    class="material-symbols-outlined fill-icon text-accent flex-shrink-0">check_circle</span><span
+                                    class="text-white/80">Faster coordination between waiters, kitchen, and bar</span>
+                            </div>
+                            <div class="flex gap-3"><span
+                                    class="material-symbols-outlined fill-icon text-accent flex-shrink-0">check_circle</span><span
+                                    class="text-white/80">Improved drink and food service speed</span></div>
+                            <div class="flex gap-3"><span
+                                    class="material-symbols-outlined fill-icon text-accent flex-shrink-0">check_circle</span><span
+                                    class="text-white/80">Professional table-side ordering via tablets</span></div>
+                            <div class="flex gap-3"><span
+                                    class="material-symbols-outlined fill-icon text-accent flex-shrink-0">check_circle</span><span
+                                    class="text-white/80">Clear visibility into food vs beverage performance</span>
+                            </div>
+                            <div class="flex gap-3"><span
+                                    class="material-symbols-outlined fill-icon text-accent flex-shrink-0">check_circle</span><span
+                                    class="text-white/80">Faster and more accurate billing</span></div>
+                            <div class="flex gap-3"><span
+                                    class="material-symbols-outlined fill-icon text-accent flex-shrink-0">check_circle</span><span
+                                    class="text-white/80">Continuous operation even during internet outages</span></div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="100">
+                        <div class="rounded-3xl p-10"
+                            style="background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1)">
+                            <h3 class="text-2xl font-black mb-6 text-white">Want a System Like This?</h3>
+                            <p class="text-white/55 mb-8 leading-relaxed">PrimeLabs builds custom restaurant, bar, and
+                                hospitality management systems that streamline operations and increase service speed.
+                            </p>
+                            <div class="flex flex-col gap-3">
+                                <a href="/contact.html"
+                                    class="btn-ripple bg-accent text-primary px-8 py-4 rounded-xl font-black text-center hover:-translate-y-0.5 transition-all">Book
+                                    a Consultation</a>
+                                <a href="/contact.html"
+                                    class="px-8 py-4 rounded-xl font-black text-center text-white transition-all"
+                                    style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2)">Start
+                                    Your Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="bg-white border-t border-[#dae0e7] pt-20 pb-10">
+            <div class="max-w-7xl mx-auto px-6 lg:px-20">
+                <div class="grid md:grid-cols-4 gap-12 mb-20">
+                    <div class="flex flex-col justify-start gap-4">
+                        <!-- Logo -->
+                        <div class="w-36 inline"> <!-- width container -->
+                            <img src="/asset/header.png" alt="logo" class="w-full h-auto object-contain">
+                        </div>
+                        <p class="text-primary text-sm leading-relaxed max-w-xs">Leading enterprise-grade technology and
+                            automation solutions for high-growth businesses.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-primary font-bold mb-6 text-xs uppercase tracking-wider">Services</h4>
+                        <ul class="flex flex-col gap-4 text-sm text-primary/80">
+                            <li><a class="hover:text-primary transition-colors" href="/service/control.html">Control
+                                    Systems</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="/service/growth.html">Growth
+                                    Systems</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="/service.html">All Solutions</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-primary font-bold mb-6 text-xs uppercase tracking-wider">Company</h4>
+                        <ul class="flex flex-col gap-4 text-sm text-primary/80">
+                            <li><a class="hover:text-primary transition-colors" href="/about.html">About Us</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="/casestudy.html">Case Studies</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors"
+                                    href="/index.html#industries">Industries</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-primary font-bold mb-6 text-xs uppercase tracking-wider">Contact</h4>
+                        <ul class="flex flex-col gap-4 text-sm text-primary/80">
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-sm text-primary">mail</span>info@primelabsbusinesssolution.com
+                            </li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-sm text-primary">phone</span>+234966363260
+                            </li>
+                            <li class="flex items-start gap-2"><span
+                                    class="material-symbols-outlined text-sm text-primary mt-0.5">location_on</span><span>Shop
+                                    S9/10, Cozyez Mall, 43 Presidential Rd, Asata, Enugu, Nigeria</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-[#dae0e7] gap-4">
+                    <p class="text-sm text-primary">&copy; 2024 Primelabs Limited. All rights reserved.</p>
+                    <div class="flex gap-6"><a class="text-sm text-primary/80 hover:text-primary transition-colors"
+                            href="#">Privacy Policy</a><a
+                            class="text-sm text-primary/80 hover:text-primary transition-colors" href="#">Terms of
+                            Service</a></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/js/restaurant.js"></script>
+</body>
+
+</html>

@@ -52,62 +52,35 @@ body {
     }
 }
 
-.prop-card {
+.flow-card {
     background: white;
     border: 1.5px solid #e8edf2;
     border-radius: 16px;
-    padding: 24px;
+    padding: 20px;
+    text-align: center;
     transition: all .25s
 }
 
-.prop-card:hover {
+.flow-card:hover {
     border-color: #00d1ff;
-    box-shadow: 0 8px 24px rgba(0, 31, 61, .08);
-    transform: translateY(-2px)
+    box-shadow: 0 8px 24px rgba(0, 31, 61, .07)
 }
 
-.tl-item {
-    position: relative;
-    padding-left: 48px;
-    padding-bottom: 40px
-}
-
-.tl-item:last-child {
-    padding-bottom: 0
-}
-
-.tl-item::before {
-    content: '';
-    position: absolute;
-    left: 15px;
-    top: 28px;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom, #00d1ff, rgba(0, 209, 255, .1))
-}
-
-.tl-item:last-child::before {
-    display: none
-}
-
-.tl-dot {
-    position: absolute;
-    left: 0;
-    top: 4px;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: #001f3d;
+.feat-row {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid #00d1ff
+    gap: 16px;
+    align-items: flex-start;
+    padding: 16px 0;
+    border-bottom: 1px solid #f0f4f8
 }
 
-.stat-pill {
-    background: white;
-    border: 1.5px solid #e8edf2;
-    border-radius: 12px;
-    padding: 20px 24px;
-    text-align: center
+.feat-row:last-child {
+    border-bottom: none
+}
+
+.screen-mock {
+    background: #001f3d;
+    border-radius: 14px;
+    padding: 16px;
+    color: white
 }

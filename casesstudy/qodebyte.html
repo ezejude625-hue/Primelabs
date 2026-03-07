@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Case Study: QodeByte Academy | PrimeLabs</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/qodebyte.css">
+</head>
+
+<body class="bg-background-light font-display text-slate-900 antialiased">
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+
+        <!-- ═══ NAV ═══ -->
+        <nav class="sticky top-0 z-50 bg-background-light shadow-sm border-b border-[#e5e7eb]">
+
+            <!-- Top bar -->
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <!-- Logo -->
+                <img src="/asset/header.png" alt="logo" class="h-30 w-40 mb-6 mt-5 bg-cover">
+
+                <!-- Desktop menu -->
+                <div class="hidden md:flex items-center gap-10">
+                    <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/service.html">Solutions</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/index.html#industries">Industries</a>
+                    <a class="text-sm font-semibold text-accent hover:text-accent transition-colors"
+                        href="/casestudy.html">Casestudies</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors" href="/about.html">About</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/contact.html">Contact</a>
+                    <button
+                        class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
+                        id="ripple">
+                        Book a Demo
+                    </button>
+                </div>
+
+                <!-- Hamburger -->
+                <div class="md:hidden cursor-pointer" id="menuBtn">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobileMenu"
+                class="md:hidden overflow-hidden max-h-0 transition-all duration-500 ease-in-out border-t border-gray-200">
+
+                <div class="px-6 py-6 flex flex-col gap-6 bg-white">
+                    <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/service.html">Solutions</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/index.html#industries">Industries</a>
+                    <a class="text-sm font-semibold text-accent hover:text-accent transition-colors"
+                        href="/casestudy.html">Casestudies</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors" href="/about.html">About</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/contact.html">Contact</a>
+                    <button
+                        class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
+                        id="ripple">
+                        Book a Demo
+                    </button>
+                </div>
+            </div>
+
+        </nav>
+
+        <main>
+
+            <!-- ═══ HERO SECTION ═══ -->
+            <section class="relative py-16 lg:py-24 overflow-hidden"
+                style="background:linear-gradient(135deg,#000d1a 0%,#001f3d 60%,#003a6b 100%)">
+                <div class="absolute inset-0 pointer-events-none"
+                    style="background-image:radial-gradient(circle at 65% 30%,rgba(0,209,255,.09),transparent 55%),linear-gradient(rgba(0,209,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,209,255,.03) 1px,transparent 1px);background-size:auto,60px 60px,60px 60px">
+                </div>
+                <div class="max-w-7xl mx-auto px-6 relative">
+                    <div class="flex flex-col gap-6 max-w-4xl" data-aos="fade-right">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full w-fit"
+                            style="background:rgba(0,209,255,.12);border:1px solid rgba(0,209,255,.3)">
+                            <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                            <span class="text-xs font-bold text-accent uppercase tracking-wider">Featured Case
+                                Study</span>
+                        </div>
+                        <h1 class="text-4xl md:text-6xl font-black leading-tight tracking-tight text-white">
+                            QodeByte Academy – Social Media, <span class="text-accent">Branding &amp; Growth
+                                Infrastructure</span>
+                        </h1>
+                        <p class="text-lg md:text-xl text-white/55">
+                            Delivered by PrimeLabs Business Solution
+                        </p>
+                    </div>
+                    <!-- Hero banner image -->
+                    <div class="mt-12 group relative" data-aos="fade-up" data-aos-delay="100">
+                        <div class="aspect-[21/9] w-full overflow-hidden rounded-2xl shadow-2xl relative"
+                            style="border:1px solid rgba(255,255,255,.1)">
+                            <img alt="QodeByte Academy digital workspace" class="h-full w-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3W2pDjh-4o-IPxQESQr-VcVWC2w73YV689Lbhh5ru8gEYpCK7ywx0djMvg8YOah5xMgRm6lMvRtFVt6U9hCt-CK0MKhsjIjdXaPPiEqV1Uyw1GyHPEwD1KFXZGL-xRPj80SJ724sXjQZterGT18EPjak5v7GYyu4A1H0p5C8T9zAnXW6dYGilfAtVU1OXyAbiO2tvcdZfmFGpL3vJgPZiXVVFt_oM8m-5aHp6CZpPl0PhXathtfjQB2_JOm3BjOV1p3-2pED1JdoZ" />
+                            <div class="absolute inset-0"
+                                style="background:linear-gradient(to top,rgba(0,12,26,.80) 0%,rgba(0,12,26,.2) 50%,transparent 100%)">
+                            </div>
+                            <div class="absolute bottom-8 left-8">
+                                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-3"
+                                    style="background:rgba(0,209,255,.15);border:1px solid rgba(0,209,255,.35)">
+                                    <span class="w-2 h-2 rounded-full bg-accent"></span>
+                                    <span class="text-xs font-bold text-accent uppercase tracking-wider">Tech Training
+                                        &amp; Digital Skills</span>
+                                </div>
+                                <h2 class="text-2xl md:text-4xl font-black text-white">QodeByte Academy</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══ OVERVIEW & PROBLEM ═══ -->
+            <section class="py-16 bg-[#f5f7f8]">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <!-- Overview -->
+                        <div class="bg-white rounded-2xl border border-[#e8edf2] p-8 shadow-sm" data-aos="fade-right">
+                            <h3 class="flex items-center gap-2 text-2xl font-black text-primary mb-5">
+                                <span class="material-symbols-outlined text-accent">info</span>
+                                Overview
+                            </h3>
+                            <p class="text-base leading-relaxed text-slate-500">
+                                QodeByte Academy is a premier Tech Training &amp; Digital Skills academy that required a
+                                complete digital foundation to scale their educational offerings and establish market
+                                authority. They were ready for the next level but lacked the unified infrastructure to
+                                get there.
+                            </p>
+                        </div>
+                        <!-- Problem -->
+                        <div class="bg-white rounded-2xl border border-[#e8edf2] p-8 shadow-sm" data-aos="fade-left"
+                            data-aos-delay="80">
+                            <h3 class="flex items-center gap-2 text-2xl font-black text-primary mb-5">
+                                <span class="material-symbols-outlined text-red-400">warning</span>
+                                The Problem
+                            </h3>
+                            <div>
+                                <div class="prob-row">
+                                    <span
+                                        class="material-symbols-outlined text-red-400 text-lg flex-shrink-0 mt-0.5">close</span>
+                                    <span class="text-slate-500 text-sm leading-relaxed">Inconsistent branding across
+                                        different digital platforms.</span>
+                                </div>
+                                <div class="prob-row">
+                                    <span
+                                        class="material-symbols-outlined text-red-400 text-lg flex-shrink-0 mt-0.5">close</span>
+                                    <span class="text-slate-500 text-sm leading-relaxed">Low digital recognition and
+                                        fragmented online presence.</span>
+                                </div>
+                                <div class="prob-row">
+                                    <span
+                                        class="material-symbols-outlined text-red-400 text-lg flex-shrink-0 mt-0.5">close</span>
+                                    <span class="text-slate-500 text-sm leading-relaxed">Inefficient lead generation
+                                        systems causing growth bottlenecks.</span>
+                                </div>
+                                <div class="prob-row">
+                                    <span
+                                        class="material-symbols-outlined text-red-400 text-lg flex-shrink-0 mt-0.5">close</span>
+                                    <span class="text-slate-500 text-sm leading-relaxed">Lack of high-quality content to
+                                        engage potential students.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══ THE SOLUTION — 6-Part System ═══ -->
+            <section class="py-24 bg-white">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="text-center mb-16" data-aos="fade-up">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full w-fit mb-5"
+                            style="background:rgba(0,31,61,.06);border:1px solid rgba(0,31,61,.1)">
+                            <span class="material-symbols-outlined text-primary text-sm">auto_awesome</span>
+                            <span class="text-xs font-bold text-primary uppercase tracking-wider">Our Approach</span>
+                        </div>
+                        <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-4">The 6-Part Digital Growth System
+                        </h2>
+                        <p class="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">We implemented a
+                            comprehensive solution to transform QodeByte&apos;s digital footprint.</p>
+                        <div class="w-16 h-1.5 bg-accent mx-auto rounded-full mt-5"></div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="sol-card" data-aos="fade-up" data-aos-delay="0">
+                            <div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
+                                <span class="material-symbols-outlined text-primary sc-icon text-2xl">palette</span>
+                            </div>
+                            <h4 class="text-lg font-black text-primary mb-2">Unified Branding</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed">Modern visual identity that communicates
+                                authority and innovation in tech education.</p>
+                        </div>
+                        <div class="sol-card" data-aos="fade-up" data-aos-delay="60">
+                            <div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
+                                <span class="material-symbols-outlined text-primary sc-icon text-2xl">web</span>
+                            </div>
+                            <h4 class="text-lg font-black text-primary mb-2">Custom Website</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed">A conversion-optimized hub for course
+                                browsing, student registration, and lead capture.</p>
+                        </div>
+                        <div class="sol-card" data-aos="fade-up" data-aos-delay="120">
+                            <div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
+                                <span class="material-symbols-outlined text-primary sc-icon text-2xl">share</span>
+                            </div>
+                            <h4 class="text-lg font-black text-primary mb-2">Social Media Strategy</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed">Engaging content engine tailored for
+                                Instagram, LinkedIn, and Facebook.</p>
+                        </div>
+                        <div class="sol-card" data-aos="fade-up" data-aos-delay="0">
+                            <div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
+                                <span class="material-symbols-outlined text-primary sc-icon text-2xl">ads_click</span>
+                            </div>
+                            <h4 class="text-lg font-black text-primary mb-2">Meta Ads</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed">Targeted advertising campaigns reaching
+                                aspiring tech professionals.</p>
+                        </div>
+                        <div class="sol-card" data-aos="fade-up" data-aos-delay="60">
+                            <div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
+                                <span class="material-symbols-outlined text-primary sc-icon text-2xl">location_on</span>
+                            </div>
+                            <h4 class="text-lg font-black text-primary mb-2">Google Business</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed">Optimized local presence to drive physical
+                                foot traffic and local trust.</p>
+                        </div>
+                        <div class="sol-card" data-aos="fade-up" data-aos-delay="120">
+                            <div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
+                                <span class="material-symbols-outlined text-primary sc-icon text-2xl">movie</span>
+                            </div>
+                            <h4 class="text-lg font-black text-primary mb-2">Motion Graphics</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed">Dynamic video assets that simplify complex
+                                tech concepts for marketing.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══ KEY FEATURES & RESULTS — dark section ═══ -->
+            <section class="py-24 bg-primary text-white" style="border-radius:2.5rem 2.5rem 0 0">
+                <div class="absolute inset-0 pointer-events-none rounded-t-[2.5rem]"
+                    style="background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(0,209,255,.07),transparent 60%)">
+                </div>
+                <div class="max-w-7xl mx-auto px-6 relative">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                        <!-- Key Features -->
+                        <div data-aos="fade-right">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full w-fit mb-6"
+                                style="background:rgba(0,209,255,.1);border:1px solid rgba(0,209,255,.25)">
+                                <span class="material-symbols-outlined text-accent text-sm">star</span>
+                                <span class="text-xs font-bold text-accent uppercase tracking-wider">What We
+                                    Delivered</span>
+                            </div>
+                            <h3 class="text-3xl font-black mb-8 text-white">Key Features Implemented</h3>
+                            <div>
+                                <div class="feat-row">
+                                    <div class="mt-1 flex h-6 w-6 items-center justify-center rounded-full flex-shrink-0"
+                                        style="background:rgba(0,209,255,.15)">
+                                        <span class="material-symbols-outlined fill-icon text-accent"
+                                            style="font-size:14px">check</span>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-black text-lg text-white">Unified Brand Identity</h5>
+                                        <p class="text-white/55 text-sm mt-1">A cohesive look and feel across every
+                                            touchpoint.</p>
+                                    </div>
+                                </div>
+                                <div class="feat-row">
+                                    <div class="mt-1 flex h-6 w-6 items-center justify-center rounded-full flex-shrink-0"
+                                        style="background:rgba(0,209,255,.15)">
+                                        <span class="material-symbols-outlined fill-icon text-accent"
+                                            style="font-size:14px">check</span>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-black text-lg text-white">Self-Service Marketing</h5>
+                                        <p class="text-white/55 text-sm mt-1">Empowering their team with modular brand
+                                            assets.</p>
+                                    </div>
+                                </div>
+                                <div class="feat-row">
+                                    <div class="mt-1 flex h-6 w-6 items-center justify-center rounded-full flex-shrink-0"
+                                        style="background:rgba(0,209,255,.15)">
+                                        <span class="material-symbols-outlined fill-icon text-accent"
+                                            style="font-size:14px">check</span>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-black text-lg text-white">Structured Content Engine</h5>
+                                        <p class="text-white/55 text-sm mt-1">A predictable system for high-quality
+                                            content production.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Results -->
+                        <div data-aos="fade-left" data-aos-delay="100">
+                            <div class="rounded-3xl p-10 relative overflow-hidden"
+                                style="background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1)">
+                                <div class="absolute inset-0 rounded-3xl pointer-events-none"
+                                    style="background:radial-gradient(circle at 100% 0%,rgba(0,209,255,.08),transparent 50%)">
+                                </div>
+                                <div class="relative z-10">
+                                    <h3 class="text-2xl font-black mb-8 text-white">Achievements &amp; Results</h3>
+                                    <div class="space-y-0">
+                                        <div>
+                                            <div class="flex items-end gap-3">
+                                                <span class="text-5xl font-black text-accent">100%</span>
+                                                <span class="text-white/55 mb-2 font-semibold">Unified Presence</span>
+                                            </div>
+                                            <div class="stat-divider"></div>
+                                        </div>
+                                        <div>
+                                            <div class="flex items-end gap-3">
+                                                <span class="text-5xl font-black text-accent">4x</span>
+                                                <span class="text-white/55 mb-2 font-semibold">Increased Lead
+                                                    Flow</span>
+                                            </div>
+                                            <div class="stat-divider"></div>
+                                        </div>
+                                        <div>
+                                            <div class="flex items-end gap-3">
+                                                <span class="text-5xl font-black text-accent">+85%</span>
+                                                <span class="text-white/55 mb-2 font-semibold">Social Engagement</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══ CTA SECTION ═══ -->
+            <section class="py-24 bg-[#f5f7f8]">
+                <div class="max-w-7xl mx-auto px-6 text-center">
+                    <div class="bg-white rounded-[2.5rem] p-12 lg:p-20 relative overflow-hidden border border-[#e8edf2] shadow-xl"
+                        data-aos="fade-up">
+                        <!-- decorative blobs -->
+                        <div class="absolute -top-20 -right-20 w-80 h-80 rounded-full pointer-events-none"
+                            style="background:rgba(0,209,255,.05);filter:blur(60px)"></div>
+                        <div class="absolute -bottom-20 -left-20 w-80 h-80 rounded-full pointer-events-none"
+                            style="background:rgba(0,31,61,.05);filter:blur(60px)"></div>
+                        <div class="relative z-10">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full w-fit mb-6"
+                                style="background:rgba(0,31,61,.06);border:1px solid rgba(0,31,61,.1)">
+                                <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                                <span class="text-xs font-bold text-primary uppercase tracking-wider">Ready to
+                                    grow?</span>
+                            </div>
+                            <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-5">Want a Growth System Like
+                                This?</h2>
+                            <p class="text-lg text-slate-500 mb-10 max-w-2xl mx-auto leading-relaxed">
+                                Stop struggling with fragmented marketing. Let PrimeLabs build your end-to-end digital
+                                foundation.
+                            </p>
+                            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                                <a href="/contact.html"
+                                    class="btn-ripple w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-primary text-white font-black rounded-xl hover:-translate-y-0.5 transition-all shadow-lg shadow-primary/25">
+                                    <span class="material-symbols-outlined text-accent">event</span>
+                                    Book a Consultation
+                                </a>
+                                <a href="/contact.html"
+                                    class="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 border-2 border-primary text-primary font-black rounded-xl hover:bg-primary hover:text-white transition-all">
+                                    <span class="material-symbols-outlined">play_arrow</span>
+                                    Start Your Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="bg-white border-t border-[#dae0e7] pt-20 pb-10">
+            <div class="max-w-7xl mx-auto px-6 lg:px-20">
+                <div class="grid md:grid-cols-4 gap-12 mb-20">
+                    <div class="flex flex-col justify-start gap-4">
+                        <!-- Logo -->
+                        <div class="w-36 inline"> <!-- width container -->
+                            <img src="/asset/header.png" alt="logo" class="w-full h-auto object-contain">
+                        </div>
+                        <p class="text-primary text-sm leading-relaxed max-w-xs">Leading enterprise-grade technology and
+                            automation solutions for high-growth businesses.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-primary font-bold mb-6 text-xs uppercase tracking-wider">Services</h4>
+                        <ul class="flex flex-col gap-4 text-sm text-primary/80">
+                            <li><a class="hover:text-primary transition-colors" href="/service/control.html">Control
+                                    Systems</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="/service/growth.html">Growth
+                                    Systems</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="/service.html">All Solutions</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-primary font-bold mb-6 text-xs uppercase tracking-wider">Company</h4>
+                        <ul class="flex flex-col gap-4 text-sm text-primary/80">
+                            <li><a class="hover:text-primary transition-colors" href="/about.html">About Us</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="/casestudy.html">Case Studies</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors"
+                                    href="/index.html#industries">Industries</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-primary font-bold mb-6 text-xs uppercase tracking-wider">Contact</h4>
+                        <ul class="flex flex-col gap-4 text-sm text-primary/80">
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-sm text-primary">mail</span>info@primelabsbusinesssolution.com
+                            </li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-sm text-primary">phone</span>+234966363260
+                            </li>
+                            <li class="flex items-start gap-2"><span
+                                    class="material-symbols-outlined text-sm text-primary mt-0.5">location_on</span><span>Shop
+                                    S9/10, Cozyez Mall, 43 Presidential Rd, Asata, Enugu, Nigeria</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-[#dae0e7] gap-4">
+                    <p class="text-sm text-primary">&copy; 2024 Primelabs Limited. All rights reserved.</p>
+                    <div class="flex gap-6"><a class="text-sm text-primary/80 hover:text-primary transition-colors"
+                            href="#">Privacy Policy</a><a
+                            class="text-sm text-primary/80 hover:text-primary transition-colors" href="#">Terms of
+                            Service</a></div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/js/qodebyte.js"></script>
+</body>
+
+</html>

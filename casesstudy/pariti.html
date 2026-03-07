@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Case Study: Pariti Delivery Platform | PrimeLabs</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/pariti.css">
+</head>
+
+<body class="bg-background-light font-display antialiased">
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+
+        <!-- Navigation -->
+        <nav class="sticky top-0 z-50 bg-background-light shadow-sm border-b border-[#e5e7eb]">
+
+            <!-- Top bar -->
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <!-- Logo -->
+                <img src="/asset/header.png" alt="logo" class="h-30 w-40 mb-6 mt-5 bg-cover">
+
+                <!-- Desktop menu -->
+                <div class="hidden md:flex items-center gap-10">
+                    <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/service.html">Solutions</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/index.html#industries">Industries</a>
+                    <a class="text-sm font-semibold text-accent hover:text-accent transition-colors"
+                        href="/casestudy.html">Casestudies</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors" href="/about.html">About</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/contact.html">Contact</a>
+                    <button
+                        class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
+                        id="ripple">
+                        Book a Demo
+                    </button>
+                </div>
+
+                <!-- Hamburger -->
+                <div class="md:hidden cursor-pointer" id="menuBtn">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobileMenu"
+                class="md:hidden overflow-hidden max-h-0 transition-all duration-500 ease-in-out border-t border-gray-200">
+
+                <div class="px-6 py-6 flex flex-col gap-6 bg-white">
+                    <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/service.html">Solutions</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/index.html#industries">Industries</a>
+                    <a class="text-sm font-semibold text-accent hover:text-accent transition-colors"
+                        href="/casestudy.html">Casestudies</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors" href="/about.html">About</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/contact.html">Contact</a>
+                    <button
+                        class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
+                        id="ripple">
+                        Book a Demo
+                    </button>
+                </div>
+            </div>
+
+        </nav>
+
+        <main>
+
+            <!-- HERO — full accent strip -->
+            <section class="relative overflow-hidden"
+                style="background:linear-gradient(120deg,#001f3d 0%,#003366 100%)">
+                <div class="absolute inset-0 pointer-events-none"
+                    style="background-image:radial-gradient(circle at 80% 20%,rgba(0,209,255,.12),transparent 50%)">
+                </div>
+                <div class="max-w-7xl mx-auto px-6 lg:px-20 py-24 grid lg:grid-cols-2 gap-16 items-center">
+                    <div data-aos="fade-right">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-6 w-fit"
+                            style="background:rgba(0,209,255,.12);border:1px solid rgba(0,209,255,.3)">
+                            <span class="material-symbols-outlined text-accent text-sm">local_shipping</span>
+                            <span class="text-xs font-bold uppercase tracking-wider text-accent">Logistics
+                                Platform</span>
+                        </div>
+                        <h1 class="text-4xl lg:text-6xl font-black leading-tight text-white mb-4">Pariti Delivery &amp;
+                            <span class="text-accent">Waybill Marketplace</span>
+                        </h1>
+                        <p class="text-white/60 text-lg leading-relaxed mb-8 max-w-lg">Connecting senders, verified
+                            riders, and partner logistics companies in one unified platform — enabling fast local
+                            delivery and nationwide shipping across Nigeria.</p>
+                        <div class="grid grid-col-2 md:flex md:flex-wrap gap-3">
+                            <span class="feat-pill"><span class="w-2 h-2 rounded-full bg-accent"></span>Rider
+                                Marketplace</span>
+                            <span class="feat-pill"><span class="w-2 h-2 rounded-full bg-accent"></span>Live
+                                Tracking</span>
+                            <span class="feat-pill"><span class="w-2 h-2 rounded-full bg-accent"></span>Nationwide
+                                Waybill</span>
+                            <span class="feat-pill"><span class="w-2 h-2 rounded-full bg-accent"></span>Flexible
+                                Pricing</span>
+                        </div>
+                    </div>
+                    <!-- Route visual -->
+                    <div class="hidden lg:block" data-aos="fade-left" data-aos-delay="100">
+                        <div class="bg-white/10 backdrop-blur rounded-3xl p-8 border border-white/15">
+                            <p class="text-xs font-bold text-accent uppercase tracking-wider mb-6">Live Delivery
+                                Workflow</p>
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-4">
+                                    <div class="route-dot bg-accent"></div>
+                                    <div class="flex-1 bg-white/10 rounded-lg px-4 py-3">
+                                        <p class="text-sm font-black text-white">Sender creates request</p>
+                                        <p class="text-xs text-white/40">Sets pickup, destination &amp; price</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-px h-6 bg-accent/30 ml-1.5"></div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="route-dot bg-accent/60"></div>
+                                    <div class="flex-1 bg-white/10 rounded-lg px-4 py-3">
+                                        <p class="text-sm font-black text-white">Nearby rider accepts job</p>
+                                        <p class="text-xs text-white/40">Radius-based matching</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-px h-6 bg-accent/30 ml-1.5"></div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="route-dot bg-accent/40"></div>
+                                    <div class="flex-1 bg-white/10 rounded-lg px-4 py-3">
+                                        <p class="text-sm font-black text-white">Live tracking begins</p>
+                                        <p class="text-xs text-white/40">Sender tracks pickup to delivery</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-px h-6 bg-accent/30 ml-1.5"></div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="route-dot bg-green-400"></div>
+                                    <div class="flex-1 bg-white/10 rounded-lg px-4 py-3">
+                                        <p class="text-sm font-black text-white">Package delivered ✓</p>
+                                        <p class="text-xs text-white/40">Or routed to waybill partner for nationwide</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- THE PROBLEM -->
+            <section class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="grid lg:grid-cols-3 gap-8">
+                        <div data-aos="fade-up">
+                            <h2 class="text-3xl font-black text-primary mb-4">The Problem</h2>
+                            <p class="text-slate-500 leading-relaxed">Businesses and individuals in Nigeria faced
+                                persistent delivery challenges that created delays, uncertainty, and lost opportunities.
+                            </p>
+                        </div>
+                        <div class="lg:col-span-2 grid md:grid-cols-2 gap-4" data-aos="fade-up" data-aos-delay="80">
+                            <div class="bg-[#f5f7f8] rounded-xl p-5 border border-[#e8edf2]"><span
+                                    class="material-symbols-outlined text-red-400 mb-2 block">person_search</span>
+                                <p class="font-black text-primary text-sm mb-1">No Reliable Riders</p>
+                                <p class="text-xs text-slate-500">Hard to find trusted, verified riders quickly</p>
+                            </div>
+                            <div class="bg-[#f5f7f8] rounded-xl p-5 border border-[#e8edf2]"><span
+                                    class="material-symbols-outlined text-red-400 mb-2 block">price_change</span>
+                                <p class="font-black text-primary text-sm mb-1">High Inflexible Pricing</p>
+                                <p class="text-xs text-slate-500">No competitive or fair pricing model</p>
+                            </div>
+                            <div class="bg-[#f5f7f8] rounded-xl p-5 border border-[#e8edf2]"><span
+                                    class="material-symbols-outlined text-red-400 mb-2 block">location_off</span>
+                                <p class="font-black text-primary text-sm mb-1">No Real-Time Tracking</p>
+                                <p class="text-xs text-slate-500">Zero visibility into rider movement or status</p>
+                            </div>
+                            <div class="bg-[#f5f7f8] rounded-xl p-5 border border-[#e8edf2]"><span
+                                    class="material-symbols-outlined text-red-400 mb-2 block">route</span>
+                                <p class="font-black text-primary text-sm mb-1">Complex Nationwide Shipping</p>
+                                <p class="text-xs text-slate-500">No bridge between local dispatch and interstate</p>
+                            </div>
+                            <div class="bg-[#f5f7f8] rounded-xl p-5 border border-[#e8edf2]"><span
+                                    class="material-symbols-outlined text-red-400 mb-2 block">hub</span>
+                                <p class="font-black text-primary text-sm mb-1">No Aggregation Platform</p>
+                                <p class="text-xs text-slate-500">Delivery companies had no digital coordination layer
+                                </p>
+                            </div>
+                            <div class="bg-[#f5f7f8] rounded-xl p-5 border border-[#e8edf2]"><span
+                                    class="material-symbols-outlined text-red-400 mb-2 block">store</span>
+                                <p class="font-black text-primary text-sm mb-1">SMBs Without Logistics</p>
+                                <p class="text-xs text-slate-500">Small businesses couldn't manage their own delivery
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- KEY FEATURES — stepped cards -->
+            <section class="py-24 bg-[#f5f7f8]">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="text-center mb-16" data-aos="fade-up">
+                        <h2 class="text-3xl font-black text-primary mb-2">Key Features Built</h2>
+                        <div class="w-12 h-1 bg-accent mx-auto rounded-full mt-3"></div>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="step-card" data-aos="fade-up" data-aos-delay="0">
+                            <div class="step-num">01</div><span
+                                class="material-symbols-outlined text-accent text-3xl mb-3 block mt-4">verified_user</span>
+                            <h4 class="font-black text-primary mb-2">Verified Rider Registration</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">Riders onboard through identity
+                                verification to build sender trust and platform security.</p>
+                        </div>
+                        <div class="step-card" data-aos="fade-up" data-aos-delay="60">
+                            <div class="step-num">02</div><span
+                                class="material-symbols-outlined text-accent text-3xl mb-3 block mt-4">radar</span>
+                            <h4 class="font-black text-primary mb-2">Smart Radius-Based Matching</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">When a sender creates a request, the
+                                system auto-searches nearby available riders by location.</p>
+                        </div>
+                        <div class="step-card" data-aos="fade-up" data-aos-delay="120">
+                            <div class="step-num">03</div><span
+                                class="material-symbols-outlined text-accent text-3xl mb-3 block mt-4">price_check</span>
+                            <h4 class="font-black text-primary mb-2">Flexible Price Model</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">Senders set a price; riders accept jobs
+                                that match their preference — market-driven pricing.</p>
+                        </div>
+                        <div class="step-card" data-aos="fade-up" data-aos-delay="0">
+                            <div class="step-num">04</div><span
+                                class="material-symbols-outlined text-accent text-3xl mb-3 block mt-4">my_location</span>
+                            <h4 class="font-black text-primary mb-2">Real-Time Rider Tracking</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">Live map tracking from pickup to delivery
+                                — full transparency and delivery confidence.</p>
+                        </div>
+                        <div class="step-card" data-aos="fade-up" data-aos-delay="60">
+                            <div class="step-num">05</div><span
+                                class="material-symbols-outlined text-accent text-3xl mb-3 block mt-4">swap_horiz</span>
+                            <h4 class="font-black text-primary mb-2">Nationwide Waybill</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">Partner logistics (e.g. GIG) handle
+                                inter-state delivery — rider drops at park, shipment moves on.</p>
+                        </div>
+                        <div class="step-card" data-aos="fade-up" data-aos-delay="120">
+                            <div class="step-num">06</div><span
+                                class="material-symbols-outlined text-accent text-3xl mb-3 block mt-4">storefront</span>
+                            <h4 class="font-black text-primary mb-2">Vendor & Business Tools</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">Businesses can send nationwide, manage
+                                multiple requests, and monitor shipments in real time.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RESULTS + CTA -->
+            <section class="py-20 bg-primary text-white">
+                <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+                    <div data-aos="fade-right">
+                        <h2 class="text-4xl font-black mb-8">Results</h2>
+                        <div class="space-y-3">
+                            <div class="flex gap-3"><span
+                                    class="material-symbols-outlined fill-icon text-accent flex-shrink-0">check_circle</span><span
+                                    class="text-white/80">Faster access to nearby verified riders</span></div>
+                            <div class="flex gap-3"><span
+                                    class="material-symbols-outlined fill-icon text-accent flex-shrink-0">check_circle</span><span
+                                    class="text-white/80">Live visibility into rider movement and delivery status</span>
+                            </div>
+                            <div class="flex gap-3"><span
+                                    class="material-symbols-outlined fill-icon text-accent flex-shrink-0">check_circle</span><span
+                                    class="text-white/80">Reduced delivery coordination stress for businesses</span>
+                            </div>
+                            <div class="flex gap-3"><span
+                                    class="material-symbols-outlined fill-icon text-accent flex-shrink-0">check_circle</span><span
+                                    class="text-white/80">Flexible and competitive delivery pricing</span></div>
+                            <div class="flex gap-3"><span
+                                    class="material-symbols-outlined fill-icon text-accent flex-shrink-0">check_circle</span><span
+                                    class="text-white/80">Improved trust through verified rider onboarding</span></div>
+                            <div class="flex gap-3"><span
+                                    class="material-symbols-outlined fill-icon text-accent flex-shrink-0">check_circle</span><span
+                                    class="text-white/80">Bridge between local dispatch and nationwide shipping</span>
+                            </div>
+                            <div class="flex gap-3"><span
+                                    class="material-symbols-outlined fill-icon text-accent flex-shrink-0">check_circle</span><span
+                                    class="text-white/80">Scalable model without owning fleets or warehouses</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="100">
+                        <div class="rounded-3xl p-10"
+                            style="background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1)">
+                            <h3 class="text-2xl font-black mb-3">Want to Build a Logistics Platform Like Pariti?</h3>
+                            <p class="text-white/55 mb-8 text-sm leading-relaxed">PrimeLabs develops scalable logistics,
+                                marketplace, and on-demand delivery systems built for real-world operations.</p>
+                            <div class="flex flex-col gap-3">
+                                <a href="/contact.html"
+                                    class="btn-ripple bg-accent text-primary px-8 py-4 rounded-xl font-black text-center">Book
+                                    a Consultation</a>
+                                <a href="/contact.html" class="px-8 py-4 rounded-xl font-black text-center text-white"
+                                    style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2)">Start
+                                    Your Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="bg-white border-t border-[#dae0e7] pt-20 pb-10">
+            <div class="max-w-7xl mx-auto px-6 lg:px-20">
+                <div class="grid md:grid-cols-4 gap-12 mb-20">
+                    <div class="flex flex-col justify-start gap-4">
+                        <!-- Logo -->
+                        <div class="w-36 inline"> <!-- width container -->
+                            <img src="/asset/header.png" alt="logo" class="w-full h-auto object-contain">
+                        </div>
+                        <p class="text-primary text-sm leading-relaxed max-w-xs">Leading enterprise-grade technology and
+                            automation solutions for high-growth businesses.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-primary font-bold mb-6 text-xs uppercase tracking-wider">Services</h4>
+                        <ul class="flex flex-col gap-4 text-sm text-primary/80">
+                            <li><a class="hover:text-primary transition-colors" href="/service/control.html">Control
+                                    Systems</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="/service/growth.html">Growth
+                                    Systems</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="/service.html">All Solutions</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-primary font-bold mb-6 text-xs uppercase tracking-wider">Company</h4>
+                        <ul class="flex flex-col gap-4 text-sm text-primary/80">
+                            <li><a class="hover:text-primary transition-colors" href="/about.html">About Us</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="/casestudy.html">Case Studies</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors"
+                                    href="/index.html#industries">Industries</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-primary font-bold mb-6 text-xs uppercase tracking-wider">Contact</h4>
+                        <ul class="flex flex-col gap-4 text-sm text-primary/80">
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-sm text-primary">mail</span>info@primelabsbusinesssolution.com
+                            </li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-sm text-primary">phone</span>+234966363260
+                            </li>
+                            <li class="flex items-start gap-2"><span
+                                    class="material-symbols-outlined text-sm text-primary mt-0.5">location_on</span><span>Shop
+                                    S9/10, Cozyez Mall, 43 Presidential Rd, Asata, Enugu, Nigeria</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-[#dae0e7] gap-4">
+                    <p class="text-sm text-primary">&copy; 2024 Primelabs Limited. All rights reserved.</p>
+                    <div class="flex gap-6"><a class="text-sm text-primary/80 hover:text-primary transition-colors"
+                            href="#">Privacy Policy</a><a
+                            class="text-sm text-primary/80 hover:text-primary transition-colors" href="#">Terms of
+                            Service</a></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/js/pariti.js"></script>
+</body>
+
+</html>
