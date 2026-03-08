@@ -1,328 +1,569 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en">
+<html class="light scroll-smooth" lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Case Studies Hub | Primelabs Limited</title>
+    <title>Case Studies | PrimeLabs Business Solution</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
         rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/casestudy.css">
 </head>
 
-<body
-    class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 overflow-x-hidden antialiased">
-    <div class="relative flex h-full w-full flex-col">
+<body class="bg-background-light font-display text-slate-900 antialiased">
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden">
 
-        <!-- Navigation -->
-        <nav class="sticky top-0 z-50 bg-background-light shadow-sm border-b border-[#e5e7eb]" data-aos="fade-down">
-
-            <!-- Top bar -->
+        <!-- ═══ NAV ═══ -->
+        <nav class="sticky top-0 z-50 bg-background-light shadow-sm border-b border-[#e5e7eb]">
             <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-                <!-- Logo -->
                 <img src="/asset/header.png" alt="logo" class="h-30 w-40 mb-6 mt-5 bg-cover">
-
-                <!-- Desktop menu -->
-                <div class="hidden md:flex items-center gap-10" data-aos="fade-left">
+                <div class="hidden md:flex items-center gap-10">
                     <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
                     <a class="text-sm font-semibold hover:text-accent transition-colors"
                         href="/service.html">Solutions</a>
                     <a class="text-sm font-semibold hover:text-accent transition-colors"
                         href="/index.html#industries">Industries</a>
-                    <a class="text-sm font-semibold text-accent hover:text-accent transition-colors"
-                        href="/casestudy.html">Casestudies</a>
+                    <a class="text-sm font-semibold text-accent" href="/casestudy.html">Case Studies</a>
                     <a class="text-sm font-semibold hover:text-accent transition-colors" href="/about.html">About</a>
                     <a class="text-sm font-semibold hover:text-accent transition-colors"
                         href="/contact.html">Contact</a>
                     <button
-                        class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
-                        id="ripple">
-                        Book a Demo
-                    </button>
+                        class="btn-ripple bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">Book
+                        a Demo</button>
                 </div>
-
-                <!-- Hamburger -->
                 <div class="md:hidden cursor-pointer" id="menuBtn">
                     <span class="material-symbols-outlined text-3xl">menu</span>
                 </div>
             </div>
-
-            <!-- Mobile menu -->
             <div id="mobileMenu"
                 class="md:hidden overflow-hidden max-h-0 transition-all duration-500 ease-in-out border-t border-gray-200">
-
                 <div class="px-6 py-6 flex flex-col gap-6 bg-white">
                     <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
                     <a class="text-sm font-semibold hover:text-accent transition-colors"
                         href="/service.html">Solutions</a>
                     <a class="text-sm font-semibold hover:text-accent transition-colors"
                         href="/index.html#industries">Industries</a>
-                    <a class="text-sm font-semibold text-accent hover:text-accent transition-colors"
-                        href="/casestudy.html">Casestudies</a>
+                    <a class="text-sm font-semibold text-accent" href="/casestudy.html">Case Studies</a>
                     <a class="text-sm font-semibold hover:text-accent transition-colors" href="/about.html">About</a>
                     <a class="text-sm font-semibold hover:text-accent transition-colors"
                         href="/contact.html">Contact</a>
-                    <button
-                        class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
-                        id="ripple">
-                        Book a Demo
-                    </button>
+                    <button class="btn-ripple bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold">Book a
+                        Demo</button>
                 </div>
             </div>
-
         </nav>
 
-        <div class="h-10"></div>
+        <main>
 
-        <!-- main -->
-        <main class="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-12">
-            <!-- Hero Section -->
-            <div class="mb-12" data-aos="fade-up">
-                <h1 class="text-4xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight mb-4">Case
-                    Studies Hub</h1>
-                <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
-                    Exploring our global impact through enterprise technology solutions, innovative digital design, and
-                    strategic brand modernization.
-                </p>
-            </div>
-            <!-- Filter Tabs -->
-            <div class="mb-10 overflow-x-auto" data-aos="fade-up" data-aos-delay="100">
-                <div class="flex border-b border-slate-200 dark:border-slate-800 min-w-max">
+            <!-- ═══ HERO ═══ -->
+            <section class="hero-bg overflow-hidden py-20 lg:py-28">
+                <div class="max-w-7xl mx-auto px-6 relative">
+                    <div class="max-w-3xl" data-aos="fade-right">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-6"
+                            style="background:rgba(0,209,255,.12);border:1px solid rgba(0,209,255,.3)">
+                            <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                            <span class="text-xs font-bold text-accent uppercase tracking-wider">Proof of Work</span>
+                        </div>
+                        <h1 class="text-5xl md:text-7xl font-black leading-none tracking-tight text-white mb-6">
+                            Real Results.<br><span class="text-accent">Real Businesses.</span>
+                        </h1>
+                        <p class="text-white/55 text-lg md:text-xl leading-relaxed max-w-2xl">
+                            Every case study here is a business we transformed — from fragmented operations to scalable,
+                            connected systems. Browse by industry and see exactly what we built.
+                        </p>
+                    </div>
 
-                    <button data-filter="all"
-                        class="filter-btn px-6 py-4 text-sm font-bold border-b-2 border-primary text-primary">
-                        All Projects
-                    </button>
+                    <!-- Stats row -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16" data-aos="fade-up" data-aos-delay="100">
+                        <div class="rounded-2xl p-5"
+                            style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)">
+                            <p class="text-4xl font-black text-accent">8+</p>
+                            <p class="text-white/50 text-sm font-semibold mt-1">Case Studies</p>
+                        </div>
+                        <div class="rounded-2xl p-5"
+                            style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)">
+                            <p class="text-4xl font-black text-accent">6</p>
+                            <p class="text-white/50 text-sm font-semibold mt-1">Industries</p>
+                        </div>
+                        <div class="rounded-2xl p-5"
+                            style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)">
+                            <p class="text-4xl font-black text-accent">100%</p>
+                            <p class="text-white/50 text-sm font-semibold mt-1">Custom Built</p>
+                        </div>
+                        <div class="rounded-2xl p-5"
+                            style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)">
+                            <p class="text-4xl font-black text-accent">₦0</p>
+                            <p class="text-white/50 text-sm font-semibold mt-1">Template Reuse</p>
+                        </div>
+                    </div>
+                </div>
 
-                    <button data-filter="business"
-                        class="filter-btn px-6 py-4 text-sm font-medium border-b-2 border-primary">
-                        Business Management
-                    </button>
+                <!-- Scroll cue -->
+                <div class="flex justify-center mt-14">
+                    <div class="bounce-slow flex flex-col items-center gap-1">
+                        <span class="text-white/30 text-xs font-bold uppercase tracking-widest">Scroll to explore</span>
+                        <span class="material-symbols-outlined text-white/30">keyboard_arrow_down</span>
+                    </div>
+                </div>
+            </section>
 
-                    <button data-filter="web"
-                        class="filter-btn px-6 py-4 text-sm font-medium border-b-2 border-primary">
-                        Web & App Development
-                    </button>
+            <!-- ═══ FILTER + GRID ═══ -->
+            <section class="py-20">
+                <div class="max-w-7xl mx-auto px-6">
 
-                    <button data-filter="branding"
-                        class="filter-btn px-6 py-4 text-sm font-medium border-b-2 border-primary">
-                        Branding & Creative
-                    </button>
+                    <!-- Filter bar -->
+                    <div class="flex flex-wrap gap-3 mb-12 items-center" data-aos="fade-up">
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider mr-1">Filter by:</span>
+                        <button class="filter-btn active" data-filter="all">
+                            All <span class="counter-badge ml-1">8</span>
+                        </button>
+                        <button class="filter-btn" data-filter="retail">Retail & POS</button>
+                        <button class="filter-btn" data-filter="growth">Growth & Brand</button>
+                        <button class="filter-btn" data-filter="operations">Operations</button>
+                        <button class="filter-btn" data-filter="logistics">Logistics</button>
+                        <button class="filter-btn" data-filter="education">Education</button>
+                        <button class="filter-btn" data-filter="real-estate">Real Estate</button>
+                    </div>
+
+                    <!-- Cards grid -->
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="cardsGrid">
+
+                        <!-- 1. BMT Fashion Retail POS -->
+                        <div class="project-card featured" data-category="retail" data-aos="fade-up" data-aos-delay="0"
+                            onclick="window.location='/casesstudy/bmt-casestudy.html'">
+                            <div class="card-thumb" style="background:linear-gradient(135deg,#1a0a2e,#2d1b4e,#001f3d)">
+                                <div class="card-thumb-inner flex-col gap-3">
+                                    <div class="flex gap-2 items-center">
+                                        <div class="rounded-xl p-3"
+                                            style="background:rgba(0,209,255,.15);border:1px solid rgba(0,209,255,.3)">
+                                            <span
+                                                class="material-symbols-outlined text-accent text-2xl">storefront</span>
+                                        </div>
+                                        <div class="rounded-xl p-3"
+                                            style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)">
+                                            <span
+                                                class="material-symbols-outlined text-white/60 text-2xl">receipt_long</span>
+                                        </div>
+                                        <div class="rounded-xl p-3"
+                                            style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)">
+                                            <span
+                                                class="material-symbols-outlined text-white/60 text-2xl">inventory_2</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-white/40 text-xs font-bold uppercase tracking-widest">Fashion Retail
+                                        POS</p>
+                                </div>
+                                <!-- Featured badge -->
+                                <div class="absolute top-4 left-4">
+                                    <span class="cat-tag"
+                                        style="background:rgba(0,209,255,.15);border:1px solid rgba(0,209,255,.35);color:#00d1ff">
+                                        <span class="material-symbols-outlined fill-icon"
+                                            style="font-size:12px">star</span> Featured
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="p-6 flex flex-col flex-1">
+                                <div class="flex items-start justify-between mb-3">
+                                    <span class="cat-tag"
+                                        style="background:rgba(0,31,61,.07);border:1px solid rgba(0,31,61,.1);color:#001f3d">
+                                        <span class="material-symbols-outlined" style="font-size:12px">storefront</span>
+                                        Retail & POS
+                                    </span>
+                                    <span
+                                        class="material-symbols-outlined card-arrow text-slate-300 text-xl">north_east</span>
+                                </div>
+                                <h3 class="text-xl font-black text-primary mb-2 leading-snug">BMT Fashion — Retail POS &
+                                    Inventory System</h3>
+                                <p class="text-slate-500 text-sm leading-relaxed flex-1">Complete point-of-sale,
+                                    inventory, staff tracking, and sales reporting system for a multi-branch fashion
+                                    retail store.</p>
+                                <div class="flex flex-wrap gap-2 mt-5 pt-5 border-t border-[#f0f4f8]">
+                                    <span class="stat-pill"><span class="accent">3×</span> Faster Checkout</span>
+                                    <span class="stat-pill"><span class="accent">100%</span> Stock Accuracy</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2. QodeByte Growth & Branding -->
+                        <div class="project-card" data-category="growth" data-aos="fade-up" data-aos-delay="60"
+                            onclick="window.location='/casesstudy/qodebyte.html'">
+                            <div class="card-thumb" style="background:linear-gradient(135deg,#001f3d,#003a6b,#0059a0)">
+                                <div class="card-thumb-inner flex-col gap-3">
+                                    <div class="flex gap-2 items-center">
+                                        <div class="rounded-xl p-3"
+                                            style="background:rgba(0,209,255,.15);border:1px solid rgba(0,209,255,.3)">
+                                            <span class="material-symbols-outlined text-accent text-2xl">palette</span>
+                                        </div>
+                                        <div class="rounded-xl p-3"
+                                            style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)">
+                                            <span
+                                                class="material-symbols-outlined text-white/60 text-2xl">ads_click</span>
+                                        </div>
+                                        <div class="rounded-xl p-3"
+                                            style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)">
+                                            <span
+                                                class="material-symbols-outlined text-white/60 text-2xl">trending_up</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-white/40 text-xs font-bold uppercase tracking-widest">Branding &
+                                        Growth</p>
+                                </div>
+                            </div>
+                            <div class="p-6 flex flex-col flex-1">
+                                <div class="flex items-start justify-between mb-3">
+                                    <span class="cat-tag"
+                                        style="background:rgba(0,31,61,.07);border:1px solid rgba(0,31,61,.1);color:#001f3d">
+                                        <span class="material-symbols-outlined"
+                                            style="font-size:12px">trending_up</span> Growth & Brand
+                                    </span>
+                                    <span
+                                        class="material-symbols-outlined card-arrow text-slate-300 text-xl">north_east</span>
+                                </div>
+                                <h3 class="text-xl font-black text-primary mb-2 leading-snug">QodeByte Academy — Social
+                                    Media & Branding Infrastructure</h3>
+                                <p class="text-slate-500 text-sm leading-relaxed flex-1">Full digital foundation:
+                                    unified branding, custom website, social strategy, Meta Ads, and motion graphics for
+                                    a tech training academy.</p>
+                                <div class="flex flex-wrap gap-2 mt-5 pt-5 border-t border-[#f0f4f8]">
+                                    <span class="stat-pill"><span class="accent">4×</span> Lead Flow</span>
+                                    <span class="stat-pill"><span class="accent">+85%</span> Engagement</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. Nadice Real Estate -->
+                        <div class="project-card" data-category="real-estate" data-aos="fade-up" data-aos-delay="120"
+                            onclick="window.location='/casesstudy/nadice.html'">
+                            <div class="card-thumb" style="background:linear-gradient(135deg,#0d2137,#001f3d,#00334d)">
+                                <div class="card-thumb-inner flex-col gap-3">
+                                    <div class="flex gap-2 items-center">
+                                        <div class="rounded-xl p-3"
+                                            style="background:rgba(0,209,255,.15);border:1px solid rgba(0,209,255,.3)">
+                                            <span
+                                                class="material-symbols-outlined text-accent text-2xl">apartment</span>
+                                        </div>
+                                        <div class="rounded-xl p-3"
+                                            style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)">
+                                            <span
+                                                class="material-symbols-outlined text-white/60 text-2xl">manage_accounts</span>
+                                        </div>
+                                        <div class="rounded-xl p-3"
+                                            style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)">
+                                            <span
+                                                class="material-symbols-outlined text-white/60 text-2xl">payments</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-white/40 text-xs font-bold uppercase tracking-widest">Real Estate
+                                        Portal</p>
+                                </div>
+                            </div>
+                            <div class="p-6 flex flex-col flex-1">
+                                <div class="flex items-start justify-between mb-3">
+                                    <span class="cat-tag"
+                                        style="background:rgba(0,31,61,.07);border:1px solid rgba(0,31,61,.1);color:#001f3d">
+                                        <span class="material-symbols-outlined" style="font-size:12px">apartment</span>
+                                        Real Estate
+                                    </span>
+                                    <span
+                                        class="material-symbols-outlined card-arrow text-slate-300 text-xl">north_east</span>
+                                </div>
+                                <h3 class="text-xl font-black text-primary mb-2 leading-snug">Nadice — Real Estate
+                                    Property & Tenant Management</h3>
+                                <p class="text-slate-500 text-sm leading-relaxed flex-1">End-to-end property management:
+                                    tenant portal, rent tracking, maintenance requests, lease management, and owner
+                                    reporting.</p>
+                                <div class="flex flex-wrap gap-2 mt-5 pt-5 border-t border-[#f0f4f8]">
+                                    <span class="stat-pill"><span class="accent">90%</span> Less Manual Work</span>
+                                    <span class="stat-pill"><span class="accent">0</span> Missed Payments</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4. Gym Management -->
+                        <div class="project-card" data-category="operations" data-aos="fade-up" data-aos-delay="0"
+                            onclick="window.location='/casesstudy/gym.html'">
+                            <div class="card-thumb" style="background:linear-gradient(135deg,#0a0a14,#001f3d,#001428)">
+                                <div class="card-thumb-inner flex-col gap-3">
+                                    <div class="flex gap-2 items-center">
+                                        <div class="rounded-xl p-3"
+                                            style="background:rgba(0,209,255,.15);border:1px solid rgba(0,209,255,.3)">
+                                            <span
+                                                class="material-symbols-outlined text-accent text-2xl">fitness_center</span>
+                                        </div>
+                                        <div class="rounded-xl p-3"
+                                            style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)">
+                                            <span class="material-symbols-outlined text-white/60 text-2xl">badge</span>
+                                        </div>
+                                        <div class="rounded-xl p-3"
+                                            style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)">
+                                            <span
+                                                class="material-symbols-outlined text-white/60 text-2xl">how_to_reg</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-white/40 text-xs font-bold uppercase tracking-widest">Gym Management
+                                        System</p>
+                                </div>
+                            </div>
+                            <div class="p-6 flex flex-col flex-1">
+                                <div class="flex items-start justify-between mb-3">
+                                    <span class="cat-tag"
+                                        style="background:rgba(0,31,61,.07);border:1px solid rgba(0,31,61,.1);color:#001f3d">
+                                        <span class="material-symbols-outlined"
+                                            style="font-size:12px">fitness_center</span> Operations
+                                    </span>
+                                    <span
+                                        class="material-symbols-outlined card-arrow text-slate-300 text-xl">north_east</span>
+                                </div>
+                                <h3 class="text-xl font-black text-primary mb-2 leading-snug">Gym Management —
+                                    Membership, Check-in & Billing System</h3>
+                                <p class="text-slate-500 text-sm leading-relaxed flex-1">Digital transformation of a
+                                    gym: membership management, biometric check-ins, automated billing, trainer
+                                    scheduling, and analytics.</p>
+                                <div class="flex flex-wrap gap-2 mt-5 pt-5 border-t border-[#f0f4f8]">
+                                    <span class="stat-pill"><span class="accent">2×</span> Member Retention</span>
+                                    <span class="stat-pill"><span class="accent">100%</span> Automated Billing</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 5. Restaurant & Bar POS -->
+                        <div class="project-card" data-category="retail" data-aos="fade-up" data-aos-delay="60"
+                            onclick="window.location='/casesstudy/restaurant.html'">
+                            <div class="card-thumb" style="background:linear-gradient(135deg,#1a0a00,#2d1200,#001f3d)">
+                                <div class="card-thumb-inner flex-col gap-3">
+                                    <div class="flex gap-2 items-center">
+                                        <div class="rounded-xl p-3"
+                                            style="background:rgba(0,209,255,.15);border:1px solid rgba(0,209,255,.3)">
+                                            <span
+                                                class="material-symbols-outlined text-accent text-2xl">restaurant</span>
+                                        </div>
+                                        <div class="rounded-xl p-3"
+                                            style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)">
+                                            <span
+                                                class="material-symbols-outlined text-white/60 text-2xl">soup_kitchen</span>
+                                        </div>
+                                        <div class="rounded-xl p-3"
+                                            style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)">
+                                            <span
+                                                class="material-symbols-outlined text-white/60 text-2xl">local_bar</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-white/40 text-xs font-bold uppercase tracking-widest">Restaurant &
+                                        Bar POS + KDS</p>
+                                </div>
+                            </div>
+                            <div class="p-6 flex flex-col flex-1">
+                                <div class="flex items-start justify-between mb-3">
+                                    <span class="cat-tag"
+                                        style="background:rgba(0,31,61,.07);border:1px solid rgba(0,31,61,.1);color:#001f3d">
+                                        <span class="material-symbols-outlined" style="font-size:12px">restaurant</span>
+                                        Retail & POS
+                                    </span>
+                                    <span
+                                        class="material-symbols-outlined card-arrow text-slate-300 text-xl">north_east</span>
+                                </div>
+                                <h3 class="text-xl font-black text-primary mb-2 leading-snug">Restaurant & Bar — POS
+                                    with Kitchen Display System</h3>
+                                <p class="text-slate-500 text-sm leading-relaxed flex-1">Unified platform connecting
+                                    waiter tablets, kitchen display, and bar — eliminating verbal errors and reducing
+                                    peak-hour delays.</p>
+                                <div class="flex flex-wrap gap-2 mt-5 pt-5 border-t border-[#f0f4f8]">
+                                    <span class="stat-pill"><span class="accent">0</span> Verbal Errors</span>
+                                    <span class="stat-pill"><span class="accent">40%</span> Faster Service</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 6. Pariti Delivery -->
+                        <div class="project-card" data-category="logistics" data-aos="fade-up" data-aos-delay="120"
+                            onclick="window.location='/casesstudy/pariti.html'">
+                            <div class="card-thumb" style="background:linear-gradient(135deg,#001428,#001f3d,#003050)">
+                                <div class="card-thumb-inner flex-col gap-3">
+                                    <div class="flex gap-2 items-center">
+                                        <div class="rounded-xl p-3"
+                                            style="background:rgba(0,209,255,.15);border:1px solid rgba(0,209,255,.3)">
+                                            <span
+                                                class="material-symbols-outlined text-accent text-2xl">local_shipping</span>
+                                        </div>
+                                        <div class="rounded-xl p-3"
+                                            style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)">
+                                            <span class="material-symbols-outlined text-white/60 text-2xl">route</span>
+                                        </div>
+                                        <div class="rounded-xl p-3"
+                                            style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)">
+                                            <span
+                                                class="material-symbols-outlined text-white/60 text-2xl">person_pin_circle</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-white/40 text-xs font-bold uppercase tracking-widest">Delivery
+                                        Marketplace</p>
+                                </div>
+                            </div>
+                            <div class="p-6 flex flex-col flex-1">
+                                <div class="flex items-start justify-between mb-3">
+                                    <span class="cat-tag"
+                                        style="background:rgba(0,31,61,.07);border:1px solid rgba(0,31,61,.1);color:#001f3d">
+                                        <span class="material-symbols-outlined"
+                                            style="font-size:12px">local_shipping</span> Logistics
+                                    </span>
+                                    <span
+                                        class="material-symbols-outlined card-arrow text-slate-300 text-xl">north_east</span>
+                                </div>
+                                <h3 class="text-xl font-black text-primary mb-2 leading-snug">Pariti — Delivery & Rider
+                                    Marketplace Platform</h3>
+                                <p class="text-slate-500 text-sm leading-relaxed flex-1">Nationwide delivery platform
+                                    with rider marketplace, live tracking, waybill management, and flexible pricing for
+                                    senders and businesses.</p>
+                                <div class="flex flex-wrap gap-2 mt-5 pt-5 border-t border-[#f0f4f8]">
+                                    <span class="stat-pill"><span class="accent">Live</span> GPS Tracking</span>
+                                    <span class="stat-pill"><span class="accent">Nationwide</span> Coverage</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 7. School Management -->
+                        <div class="project-card" data-category="education" data-aos="fade-up" data-aos-delay="0"
+                            onclick="window.location='/casesstudy/school.html'">
+                            <div class="card-thumb" style="background:linear-gradient(135deg,#001428,#001f3d,#002b52)">
+                                <div class="card-thumb-inner flex-col gap-3">
+                                    <div class="flex gap-2 items-center">
+                                        <div class="rounded-xl p-3"
+                                            style="background:rgba(0,209,255,.15);border:1px solid rgba(0,209,255,.3)">
+                                            <span class="material-symbols-outlined text-accent text-2xl">school</span>
+                                        </div>
+                                        <div class="rounded-xl p-3"
+                                            style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)">
+                                            <span
+                                                class="material-symbols-outlined text-white/60 text-2xl">family_restroom</span>
+                                        </div>
+                                        <div class="rounded-xl p-3"
+                                            style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)">
+                                            <span
+                                                class="material-symbols-outlined text-white/60 text-2xl">cast_for_education</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-white/40 text-xs font-bold uppercase tracking-widest">School
+                                        Management System</p>
+                                </div>
+                            </div>
+                            <div class="p-6 flex flex-col flex-1">
+                                <div class="flex items-start justify-between mb-3">
+                                    <span class="cat-tag"
+                                        style="background:rgba(0,31,61,.07);border:1px solid rgba(0,31,61,.1);color:#001f3d">
+                                        <span class="material-symbols-outlined" style="font-size:12px">school</span>
+                                        Education
+                                    </span>
+                                    <span
+                                        class="material-symbols-outlined card-arrow text-slate-300 text-xl">north_east</span>
+                                </div>
+                                <h3 class="text-xl font-black text-primary mb-2 leading-snug">School Management & Parent
+                                    Portal System</h3>
+                                <p class="text-slate-500 text-sm leading-relaxed flex-1">Centralized platform for
+                                    admins, teachers, and parents: attendance, fee payments, results, and real-time
+                                    communication — all connected.</p>
+                                <div class="flex flex-wrap gap-2 mt-5 pt-5 border-t border-[#f0f4f8]">
+                                    <span class="stat-pill"><span class="accent">3</span> User Portals</span>
+                                    <span class="stat-pill"><span class="accent">Real-time</span> Parent Access</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 8. Booking Platform -->
+                        <div class="project-card" data-category="operations" data-aos="fade-up" data-aos-delay="60"
+                            onclick="window.location='/casesstudy/booking.html'">
+                            <div class="card-thumb" style="background:linear-gradient(135deg,#001f3d,#003050,#001a2e)">
+                                <div class="card-thumb-inner flex-col gap-3">
+                                    <div class="flex gap-2 items-center">
+                                        <div class="rounded-xl p-3"
+                                            style="background:rgba(0,209,255,.15);border:1px solid rgba(0,209,255,.3)">
+                                            <span
+                                                class="material-symbols-outlined text-accent text-2xl">event_available</span>
+                                        </div>
+                                        <div class="rounded-xl p-3"
+                                            style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)">
+                                            <span
+                                                class="material-symbols-outlined text-white/60 text-2xl">calendar_month</span>
+                                        </div>
+                                        <div class="rounded-xl p-3"
+                                            style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)">
+                                            <span
+                                                class="material-symbols-outlined text-white/60 text-2xl">notifications_active</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-white/40 text-xs font-bold uppercase tracking-widest">Booking &
+                                        Appointment Platform</p>
+                                </div>
+                            </div>
+                            <div class="p-6 flex flex-col flex-1">
+                                <div class="flex items-start justify-between mb-3">
+                                    <span class="cat-tag"
+                                        style="background:rgba(0,31,61,.07);border:1px solid rgba(0,31,61,.1);color:#001f3d">
+                                        <span class="material-symbols-outlined"
+                                            style="font-size:12px">event_available</span> Operations
+                                    </span>
+                                    <span
+                                        class="material-symbols-outlined card-arrow text-slate-300 text-xl">north_east</span>
+                                </div>
+                                <h3 class="text-xl font-black text-primary mb-2 leading-snug">Service Booking &
+                                    Appointment Platform</h3>
+                                <p class="text-slate-500 text-sm leading-relaxed flex-1">Built for salons, clinics,
+                                    spas, and consultants — eliminating double bookings, reducing no-shows, and giving
+                                    full revenue visibility.</p>
+                                <div class="flex flex-wrap gap-2 mt-5 pt-5 border-t border-[#f0f4f8]">
+                                    <span class="stat-pill"><span class="accent">0</span> Double Bookings</span>
+                                    <span class="stat-pill"><span class="accent">Auto</span> Reminders</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- /cardsGrid -->
+
+                    <!-- Empty state (hidden by default) -->
+                    <div id="emptyState" class="hidden py-20 text-center">
+                        <span class="material-symbols-outlined text-5xl text-slate-200 mb-4 block">search_off</span>
+                        <p class="text-slate-400 font-bold text-lg">No case studies in this category yet.</p>
+                        <p class="text-slate-400 text-sm mt-1">More are being added — check back soon.</p>
+                    </div>
 
                 </div>
-            </div>
-            <!-- Premium Grid Layout -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 projects">
-                <!-- Card 1 -->
-                <div data-category="business"
-                    class="group project-card flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300"
-                    data-aos="fade-up" data-aos-delay="100">
-                    <div class="relative aspect-[16/10] overflow-hidden">
-                        <img alt="Logistics"
-                            class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
-                            data-alt="Modern logistics warehouse with automated systems"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo7xr7LC5Fh6rqjMqr9J331p6Mf-JvwJCVHPJrm4VCK79hu6fNUtRB-vKyHTScbUwGI7R3N-I4G-3wRpeMSXP3-zAGcaKEGEm2bZFi3zuH63vwQq0Z1xYThk2Rqa426rgCyQkdnateiHu7fFRYfY_Smx2n0sAn_TQYxBbS9ptAkhVS-uTrAlhHiTXSIzibcIeDfxmW6bmpuKUf2JD4AwaYyhnPK-NOCcQaZ841jdxfEWMs1kFF3jty90Kpg0-e2YU5l6BeRLJcFRw" />
-                        <div
-                            class="absolute top-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur px-3 py-1 rounded-lg">
-                            <span class="text-[10px] font-bold uppercase tracking-wider text-primary">Efficiency
-                                +40%</span>
+            </section>
+
+            <!-- ═══ CTA BAND ═══ -->
+            <section class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="rounded-[2.5rem] overflow-hidden relative"
+                        style="background:linear-gradient(135deg,#000d1a 0%,#001f3d 60%,#003a6b 100%)">
+                        <div class="absolute inset-0 pointer-events-none"
+                            style="background-image:radial-gradient(circle at 80% 50%,rgba(0,209,255,.1),transparent 50%),linear-gradient(rgba(0,209,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,209,255,.03) 1px,transparent 1px);background-size:auto,60px 60px,60px 60px">
                         </div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-1">
-                        <div class="mb-2">
-                            <span class="text-xs font-semibold text-primary uppercase tracking-widest">Business
-                                Management</span>
-                        </div>
-                        <h3
-                            class="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary transition-colors">
-                            Global Logistics ERP</h3>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-1">
-                            A comprehensive enterprise resource planning system designed to unify global supply chain
-                            operations and real-time tracking.
-                        </p>
-                        <div
-                            class="pt-4 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center">
-                            <span class="text-xs text-slate-400 dark:text-slate-500 font-medium italic">Streamlined
-                                operations across 12 countries</span>
-                            <span class="material-symbols-outlined text-primary text-lg">arrow_forward</span>
+                        <div class="relative px-10 py-16 lg:px-20 flex flex-col aspect-rect items-center justify-between gap-10"
+                            data-aos="fade-up">
+                            <div>
+                                <p class="text-accent font-bold text-sm uppercase tracking-widest mb-3">Want results
+                                    like these?</p>
+                                <h2 class="text-3xl md:text-5xl font-black text-white leading-tight">Your Business Could
+                                    Be<br>The Next Case Study.</h2>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-4 flex-shrink-0">
+                                <a href="/contact.html"
+                                    class="btn-ripple flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-black text-primary bg-accent hover:-translate-y-0.5 transition-all">
+                                    <span class="material-symbols-outlined">event</span> Book a Consultation
+                                </a>
+                                <a href="/contact.html"
+                                    class="flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-black text-white transition-all"
+                                    style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2)">
+                                    <span class="material-symbols-outlined">play_arrow</span> Start Your Project
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Card 2 -->
-                <div data-category="business"
-                    class="group project-card flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300"
-                    data-aos="fade-up" data-aos-delay="200">
-                    <div class="relative aspect-[16/10] overflow-hidden">
-                        <img alt="Retail"
-                            class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
-                            data-alt="High-end retail interior with digital displays"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr5D9GyjXqhlwRSa28BbJ_4IFwR6qPjqepU4vaj0TmVgm0OAL0iVwhVPafqOFDCa6NtK4N8DRQaHQTnsIpnR-wwnkm0cNluVkVTquNQgfl-6oUEXlK1Vlj2XtCFwCk50o4dPjoJr5M_tcX3iKVvHMNWqNzmOBxpSwU5kt3Vm0XtcKVulOpaMzlWqyyZMz8cSl_2ImZbmmWj0lPp2DVBi3pKs4d-XjWLlyDYCyZ6jKPOfiUryl99zeoGkTnTKuLZexNyv6CupTnJHo" />
-                    </div>
-                    <div class="p-6 flex flex-col flex-1">
-                        <div class="mb-2">
-                            <span class="text-xs font-semibold text-primary uppercase tracking-widest">Business
-                                Management</span>
-                        </div>
-                        <h3
-                            class="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary transition-colors">
-                            Retail Management System</h3>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-1">
-                            Custom multi-store inventory and POS integration that boosted cross-location efficiency and
-                            sales visibility.
-                        </p>
-                        <div
-                            class="pt-4 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center">
-                            <span class="text-xs text-slate-400 dark:text-slate-500 font-medium italic">Increased
-                                multi-store efficiency by 25%</span>
-                            <span class="material-symbols-outlined text-primary text-lg">arrow_forward</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div data-category="branding"
-                    class="group project-card flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300"
-                    data-aos="fade-up" data-aos-delay="300">
-                    <div class="relative aspect-[16/10] overflow-hidden">
-                        <img alt="Fintech"
-                            class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
-                            data-alt="Abstract digital data visualization interface"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCscQ5NHqGsBjPLYZSwyEexSr8PwZnI-Gt2VW7XC3NLVOWc_Gk_EofPXpDhWBM_fruFGRHpOXlNovM7Vz43hxb5i73mf76apS3CljIQJcNlC5QvIIiFR8J7JVYx6RIzyu9DTzBKYbcsqP05fSVz9EmDOIPs1pzy0L_DF-tpc9nfZzKTgRNntVXvKLJ1IU7zkfbICtpAcpcQguT5oU3-aWNnrfBxufIFcPzZW9oGjBm17KeKFqX_cP3NXvS7cFVhCIcCT1uwBvf4VKQ" />
-                    </div>
-                    <div class="p-6 flex flex-col flex-1">
-                        <div class="mb-2">
-                            <span class="text-xs font-semibold text-primary uppercase tracking-widest">Branding &amp;
-                                Creative</span>
-                        </div>
-                        <h3
-                            class="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary transition-colors">
-                            Nexus FinTech Rebranding</h3>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-1">
-                            Complete visual identity overhaul and brand strategy for a disruptive digital banking
-                            platform targeting Gen-Z.
-                        </p>
-                        <div
-                            class="pt-4 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center">
-                            <span class="text-xs text-slate-400 dark:text-slate-500 font-medium italic">Modernized brand
-                                identity for digital age</span>
-                            <span class="material-symbols-outlined text-primary text-lg">arrow_forward</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 4 -->
-                <div data-category="web"
-                    class="group project-card flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300"
-                    data-aos="fade-up" data-aos-delay="400">
-                    <div class="relative aspect-[16/10] overflow-hidden">
-                        <img alt="Real Estate"
-                            class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
-                            data-alt="Luxury apartment building with sleek glass architecture"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD53gU6ngU8oWlnm-U2WVH02vXhMUqmblEZDi0526nowz9Gt3o8vkYNpZzet-D3IANUFBbozfX4cQvMJsq4hYS230vM9Xh8-KREDMughKDkulyc-SPAPM2EOY_9_JUrn-FNZsDGRAc7j9fnSF0RWh6zCaaKqcdfesHlgjIvOgKi6lz1Pb9Hc__6pL7FFd6S5cDGsvs1EkdNSsttIW34ZfplcnXcOobJGF48s35NvHi51kF0xcyCo-R9SwwA4XqKmF8LZ0wIgxKnIqU" />
-                    </div>
-                    <div class="p-6 flex flex-col flex-1">
-                        <div class="mb-2">
-                            <span class="text-xs font-semibold text-primary uppercase tracking-widest">Web &amp; App
-                                Development</span>
-                        </div>
-                        <h3
-                            class="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary transition-colors">
-                            Real Estate Platform</h3>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-1">
-                            An immersive property marketplace featuring VR tours and AI-driven matching algorithms for
-                            buyers and sellers.
-                        </p>
-                        <div
-                            class="pt-4 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center">
-                            <span class="text-xs text-slate-400 dark:text-slate-500 font-medium italic">Scaled user
-                                engagement by 150%</span>
-                            <span class="material-symbols-outlined text-primary text-lg">arrow_forward</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 5 -->
-                <div data-category="web"
-                    class="group project-card flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300"
-                    data-aos="fade-up" data-aos-delay="500">
-                    <div class="relative aspect-[16/10] overflow-hidden">
-                        <img alt="SaaS"
-                            class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
-                            data-alt="Futuristic office space with collaborative technology"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ548tp0VsCfZ8XY1BhtB9GQ6L1Ts7555g8XvBsbMQcrS42OnpT3jHgNbo1z1UsS_i4BGG0CI61_y5a1nHgKpWkOFzXus7cF7MApGHZHJno0WHNkRnzu9uPJpjYDCXFjNbA0FVpP9uFCenPOg7hMzFNh5x22YOgk54ZYCSj4BuQOuwySkcWswkWfuvMGqLcnAUKswU9eoXTD_1tu2GxOvGjNCu4Ct2YV6XJrHihn1gKUKV9sUow7kq2L2a_goZRkFKm3_hr1Cv0dc" />
-                    </div>
-                    <div class="p-6 flex flex-col flex-1">
-                        <div class="mb-2">
-                            <span class="text-xs font-semibold text-primary uppercase tracking-widest">Web &amp; App
-                                Development</span>
-                        </div>
-                        <h3
-                            class="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary transition-colors">
-                            SaaS Analytics Engine</h3>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-1">
-                            Building a high-performance data processing dashboard for B2B cloud monitoring services.
-                        </p>
-                        <div
-                            class="pt-4 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center">
-                            <span class="text-xs text-slate-400 dark:text-slate-500 font-medium italic">Handled 1M+
-                                concurrent events</span>
-                            <span class="material-symbols-outlined text-primary text-lg">arrow_forward</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 6 -->
-                <div data-category="branding"
-                    class="group project-card flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300"
-                    data-aos="fade-up" data-aos-delay="600">
-                    <div class="relative aspect-[16/10] overflow-hidden">
-                        <img alt="Branding"
-                            class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
-                            data-alt="Close up of high-quality printed brand collateral"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXFU-8nalGQt581eGx0p1Rwkabtdj1m-qclidcjd8zhQ2XRVEn7J7mGRTDoG-oEK5lw0qo-HIZmj6TG2cbUcelPGz9OXrQ4ZbjiLOdUxHv4GiZF8wpmIkIOGZ9fbr098078v298_iyq7VIG01HF_1VKXypS_6qvMAf2HLhl6gOqi2uNShiM64ticuXKBkXeK9HyUYv4bZd98fIVXwyUORK2TT5kZLTNA5zxqWW4LbyrQFrODct1E3xpxgh39lHMDLh8pGjLMeqVtM" />
-                    </div>
-                    <div class="p-6 flex flex-col flex-1">
-                        <div class="mb-2">
-                            <span class="text-xs font-semibold text-primary uppercase tracking-widest">Branding &amp;
-                                Creative</span>
-                        </div>
-                        <h3
-                            class="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary transition-colors">
-                            Horizon Venture Identity</h3>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-1">
-                            Defining the brand voice and visual language for a sustainable energy investment firm.
-                        </p>
-                        <div
-                            class="pt-4 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center">
-                            <span class="text-xs text-slate-400 dark:text-slate-500 font-medium italic">Established
-                                premium market position</span>
-                            <span class="material-symbols-outlined text-primary text-lg">arrow_forward</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Pagination -->
-            <div class="mt-16 flex items-center justify-center gap-2" data-aos="fade-up">
-                <button
-                    class="w-10 h-10 flex items-center justify-center rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-                    <span class="material-symbols-outlined text-lg">chevron_left</span>
-                </button>
-                <button
-                    class="w-10 h-10 flex items-center justify-center rounded-xl bg-primary text-white font-bold text-sm">1</button>
-                <button
-                    class="w-10 h-10 flex items-center justify-center rounded-xl border border-transparent text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors font-medium text-sm">2</button>
-                <button
-                    class="w-10 h-10 flex items-center justify-center rounded-xl border border-transparent text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors font-medium text-sm">3</button>
-                <button
-                    class="w-10 h-10 flex items-center justify-center rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-                    <span class="material-symbols-outlined text-lg">chevron_right</span>
-                </button>
-            </div>
+            </section>
+
         </main>
 
         <!-- FOOTER -->
@@ -384,50 +625,11 @@
                 </div>
             </div>
         </footer>
+
     </div>
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/js/casestudy.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 80,
-            easing: "ease-out-cubic",
-        });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-
-            const buttons = document.querySelectorAll(".filter-btn");
-            const cards = document.querySelectorAll(".project-card");
-
-            buttons.forEach(btn => {
-                btn.addEventListener("click", () => {
-
-                    buttons.forEach(b => {
-                        b.classList.remove("border-primary", "text-primary", "font-bold");
-                        b.classList.add("border-transparent");
-                    });
-
-                    btn.classList.remove("border-transparent");
-                    btn.classList.add("border-primary", "text-primary", "font-bold");
-
-                    const filter = btn.dataset.filter;
-
-                    cards.forEach(card => {
-                        if (filter === "all" || card.dataset.category === filter) {
-                            card.classList.remove("hidden");
-                        } else {
-                            card.classList.add("hidden");
-                        }
-                    });
-
-                });
-
-            });
-
-        });
-    </script>
 </body>
 
 </html>

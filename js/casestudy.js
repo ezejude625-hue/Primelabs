@@ -8,9 +8,7 @@ tailwind.config = {
         "background-light": "#f5f7f8",
         "background-dark": "#0f1923",
       },
-      fontFamily: {
-        display: ["Manrope", "sans-serif"],
-      },
+      fontFamily: { display: ["Manrope", "sans-serif"] },
       borderRadius: {
         DEFAULT: "0.25rem",
         lg: "0.5rem",
@@ -21,55 +19,60 @@ tailwind.config = {
   },
 };
 
+// Nav
 const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
-
 menuBtn.addEventListener("click", (e) => {
   e.stopPropagation();
   mobileMenu.classList.toggle("max-h-0");
   mobileMenu.classList.toggle("max-h-[500px]");
 });
-
-// Prevent inside clicks from closing
-menu.addEventListener("click", (e) => {
-  e.stopPropagation();
+document.addEventListener("click", (e) => {
+  if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+    mobileMenu.classList.add("max-h-0");
+    mobileMenu.classList.remove("max-h-[500px]");
+  }
 });
 
-// Close when clicking outside
-document.addEventListener("click", () => {
-  menu.classList.add("max-h-0", "opacity-0");
-  menu.classList.remove("max-h-[500px]", "opacity-100");
+// Ripple
+document.querySelectorAll(".btn-ripple").forEach((btn) => {
+  btn.addEventListener("mouseenter", () => {
+    btn.classList.remove("ripple-active");
+    void btn.offsetWidth;
+    btn.classList.add("ripple-active");
+  });
+  btn.addEventListener("mouseleave", () =>
+    btn.classList.remove("ripple-active"),
+  );
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const buttons = document.querySelectorAll(".filter-btn");
-  const cards = document.querySelectorAll(".project-card");
+// Filter
+const filterBtns = document.querySelectorAll(".filter-btn");
+const cards = document.querySelectorAll(".project-card");
+const emptyState = document.getElementById("emptyState");
 
-  buttons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      buttons.forEach((b) => {
-        b.classList.remove("border-primary", "text-primary", "font-bold");
-        b.classList.add("border-transparent");
-      });
+filterBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    filterBtns.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
 
-      btn.classList.add("border-primary", "text-primary", "font-bold");
+    const filter = btn.dataset.filter;
+    let visible = 0;
 
-      const filter = btn.dataset.filter;
-
-      cards.forEach((card) => {
-        if (filter === "all" || card.dataset.category === filter) {
-          card.style.display = "flex";
-        } else {
-          card.style.display = "none";
-        }
-      });
+    cards.forEach((card, i) => {
+      const match = filter === "all" || card.dataset.category === filter;
+      if (match) {
+        card.style.display = "flex";
+        // Re-trigger AOS stagger
+        card.style.transitionDelay = visible * 40 + "ms";
+        visible++;
+      } else {
+        card.style.display = "none";
+      }
     });
+
+    emptyState.classList.toggle("hidden", visible > 0);
   });
 });
 
-AOS.init({
-  duration: 1000,
-  once: true,
-  offset: 80,
-  easing: "ease-out-cubic",
-});
+AOS.init({ duration: 1000, once: true, offset: 80, easing: "ease-out-cubic" });
