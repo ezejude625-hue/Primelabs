@@ -78,7 +78,7 @@ body {
     border-bottom: none
 }
 
-.member-card {
+/* .member-card {
     background: linear-gradient(135deg, #001f3d 0%, #003366 100%);
     border-radius: 20px;
     padding: 24px;
@@ -96,4 +96,4 @@ body {
     height: 120px;
     border-radius: 50%;
     background: rgba(0, 209, 255, .1)
-}
+} */

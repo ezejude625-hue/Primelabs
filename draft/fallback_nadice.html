@@ -1,0 +1,2000 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Case Study: Nadice Real Estate | PrimeLabs</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: { primary: "#001f3d", accent: "#00d1ff", "background-light": "#f5f7f8" },
+                    fontFamily: { display: ["Manrope", "sans-serif"] },
+                    borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" }
+                }
+            }
+        };
+    </script>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            overflow-x: hidden;
+            background: #f5f7f8;
+            color: #001f3d
+        }
+
+        :root {
+            --primary: #001f3d;
+            --accent: #00d1ff
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+        }
+
+        .fill-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24
+        }
+
+        .btn-ripple {
+            position: relative;
+            overflow: hidden
+        }
+
+        .btn-ripple::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .35);
+            transform: translate(-50%, -50%)
+        }
+
+        .btn-ripple.ripple-active::before {
+            animation: ripple .9s ease-out forwards
+        }
+
+        @keyframes ripple {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 1
+            }
+
+            100% {
+                width: 520px;
+                height: 520px;
+                opacity: 0
+            }
+        }
+
+        .feat-card {
+            background: white;
+            border: 1.5px solid #e8edf2;
+            border-radius: 18px;
+            padding: 28px;
+            transition: border-color .25s, box-shadow .25s, transform .25s
+        }
+
+        .feat-card:hover {
+            border-color: #00d1ff;
+            box-shadow: 0 16px 40px rgba(0, 31, 61, .08);
+            transform: translateY(-3px)
+        }
+
+        .feat-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: rgba(0, 31, 61, .07);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            transition: background .25s
+        }
+
+        .feat-card:hover .feat-icon {
+            background: #001f3d
+        }
+
+        .feat-card:hover .feat-icon span {
+            color: #00d1ff !important
+        }
+
+        .result-card {
+            background: white;
+            border: 1.5px solid #e8edf2;
+            border-radius: 16px;
+            padding: 24px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start
+        }
+
+        .result-icon {
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: rgba(0, 209, 255, .1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #00d1ff
+        }
+
+        .prob-card {
+            background: white;
+            border: 1.5px solid #e8edf2;
+            border-radius: 14px;
+            padding: 20px;
+            display: flex;
+            gap: 14px;
+            align-items: flex-start
+        }
+
+        .screen-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 9999px
+        }
+
+        .play-btn {
+            transition: transform .3s
+        }
+
+        .play-btn:hover {
+            transform: scale(1.1)
+        }
+    </style>
+</head>
+
+<body class="bg-background-light font-display text-slate-900 antialiased">
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+
+        <!-- NAV -->
+        <nav class="sticky top-0 z-50 bg-background-light shadow-sm border-b border-[#e5e7eb]">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <img src="/asset/header.png" alt="logo" class="h-30 w-40 mb-6 mt-5 bg-cover">
+                <div class="hidden md:flex items-center gap-10">
+                    <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/service.html">Solutions</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/index.html#industries">Industries</a>
+                    <a class="text-sm font-semibold text-accent" href="/casestudy.html">Case Studies</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors" href="/about.html">About</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/contact.html">Contact</a>
+                    <button
+                        class="btn-ripple bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">Book
+                        a Demo</button>
+                </div>
+                <div class="md:hidden cursor-pointer" id="menuBtn"><span
+                        class="material-symbols-outlined text-3xl">menu</span></div>
+            </div>
+            <div id="mobileMenu"
+                class="md:hidden overflow-hidden max-h-0 transition-all duration-500 ease-in-out border-t border-gray-200">
+                <div class="px-6 py-6 flex flex-col gap-6 bg-white">
+                    <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/service.html">Solutions</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/index.html#industries">Industries</a>
+                    <a class="text-sm font-semibold text-accent" href="/casestudy.html">Case Studies</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors" href="/about.html">About</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/contact.html">Contact</a>
+                    <button class="btn-ripple bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold">Book a
+                        Demo</button>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+
+            <!-- HERO -->
+            <section class="relative overflow-hidden min-h-[700px] flex items-center"
+                style="background:linear-gradient(135deg,#000d1a 0%,#001f3d 60%,#003a6b 100%)">
+                <div class="absolute inset-0 pointer-events-none"
+                    style="background-image:radial-gradient(circle at 70% 40%,rgba(0,209,255,.09),transparent 55%),linear-gradient(rgba(0,209,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,209,255,.03) 1px,transparent 1px);background-size:auto,60px 60px,60px 60px">
+                </div>
+                <div class="absolute inset-0 z-0 pointer-events-none">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+                        class="w-full h-full object-cover opacity-10" alt="" />
+                </div>
+                <div class="max-w-7xl mx-auto px-6 py-20 relative z-10 w-full">
+                    <div class="grid lg:grid-cols-2 gap-16 items-center">
+                        <!-- LEFT -->
+                        <div class="flex flex-col gap-7" data-aos="fade-right">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full w-fit"
+                                style="background:rgba(0,209,255,.12);border:1px solid rgba(0,209,255,.3)">
+                                <span class="material-symbols-outlined text-accent text-sm">auto_graph</span>
+                                <span class="text-xs font-bold text-accent uppercase tracking-wider">Enterprise Case
+                                    Study</span>
+                            </div>
+                            <h1 class="text-4xl lg:text-6xl font-black text-white leading-tight tracking-tight">
+                                Nadice Real Estate<br><span class="text-accent">Property Management System</span>
+                            </h1>
+                            <p class="text-lg text-white/60 leading-relaxed max-w-xl">A comprehensive digital ecosystem
+                                designed to streamline property, tenant, and financial management operations into a
+                                single, cohesive interface.</p>
+                            <!-- Overview strip -->
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                                <div class="rounded-xl p-4"
+                                    style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)">
+                                    <p class="text-accent text-xs font-bold uppercase tracking-wider mb-1">Client</p>
+                                    <p class="text-white font-bold text-sm leading-snug">Nadice Real Estate</p>
+                                </div>
+                                <div class="rounded-xl p-4"
+                                    style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)">
+                                    <p class="text-accent text-xs font-bold uppercase tracking-wider mb-1">Industry</p>
+                                    <p class="text-white font-bold text-sm leading-snug">Property Management</p>
+                                </div>
+                                <div class="rounded-xl p-4"
+                                    style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)">
+                                    <p class="text-accent text-xs font-bold uppercase tracking-wider mb-1">Service</p>
+                                    <p class="text-white font-bold text-sm leading-snug">Custom Management System</p>
+                                </div>
+                                <div class="rounded-xl p-4"
+                                    style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)">
+                                    <p class="text-accent text-xs font-bold uppercase tracking-wider mb-1">Delivered by
+                                    </p>
+                                    <p class="text-white font-bold text-sm leading-snug">PrimeLabs Business Solution</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-4">
+                                <a href="/contact.html"
+                                    class="btn-ripple flex items-center gap-2 px-8 py-4 rounded-xl font-black text-primary bg-accent hover:-translate-y-0.5 transition-all">
+                                    <span class="material-symbols-outlined">calendar_month</span> Book a Consultation
+                                </a>
+                                <a href="/contact.html"
+                                    class="flex items-center gap-2 px-8 py-4 rounded-xl font-black text-white transition-all"
+                                    style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2)">
+                                    <span class="material-symbols-outlined">play_arrow</span> Start Your Project
+                                </a>
+                            </div>
+                        </div>
+                        <!-- RIGHT: video mockup -->
+                        <div class="relative group" data-aos="fade-left" data-aos-delay="100">
+                            <div class="absolute -inset-1 rounded-3xl blur opacity-30"
+                                style="background:linear-gradient(135deg,#00d1ff,#001f3d)"></div>
+                            <div class="relative aspect-video rounded-2xl overflow-hidden shadow-2xl"
+                                style="background:#0a1628;border:1px solid rgba(255,255,255,.1)">
+                                <div class="absolute inset-0 bg-cover bg-center opacity-50"
+                                    style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuCnY5Q9EwmSx6I1jWwu4wTq17MfX45-hsBULZ52aNwRCNT0lhE8ukHLlqS0292SNUS9OrXp_9XE1YV4V98trNwS5dEBZoMxSeKCEBcmKZAgLIyptj4ocXaA21yx8ECwcN3Nf2B9aCBRDQNycLgYGZoPK2qvNFimZhDnFv-HVqVavZuFulQZI8m73W5V_RRy4rQlLsXwUYytWe9oTubnFqQtOEJ9bk9h6fEFMHFf86dl37B4FcPEfEyyXZNJm2NpP-zXm-hKX_gG-2Q')">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/40 transition-all cursor-pointer">
+                                    <div class="play-btn size-20 rounded-full flex items-center justify-center shadow-2xl"
+                                        style="background:#00d1ff">
+                                        <span
+                                            class="material-symbols-outlined fill-icon text-primary text-5xl">play_arrow</span>
+                                    </div>
+                                </div>
+                                <div class="absolute bottom-0 inset-x-0 p-6"
+                                    style="background:linear-gradient(to top,rgba(0,0,0,.9),transparent)">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <div class="flex items-center gap-3">
+                                            <span
+                                                class="material-symbols-outlined text-white text-xl cursor-pointer">pause</span>
+                                            <span
+                                                class="material-symbols-outlined text-white text-xl cursor-pointer">volume_up</span>
+                                            <span class="text-white text-xs font-medium">02:45 / 04:12</span>
+                                        </div>
+                                        <span class="text-white/70 text-xs font-bold uppercase tracking-widest">System
+                                            Preview</span>
+                                    </div>
+                                    <div class="h-1.5 w-full rounded-full overflow-hidden"
+                                        style="background:rgba(255,255,255,.2)">
+                                        <div class="h-full w-2/3 rounded-full relative" style="background:#00d1ff">
+                                            <div
+                                                class="absolute right-0 top-1/2 -translate-y-1/2 w-3.5 h-3.5 bg-white rounded-full shadow-lg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- THE PROBLEM -->
+            <section class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="grid lg:grid-cols-5 gap-16">
+                        <div class="lg:col-span-2" data-aos="fade-right">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-5"
+                                style="background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.15)">
+                                <span class="material-symbols-outlined text-red-400 text-sm">warning</span>
+                                <span class="text-xs font-bold text-red-400 uppercase tracking-wider">The Problem</span>
+                            </div>
+                            <h2 class="text-3xl font-black text-primary mb-5">Why Nadice Needed a New System</h2>
+                            <p class="text-slate-500 leading-relaxed mb-8">Nadice Real Estate needed a streamlined
+                                system to manage multiple properties, track tenants, handle finances, and improve
+                                communication. Before implementation, managing properties and tenant interactions was
+                                manual, inefficient, and prone to errors.</p>
+                            <div class="rounded-2xl p-6 italic leading-relaxed font-medium"
+                                style="background:#fff5f5;border:1.5px solid #fee2e2;color:#7f1d1d">"These issues led to
+                                operational inefficiencies, delayed payments, poor tenant satisfaction, and limited
+                                insight into property performance."</div>
+                        </div>
+                        <div class="lg:col-span-3 grid md:grid-cols-2 gap-4" data-aos="fade-left" data-aos-delay="80">
+                            <div class="prob-card"><span
+                                    class="material-symbols-outlined text-red-400 text-xl flex-shrink-0 mt-0.5">visibility_off</span>
+                                <div>
+                                    <h4 class="font-black text-primary text-sm mb-1">Low Visibility</h4>
+                                    <p class="text-slate-500 text-xs leading-relaxed">Lack of real-time insights into
+                                        total property revenue and operational expenses.</p>
+                                </div>
+                            </div>
+                            <div class="prob-card"><span
+                                    class="material-symbols-outlined text-red-400 text-xl flex-shrink-0 mt-0.5">group_off</span>
+                                <div>
+                                    <h4 class="font-black text-primary text-sm mb-1">Tracking Hurdles</h4>
+                                    <p class="text-slate-500 text-xs leading-relaxed">Difficulty tracking tenants and
+                                        units across multiple properties.</p>
+                                </div>
+                            </div>
+                            <div class="prob-card"><span
+                                    class="material-symbols-outlined text-red-400 text-xl flex-shrink-0 mt-0.5">chat_error</span>
+                                <div>
+                                    <h4 class="font-black text-primary text-sm mb-1">Communication Gaps</h4>
+                                    <p class="text-slate-500 text-xs leading-relaxed">Tenants struggling to lodge
+                                        complaints or communicate effectively with management.</p>
+                                </div>
+                            </div>
+                            <div class="prob-card"><span
+                                    class="material-symbols-outlined text-red-400 text-xl flex-shrink-0 mt-0.5">payments</span>
+                                <div>
+                                    <h4 class="font-black text-primary text-sm mb-1">Payment Friction</h4>
+                                    <p class="text-slate-500 text-xs leading-relaxed">Limited options for tenants to pay
+                                        rent in installments — causing defaults and delays.</p>
+                                </div>
+                            </div>
+                            <div class="prob-card"><span
+                                    class="material-symbols-outlined text-red-400 text-xl flex-shrink-0 mt-0.5">notifications_off</span>
+                                <div>
+                                    <h4 class="font-black text-primary text-sm mb-1">No Automation</h4>
+                                    <p class="text-slate-500 text-xs leading-relaxed">No automated reminders for
+                                        upcoming payments or lease expirations.</p>
+                                </div>
+                            </div>
+                            <div class="prob-card"><span
+                                    class="material-symbols-outlined text-red-400 text-xl flex-shrink-0 mt-0.5">folder_off</span>
+                                <div>
+                                    <h4 class="font-black text-primary text-sm mb-1">Document Chaos</h4>
+                                    <p class="text-slate-500 text-xs leading-relaxed">Difficulty providing agreements,
+                                        receipts, and documents to tenants in a timely way.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- THE SOLUTION -->
+            <section class="py-20 bg-[#f5f7f8]">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="rounded-3xl overflow-hidden relative p-12 lg:p-16"
+                        style="background:linear-gradient(135deg,#000d1a 0%,#001f3d 70%,#003a6b 100%)">
+                        <div class="absolute inset-0 pointer-events-none"
+                            style="background:radial-gradient(ellipse 70% 60% at 90% 10%,rgba(0,209,255,.08),transparent 60%)">
+                        </div>
+                        <div class="max-w-3xl relative z-10" data-aos="fade-right">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-6"
+                                style="background:rgba(0,209,255,.12);border:1px solid rgba(0,209,255,.3)">
+                                <span class="material-symbols-outlined text-accent text-sm">lightbulb</span>
+                                <span class="text-xs font-bold text-accent uppercase tracking-wider">The Solution</span>
+                            </div>
+                            <h2 class="text-3xl font-black text-white mb-5">What PrimeLabs Built</h2>
+                            <p class="text-white/65 text-lg leading-relaxed mb-8">PrimeLabs implemented a custom
+                                Property Management System tailored to Nadice Real Estate's operations. The platform
+                                centralizes property, tenant, and financial management while improving communication and
+                                transparency.</p>
+                            <p class="text-white font-bold mb-5">The system enables:</p>
+                            <ul class="grid md:grid-cols-2 gap-4 mb-8">
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-1 flex-shrink-0 size-5 rounded-full flex items-center justify-center"
+                                        style="background:rgba(0,209,255,.15)"><span
+                                            class="material-symbols-outlined fill-icon text-accent"
+                                            style="font-size:13px">check</span></div><span
+                                        class="text-white/70 text-sm leading-relaxed">Tracking multiple properties and
+                                        their units</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-1 flex-shrink-0 size-5 rounded-full flex items-center justify-center"
+                                        style="background:rgba(0,209,255,.15)"><span
+                                            class="material-symbols-outlined fill-icon text-accent"
+                                            style="font-size:13px">check</span></div><span
+                                        class="text-white/70 text-sm leading-relaxed">Tenant management with portal
+                                        access for complaints, payments, and documents</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-1 flex-shrink-0 size-5 rounded-full flex items-center justify-center"
+                                        style="background:rgba(0,209,255,.15)"><span
+                                            class="material-symbols-outlined fill-icon text-accent"
+                                            style="font-size:13px">check</span></div><span
+                                        class="text-white/70 text-sm leading-relaxed">Expense and revenue tracking for
+                                        each property</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-1 flex-shrink-0 size-5 rounded-full flex items-center justify-center"
+                                        style="background:rgba(0,209,255,.15)"><span
+                                            class="material-symbols-outlined fill-icon text-accent"
+                                            style="font-size:13px">check</span></div><span
+                                        class="text-white/70 text-sm leading-relaxed">Payment scheduling, including
+                                        installments for tenants</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-1 flex-shrink-0 size-5 rounded-full flex items-center justify-center"
+                                        style="background:rgba(0,209,255,.15)"><span
+                                            class="material-symbols-outlined fill-icon text-accent"
+                                            style="font-size:13px">check</span></div><span
+                                        class="text-white/70 text-sm leading-relaxed">Automated reminders for lease
+                                        expirations and payments</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-1 flex-shrink-0 size-5 rounded-full flex items-center justify-center"
+                                        style="background:rgba(0,209,255,.15)"><span
+                                            class="material-symbols-outlined fill-icon text-accent"
+                                            style="font-size:13px">check</span></div><span
+                                        class="text-white/70 text-sm leading-relaxed">Easy access to agreements,
+                                        receipts, and other property documents</span>
+                                </li>
+                            </ul>
+                            <p class="text-white/55 text-sm leading-relaxed">This ensures property owners or agencies
+                                have a clear overview of revenue, expenses, and tenant activities, while tenants can
+                                interact and pay easily.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- KEY FEATURES -->
+            <section class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="text-center mb-14" data-aos="fade-up">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full w-fit mb-5"
+                            style="background:rgba(0,31,61,.06);border:1px solid rgba(0,31,61,.1)">
+                            <span class="material-symbols-outlined text-primary text-sm">star</span>
+                            <span class="text-xs font-bold text-primary uppercase tracking-wider">Core System
+                                Features</span>
+                        </div>
+                        <h2 class="text-3xl md:text-5xl font-black text-primary mb-4">Key Features Implemented</h2>
+                        <p class="text-slate-500 max-w-xl mx-auto">Advanced modules designed for efficiency and scale
+                            across all property operations.</p>
+                        <div class="w-16 h-1.5 bg-accent mx-auto rounded-full mt-5"></div>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="feat-card" data-aos="fade-up" data-aos-delay="0">
+                            <div class="feat-icon"><span class="material-symbols-outlined text-primary">apartment</span>
+                            </div>
+                            <h4 class="text-lg font-black text-primary mb-2">Property & Unit Management</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-4">Organize multiple properties and
+                                individual units. Assign tenants to units and track occupancy with real-time status
+                                updates.</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-center gap-2 text-xs text-slate-500"><span
+                                        class="material-symbols-outlined fill-icon text-accent"
+                                        style="font-size:14px">check_circle</span>Multi-property portfolio view</li>
+                                <li class="flex items-center gap-2 text-xs text-slate-500"><span
+                                        class="material-symbols-outlined fill-icon text-accent"
+                                        style="font-size:14px">check_circle</span>Unit-level occupancy tracking</li>
+                            </ul>
+                        </div>
+                        <div class="feat-card" data-aos="fade-up" data-aos-delay="60">
+                            <div class="feat-icon"><span
+                                    class="material-symbols-outlined text-primary">person_pin</span></div>
+                            <h4 class="text-lg font-black text-primary mb-2">Tenant Portal</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-4">Dedicated space for tenants to
+                                interact with management, make payments, and access their documents.</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-center gap-2 text-xs text-slate-500"><span
+                                        class="material-symbols-outlined fill-icon text-accent"
+                                        style="font-size:14px">check_circle</span>Submit complaints & maintenance
+                                    requests</li>
+                                <li class="flex items-center gap-2 text-xs text-slate-500"><span
+                                        class="material-symbols-outlined fill-icon text-accent"
+                                        style="font-size:14px">check_circle</span>Installment or full payments online
+                                </li>
+                                <li class="flex items-center gap-2 text-xs text-slate-500"><span
+                                        class="material-symbols-outlined fill-icon text-accent"
+                                        style="font-size:14px">check_circle</span>Download agreements & receipts</li>
+                            </ul>
+                        </div>
+                        <div class="feat-card" data-aos="fade-up" data-aos-delay="120">
+                            <div class="feat-icon"><span class="material-symbols-outlined text-primary">alarm_on</span>
+                            </div>
+                            <h4 class="text-lg font-black text-primary mb-2">Payment Reminders</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-4">Automated email notifications for
+                                upcoming payments and lease expirations — zero missed follow-ups.</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-center gap-2 text-xs text-slate-500"><span
+                                        class="material-symbols-outlined fill-icon text-accent"
+                                        style="font-size:14px">check_circle</span>Lease expiration alerts</li>
+                                <li class="flex items-center gap-2 text-xs text-slate-500"><span
+                                        class="material-symbols-outlined fill-icon text-accent"
+                                        style="font-size:14px">check_circle</span>Overdue balance notifications</li>
+                            </ul>
+                        </div>
+                        <div class="feat-card" data-aos="fade-up" data-aos-delay="0">
+                            <div class="feat-icon"><span class="material-symbols-outlined text-primary">insights</span>
+                            </div>
+                            <h4 class="text-lg font-black text-primary mb-2">Expense & Revenue Tracking</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-4">Record and monitor property income,
+                                expenses, and profitability with detailed reports per property or unit.</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-center gap-2 text-xs text-slate-500"><span
+                                        class="material-symbols-outlined fill-icon text-accent"
+                                        style="font-size:14px">check_circle</span>Per-property financial reports</li>
+                                <li class="flex items-center gap-2 text-xs text-slate-500"><span
+                                        class="material-symbols-outlined fill-icon text-accent"
+                                        style="font-size:14px">check_circle</span>Net profit calculators</li>
+                            </ul>
+                        </div>
+                        <div class="feat-card" data-aos="fade-up" data-aos-delay="60">
+                            <div class="feat-icon"><span class="material-symbols-outlined text-primary">dashboard</span>
+                            </div>
+                            <h4 class="text-lg font-black text-primary mb-2">Communication & Transparency</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-4">Centralized dashboard for property
+                                managers or owners with full visibility into tenant activity and financial health.</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-center gap-2 text-xs text-slate-500"><span
+                                        class="material-symbols-outlined fill-icon text-accent"
+                                        style="font-size:14px">check_circle</span>Pending complaints at a glance</li>
+                                <li class="flex items-center gap-2 text-xs text-slate-500"><span
+                                        class="material-symbols-outlined fill-icon text-accent"
+                                        style="font-size:14px">check_circle</span>Payment activity overview</li>
+                            </ul>
+                        </div>
+                        <div class="feat-card" data-aos="fade-up" data-aos-delay="120">
+                            <div class="feat-icon"><span
+                                    class="material-symbols-outlined text-primary">signal_cellular_nodata</span></div>
+                            <h4 class="text-lg font-black text-primary mb-2">Online & Offline Operation</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-4">Continuous field operations without
+                                internet dependency. Data syncs automatically once reconnected.</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-center gap-2 text-xs text-slate-500"><span
+                                        class="material-symbols-outlined fill-icon text-accent"
+                                        style="font-size:14px">check_circle</span>Secure offline data storage</li>
+                                <li class="flex items-center gap-2 text-xs text-slate-500"><span
+                                        class="material-symbols-outlined fill-icon text-accent"
+                                        style="font-size:14px">check_circle</span>Auto-sync on reconnection</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INTERFACE PREVIEW -->
+            <section class="py-20 bg-[#f5f7f8]">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="text-center mb-14" data-aos="fade-up">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full w-fit mb-5"
+                            style="background:rgba(0,31,61,.06);border:1px solid rgba(0,31,61,.1)">
+                            <span class="material-symbols-outlined text-primary text-sm">devices</span>
+                            <span class="text-xs font-bold text-primary uppercase tracking-wider">Interface
+                                Preview</span>
+                        </div>
+                        <h2 class="text-3xl font-black text-primary mb-4">A Glimpse Into the System</h2>
+                        <p class="text-slate-500 max-w-xl mx-auto">Clean, intuitive interfaces built for property
+                            managers and tenants alike.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-end" data-aos="fade-up"
+                        data-aos-delay="80">
+                        <!-- Dashboard -->
+                        <div class="flex flex-col gap-4">
+                            <div class="rounded-2xl overflow-hidden border border-[#e8edf2] shadow-lg bg-white p-3">
+                                <div class="rounded-xl overflow-hidden bg-[#f0f4f8] relative"
+                                    style="aspect-ratio:16/10">
+                                    <div class="absolute top-3 left-3 flex gap-1.5">
+                                        <div class="screen-dot bg-red-300"></div>
+                                        <div class="screen-dot bg-yellow-300"></div>
+                                        <div class="screen-dot bg-green-300"></div>
+                                    </div>
+                                    <div class="absolute inset-0 flex flex-col p-5 pt-8">
+                                        <div class="grid grid-cols-3 gap-2 mb-3">
+                                            <div class="rounded-lg p-2 bg-primary">
+                                                <p class="text-accent text-xs font-black">12</p>
+                                                <p class="text-white/50 text-[9px]">Properties</p>
+                                            </div>
+                                            <div class="rounded-lg p-2 bg-primary">
+                                                <p class="text-accent text-xs font-black">48</p>
+                                                <p class="text-white/50 text-[9px]">Tenants</p>
+                                            </div>
+                                            <div class="rounded-lg p-2 bg-primary">
+                                                <p class="text-accent text-xs font-black">₦2.4M</p>
+                                                <p class="text-white/50 text-[9px]">Revenue</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex-1 rounded-lg bg-white border border-[#e8edf2] p-2">
+                                            <div class="h-2 bg-accent/30 rounded mb-1.5 w-3/4"></div>
+                                            <div class="h-2 bg-primary/15 rounded mb-1.5 w-full"></div>
+                                            <div class="h-2 bg-primary/15 rounded mb-1.5 w-1/2"></div>
+                                            <div class="h-2 bg-accent/20 rounded w-2/3"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-center text-xs font-bold text-primary uppercase tracking-wider">Central
+                                Dashboard</p>
+                        </div>
+                        <!-- Property Portfolio -->
+                        <div class="flex flex-col gap-4">
+                            <div class="rounded-2xl overflow-hidden border border-[#e8edf2] shadow-lg bg-white p-3">
+                                <div class="rounded-xl overflow-hidden bg-[#f0f4f8] relative"
+                                    style="aspect-ratio:16/10">
+                                    <div class="absolute top-3 left-3 flex gap-1.5">
+                                        <div class="screen-dot bg-red-300"></div>
+                                        <div class="screen-dot bg-yellow-300"></div>
+                                        <div class="screen-dot bg-green-300"></div>
+                                    </div>
+                                    <div class="absolute inset-0 flex flex-col gap-2 p-4 pt-8">
+                                        <div
+                                            class="flex gap-2 items-center rounded-lg bg-white border border-[#e8edf2] p-2">
+                                            <div
+                                                class="size-6 rounded-md bg-primary flex items-center justify-center flex-shrink-0">
+                                                <span class="material-symbols-outlined text-accent"
+                                                    style="font-size:12px">apartment</span>
+                                            </div>
+                                            <div class="flex-1">
+                                                <div class="h-1.5 bg-primary/20 rounded w-20 mb-1"></div>
+                                                <div class="h-1.5 bg-accent/30 rounded w-12"></div>
+                                            </div>
+                                            <div
+                                                class="text-[9px] font-bold text-green-600 bg-green-50 px-1.5 py-0.5 rounded-full">
+                                                Occupied</div>
+                                        </div>
+                                        <div
+                                            class="flex gap-2 items-center rounded-lg bg-white border border-[#e8edf2] p-2">
+                                            <div
+                                                class="size-6 rounded-md bg-primary flex items-center justify-center flex-shrink-0">
+                                                <span class="material-symbols-outlined text-accent"
+                                                    style="font-size:12px">apartment</span>
+                                            </div>
+                                            <div class="flex-1">
+                                                <div class="h-1.5 bg-primary/20 rounded w-16 mb-1"></div>
+                                                <div class="h-1.5 bg-accent/30 rounded w-10"></div>
+                                            </div>
+                                            <div
+                                                class="text-[9px] font-bold text-amber-600 bg-amber-50 px-1.5 py-0.5 rounded-full">
+                                                Pending</div>
+                                        </div>
+                                        <div
+                                            class="flex gap-2 items-center rounded-lg bg-white border border-[#e8edf2] p-2">
+                                            <div
+                                                class="size-6 rounded-md bg-primary flex items-center justify-center flex-shrink-0">
+                                                <span class="material-symbols-outlined text-accent"
+                                                    style="font-size:12px">apartment</span>
+                                            </div>
+                                            <div class="flex-1">
+                                                <div class="h-1.5 bg-primary/20 rounded w-24 mb-1"></div>
+                                                <div class="h-1.5 bg-accent/30 rounded w-14"></div>
+                                            </div>
+                                            <div
+                                                class="text-[9px] font-bold text-slate-400 bg-slate-50 px-1.5 py-0.5 rounded-full">
+                                                Vacant</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-center text-xs font-bold text-primary uppercase tracking-wider">Property
+                                Portfolio View</p>
+                        </div>
+                        <!-- Mobile tenant portal -->
+                        <div class="flex flex-col gap-4 items-center">
+                            <div class="w-44 rounded-[2rem] overflow-hidden shadow-2xl p-1.5"
+                                style="background:#1e293b;border:3px solid #0f172a">
+                                <div class="rounded-[1.6rem] overflow-hidden bg-[#f5f7f8] relative flex flex-col"
+                                    style="aspect-ratio:9/19">
+                                    <div
+                                        class="absolute top-2 left-1/2 -translate-x-1/2 w-14 h-1.5 rounded-full bg-slate-300 z-10">
+                                    </div>
+                                    <div class="flex-1 flex flex-col gap-2 p-3 pt-6">
+                                        <div class="rounded-lg p-2 bg-primary text-center">
+                                            <p class="text-accent text-xs font-black">Tenant Portal</p>
+                                            <p class="text-white/50 text-[8px]">Nadice Real Estate</p>
+                                        </div>
+                                        <div class="rounded-lg bg-white border border-[#e8edf2] p-2">
+                                            <p class="text-[8px] font-bold text-primary mb-1">My Payments</p>
+                                            <div class="h-1 bg-accent rounded-full w-4/5 mb-0.5"></div>
+                                            <div class="h-1 bg-primary/10 rounded-full w-full"></div>
+                                        </div>
+                                        <div class="rounded-lg bg-white border border-[#e8edf2] p-2">
+                                            <p class="text-[8px] font-bold text-primary mb-1">My Requests</p>
+                                            <div class="h-1 bg-primary/10 rounded-full w-3/5 mb-0.5"></div>
+                                            <div class="h-1 bg-primary/10 rounded-full w-2/5"></div>
+                                        </div>
+                                        <div class="mt-auto rounded-lg p-1.5 text-center bg-accent">
+                                            <p class="text-primary text-[8px] font-black">Pay Rent</p>
+                                        </div>
+                                    </div>
+                                    <div class="h-4 flex items-center justify-center">
+                                        <div class="w-8 h-1 rounded-full bg-slate-300"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-center text-xs font-bold text-primary uppercase tracking-wider">Mobile Tenant
+                                Portal</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RESULTS -->
+            <section class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="text-center mb-14" data-aos="fade-up">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full w-fit mb-5"
+                            style="background:rgba(0,31,61,.06);border:1px solid rgba(0,31,61,.1)">
+                            <span class="material-symbols-outlined text-primary text-sm">emoji_events</span>
+                            <span class="text-xs font-bold text-primary uppercase tracking-wider">Results</span>
+                        </div>
+                        <h2 class="text-3xl font-black text-primary mb-4">What Changed After Deployment</h2>
+                        <p class="text-slate-500 max-w-2xl mx-auto">After deployment, Nadice Real Estate experienced
+                            significant improvements across all operational metrics.</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-5">
+                        <div class="result-card" data-aos="fade-up" data-aos-delay="0">
+                            <div class="result-icon"><span class="material-symbols-outlined">analytics</span></div>
+                            <div>
+                                <h4 class="font-black text-primary text-sm mb-1">Clear Visibility</h4>
+                                <p class="text-slate-500 text-xs leading-relaxed">Into property revenue and expenses for
+                                    better financial control and decision-making.</p>
+                            </div>
+                        </div>
+                        <div class="result-card" data-aos="fade-up" data-aos-delay="40">
+                            <div class="result-icon"><span class="material-symbols-outlined">holiday_village</span>
+                            </div>
+                            <div>
+                                <h4 class="font-black text-primary text-sm mb-1">Simplified Management</h4>
+                                <p class="text-slate-500 text-xs leading-relaxed">Efficient tenant management across
+                                    multiple units and properties from one dashboard.</p>
+                            </div>
+                        </div>
+                        <div class="result-card" data-aos="fade-up" data-aos-delay="80">
+                            <div class="result-icon"><span class="material-symbols-outlined">speed</span></div>
+                            <div>
+                                <h4 class="font-black text-primary text-sm mb-1">Faster Response</h4>
+                                <p class="text-slate-500 text-xs leading-relaxed">Quicker turnaround on tenant
+                                    complaints and maintenance requests.</p>
+                            </div>
+                        </div>
+                        <div class="result-card" data-aos="fade-up" data-aos-delay="0">
+                            <div class="result-icon"><span class="material-symbols-outlined">sentiment_satisfied</span>
+                            </div>
+                            <div>
+                                <h4 class="font-black text-primary text-sm mb-1">Increased Satisfaction</h4>
+                                <p class="text-slate-500 text-xs leading-relaxed">Improved tenant experience through
+                                    installment payment options and portal access.</p>
+                            </div>
+                        </div>
+                        <div class="result-card" data-aos="fade-up" data-aos-delay="40">
+                            <div class="result-icon"><span class="material-symbols-outlined">event_note</span></div>
+                            <div>
+                                <h4 class="font-black text-primary text-sm mb-1">Timely Reminders</h4>
+                                <p class="text-slate-500 text-xs leading-relaxed">Automated notifications for payments
+                                    and lease expirations — no more missed follow-ups.</p>
+                            </div>
+                        </div>
+                        <div class="result-card" data-aos="fade-up" data-aos-delay="80">
+                            <div class="result-icon"><span class="material-symbols-outlined">folder_shared</span></div>
+                            <div>
+                                <h4 class="font-black text-primary text-sm mb-1">Easy Document Access</h4>
+                                <p class="text-slate-500 text-xs leading-relaxed">Instant availability of agreements,
+                                    receipts, and financial records for all parties.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- wide card -->
+                    <div class="result-card mb-10" data-aos="fade-up">
+                        <div class="result-icon"><span class="material-symbols-outlined">rocket_launch</span></div>
+                        <div>
+                            <h4 class="font-black text-primary text-sm mb-1">Operational Excellence</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed">Overall more efficient property management
+                                and better decision-making capabilities — transforming Nadice Real Estate into a
+                                data-driven, organized, and tenant-friendly operation.</p>
+                        </div>
+                    </div>
+                    <!-- quote -->
+                    <div class="rounded-2xl p-8 text-center"
+                        style="background:rgba(0,31,61,.04);border:1.5px solid rgba(0,31,61,.08)" data-aos="fade-up">
+                        <p class="text-primary font-semibold leading-relaxed max-w-3xl mx-auto">The system transformed
+                            Nadice Real Estate into a data-driven, organized, and tenant-friendly operation, enabling
+                            both owners and agencies to manage properties with confidence.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="py-20 bg-[#f5f7f8]">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="rounded-[2.5rem] overflow-hidden relative"
+                        style="background:linear-gradient(135deg,#000d1a 0%,#001f3d 60%,#003a6b 100%)">
+                        <div class="absolute inset-0 pointer-events-none"
+                            style="background-image:radial-gradient(circle at 80% 50%,rgba(0,209,255,.1),transparent 50%),linear-gradient(rgba(0,209,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,209,255,.03) 1px,transparent 1px);background-size:auto,60px 60px,60px 60px">
+                        </div>
+                        <div class="relative px-10 py-16 lg:px-20 text-center" data-aos="fade-up">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-6"
+                                style="background:rgba(0,209,255,.12);border:1px solid rgba(0,209,255,.3)">
+                                <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                                <span class="text-xs font-bold text-accent uppercase tracking-wider">Want a System Like
+                                    This for Your Properties?</span>
+                            </div>
+                            <h2 class="text-4xl lg:text-5xl font-black text-white mb-5 leading-tight">Ready to Manage
+                                Your Properties<br>with Confidence?</h2>
+                            <p class="text-white/55 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">PrimeLabs Business
+                                Solution builds custom property management and business systems designed to streamline
+                                operations, improve tenant satisfaction, and maximize profitability.</p>
+                            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                                <a href="/contact.html"
+                                    class="btn-ripple flex items-center gap-2 px-10 py-4 rounded-xl font-black text-primary bg-accent hover:-translate-y-0.5 transition-all"><span
+                                        class="material-symbols-outlined">event</span> Book a Consultation</a>
+                                <a href="/contact.html"
+                                    class="flex items-center gap-2 px-10 py-4 rounded-xl font-black text-white transition-all"
+                                    style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2)"><span
+                                        class="material-symbols-outlined">play_arrow</span> Start Your Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="bg-white border-t border-[#dae0e7] pt-20 pb-10">
+            <div class="max-w-7xl mx-auto px-6 lg:px-20">
+                <div class="grid md:grid-cols-4 gap-12 mb-20">
+                    <div class="flex flex-col justify-start gap-4">
+                        <div class="w-36 inline"><img src="/asset/header.png" alt="logo"
+                                class="w-full h-auto object-contain"></div>
+                        <p class="text-primary text-sm leading-relaxed max-w-xs">Leading enterprise-grade technology and
+                            automation solutions for high-growth businesses.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-primary font-bold mb-6 text-xs uppercase tracking-wider">Services</h4>
+                        <ul class="flex flex-col gap-4 text-sm text-primary/80">
+                            <li><a class="hover:text-primary transition-colors" href="/service/control.html">Control
+                                    Systems</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="/service/growth.html">Growth
+                                    Systems</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="/service.html">All Solutions</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-primary font-bold mb-6 text-xs uppercase tracking-wider">Company</h4>
+                        <ul class="flex flex-col gap-4 text-sm text-primary/80">
+                            <li><a class="hover:text-primary transition-colors" href="/about.html">About Us</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="/casestudy.html">Case Studies</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors"
+                                    href="/index.html#industries">Industries</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-primary font-bold mb-6 text-xs uppercase tracking-wider">Contact</h4>
+                        <ul class="flex flex-col gap-4 text-sm text-primary/80">
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-sm text-primary">mail</span>info@primelabsbusinesssolution.com
+                            </li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-sm text-primary">phone</span>09066363260</li>
+                            <li class="flex items-start gap-2"><span
+                                    class="material-symbols-outlined text-sm text-primary mt-0.5">location_on</span><span>Shop
+                                    S9/10, Cozyez Mall, 43 Presidential Rd, Asata, Enugu, Nigeria</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-[#dae0e7] gap-4">
+                    <p class="text-sm text-primary">&copy; 2024 Primelabs Limited. All rights reserved.</p>
+                    <div class="flex gap-6"><a class="text-sm text-primary/80 hover:text-primary transition-colors"
+                            href="#">Privacy Policy</a><a
+                            class="text-sm text-primary/80 hover:text-primary transition-colors" href="#">Terms of
+                            Service</a></div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        const menuBtn = document.getElementById("menuBtn"), mobileMenu = document.getElementById("mobileMenu");
+        menuBtn.addEventListener("click", e => { e.stopPropagation(); mobileMenu.classList.toggle("max-h-0"); mobileMenu.classList.toggle("max-h-[500px]") });
+        document.addEventListener("click", e => { if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) { mobileMenu.classList.add("max-h-0"); mobileMenu.classList.remove("max-h-[500px]") } });
+        document.querySelectorAll('.btn-ripple').forEach(btn => { btn.addEventListener('mouseenter', () => { btn.classList.remove('ripple-active'); void btn.offsetWidth; btn.classList.add('ripple-active') }); btn.addEventListener('mouseleave', () => btn.classList.remove('ripple-active')) });
+        AOS.init({ duration: 1000, once: true, offset: 80, easing: "ease-out-cubic" });
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Case Study: Nadice Real Estate | PrimeLabs</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: { primary: "#001f3d", accent: "#00d1ff", "background-light": "#f5f7f8" },
+                    fontFamily: { display: ["Manrope", "sans-serif"] },
+                    borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" }
+                }
+            }
+        };
+    </script>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            overflow-x: hidden;
+            background: #f5f7f8;
+            color: #001f3d
+        }
+
+        :root {
+            --primary: #001f3d;
+            --accent: #00d1ff
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+        }
+
+        .fill-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24
+        }
+
+        /* ── Ripple ── */
+        .btn-ripple {
+            position: relative;
+            overflow: hidden
+        }
+
+        .btn-ripple::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .35);
+            transform: translate(-50%, -50%)
+        }
+
+        .btn-ripple.ripple-active::before {
+            animation: ripple .9s ease-out forwards
+        }
+
+        @keyframes ripple {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 1
+            }
+
+            100% {
+                width: 520px;
+                height: 520px;
+                opacity: 0
+            }
+        }
+
+        /* ── Timeline ── */
+        .tl-list {
+            position: relative;
+            padding-left: 36px
+        }
+
+        .tl-list::before {
+            content: '';
+            position: absolute;
+            left: 11px;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background: linear-gradient(to bottom, #00d1ff, rgba(0, 209, 255, .15))
+        }
+
+        .tl-item {
+            position: relative;
+            padding: 0 0 28px 24px
+        }
+
+        .tl-item:last-child {
+            padding-bottom: 0
+        }
+
+        .tl-dot {
+            position: absolute;
+            left: -36px;
+            top: 2px;
+            width: 24px;
+            height: 24px;
+            border-radius: 9999px;
+            background: rgba(0, 209, 255, .12);
+            border: 1.5px solid rgba(0, 209, 255, .3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0
+        }
+
+        /* ── Prop card ── */
+        .prop-card {
+            background: white;
+            border: 1.5px solid #e8edf2;
+            border-radius: 18px;
+            padding: 28px;
+            transition: border-color .25s, box-shadow .25s, transform .25s
+        }
+
+        .prop-card:hover {
+            border-color: #00d1ff;
+            box-shadow: 0 16px 40px rgba(0, 31, 61, .08);
+            transform: translateY(-4px)
+        }
+
+        /* ── Interface preview ── */
+        .screen-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 9999px
+        }
+
+        .mock-bar {
+            border-radius: 4px
+        }
+
+        /* ── Result checklist ── */
+        .result-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, .07)
+        }
+
+        .result-row:last-child {
+            border-bottom: none
+        }
+    </style>
+</head>
+
+<body class="bg-background-light font-display text-slate-900 antialiased">
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+
+        <!-- ═══ NAV ═══ -->
+        <nav class="sticky top-0 z-50 bg-background-light shadow-sm border-b border-[#e5e7eb]">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <img src="/asset/header.png" alt="PrimeLabs" class="h-30 w-40 mb-6 mt-5 bg-cover">
+                <div class="hidden md:flex items-center gap-10">
+                    <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/service.html">Solutions</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/index.html#industries">Industries</a>
+                    <a class="text-sm font-semibold text-accent" href="/casestudy.html">Case Studies</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors" href="/about.html">About</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/contact.html">Contact</a>
+                    <button
+                        class="btn-ripple bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">Book
+                        a Demo</button>
+                </div>
+                <div class="md:hidden cursor-pointer" id="menuBtn"><span
+                        class="material-symbols-outlined text-3xl">menu</span></div>
+            </div>
+            <div id="mobileMenu"
+                class="md:hidden overflow-hidden max-h-0 transition-all duration-500 ease-in-out border-t border-gray-200">
+                <div class="px-6 py-6 flex flex-col gap-6 bg-white">
+                    <a class="text-sm font-semibold hover:text-accent transition-colors" href="/index.html">Home</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/service.html">Solutions</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/index.html#industries">Industries</a>
+                    <a class="text-sm font-semibold text-accent" href="/casestudy.html">Case Studies</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors" href="/about.html">About</a>
+                    <a class="text-sm font-semibold hover:text-accent transition-colors"
+                        href="/contact.html">Contact</a>
+                    <button class="btn-ripple bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold">Book a
+                        Demo</button>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+
+            <!-- ═══ HERO — split full-bleed ═══ -->
+            <section class="bg-primary text-white min-h-[75vh] grid lg:grid-cols-2 relative overflow-hidden">
+                <!-- subtle grid overlay -->
+                <div class="absolute inset-0 pointer-events-none"
+                    style="background-image:linear-gradient(rgba(0,209,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,209,255,.03) 1px,transparent 1px);background-size:60px 60px">
+                </div>
+
+                <!-- LEFT: content -->
+                <div class="flex flex-col justify-center px-8 lg:px-20 py-20 gap-8 relative z-10" data-aos="fade-right">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full w-fit"
+                        style="background:rgba(0,209,255,.12);border:1px solid rgba(0,209,255,.3)">
+                        <span class="material-symbols-outlined text-accent text-sm">apartment</span>
+                        <span class="text-xs font-bold uppercase tracking-wider text-accent">Real Estate Case
+                            Study</span>
+                    </div>
+                    <h1 class="text-4xl lg:text-6xl font-black leading-tight tracking-tight">
+                        Nadice Real Estate <span class="text-accent">Property Management System</span>
+                    </h1>
+                    <p class="text-white/65 text-lg max-w-lg leading-relaxed">A custom system to manage multiple
+                        properties, track tenants, handle finances, and improve communication — all in one place.
+                        Delivered by PrimeLabs Business Solution.</p>
+                    <!-- mini stats -->
+                    <div class="grid grid-cols-3 gap-4 max-w-md">
+                        <div class="text-center p-4 rounded-xl"
+                            style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)">
+                            <p class="text-2xl font-black text-accent">100%</p>
+                            <p class="text-xs text-white/50 mt-1">Revenue Visibility</p>
+                        </div>
+                        <div class="text-center p-4 rounded-xl"
+                            style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)">
+                            <p class="text-2xl font-black text-accent">Multi</p>
+                            <p class="text-xs text-white/50 mt-1">Properties</p>
+                        </div>
+                        <div class="text-center p-4 rounded-xl"
+                            style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)">
+                            <p class="text-2xl font-black text-accent">0</p>
+                            <p class="text-xs text-white/50 mt-1">Missed Payments</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="/contact.html"
+                            class="btn-ripple flex items-center gap-2 px-8 py-4 rounded-xl font-black text-primary bg-accent hover:-translate-y-0.5 transition-all">
+                            <span class="material-symbols-outlined">calendar_month</span> Book a Consultation
+                        </a>
+                        <a href="/contact.html"
+                            class="flex items-center gap-2 px-8 py-4 rounded-xl font-black text-white transition-all"
+                            style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2)">
+                            <span class="material-symbols-outlined">play_arrow</span> Start Your Project
+                        </a>
+                    </div>
+                </div>
+
+                <!-- RIGHT: property image + floating card -->
+                <div class="relative hidden lg:block" data-aos="fade-left">
+                    <div class="absolute inset-0 bg-cover bg-center"
+                        style="background-image:url('/asset/nadice/PROPERTY MOCKUP.png')"></div>
+                    <!-- left-to-right fade blending into bg-primary -->
+                    <div class="absolute inset-0"
+                        style="background:linear-gradient(to right,#001f3d 0%,transparent 40%)"></div>
+                    <!-- top fade -->
+                    <div class="absolute inset-0"
+                        style="background:linear-gradient(to bottom,rgba(0,31,61,.3) 0%,transparent 30%)"></div>
+                    <!-- floating card -->
+                    <div class="absolute bottom-12 right-10 bg-white rounded-2xl p-5 shadow-2xl" style="max-width:260px"
+                        data-aos="fade-up" data-aos-delay="300">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="material-symbols-outlined fill-icon text-accent">verified</span>
+                            <span class="text-primary font-black text-sm">Tenant Portal Active</span>
+                        </div>
+                        <p class="text-xs text-slate-500 leading-relaxed">Tenants can now pay rent, lodge complaints
+                            &amp; access documents online — anytime.</p>
+                        <div class="mt-3 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                            <span class="text-xs font-bold text-green-500">Live & Operational</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══ CLIENT OVERVIEW STRIP ═══ -->
+            <section class="bg-white border-b border-[#e8edf2]">
+                <div class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 divide-x divide-[#e8edf2]">
+                    <div class="text-center px-6">
+                        <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Client</p>
+                        <p class="font-black text-primary">Nadice Real Estate</p>
+                    </div>
+                    <div class="text-center px-6">
+                        <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Industry</p>
+                        <p class="font-black text-primary">Property Management</p>
+                    </div>
+                    <div class="text-center px-6">
+                        <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Service</p>
+                        <p class="font-black text-primary">Custom Mgmt System</p>
+                    </div>
+                    <div class="text-center px-6">
+                        <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Delivered by</p>
+                        <p class="font-black text-primary">PrimeLabs Business Solution</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══ PROBLEM + SOLUTION ═══ -->
+            <section class="py-20 bg-[#f5f7f8]">
+                <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-14">
+
+                    <!-- Problem — vertical timeline -->
+                    <div data-aos="fade-right">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-5"
+                            style="background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.15)">
+                            <span class="material-symbols-outlined text-red-400 text-sm">warning</span>
+                            <span class="text-xs font-bold text-red-400 uppercase tracking-wider">The Problem</span>
+                        </div>
+                        <h2 class="text-3xl font-black text-primary mb-3">Why Nadice Needed a New System</h2>
+                        <p class="text-slate-500 mb-10 leading-relaxed">Before PrimeLabs, Nadice Real Estate faced
+                            persistent manual challenges across their entire property portfolio. Managing properties and
+                            tenant interactions was inefficient and prone to costly errors.</p>
+
+                        <div class="tl-list">
+                            <div class="tl-item">
+                                <div class="tl-dot"><span class="material-symbols-outlined text-accent"
+                                        style="font-size:13px">visibility_off</span></div>
+                                <h4 class="font-black text-primary text-sm">No Revenue Visibility</h4>
+                                <p class="text-sm text-slate-500 mt-1 leading-relaxed">Lack of visibility into property
+                                    revenue and expenses — no clear financial picture.</p>
+                            </div>
+                            <div class="tl-item">
+                                <div class="tl-dot"><span class="material-symbols-outlined text-accent"
+                                        style="font-size:13px">manage_accounts</span></div>
+                                <h4 class="font-black text-primary text-sm">Scattered Tenant Records</h4>
+                                <p class="text-sm text-slate-500 mt-1 leading-relaxed">Difficulty tracking tenants and
+                                    units across multiple properties — error-prone and time-consuming.</p>
+                            </div>
+                            <div class="tl-item">
+                                <div class="tl-dot"><span class="material-symbols-outlined text-accent"
+                                        style="font-size:13px">chat_error</span></div>
+                                <h4 class="font-black text-primary text-sm">Poor Communication</h4>
+                                <p class="text-sm text-slate-500 mt-1 leading-relaxed">Tenants struggled to lodge
+                                    complaints or communicate effectively, leading to frustration.</p>
+                            </div>
+                            <div class="tl-item">
+                                <div class="tl-dot"><span class="material-symbols-outlined text-accent"
+                                        style="font-size:13px">payments</span></div>
+                                <h4 class="font-black text-primary text-sm">No Installment Options</h4>
+                                <p class="text-sm text-slate-500 mt-1 leading-relaxed">Tenants had limited options to
+                                    pay rent in structured installments — causing defaults and delays.</p>
+                            </div>
+                            <div class="tl-item">
+                                <div class="tl-dot"><span class="material-symbols-outlined text-accent"
+                                        style="font-size:13px">notifications_off</span></div>
+                                <h4 class="font-black text-primary text-sm">No Automated Reminders</h4>
+                                <p class="text-sm text-slate-500 mt-1 leading-relaxed">Late payments and lease
+                                    expirations went unnoticed with no automated alert system.</p>
+                            </div>
+                            <div class="tl-item">
+                                <div class="tl-dot"><span class="material-symbols-outlined text-accent"
+                                        style="font-size:13px">description</span></div>
+                                <h4 class="font-black text-primary text-sm">Document Inaccessibility</h4>
+                                <p class="text-sm text-slate-500 mt-1 leading-relaxed">Difficulty providing agreements,
+                                    receipts, and documents to tenants quickly and reliably.</p>
+                            </div>
+                        </div>
+
+                        <!-- Quote -->
+                        <div class="mt-10 rounded-2xl p-6 italic leading-relaxed font-medium"
+                            style="background:#fff5f5;border:1.5px solid #fee2e2;color:#7f1d1d">
+                            "These issues led to operational inefficiencies, delayed payments, poor tenant satisfaction,
+                            and limited insight into property performance."
+                        </div>
+                    </div>
+
+                    <!-- Solution -->
+                    <div data-aos="fade-left" data-aos-delay="100">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-5"
+                            style="background:rgba(0,209,255,.1);border:1px solid rgba(0,209,255,.25)">
+                            <span class="material-symbols-outlined text-accent text-sm">lightbulb</span>
+                            <span class="text-xs font-bold text-accent uppercase tracking-wider">The Solution</span>
+                        </div>
+                        <h2 class="text-3xl font-black text-primary mb-3">What PrimeLabs Built</h2>
+                        <p class="text-slate-500 mb-8 leading-relaxed">PrimeLabs implemented a custom Property
+                            Management System tailored to Nadice Real Estate's operations. The platform centralizes
+                            property, tenant, and financial management while improving communication and transparency.
+                        </p>
+
+                        <div class="bg-primary rounded-2xl p-8 text-white">
+                            <h3 class="font-black text-lg mb-6 text-accent">Platform Capabilities</h3>
+                            <div class="space-y-4">
+                                <div class="flex gap-3 items-start"><span
+                                        class="material-symbols-outlined fill-icon text-accent flex-shrink-0">check_circle</span><span
+                                        class="text-sm text-white/80 leading-relaxed">Track multiple properties and
+                                        individual units with real-time occupancy status</span></div>
+                                <div class="flex gap-3 items-start"><span
+                                        class="material-symbols-outlined fill-icon text-accent flex-shrink-0">check_circle</span><span
+                                        class="text-sm text-white/80 leading-relaxed">Tenant portal: submit complaints,
+                                        make payments online, download documents</span></div>
+                                <div class="flex gap-3 items-start"><span
+                                        class="material-symbols-outlined fill-icon text-accent flex-shrink-0">check_circle</span><span
+                                        class="text-sm text-white/80 leading-relaxed">Expense and revenue tracking per
+                                        property with automated financial reports</span></div>
+                                <div class="flex gap-3 items-start"><span
+                                        class="material-symbols-outlined fill-icon text-accent flex-shrink-0">check_circle</span><span
+                                        class="text-sm text-white/80 leading-relaxed">Installment payment scheduling for
+                                        tenants — flexible and structured</span></div>
+                                <div class="flex gap-3 items-start"><span
+                                        class="material-symbols-outlined fill-icon text-accent flex-shrink-0">check_circle</span><span
+                                        class="text-sm text-white/80 leading-relaxed">Automated reminders for lease
+                                        expirations and payment due dates</span></div>
+                                <div class="flex gap-3 items-start"><span
+                                        class="material-symbols-outlined fill-icon text-accent flex-shrink-0">check_circle</span><span
+                                        class="text-sm text-white/80 leading-relaxed">One-click access to agreements,
+                                        receipts, and all property documents</span></div>
+                            </div>
+                            <p class="text-white/50 text-xs mt-6 leading-relaxed">This ensures property owners or
+                                agencies have a clear overview of revenue, expenses, and tenant activities, while
+                                tenants can interact and pay easily.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ═══ KEY FEATURES ═══ -->
+            <section class="py-24 bg-white">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="text-center mb-14" data-aos="fade-up">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full w-fit mb-4"
+                            style="background:rgba(0,31,61,.06);border:1px solid rgba(0,31,61,.1)">
+                            <span class="material-symbols-outlined text-primary text-sm">star</span>
+                            <span class="text-xs font-bold text-primary uppercase tracking-wider">Core System
+                                Features</span>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-black text-primary mb-2">Key Features Implemented</h2>
+                        <p class="text-slate-500 max-w-xl mx-auto">Advanced modules designed for efficiency and scale
+                            across all property operations.</p>
+                        <div class="w-12 h-1.5 bg-accent mx-auto rounded-full mt-4"></div>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="prop-card" data-aos="fade-up" data-aos-delay="0">
+                            <span class="material-symbols-outlined text-accent text-3xl mb-3 block">apartment</span>
+                            <h4 class="font-black text-primary text-lg mb-2">Property & Unit Management</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">Organize multiple properties and
+                                individual units. Assign tenants to units and track occupancy status in real time.</p>
+                        </div>
+                        <div class="prop-card" data-aos="fade-up" data-aos-delay="60">
+                            <span class="material-symbols-outlined text-accent text-3xl mb-3 block">person_pin</span>
+                            <h4 class="font-black text-primary text-lg mb-2">Tenant Portal</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">Tenants can submit complaints and
+                                maintenance requests, pay online (full or installment), and download agreements and
+                                receipts.</p>
+                        </div>
+                        <div class="prop-card" data-aos="fade-up" data-aos-delay="120">
+                            <span class="material-symbols-outlined text-accent text-3xl mb-3 block">alarm_on</span>
+                            <h4 class="font-black text-primary text-lg mb-2">Payment Reminders</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">Automated email notifications for upcoming
+                                payments and lease expirations — zero missed follow-ups.</p>
+                        </div>
+                        <div class="prop-card" data-aos="fade-up" data-aos-delay="0">
+                            <span
+                                class="material-symbols-outlined text-accent text-3xl mb-3 block">account_balance</span>
+                            <h4 class="font-black text-primary text-lg mb-2">Expense & Revenue Tracking</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">Record income, expenses, and profitability
+                                per property with automated financial reports and net profit calculators.</p>
+                        </div>
+                        <div class="prop-card" data-aos="fade-up" data-aos-delay="60">
+                            <span class="material-symbols-outlined text-accent text-3xl mb-3 block">dashboard</span>
+                            <h4 class="font-black text-primary text-lg mb-2">Communication & Dashboard</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">Centralized dashboard for property
+                                managers — view tenant activity, pending complaints, and payment status at a glance.</p>
+                        </div>
+                        <div class="prop-card" data-aos="fade-up" data-aos-delay="120">
+                            <span class="material-symbols-outlined text-accent text-3xl mb-3 block">cloud_sync</span>
+                            <h4 class="font-black text-primary text-lg mb-2">Online & Offline Operation</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">System works reliably and stores tenant
+                                data securely. Key functions continue even if internet access is temporarily
+                                unavailable.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══ INTERFACE PREVIEW ═══ -->
+            <section class="py-20 bg-[#f5f7f8]">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="text-center mb-14" data-aos="fade-up">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full w-fit mb-4"
+                            style="background:rgba(0,31,61,.06);border:1px solid rgba(0,31,61,.1)">
+                            <span class="material-symbols-outlined text-primary text-sm">devices</span>
+                            <span class="text-xs font-bold text-primary uppercase tracking-wider">Interface
+                                Preview</span>
+                        </div>
+                        <h2 class="text-3xl font-black text-primary mb-2">A Glimpse Into the System</h2>
+                        <p class="text-slate-500 max-w-xl mx-auto">Clean, intuitive interfaces built for property
+                            managers and tenants alike — desktop and mobile.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-end" data-aos="fade-up"
+                        data-aos-delay="80">
+
+                        <!-- Central Dashboard mockup -->
+                        <div class="flex flex-col gap-4">
+                            <div class="rounded-2xl overflow-hidden border border-[#e8edf2] shadow-xl bg-white p-3">
+                                <div class="rounded-xl overflow-hidden bg-[#f0f4f8] relative"
+                                    style="aspect-ratio:16/10">
+                                    <div class="absolute top-3 left-3 flex gap-1.5 z-10">
+                                        <div class="screen-dot bg-red-400"></div>
+                                        <div class="screen-dot bg-yellow-400"></div>
+                                        <div class="screen-dot bg-green-400"></div>
+                                    </div>
+                                    <!-- Simulated dashboard UI -->
+                                    <div class="absolute inset-0 flex flex-col p-4 pt-8 gap-2">
+                                        <!-- top KPI row -->
+                                        <div class="grid grid-cols-3 gap-1.5">
+                                            <div class="rounded-lg p-2 bg-primary flex flex-col">
+                                                <p class="text-accent text-xs font-black">12</p>
+                                                <p class="text-white/50 text-[8px]">Properties</p>
+                                            </div>
+                                            <div class="rounded-lg p-2 bg-primary flex flex-col">
+                                                <p class="text-accent text-xs font-black">48</p>
+                                                <p class="text-white/50 text-[8px]">Tenants</p>
+                                            </div>
+                                            <div class="rounded-lg p-2 bg-primary flex flex-col">
+                                                <p class="text-accent text-xs font-black">₦2.4M</p>
+                                                <p class="text-white/50 text-[8px]">Revenue</p>
+                                            </div>
+                                        </div>
+                                        <!-- chart area -->
+                                        <div
+                                            class="flex-1 rounded-lg bg-white border border-[#e8edf2] p-2 flex flex-col justify-end gap-1">
+                                            <div class="flex items-end gap-1 h-full">
+                                                <div class="flex-1 rounded-t-sm bg-accent/40" style="height:50%"></div>
+                                                <div class="flex-1 rounded-t-sm bg-primary/30" style="height:75%"></div>
+                                                <div class="flex-1 rounded-t-sm bg-accent/40" style="height:60%"></div>
+                                                <div class="flex-1 rounded-t-sm bg-primary/20" style="height:40%"></div>
+                                                <div class="flex-1 rounded-t-sm bg-accent/60" style="height:90%"></div>
+                                                <div class="flex-1 rounded-t-sm bg-primary/30" style="height:55%"></div>
+                                            </div>
+                                        </div>
+                                        <!-- row -->
+                                        <div class="flex gap-1.5">
+                                            <div class="flex-1 rounded-lg p-1.5 bg-white border border-[#e8edf2]">
+                                                <div class="h-1 mock-bar bg-primary/20 w-3/4 mb-1"></div>
+                                                <div class="h-1 mock-bar bg-accent/30 w-1/2"></div>
+                                            </div>
+                                            <div class="flex-1 rounded-lg p-1.5 bg-white border border-[#e8edf2]">
+                                                <div class="h-1 mock-bar bg-primary/20 w-full mb-1"></div>
+                                                <div class="h-1 mock-bar bg-accent/30 w-2/3"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-center text-xs font-bold text-primary uppercase tracking-wider">Central
+                                Dashboard</p>
+                        </div>
+
+                        <!-- Property Portfolio View -->
+                        <div class="flex flex-col gap-4">
+                            <div class="rounded-2xl overflow-hidden border border-[#e8edf2] shadow-xl bg-white p-3">
+                                <div class="rounded-xl overflow-hidden bg-[#f0f4f8] relative"
+                                    style="aspect-ratio:16/10">
+                                    <div class="absolute top-3 left-3 flex gap-1.5 z-10">
+                                        <div class="screen-dot bg-red-400"></div>
+                                        <div class="screen-dot bg-yellow-400"></div>
+                                        <div class="screen-dot bg-green-400"></div>
+                                    </div>
+                                    <div class="absolute inset-0 flex flex-col gap-2 p-4 pt-8">
+                                        <!-- search bar -->
+                                        <div
+                                            class="rounded-lg bg-white border border-[#e8edf2] px-3 py-1.5 flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-slate-300"
+                                                style="font-size:13px">search</span>
+                                            <div class="h-1.5 mock-bar bg-slate-200 w-24"></div>
+                                        </div>
+                                        <!-- property rows -->
+                                        <div
+                                            class="flex gap-2 items-center rounded-lg bg-white border border-[#e8edf2] p-2">
+                                            <div
+                                                class="size-7 rounded-lg bg-primary flex items-center justify-center flex-shrink-0">
+                                                <span class="material-symbols-outlined text-accent"
+                                                    style="font-size:12px">apartment</span>
+                                            </div>
+                                            <div class="flex-1">
+                                                <div class="h-1.5 mock-bar bg-primary/20 w-20 mb-1"></div>
+                                                <div class="h-1 mock-bar bg-slate-200 w-12"></div>
+                                            </div>
+                                            <div
+                                                class="text-[8px] font-bold text-green-600 bg-green-50 px-1.5 py-0.5 rounded-full">
+                                                Occupied</div>
+                                        </div>
+                                        <div
+                                            class="flex gap-2 items-center rounded-lg bg-white border border-[#e8edf2] p-2">
+                                            <div
+                                                class="size-7 rounded-lg bg-primary flex items-center justify-center flex-shrink-0">
+                                                <span class="material-symbols-outlined text-accent"
+                                                    style="font-size:12px">apartment</span>
+                                            </div>
+                                            <div class="flex-1">
+                                                <div class="h-1.5 mock-bar bg-primary/20 w-16 mb-1"></div>
+                                                <div class="h-1 mock-bar bg-slate-200 w-10"></div>
+                                            </div>
+                                            <div
+                                                class="text-[8px] font-bold text-amber-600 bg-amber-50 px-1.5 py-0.5 rounded-full">
+                                                Pending</div>
+                                        </div>
+                                        <div
+                                            class="flex gap-2 items-center rounded-lg bg-white border border-[#e8edf2] p-2">
+                                            <div
+                                                class="size-7 rounded-lg bg-primary flex items-center justify-center flex-shrink-0">
+                                                <span class="material-symbols-outlined text-accent"
+                                                    style="font-size:12px">apartment</span>
+                                            </div>
+                                            <div class="flex-1">
+                                                <div class="h-1.5 mock-bar bg-primary/20 w-24 mb-1"></div>
+                                                <div class="h-1 mock-bar bg-slate-200 w-14"></div>
+                                            </div>
+                                            <div
+                                                class="text-[8px] font-bold text-slate-400 bg-slate-50 px-1.5 py-0.5 rounded-full">
+                                                Vacant</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-center text-xs font-bold text-primary uppercase tracking-wider">Property
+                                Portfolio View</p>
+                        </div>
+
+                        <!-- Mobile Tenant Portal -->
+                        <div class="flex flex-col gap-4 items-center">
+                            <div class="w-44 rounded-[2rem] overflow-hidden shadow-2xl p-1.5"
+                                style="background:#1e293b;border:3px solid #0f172a">
+                                <div class="rounded-[1.6rem] overflow-hidden bg-[#f5f7f8] relative flex flex-col"
+                                    style="aspect-ratio:9/19">
+                                    <!-- notch -->
+                                    <div
+                                        class="absolute top-2 left-1/2 -translate-x-1/2 w-14 h-1.5 rounded-full bg-slate-300 z-10">
+                                    </div>
+                                    <div class="flex-1 flex flex-col gap-2 p-3 pt-6">
+                                        <!-- header -->
+                                        <div class="rounded-xl p-2.5 bg-primary text-center">
+                                            <p class="text-accent text-[10px] font-black">Tenant Portal</p>
+                                            <p class="text-white/50 text-[8px]">Nadice Real Estate</p>
+                                        </div>
+                                        <!-- payment bar -->
+                                        <div class="rounded-xl bg-white border border-[#e8edf2] p-2.5">
+                                            <p class="text-[8px] font-black text-primary mb-1.5">My Payments</p>
+                                            <div class="h-1.5 rounded-full overflow-hidden bg-slate-100">
+                                                <div class="h-full bg-accent rounded-full" style="width:65%"></div>
+                                            </div>
+                                            <p class="text-[7px] text-slate-400 mt-1">₦65,000 of ₦100,000 paid</p>
+                                        </div>
+                                        <!-- requests -->
+                                        <div class="rounded-xl bg-white border border-[#e8edf2] p-2.5">
+                                            <p class="text-[8px] font-black text-primary mb-1">Open Requests</p>
+                                            <div class="flex items-center gap-1.5">
+                                                <div
+                                                    class="size-4 rounded-full bg-amber-100 flex items-center justify-center">
+                                                    <span class="material-symbols-outlined text-amber-500"
+                                                        style="font-size:9px">build</span>
+                                                </div>
+                                                <div class="h-1 mock-bar bg-slate-200 flex-1"></div>
+                                            </div>
+                                        </div>
+                                        <!-- documents -->
+                                        <div class="rounded-xl bg-white border border-[#e8edf2] p-2.5">
+                                            <p class="text-[8px] font-black text-primary mb-1">Documents</p>
+                                            <div class="h-1 mock-bar bg-slate-200 w-3/4 mb-0.5"></div>
+                                            <div class="h-1 mock-bar bg-slate-200 w-1/2"></div>
+                                        </div>
+                                        <!-- CTA -->
+                                        <div class="mt-auto rounded-xl p-2 text-center bg-accent">
+                                            <p class="text-primary text-[9px] font-black">Pay Rent</p>
+                                        </div>
+                                    </div>
+                                    <!-- home bar -->
+                                    <div class="h-4 flex items-center justify-center">
+                                        <div class="w-10 h-1 rounded-full bg-slate-300"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-center text-xs font-bold text-primary uppercase tracking-wider">Mobile Tenant
+                                Portal</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══ RESULTS ═══ -->
+            <section class="py-24 bg-primary text-white">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="grid lg:grid-cols-2 gap-16 items-start">
+
+                        <!-- Left: checklist -->
+                        <div data-aos="fade-right">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-6"
+                                style="background:rgba(0,209,255,.12);border:1px solid rgba(0,209,255,.3)">
+                                <span class="material-symbols-outlined text-accent text-sm">emoji_events</span>
+                                <span class="text-xs font-bold text-accent uppercase tracking-wider">Results After
+                                    Deployment</span>
+                            </div>
+                            <h2 class="text-4xl font-black mb-4">What Changed After Go-Live</h2>
+                            <p class="text-white/60 mb-10 leading-relaxed">Nadice Real Estate experienced significant
+                                improvements across all operational metrics — transforming into a data-driven,
+                                organized, and tenant-friendly operation.</p>
+                            <div>
+                                <div class="result-row"><span
+                                        class="material-symbols-outlined fill-icon text-accent flex-shrink-0">check_circle</span><span
+                                        class="text-white/80 text-sm leading-relaxed">Clear visibility into property
+                                        revenue and expenses for better financial control</span></div>
+                                <div class="result-row"><span
+                                        class="material-symbols-outlined fill-icon text-accent flex-shrink-0">check_circle</span><span
+                                        class="text-white/80 text-sm leading-relaxed">Simplified tenant management
+                                        across multiple units and properties</span></div>
+                                <div class="result-row"><span
+                                        class="material-symbols-outlined fill-icon text-accent flex-shrink-0">check_circle</span><span
+                                        class="text-white/80 text-sm leading-relaxed">Faster response to tenant
+                                        complaints and maintenance requests</span></div>
+                                <div class="result-row"><span
+                                        class="material-symbols-outlined fill-icon text-accent flex-shrink-0">check_circle</span><span
+                                        class="text-white/80 text-sm leading-relaxed">Increased tenant satisfaction
+                                        through installment payment options and portal access</span></div>
+                                <div class="result-row"><span
+                                        class="material-symbols-outlined fill-icon text-accent flex-shrink-0">check_circle</span><span
+                                        class="text-white/80 text-sm leading-relaxed">Timely automated reminders for
+                                        payments and lease expirations</span></div>
+                                <div class="result-row"><span
+                                        class="material-symbols-outlined fill-icon text-accent flex-shrink-0">check_circle</span><span
+                                        class="text-white/80 text-sm leading-relaxed">Easy access to agreements,
+                                        receipts, and all financial records</span></div>
+                                <div class="result-row"><span
+                                        class="material-symbols-outlined fill-icon text-accent flex-shrink-0">check_circle</span><span
+                                        class="text-white/80 text-sm leading-relaxed">Overall more efficient property
+                                        management and better decision-making capabilities</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Right: stat boxes -->
+                        <div class="grid grid-cols-2 gap-4" data-aos="fade-left" data-aos-delay="100">
+                            <div class="rounded-2xl p-7 text-center"
+                                style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)">
+                                <p class="text-5xl font-black text-accent mb-2">100%</p>
+                                <p class="text-white/55 text-sm">Revenue Visibility</p>
+                            </div>
+                            <div class="rounded-2xl p-7 text-center"
+                                style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)">
+                                <p class="text-5xl font-black text-accent mb-2">0</p>
+                                <p class="text-white/55 text-sm">Missed Payments</p>
+                            </div>
+                            <div class="rounded-2xl p-7 text-center"
+                                style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)">
+                                <p class="text-5xl font-black text-accent mb-2">Multi</p>
+                                <p class="text-white/55 text-sm">Properties from One Dashboard</p>
+                            </div>
+                            <div class="rounded-2xl p-7 text-center"
+                                style="background:rgba(0,209,255,.08);border:1px solid rgba(0,209,255,.2)">
+                                <p class="text-5xl font-black text-accent mb-2">Live</p>
+                                <p class="text-white/55 text-sm">Tenant Portal Active</p>
+                            </div>
+                            <!-- closing quote -->
+                            <div class="col-span-2 rounded-2xl p-6"
+                                style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)">
+                                <p class="text-white/60 text-sm leading-relaxed italic">The system transformed Nadice
+                                    Real Estate into a data-driven, organized, and tenant-friendly operation, enabling
+                                    both owners and agencies to manage properties with confidence.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══ CTA ═══ -->
+            <section class="py-20 bg-[#f5f7f8]">
+                <div class="max-w-4xl mx-auto px-6 text-center" data-aos="fade-up">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-6"
+                        style="background:rgba(0,31,61,.06);border:1px solid rgba(0,31,61,.1)">
+                        <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                        <span class="text-xs font-bold text-primary uppercase tracking-wider">Want a System Like
+                            This?</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-black text-primary mb-4">Want a System Like This for Your
+                        Properties?</h2>
+                    <p class="text-slate-500 mb-10 leading-relaxed max-w-2xl mx-auto">PrimeLabs Business Solution builds
+                        custom property management and business systems designed to streamline operations, improve
+                        tenant satisfaction, and maximize profitability.</p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="/contact.html"
+                            class="btn-ripple flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-xl font-black hover:-translate-y-0.5 transition-all shadow-lg shadow-primary/25">
+                            <span class="material-symbols-outlined text-accent">event</span> Book a Consultation
+                        </a>
+                        <a href="/contact.html"
+                            class="flex items-center gap-2 px-8 py-4 rounded-xl font-black border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all">
+                            <span class="material-symbols-outlined">play_arrow</span> Start Your Project
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- ═══ FOOTER ═══ -->
+        <footer class="bg-white border-t border-[#dae0e7] pt-20 pb-10">
+            <div class="max-w-7xl mx-auto px-6 lg:px-20">
+                <div class="grid md:grid-cols-4 gap-12 mb-20">
+                    <div class="flex flex-col justify-start gap-4">
+                        <div class="w-36 inline">
+                            <img src="/asset/header.png" alt="PrimeLabs" class="w-full h-auto object-contain">
+                        </div>
+                        <p class="text-primary text-sm leading-relaxed max-w-xs">Leading enterprise-grade technology and
+                            automation solutions for high-growth businesses.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-primary font-bold mb-6 text-xs uppercase tracking-wider">Services</h4>
+                        <ul class="flex flex-col gap-4 text-sm text-primary/80">
+                            <li><a class="hover:text-primary transition-colors" href="/service/control.html">Control
+                                    Systems</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="/service/growth.html">Growth
+                                    Systems</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="/service.html">All Solutions</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-primary font-bold mb-6 text-xs uppercase tracking-wider">Company</h4>
+                        <ul class="flex flex-col gap-4 text-sm text-primary/80">
+                            <li><a class="hover:text-primary transition-colors" href="/about.html">About Us</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="/casestudy.html">Case Studies</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors"
+                                    href="/index.html#industries">Industries</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-primary font-bold mb-6 text-xs uppercase tracking-wider">Contact</h4>
+                        <ul class="flex flex-col gap-4 text-sm text-primary/80">
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-sm text-primary">mail</span>info@primelabsbusinesssolution.com
+                            </li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-sm text-primary">phone</span>09066363260</li>
+                            <li class="flex items-start gap-2"><span
+                                    class="material-symbols-outlined text-sm text-primary mt-0.5">location_on</span><span>Shop
+                                    S9/10, Cozyez Mall, 43 Presidential Rd, Asata, Enugu, Nigeria</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-[#dae0e7] gap-4">
+                    <p class="text-sm text-primary">&copy; 2024 Primelabs Limited. All rights reserved.</p>
+                    <div class="flex gap-6">
+                        <a class="text-sm text-primary/80 hover:text-primary transition-colors" href="#">Privacy
+                            Policy</a>
+                        <a class="text-sm text-primary/80 hover:text-primary transition-colors" href="#">Terms of
+                            Service</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Nav toggle
+        const menuBtn = document.getElementById("menuBtn"), mobileMenu = document.getElementById("mobileMenu");
+        menuBtn.addEventListener("click", e => { e.stopPropagation(); mobileMenu.classList.toggle("max-h-0"); mobileMenu.classList.toggle("max-h-[500px]") });
+        document.addEventListener("click", e => { if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) { mobileMenu.classList.add("max-h-0"); mobileMenu.classList.remove("max-h-[500px]") } });
+
+        // Ripple
+        document.querySelectorAll('.btn-ripple').forEach(btn => {
+            btn.addEventListener('mouseenter', () => { btn.classList.remove('ripple-active'); void btn.offsetWidth; btn.classList.add('ripple-active') });
+            btn.addEventListener('mouseleave', () => btn.classList.remove('ripple-active'));
+        });
+
+        AOS.init({ duration: 1000, once: true, offset: 80, easing: "ease-out-cubic" });
+    </script>
+</body>
+
+</html>
