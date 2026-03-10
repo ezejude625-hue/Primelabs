@@ -6,7 +6,6 @@ tailwind.config = {
         primary: "#001f3d",
         accent: "#00d1ff",
         "background-light": "#f5f7f8",
-        "background-dark": "#0f1923",
       },
       fontFamily: { display: ["Manrope", "sans-serif"] },
       borderRadius: {

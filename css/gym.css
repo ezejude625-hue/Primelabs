@@ -78,6 +78,30 @@ body {
     border-bottom: none
 }
 
+
+/* Gallery overlay */
+.gallery-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px
+}
+
+.gallery-img .gl-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 31, 61, .6);
+    opacity: 0;
+    transition: opacity .3s;
+    display: flex;
+    align-items: flex-end;
+    padding: 14px 16px
+}
+
+.gallery-img:hover .gl-overlay {
+    opacity: 1
+}
+
+
 /* .member-card {
     background: linear-gradient(135deg, #001f3d 0%, #003366 100%);
     border-radius: 20px;

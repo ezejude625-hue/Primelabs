@@ -6,11 +6,24 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Case Study: Gym Management System | PrimeLabs</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <!-- Owl Carousel Theme CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/carousel.css">
     <link rel="stylesheet" href="/css/gym.css">
 </head>
 
@@ -264,6 +277,80 @@
                 </div>
             </section>
 
+            <!-- INTERFACE PREVIEW -->
+            <section class="py-20 bg-[#f5f7f8]">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="text-center mb-14" data-aos="fade-up">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full w-fit mb-5"
+                            style="background:rgba(0,31,61,.06);border:1px solid rgba(0,31,61,.1)">
+                            <span class="material-symbols-outlined text-primary text-sm">devices</span>
+                            <span class="text-xs font-bold text-primary uppercase tracking-wider">Platform
+                                Preview</span>
+                        </div>
+                        <h2 class="text-3xl font-black text-primary mb-4">An Overview Inside the Platform</h2>
+                        <p class="text-slate-500 max-w-xl mx-auto">Clean, intuitive dashboards designed for gym owners
+                            and staff to manage memberships, track performance, and run daily operations efficiently.
+                        </p>
+                    </div>
+
+                    <div class="carousel-wrap">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 owl-carousel owl-theme">
+                            <div class="gallery-img aspect-[3/4] bg-slate-200" data-aos="fade-up" data-aos-delay="0">
+                                <div class="absolute inset-0 bg-contain bg-no-repeat bg-center"
+                                    style="background-image:url('/asset/gym/dashboard.svg')">
+                                </div>
+                                <div class="gl-overlay"><span class="text-white font-black text-sm">Main
+                                        Dashboard</span>
+                                </div>
+                            </div>
+                            <div class="gallery-img aspect-[3/4] bg-slate-200" data-aos="fade-up" data-aos-delay="60">
+                                <div class="absolute inset-0 bg-contain bg-no-repeat bg-center"
+                                    style="background-image:url('/asset/gym/analytics.svg')">
+                                </div>
+                                <div class="gl-overlay"><span class="text-white font-black text-sm">Sales
+                                        Screen</span>
+                                </div>
+                            </div>
+                            <div class="gallery-img aspect-[3/4] bg-slate-200" data-aos="fade-up" data-aos-delay="120">
+                                <div class="absolute inset-0 bg-contain bg-no-repeat bg-center"
+                                    style="background-image:url('/asset/gym/INVENTORY.svg')">
+                                </div>
+                                <div class="gl-overlay"><span class="text-white font-black text-sm">Inventory
+                                        View</span>
+                                </div>
+                            </div>
+                            <div class="gallery-img aspect-[3/4] bg-slate-200" data-aos="fade-up" data-aos-delay="180">
+                                <div class="absolute inset-0 bg-cover bg-center"
+                                    style="background-image:url('/asset/gym/POS.svg')">
+                                </div>
+                                <div class="gl-overlay"><span class="text-white font-black text-sm">Mobile
+                                        Dashboard</span>
+                                </div>
+                            </div>
+                            <div class="gallery-img aspect-[3/4] bg-slate-200" data-aos="fade-up" data-aos-delay="180">
+                                <div class="absolute inset-0 bg-contain bg-no-repeat bg-center"
+                                    style="background-image:url('/asset/gym/member.svg')">
+                                </div>
+                                <div class="gl-overlay"><span class="text-white font-black text-sm">Member
+                                        Management</span>
+                                </div>
+                            </div>
+                            <div class="gallery-img aspect-[3/4] bg-slate-200" data-aos="fade-up" data-aos-delay="180">
+                                <div class="absolute inset-0 bg-contain bg-no-repeat bg-center"
+                                    style="background-image:url('/asset/gym/preview.svg')">
+                                </div>
+                                <div class="gl-overlay"><span class="text-white font-black text-sm">System
+                                        Preview</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Custom nav buttons (placed at carousel edges) -->
+                        <button class="custom-prev" aria-label="Previous">&lt;</button>
+                        <button class="custom-next" aria-label="Next">&gt;</button>
+                    </div>
+                </div>
+            </section>
+
             <!-- RESULTS STATS -->
             <section class="py-20 bg-white">
                 <div class="max-w-7xl mx-auto px-6">
@@ -372,6 +459,7 @@
         </footer>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/js/carousel.js"></script>
     <script src="/js/gym.js"></script>
 </body>
 
