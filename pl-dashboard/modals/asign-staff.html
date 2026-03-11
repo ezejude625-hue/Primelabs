@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Assign Staff to Project</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+</head>
+
+<body class="bg-slate-900/50 font-display flex items-center justify-center min-h-screen p-4">
+    <!-- Modal Container -->
+    <div
+        class="bg-background-light dark:bg-background-dark w-full max-w-2xl rounded-xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+        <!-- Header -->
+        <div class="px-6 py-4 border-b border-slate-200 dark:border-slate-800 flex justify-between items-center">
+            <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100">Assign Staff to Project</h2>
+            <button class="text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <!-- Search Bar -->
+        <div class="px-6 py-4">
+            <div class="relative group">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <span
+                        class="material-symbols-outlined text-slate-400 group-focus-within:text-primary transition-colors">search</span>
+                </div>
+                <input
+                    class="block w-full pl-10 pr-3 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary text-slate-900 dark:text-slate-100 placeholder-slate-400 text-sm transition-all"
+                    placeholder="Search by name, role, or skills..." type="text" />
+            </div>
+        </div>
+        <!-- Staff List -->
+        <div class="flex-1 overflow-y-auto px-6 py-2 space-y-3">
+            <!-- Staff Item 1 -->
+            <div
+                class="flex items-center justify-between p-3 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-primary/50 transition-colors">
+                <div class="flex items-center gap-4">
+                    <div class="relative">
+                        <div class="h-12 w-12 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
+                            <img class="h-full w-full object-cover" data-alt="Portrait of a male software developer"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuADTQnI5HQFuiH_7ndjxgtOFRimbOyWLPL9em8-xhx2tG0FkRBiyjnbZsZPxIJJt0POVPl0Y2aB0dOycninTMCi4U09w8fETf2xsKRgkZdjK7wdyDYPsHuBZlruM7d0lS7a-rYPTjkB7GISUIlP4hTIygehONeydqKY55uEFCgjOfDjj-YVcI-nc_PFRyX8b72Ws95SCFUOlIf9RYq3dZ5a1kwS3iYQPACjdK7F2tWSNI5rrdR0XyjA8nS_PVqW5gnl1U67Sp2XPiwz" />
+                        </div>
+                        <span
+                            class="absolute bottom-0 right-0 block h-3 w-3 rounded-full bg-green-500 ring-2 ring-white dark:ring-slate-900"></span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-sm font-semibold text-slate-900 dark:text-slate-100">Alex Rivera</span>
+                        <span class="text-xs text-slate-500 dark:text-slate-400">Senior Developer • Available</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <input checked=""
+                        class="h-5 w-5 rounded border-slate-300 dark:border-slate-600 text-primary focus:ring-primary"
+                        type="checkbox" />
+                </div>
+            </div>
+            <!-- Primary Lead Toggle (Contextual for Selected Staff) -->
+            <div class="bg-primary/5 dark:bg-primary/10 border border-primary/20 rounded-lg p-4 mb-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex flex-col gap-0.5">
+                        <p class="text-sm font-bold text-slate-900 dark:text-slate-100">Designate as Primary Lead</p>
+                        <p class="text-xs text-slate-600 dark:text-slate-400">Alex Rivera will have administrative
+                            control over project milestones.</p>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input checked="" class="sr-only peer" type="checkbox" value="" />
+                        <div
+                            class="w-11 h-6 bg-slate-200 peer-focus:outline-none dark:bg-slate-700 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary">
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <!-- Staff Item 2 -->
+            <div
+                class="flex items-center justify-between p-3 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-primary/50 transition-colors">
+                <div class="flex items-center gap-4">
+                    <div class="relative">
+                        <div class="h-12 w-12 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
+                            <img class="h-full w-full object-cover" data-alt="Portrait of a female UI designer"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAayOSZxw90eepu0EyRad_BH2LyLlTBwd2vYcOXP06b6QQZqjROIsgTYzB2yW77eUuVTbhhst0ZIOYRbUJhrS6Gsd_w2hz969tCRZV-0IXx96yMJtbVroyNzflmN7i1dyHUK4MnhX5bMIzleyQk5rqDuM5X7gYFNL--hxOhTM0jR2V7zJdeoNFPJZywFlEPg7Hm0reNObgrsZVaMJ-nzUc7ItV0LhTpfEddeUtFU75QkwcnBbDY0R-0HVvftncKYs0qlUCndUKzdi6l" />
+                        </div>
+                        <span
+                            class="absolute bottom-0 right-0 block h-3 w-3 rounded-full bg-amber-500 ring-2 ring-white dark:ring-slate-900"></span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-sm font-semibold text-slate-900 dark:text-slate-100">Jordan Smith</span>
+                        <span class="text-xs text-slate-500 dark:text-slate-400">Product Designer • Busy until
+                            Monday</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <input
+                        class="h-5 w-5 rounded border-slate-300 dark:border-slate-600 text-primary focus:ring-primary"
+                        type="checkbox" />
+                </div>
+            </div>
+            <!-- Staff Item 3 -->
+            <div
+                class="flex items-center justify-between p-3 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-primary/50 transition-colors">
+                <div class="flex items-center gap-4">
+                    <div class="relative">
+                        <div class="h-12 w-12 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
+                            <img class="h-full w-full object-cover" data-alt="Portrait of a male backend developer"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLHc5XnnV00Ch_Ki-ybVKk0VnptPhpdfYprRh7WbpdmnDjQFQi68VmDjWSTnm9Jks7p9jcdxO2a0g_DWmPnSWCR_e6tOFarCYX7HC7GiV9Bzb1eqvbO1np-4LAg5Q3n69teX4zSo5aX-7uc6ICn0-7ZZXDNMQMXT76AzflMzwr2tGX6k6LBpZeLPFx_romhO_PmHCWe9c-fEv4Uz6XzAdbubk_3sE6D1r1hTWFJuNlh-fm2UWSz6AQBfazRUVNHtEFMsE_nJh0kqf3" />
+                        </div>
+                        <span
+                            class="absolute bottom-0 right-0 block h-3 w-3 rounded-full bg-green-500 ring-2 ring-white dark:ring-slate-900"></span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-sm font-semibold text-slate-900 dark:text-slate-100">Marcus Chen</span>
+                        <span class="text-xs text-slate-500 dark:text-slate-400">QA Engineer • Available</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <input checked=""
+                        class="h-5 w-5 rounded border-slate-300 dark:border-slate-600 text-primary focus:ring-primary"
+                        type="checkbox" />
+                </div>
+            </div>
+            <!-- Staff Item 4 -->
+            <div
+                class="flex items-center justify-between p-3 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-primary/50 transition-colors opacity-60">
+                <div class="flex items-center gap-4">
+                    <div class="relative">
+                        <div class="h-12 w-12 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
+                            <img class="h-full w-full object-cover" data-alt="Portrait of a female manager"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGQ03RG6Cb4kclM7THigOfWd6A7x41iKr9O_CM15IM29blYb5kG7xglH93zRj3w91rEaFEuoToiYyyNtEa9Rx0HD-xsiFJumnM7x77NfJ90UK2_kGgf1JTnHMJReDC99g5Whtok9hVb3KujirijV_QaYbxoY-EjeZJXnreC81verQHDnpctuhx_sOvHZ-kGSPauCTBd6K88tOuzgA_10Jg2NzZEZgJu9yW7_Xz7lFziFkb1aIj8V3PSnsUCKktLrNuaUC68okmGP9j" />
+                        </div>
+                        <span
+                            class="absolute bottom-0 right-0 block h-3 w-3 rounded-full bg-red-500 ring-2 ring-white dark:ring-slate-900"></span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-sm font-semibold text-slate-900 dark:text-slate-100">Elena Rodriguez</span>
+                        <span class="text-xs text-slate-500 dark:text-slate-400">Project Manager • On Leave</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <input
+                        class="h-5 w-5 rounded border-slate-300 dark:border-slate-600 text-primary focus:ring-primary bg-slate-100 dark:bg-slate-800"
+                        disabled="" type="checkbox" />
+                </div>
+            </div>
+        </div>
+        <!-- Footer Actions -->
+        <div
+            class="px-6 py-6 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row justify-end gap-3 bg-slate-50 dark:bg-slate-900/50">
+            <button
+                class="px-6 py-2.5 rounded-lg text-sm font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors order-2 sm:order-1">
+                Cancel
+            </button>
+            <button
+                class="px-6 py-2.5 rounded-lg text-sm font-semibold bg-primary text-white hover:bg-primary/90 transition-shadow shadow-lg shadow-primary/20 order-1 sm:order-2">
+                Assign Staff
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>

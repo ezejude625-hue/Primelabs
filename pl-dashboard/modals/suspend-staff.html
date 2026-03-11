@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Suspend Staff Member</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex items-center justify-center p-4">
+    <!-- Modal Container -->
+    <div
+        class="max-w-[560px] w-full bg-white dark:bg-slate-900 rounded-xl shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+        <!-- Header -->
+        <header class="flex items-center justify-between px-6 py-4 border-b border-slate-100 dark:border-slate-800">
+            <div class="flex items-center gap-3">
+                <div
+                    class="flex items-center justify-center w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400">
+                    <span class="material-symbols-outlined">person_off</span>
+                </div>
+                <h2 class="text-xl font-bold tracking-tight">Suspend Staff Member</h2>
+            </div>
+            <button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
+                <span class="material-symbols-outlined text-slate-500">close</span>
+            </button>
+        </header>
+        <!-- Content -->
+        <div class="p-6 space-y-6">
+            <!-- Staff Profile Summary -->
+            <div
+                class="flex items-center gap-4 p-4 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+                <div class="size-14 rounded-full bg-cover bg-center border-2 border-white dark:border-slate-700 shadow-sm"
+                    data-alt="Professional headshot of male staff member"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDxlpgwPKVYfYI75idNREWfz_ozcTKgWUDWgDZbrocLTBfGpQvDm6518H2MAzaTTZ_7ymr_LOknoBwbHeXVf1u1-Xi7V96FTRvxzthJEVtbFQDG9PPZXdDggqTtGseAJhr469W1l4KiPRETNTBcl8hsJU8DFrkhc5tW-sQypiv1lWIMh8dwGijSLcGQOewYEGwrYcemoT2uuQbHqiqwMS4Y2Qk12FihiZfxh6gXwge5rs_mPejdKFnq5yGhu7tONW9MYjWMvBk4RrK5');">
+                </div>
+                <div class="flex flex-col">
+                    <p class="font-semibold text-slate-900 dark:text-slate-100">Alex Johnson</p>
+                    <p class="text-sm text-slate-500 dark:text-slate-400">Senior Operations Manager • ID: 4492</p>
+                </div>
+                <div class="ml-auto">
+                    <span
+                        class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">Active</span>
+                </div>
+            </div>
+            <!-- Warning Message -->
+            <div
+                class="flex gap-3 p-4 rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800/50 text-amber-800 dark:text-amber-200 text-sm leading-relaxed">
+                <span class="material-symbols-outlined text-amber-600 dark:text-amber-500 shrink-0">warning</span>
+                <p>
+                    <strong>Warning:</strong> Suspending this staff member will immediately revoke all system access and
+                    cancel scheduled shifts. This action is logged for compliance.
+                </p>
+            </div>
+            <!-- Form Fields -->
+            <div class="grid grid-cols-1 gap-5">
+                <!-- Reason -->
+                <div class="flex flex-col gap-2">
+                    <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Reason for
+                        Suspension</label>
+                    <select
+                        class="w-full rounded-lg border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-1 focus:ring-primary h-12 px-4 transition-all">
+                        <option value="">Select a specific reason</option>
+                        <option value="policy">Policy Violation</option>
+                        <option value="investigation">Internal Investigation</option>
+                        <option value="performance">Performance Review Period</option>
+                        <option value="misconduct">Gross Misconduct</option>
+                        <option value="other">Other (Specify in notes)</option>
+                    </select>
+                </div>
+                <!-- Date Range -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="flex flex-col gap-2">
+                        <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Suspension Start
+                            Date</label>
+                        <div class="relative">
+                            <input
+                                class="w-full rounded-lg border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-1 focus:ring-primary h-12 px-4 transition-all"
+                                type="date" value="2023-10-25" />
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Expected End Date <span
+                                class="text-slate-400 font-normal">(Optional)</span></label>
+                        <div class="relative">
+                            <input
+                                class="w-full rounded-lg border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-1 focus:ring-primary h-12 px-4 transition-all"
+                                type="date" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Additional Notes -->
+                <div class="flex flex-col gap-2">
+                    <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Additional Context</label>
+                    <textarea
+                        class="w-full rounded-lg border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-1 focus:ring-primary p-4 transition-all resize-none"
+                        placeholder="Provide additional details regarding the suspension..." rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Actions -->
+        <footer
+            class="flex flex-col-reverse sm:flex-row items-center justify-end gap-3 px-6 py-5 bg-slate-50 dark:bg-slate-800/30 border-t border-slate-100 dark:border-slate-800">
+            <button
+                class="w-full sm:w-auto px-6 py-2.5 rounded-lg border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                Cancel
+            </button>
+            <button
+                class="w-full sm:w-auto px-6 py-2.5 rounded-lg bg-red-600 hover:bg-red-700 text-white font-semibold flex items-center justify-center gap-2 shadow-sm transition-all active:scale-[0.98]">
+                <span class="material-symbols-outlined text-sm">gavel</span>
+                Confirm Suspension
+            </button>
+        </footer>
+    </div>
+</body>
+
+</html>

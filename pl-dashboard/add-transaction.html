@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Add New Transaction | PrimeLabs</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+    <div class="flex min-h-screen">
+        <!-- SideNavBar Component -->
+        <aside
+            class="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col fixed h-full">
+            <div class="p-6 flex flex-col h-full justify-between">
+                <div class="flex flex-col gap-8">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-primary rounded-xl size-10 flex items-center justify-center text-white">
+                            <span class="material-symbols-outlined">payments</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <h1 class="text-slate-900 dark:text-white text-base font-bold leading-none">PrimeLabs</h1>
+                            <p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Financial Mgmt</p>
+                        </div>
+                    </div>
+                    <nav class="flex flex-col gap-1">
+                        <a class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-slate-500 dark:text-slate-400">dashboard</span>
+                            <span class="text-sm font-medium">Dashboard</span>
+                        </a>
+                        <a class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-slate-500 dark:text-slate-400">group</span>
+                            <span class="text-sm font-medium">Staff</span>
+                        </a>
+                        <a class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                            href="#">
+                            <span
+                                class="material-symbols-outlined text-slate-500 dark:text-slate-400">business_center</span>
+                            <span class="text-sm font-medium">Projects</span>
+                        </a>
+                        <a class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-slate-500 dark:text-slate-400">bar_chart</span>
+                            <span class="text-sm font-medium">Reports</span>
+                        </a>
+                        <a class="flex items-center gap-3 px-3 py-2 rounded-xl bg-primary/10 text-primary" href="#">
+                            <span class="material-symbols-outlined">add_circle</span>
+                            <span class="text-sm font-medium">Add New</span>
+                        </a>
+                        <a class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors mt-4"
+                            href="#">
+                            <span class="material-symbols-outlined text-slate-500 dark:text-slate-400">settings</span>
+                            <span class="text-sm font-medium">Settings</span>
+                        </a>
+                    </nav>
+                </div>
+                <div class="pt-4 border-t border-slate-200 dark:border-slate-800">
+                    <div class="flex items-center gap-3">
+                        <div class="size-8 rounded-full bg-slate-200 dark:bg-slate-700" data-alt="User profile avatar">
+                        </div>
+                        <div class="flex flex-col overflow-hidden">
+                            <p class="text-xs font-bold truncate">Alex Rivera</p>
+                            <p class="text-[10px] text-slate-500 truncate">Admin Account</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- Main Content Area -->
+        <main class="flex-1 ml-64 p-8 max-w-5xl">
+            <!-- Header Section -->
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">Add New Transaction</h2>
+                <p class="text-slate-500 dark:text-slate-400">Record a new income or expense for your SaaS project
+                    ledger.</p>
+            </div>
+            <!-- Form Container -->
+            <div
+                class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
+                <form class="p-8 space-y-8">
+                    <!-- Type Selector (Income/Expense Toggle) -->
+                    <div class="flex flex-col gap-3">
+                        <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Transaction Type</label>
+                        <div
+                            class="flex h-12 w-full max-w-md items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 p-1">
+                            <label
+                                class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-slate-700 has-[:checked]:shadow-sm has-[:checked]:text-primary text-slate-500 font-semibold transition-all">
+                                <span class="truncate">Income</span>
+                                <input class="hidden" name="transaction_type" type="radio" value="Income" />
+                            </label>
+                            <label
+                                class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-slate-700 has-[:checked]:shadow-sm has-[:checked]:text-primary text-slate-500 font-semibold transition-all">
+                                <span class="truncate">Expense</span>
+                                <input checked="" class="hidden" name="transaction_type" type="radio" value="Expense" />
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Main Fields Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Transaction
+                                Title</label>
+                            <input
+                                class="form-input w-full rounded-xl border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-3"
+                                placeholder="e.g. AWS Cloud Infrastructure Monthly" type="text" />
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Amount</label>
+                            <div class="relative">
+                                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">$</span>
+                                <input
+                                    class="form-input w-full pl-8 rounded-xl border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-3"
+                                    placeholder="0.00" step="0.01" type="number" />
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Date</label>
+                            <input
+                                class="form-input w-full rounded-xl border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-3"
+                                type="date" />
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Expense Category</label>
+                            <select
+                                class="form-select w-full rounded-xl border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-3">
+                                <option>Select a category</option>
+                                <option>Infrastructure</option>
+                                <option>Marketing</option>
+                                <option>SaaS Subscription</option>
+                                <option>Salaries</option>
+                                <option>Consulting</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Payment Method</label>
+                            <select
+                                class="form-select w-full rounded-xl border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-3">
+                                <option>Bank Transfer</option>
+                                <option>Credit Card (Visa ending in 4242)</option>
+                                <option>PayPal</option>
+                                <option>Stripe Checkout</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Vendor / Merchant <span
+                                    class="text-xs font-normal text-slate-400 italic">(Optional)</span></label>
+                            <select
+                                class="form-select w-full rounded-xl border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-3">
+                                <option text="Select vendor">None</option>
+                                <option>Project Phoenix</option>
+                                <option>Global Corp Rebrand</option>
+                                <option>Mobile App v2.0</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Notes Area -->
+                    <div class="flex flex-col gap-2">
+                        <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Notes / Description</label>
+                        <textarea
+                            class="form-textarea w-full rounded-xl border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-3"
+                            placeholder="Add any specific details regarding this transaction..." rows="4"></textarea>
+                    </div><!-- Recurring Transaction Section -->
+                    <div class="flex flex-col gap-4 border-t border-slate-100 dark:border-slate-800 pt-6">
+                        <div class="flex items-center justify-between">
+                            <div class="flex flex-col gap-1">
+                                <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Recurring
+                                    Transaction</label>
+                                <p class="text-xs text-slate-500 dark:text-slate-400">Automatically create this
+                                    transaction on a schedule</p>
+                            </div>
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input checked="" class="sr-only peer" type="checkbox" value="" />
+                                <div
+                                    class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary">
+                                </div>
+                                <span class="ms-3 text-sm font-medium text-slate-700 dark:text-slate-300">Active</span>
+                            </label>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="flex flex-col gap-2">
+                                <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Frequency</label>
+                                <select
+                                    class="form-select w-full rounded-xl border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-3">
+                                    <option>Weekly</option>
+                                    <option selected="">Monthly</option>
+                                    <option>Quarterly</option>
+                                    <option>Yearly</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label class="text-sm font-bold text-slate-700 dark:text-slate-300">End Date <span
+                                        class="text-xs font-normal text-slate-400 italic">(Optional)</span></label>
+                                <input
+                                    class="form-input w-full rounded-xl border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-3"
+                                    type="date" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- File Upload Area -->
+                    <div class="flex flex-col gap-2">
+                        <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Attach Expense Receipt or
+                            Invoice</label>
+                        <div
+                            class="border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-xl p-8 flex flex-col items-center justify-center bg-slate-50/50 dark:bg-slate-800/30 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors cursor-pointer group">
+                            <div
+                                class="bg-primary/10 text-primary p-3 rounded-full mb-3 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined">cloud_upload</span>
+                            </div>
+                            <p class="text-sm font-semibold text-slate-700 dark:text-slate-300">Click to upload or drag
+                                and drop</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">PDF, PNG, JPG (Max 10MB)</p>
+                            <input class="hidden" type="file" />
+                        </div>
+                    </div>
+                    <!-- Action Buttons -->
+                    <div
+                        class="flex items-center justify-end gap-4 pt-6 border-t border-slate-100 dark:border-slate-800">
+                        <button
+                            class="px-6 py-3 rounded-xl text-sm font-bold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                            type="button">
+                            Cancel
+                        </button>
+                        <button
+                            class="bg-primary text-white px-8 py-3 rounded-xl text-sm font-bold hover:bg-primary/90 shadow-lg shadow-primary/20 transition-all flex items-center gap-2"
+                            type="submit">
+                            <span class="material-symbols-outlined text-[20px]">check_circle</span>
+                            Save Transaction
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <!-- Contextual Help -->
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="p-4 bg-primary/5 rounded-xl border border-primary/10 flex items-start gap-3">
+                    <span class="material-symbols-outlined text-primary text-[20px]">info</span>
+                    <div>
+                        <p class="text-xs font-bold text-slate-900 dark:text-white">Tax Deductions</p>
+                        <p class="text-[10px] text-slate-500 dark:text-slate-400 mt-1">Expenses marked as
+                            'Infrastructure' are automatically flagged for tax season.</p>
+                    </div>
+                </div>
+                <div class="p-4 bg-green-500/5 rounded-xl border border-green-500/10 flex items-start gap-3">
+                    <span class="material-symbols-outlined text-green-600 text-[20px]">security</span>
+                    <div>
+                        <p class="text-xs font-bold text-slate-900 dark:text-white">Secure Storage</p>
+                        <p class="text-[10px] text-slate-500 dark:text-slate-400 mt-1">All attached receipts are
+                            encrypted and stored in your private vault.</p>
+                    </div>
+                </div>
+                <div class="p-4 bg-orange-500/5 rounded-xl border border-orange-500/10 flex items-start gap-3">
+                    <span class="material-symbols-outlined text-orange-600 text-[20px]">sync</span>
+                    <div>
+                        <p class="text-xs font-bold text-slate-900 dark:text-white">Auto-Sync</p>
+                        <p class="text-[10px] text-slate-500 dark:text-slate-400 mt-1">Transaction will sync with your
+                            linked accounting software (Quickbooks).</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

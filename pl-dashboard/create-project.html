@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Add New Project | PrimeLabs</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+</head>
+
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+    <div class="flex h-screen overflow-hidden">
+        <!-- Side Navigation -->
+        <aside
+            class="w-64 flex-shrink-0 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col">
+            <div class="p-6 flex items-center gap-3">
+                <div class="size-10 rounded-full bg-primary flex items-center justify-center text-white">
+                    <span class="material-symbols-outlined">rocket_launch</span>
+                </div>
+                <div class="flex flex-col">
+                    <h1 class="text-base font-bold leading-tight">PrimeLabs</h1>
+                    <p class="text-slate-500 dark:text-slate-400 text-xs">Business Solution</p>
+                </div>
+            </div>
+            <nav class="flex-1 px-4 space-y-1 mt-4">
+                <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    <span class="text-sm font-medium">Dashboard</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2 bg-primary/10 text-primary rounded-lg transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">folder</span>
+                    <span class="text-sm font-medium">Projects</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined">group</span>
+                    <span class="text-sm font-medium">Team</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined">account_circle</span>
+                    <span class="text-sm font-medium">Clients</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined">bar_chart</span>
+                    <span class="text-sm font-medium">Reports</span>
+                </a>
+            </nav>
+            <div class="p-4 border-t border-slate-200 dark:border-slate-800">
+                <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined">settings</span>
+                    <span class="text-sm font-medium">Settings</span>
+                </a>
+            </div>
+        </aside>
+        <!-- Main Content Area -->
+        <main class="flex-1 flex flex-col overflow-hidden">
+            <!-- Header -->
+            <header
+                class="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-8">
+                <div class="flex items-center gap-4">
+                    <span class="text-slate-400 text-sm">Projects</span>
+                    <span class="text-slate-400 material-symbols-outlined text-sm">chevron_right</span>
+                    <span class="text-slate-900 dark:text-slate-100 text-sm font-medium">Add New Project</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button
+                        class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors relative">
+                        <span class="material-symbols-outlined">notifications</span>
+                        <span
+                            class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-white dark:border-slate-900"></span>
+                    </button>
+                    <div class="h-8 w-px bg-slate-200 dark:border-slate-800 mx-1"></div>
+                    <div class="flex items-center gap-3">
+                        <div class="size-8 rounded-full bg-slate-200"
+                            data-alt="User profile avatar of the administrator"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAYtOwc3hG28yb9Yoe3Hl522Axp01Vx_GQSWKGAqXtxxlikhxtBhu3KXqqrjWkiSIvoRaJxYyW71iOqxQOzhFiRkbdj6rdbVtBUb0WfAh9cQI7GZgp5eUvzrVl2KVFfkkw3KSnBpQ0AjgNEJk39LBWnxnre-P2YiqABdwTMB50E97EXuh7jkmfzxaX5X4DCHf7mH5ffQRpNXVMBpNsKF7ghpUYNvK3nCIdgxwmLUvVlMf4ZnyYIZcvakO0n7njjOPCdkYAOfuubAIyD')">
+                        </div>
+                        <span class="text-sm font-medium">Alex Rivera</span>
+                    </div>
+                </div>
+            </header>
+            <!-- Scrollable Content -->
+            <div class="flex-1 overflow-y-auto p-8">
+                <div class="max-w-4xl mx-auto">
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Create New Project</h2>
+                        <p class="text-slate-500 dark:text-slate-400 mt-1">Initialize a new SaaS workflow by filling out
+                            the project specifications.</p>
+                    </div>
+                    <form
+                        class="space-y-8 bg-white dark:bg-slate-900 p-8 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <!-- Basic Info Section -->
+                        <section class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Project
+                                        Name</label>
+                                    <input
+                                        class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-transparent focus:ring-primary focus:border-primary px-4 py-2.5"
+                                        placeholder="e.g. Enterprise Cloud Migration" type="text" />
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Project
+                                        ID</label>
+                                    <input
+                                        class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-transparent focus:ring-primary focus:border-primary px-4 py-2.5"
+                                        placeholder="PRJ-2024-001" type="text" />
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Select or Create
+                                    Client</label>
+                                <div class="relative group">
+                                    <input
+                                        class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-transparent focus:ring-primary focus:border-primary px-4 py-2.5 pr-10"
+                                        placeholder="Search existing clients or type to create new..." type="text" />
+                                    <span
+                                        class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none transition-transform group-focus-within:rotate-180">expand_more</span>
+                                    <div
+                                        class="absolute z-10 w-full mt-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-xl hidden group-focus-within:block">
+                                        <div class="p-1">
+                                            <button
+                                                class="w-full text-left px-3 py-2 text-sm rounded-md hover:bg-slate-100 dark:hover:bg-slate-700/50 flex items-center gap-2"
+                                                type="button">
+                                                <span class="size-2 rounded-full bg-blue-500"></span> Global Tech
+                                                Solutions
+                                            </button>
+                                            <button
+                                                class="w-full text-left px-3 py-2 text-sm rounded-md hover:bg-slate-100 dark:hover:bg-slate-700/50 flex items-center gap-2"
+                                                type="button">
+                                                <span class="size-2 rounded-full bg-emerald-500"></span> Apex Industries
+                                            </button>
+                                            <button
+                                                class="w-full text-left px-3 py-2 text-sm rounded-md hover:bg-slate-100 dark:hover:bg-slate-700/50 flex items-center gap-2"
+                                                type="button">
+                                                <span class="size-2 rounded-full bg-amber-500"></span> Innovate Soft
+                                            </button>
+                                            <div class="border-t border-slate-100 dark:border-slate-700 my-1"></div>
+                                            <button
+                                                class="w-full text-left px-3 py-2 text-sm font-semibold text-primary hover:bg-primary/5 rounded-md flex items-center gap-2"
+                                                type="button">
+                                                <span class="material-symbols-outlined text-sm">add</span> Add "New
+                                                Client"
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Project
+                                        Type</label>
+                                    <select
+                                        class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-transparent focus:ring-primary focus:border-primary px-4 py-2.5">
+                                        <option value="growth">Growth</option>
+                                        <option value="control">Control</option>
+                                    </select>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Project
+                                        Amount</label>
+                                    <div class="relative">
+                                        <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">$</span>
+                                        <input
+                                            class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-transparent focus:ring-primary focus:border-primary pl-8 pr-4 py-2.5"
+                                            placeholder="0.00" step="0.01" type="number" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="mt-6 p-6 bg-slate-50 dark:bg-slate-800/30 rounded-xl border border-slate-200 dark:border-slate-700 space-y-6 animate-in fade-in slide-in-from-top-2 duration-300">
+                                <div class="flex items-center justify-between">
+                                    <h3
+                                        class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">
+                                        New Client Details</h3>
+                                    <span
+                                        class="text-[10px] font-bold px-2 py-0.5 bg-primary/10 text-primary rounded-full">CREATING
+                                        NEW</span>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="flex flex-col gap-2">
+                                        <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Client
+                                            Company Name</label>
+                                        <input
+                                            class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 focus:ring-primary focus:border-primary px-4 py-2.5"
+                                            placeholder="Legal Entity Name" type="text" />
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Primary
+                                            Contact Person</label>
+                                        <input
+                                            class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 focus:ring-primary focus:border-primary px-4 py-2.5"
+                                            placeholder="Full Name" type="text" />
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Contact
+                                            Email</label>
+                                        <input
+                                            class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 focus:ring-primary focus:border-primary px-4 py-2.5"
+                                            placeholder="contact@company.com" type="email" />
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Client
+                                            Industry</label>
+                                        <select
+                                            class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 focus:ring-primary focus:border-primary px-4 py-2.5">
+                                            <option value="">Select industry</option>
+                                            <option value="tech">Technology</option>
+                                            <option value="finance">Finance</option>
+                                            <option value="healthcare">Healthcare</option>
+                                            <option value="retail">Retail</option>
+                                            <option value="manufacturing">Manufacturing</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Project
+                                    Description</label>
+                                <textarea
+                                    class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-transparent focus:ring-primary focus:border-primary px-4 py-2.5"
+                                    placeholder="Brief overview of project goals and scope..." rows="4"></textarea>
+                            </div>
+                        </section>
+                        <hr class="border-slate-100 dark:border-slate-800" />
+                        <!-- Timeline and Budget Section -->
+                        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="flex flex-col gap-2">
+                                <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Start
+                                    Date</label>
+                                <div class="relative">
+                                    <input
+                                        class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-transparent focus:ring-primary focus:border-primary px-4 py-2.5"
+                                        type="date" />
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Deadline</label>
+                                <div class="relative">
+                                    <input
+                                        class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-transparent focus:ring-primary focus:border-primary px-4 py-2.5"
+                                        type="date" />
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Budget
+                                    Allocation</label>
+                                <div class="relative">
+                                    <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">$</span>
+                                    <input
+                                        class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-transparent focus:ring-primary focus:border-primary pl-8 pr-4 py-2.5"
+                                        placeholder="0.00" type="number" />
+                                </div>
+                            </div>
+                        </section>
+                        <hr class="border-slate-100 dark:border-slate-800" />
+                        <!-- Team and Status Section -->
+                        <section class="space-y-6">
+                            <div class="flex flex-col gap-2">
+                                <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Assigned Team
+                                    Members</label>
+                                <div
+                                    class="flex flex-wrap gap-2 p-3 border border-slate-200 dark:border-slate-700 rounded-lg bg-slate-50 dark:bg-slate-800/50">
+                                    <div
+                                        class="flex items-center gap-2 bg-white dark:bg-slate-700 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-600 shadow-sm">
+                                        <div
+                                            class="size-6 rounded-full bg-blue-100 flex items-center justify-center text-[10px] font-bold text-blue-600">
+                                            JD</div>
+                                        <span class="text-xs font-medium">Jane Doe</span>
+                                        <button
+                                            class="material-symbols-outlined text-xs text-slate-400 hover:text-slate-600"
+                                            type="button">close</button>
+                                    </div>
+                                    <div
+                                        class="flex items-center gap-2 bg-white dark:bg-slate-700 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-600 shadow-sm">
+                                        <div
+                                            class="size-6 rounded-full bg-emerald-100 flex items-center justify-center text-[10px] font-bold text-emerald-600">
+                                            MS</div>
+                                        <span class="text-xs font-medium">Mike Smith</span>
+                                        <button
+                                            class="material-symbols-outlined text-xs text-slate-400 hover:text-slate-600"
+                                            type="button">close</button>
+                                    </div>
+                                    <button
+                                        class="flex items-center gap-1 px-3 py-1.5 rounded-full border border-dashed border-slate-300 dark:border-slate-600 text-slate-500 hover:bg-slate-100 transition-colors"
+                                        type="button">
+                                        <span class="material-symbols-outlined text-sm">add</span>
+                                        <span class="text-xs font-medium">Add Staff</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Priority
+                                        Level</label>
+                                    <div class="flex gap-2">
+                                        <label class="flex-1 cursor-pointer group">
+                                            <input class="sr-only peer" name="priority" type="radio" value="low" />
+                                            <div
+                                                class="text-center py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 peer-checked:bg-slate-100 dark:peer-checked:bg-slate-800 peer-checked:border-slate-400 dark:peer-checked:border-slate-500 transition-all text-sm font-medium text-slate-500 peer-checked:text-slate-900 dark:peer-checked:text-white">
+                                                Low</div>
+                                        </label>
+                                        <label class="flex-1 cursor-pointer group">
+                                            <input checked="" class="sr-only peer" name="priority" type="radio"
+                                                value="medium" />
+                                            <div
+                                                class="text-center py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 peer-checked:bg-primary/10 peer-checked:border-primary/50 transition-all text-sm font-medium text-slate-500 peer-checked:text-primary">
+                                                Medium</div>
+                                        </label>
+                                        <label class="flex-1 cursor-pointer group">
+                                            <input class="sr-only peer" name="priority" type="radio" value="high" />
+                                            <div
+                                                class="text-center py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 peer-checked:bg-red-50 dark:peer-checked:bg-red-900/20 peer-checked:border-red-200 dark:peer-checked:border-red-800 transition-all text-sm font-medium text-slate-500 peer-checked:text-red-600">
+                                                High</div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Initial
+                                        Status</label>
+                                    <select
+                                        class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-transparent focus:ring-primary focus:border-primary px-4 py-2.5">
+                                        <option value="proposed">Proposed</option>
+                                        <option value="in_progress">In Progress</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- Form Actions -->
+                        <div
+                            class="pt-6 flex items-center justify-end gap-4 border-t border-slate-100 dark:border-slate-800">
+                            <button
+                                class="px-6 py-2.5 text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
+                                type="button">
+                                Cancel
+                            </button>
+                            <button
+                                class="px-6 py-2.5 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm font-semibold rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-all"
+                                type="button">
+                                Save as Draft
+                            </button><button
+                                class="px-8 py-2.5 bg-primary text-white text-sm font-bold rounded-lg shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all"
+                                type="submit">
+                                Create Project
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- Success Toast Notification -->
+    <div
+        class="fixed bottom-8 right-8 z-50 flex items-center gap-4 bg-white dark:bg-slate-800 p-4 rounded-xl border border-emerald-500/20 dark:border-emerald-500/30 shadow-2xl shadow-emerald-500/10 max-w-sm animate-in fade-in slide-in-from-bottom-4 duration-300">
+        <div
+            class="flex-shrink-0 size-10 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
+            <span class="material-symbols-outlined">check_circle</span>
+        </div>
+        <div class="flex-1">
+            <h4 class="text-sm font-bold text-slate-900 dark:text-white">Project Created Successfully</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">The project has been added to your dashboard.
+            </p>
+        </div>
+        <button class="flex-shrink-0 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
+            onclick="this.parentElement.remove()">
+            <span class="material-symbols-outlined text-lg">close</span>
+        </button>
+    </div>
+</body>
+
+</html>

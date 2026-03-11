@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Clients Management | PrimeLabs</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+    <div class="flex h-screen overflow-hidden">
+        <!-- Sidebar -->
+        <aside class="w-64 flex-shrink-0 border-r border-primary/10 bg-white dark:bg-slate-900 flex flex-col">
+            <div class="p-6">
+                <div class="flex items-center gap-3">
+                    <div class="bg-primary rounded-lg size-10 flex items-center justify-center text-white">
+                        <span class="material-symbols-outlined">rocket_launch</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h1 class="text-slate-900 dark:text-white text-base font-bold leading-none">PrimeLabs</h1>
+                        <p class="text-primary text-xs font-medium mt-1 uppercase tracking-wider">Business Solution</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="flex-1 px-4 space-y-1 overflow-y-auto">
+                <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/5 hover:text-primary rounded-lg transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    <span class="text-sm font-medium">Dashboard</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2 bg-primary text-white rounded-lg transition-colors shadow-lg shadow-primary/20"
+                    href="#">
+                    <span class="material-symbols-outlined">groups</span>
+                    <span class="text-sm font-medium">Clients</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/5 hover:text-primary rounded-lg transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined">work</span>
+                    <span class="text-sm font-medium">Projects</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/5 hover:text-primary rounded-lg transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined">receipt_long</span>
+                    <span class="text-sm font-medium">Invoices</span>
+                </a>
+                <div class="pt-4 pb-2">
+                    <p class="px-3 text-[10px] font-bold text-slate-400 uppercase tracking-widest">System</p>
+                </div>
+                <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/5 hover:text-primary rounded-lg transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined">settings</span>
+                    <span class="text-sm font-medium">Settings</span>
+                </a>
+            </nav>
+            <div class="p-4 mt-auto border-t border-primary/10">
+                <div class="flex items-center gap-3 p-2 bg-slate-50 dark:bg-slate-800 rounded-xl">
+                    <div class="size-8 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden">
+                        <img alt="Profile" data-alt="User profile avatar circle"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw3Ps96A21BJ8yf3Qo1p7xgaEAzhOKbWZtGOQQDA_Cf6cWAsOty_HdirYetWdRJjbbXcRYRkrU7Rw1mN8na9lgGUCqSvYi2CqiOEIoqgnjRSRmGZYkihf0pzIl1q5OBPYo5a9jxe2iZbeSH-Y3b2WcAVlqs6ndLl4ylael_q0x2c_RIYAkraFgwwi0DucY0yeH7PSsEIVurxrG7x4gdk0wTgvNymqGXv3GOFjnkTZQOb0_EQARWx6ra7-OO34rUE2JE5BU_k6T8aJu" />
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-xs font-bold truncate">Alex Morgan</p>
+                        <p class="text-[10px] text-slate-500 truncate">Admin Access</p>
+                    </div>
+                    <span class="material-symbols-outlined text-slate-400 text-lg">logout</span>
+                </div>
+            </div>
+        </aside>
+        <!-- Main Content -->
+        <main class="flex-1 overflow-y-auto bg-background-light dark:bg-background-dark">
+            <header
+                class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+                <div
+                    class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <h2 class="text-2xl font-black text-slate-900 dark:text-white tracking-tight">Clients Management
+                        </h2>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">Manage and monitor your client
+                            relationships and project status.</p>
+                    </div>
+                    <button
+                        class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg flex items-center gap-2 text-sm font-bold shadow-lg shadow-primary/20 transition-all">
+                        <span class="material-symbols-outlined text-lg">add</span>
+                        Add New Client
+                    </button>
+                </div>
+            </header>
+            <div class="max-w-7xl mx-auto px-6 py-8">
+                <!-- Filters & Search -->
+                <div class="flex flex-col lg:flex-row gap-4 mb-8">
+                    <div class="flex-1 relative">
+                        <span
+                            class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+                        <input
+                            class="w-full pl-12 pr-4 py-3 bg-white dark:bg-slate-900 border border-primary/10 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm outline-none"
+                            placeholder="Search clients by name, company, or email..." type="text" />
+                    </div>
+                    <div class="flex gap-2 overflow-x-auto pb-1 no-scrollbar">
+                        <button
+                            class="flex items-center gap-2 px-4 py-3 bg-white dark:bg-slate-900 border border-primary/10 rounded-xl text-sm font-medium whitespace-nowrap hover:bg-primary/5 hover:border-primary/30 transition-all">
+                            <span class="material-symbols-outlined text-lg">filter_list</span>
+                            All Clients
+                            <span class="material-symbols-outlined text-sm">expand_more</span>
+                        </button>
+                        <button
+                            class="flex items-center gap-2 px-4 py-3 bg-white dark:bg-slate-900 border border-primary/10 rounded-xl text-sm font-medium whitespace-nowrap hover:bg-primary/5 hover:border-primary/30 transition-all">
+                            Status: Active
+                            <span class="material-symbols-outlined text-sm">expand_more</span>
+                        </button>
+                        <button
+                            class="flex items-center gap-2 px-4 py-3 bg-white dark:bg-slate-900 border border-primary/10 rounded-xl text-sm font-medium whitespace-nowrap hover:bg-primary/5 hover:border-primary/30 transition-all">
+                            Sort: Newest
+                            <span class="material-symbols-outlined text-sm">expand_more</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Table Container -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl border border-primary/10 shadow-sm overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-primary/5 border-b border-primary/10">
+                                    <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">
+                                        Client Name</th>
+                                    <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">
+                                        Company</th>
+                                    <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">
+                                        Status</th>
+                                    <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">
+                                        Active Projects</th>
+                                    <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">
+                                        Total Invoiced</th>
+                                    <th
+                                        class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider text-right">
+                                        Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-primary/10">
+                                <!-- Row 1 -->
+                                <tr class="hover:bg-primary/5 transition-colors group">
+                                    <td class="px-6 py-5">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="size-10 rounded-full bg-primary/10 flex items-center justify-center overflow-hidden">
+                                                <img alt="Alex Thompson" data-alt="Portrait of Alex Thompson in circles"
+                                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIqM4KJaQKwauC7mHMupDTHMozdWcNbmebBzDuc1FjbXIpxH3ofbuPyY5V7za6Ouvcojv-5RPhInUhExKfO7ai-dcX6eO7ROah5cnpFNuVEYazlZYf6wUw8KG-XA2SggdloVpzNnesMYjEva90LZKsY_NGSBVjzSs3vR2zkkBlBEFnb5k_uxkItigG3u-9jpZ5pnU2mQkpUmE5iE3nUROvidurTVtefjW4rRdGlZtUZZCcGLu_C8aUSxRQg6gXvGiX2gv6BlK_OK79" />
+                                            </div>
+                                            <div>
+                                                <p class="text-sm font-bold text-slate-900 dark:text-white">Alex
+                                                    Thompson</p>
+                                                <p class="text-xs text-slate-500">alex.t@techflow.com</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-5">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-sm font-medium">TechFlow Inc.</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-5">
+                                        <span
+                                            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">
+                                            <span class="size-1.5 rounded-full bg-green-500"></span>
+                                            Active
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-5 text-sm font-medium">3 Projects</td>
+                                    <td class="px-6 py-5 text-sm font-bold text-primary">$12,500.00</td>
+                                    <td class="px-6 py-5 text-right">
+                                        <div
+                                            class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                            <button class="p-2 text-slate-400 hover:text-primary transition-colors"
+                                                title="View">
+                                                <span class="material-symbols-outlined text-xl">visibility</span>
+                                            </button>
+                                            <button class="p-2 text-slate-400 hover:text-primary transition-colors"
+                                                title="Edit">
+                                                <span class="material-symbols-outlined text-xl">edit</span>
+                                            </button>
+                                            <button class="p-2 text-slate-400 hover:text-red-500 transition-colors"
+                                                title="Delete">
+                                                <span class="material-symbols-outlined text-xl">delete</span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- Row 2 -->
+                                <tr class="hover:bg-primary/5 transition-colors group">
+                                    <td class="px-6 py-5">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="size-10 rounded-full bg-primary/10 flex items-center justify-center overflow-hidden">
+                                                <img alt="Sarah Jenkins" data-alt="Portrait of Sarah Jenkins in circles"
+                                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyza3tesQHzSgDkaU4FAnFOppP9EamMYFJkX9HhgGxNMMJ4upPNNYrTBLJPsciMEA9KKcCTAmukDI4-PhlIq1zrL3WIfg8oDVazTv-rtYyM3tRPgiUsLoGRddA5nPy1mAfS_q-CkK8N26gkMBNoTNUs0p45_xXQZOzlspAD1MZRYQIdGfDZwX-Ytaoc0yAStjIGhQIRij7ggueQwl32FbsNd6ei3U6qoupLLbT5FIom7eA_4kqZedZTb2-QAIIkcGP3js404YYKj_h" />
+                                            </div>
+                                            <div>
+                                                <p class="text-sm font-bold text-slate-900 dark:text-white">Sarah
+                                                    Jenkins</p>
+                                                <p class="text-xs text-slate-500">sarah@creativepulse.io</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-5">
+                                        <span class="text-sm font-medium">Creative Pulse</span>
+                                    </td>
+                                    <td class="px-6 py-5">
+                                        <span
+                                            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400">
+                                            <span class="size-1.5 rounded-full bg-amber-500"></span>
+                                            Onboarding
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-5 text-sm font-medium">1 Project</td>
+                                    <td class="px-6 py-5 text-sm font-bold text-primary">$2,200.00</td>
+                                    <td class="px-6 py-5 text-right">
+                                        <div
+                                            class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                            <button class="p-2 text-slate-400 hover:text-primary transition-colors"
+                                                title="View">
+                                                <span class="material-symbols-outlined text-xl">visibility</span>
+                                            </button>
+                                            <button class="p-2 text-slate-400 hover:text-primary transition-colors"
+                                                title="Edit">
+                                                <span class="material-symbols-outlined text-xl">edit</span>
+                                            </button>
+                                            <button class="p-2 text-slate-400 hover:text-red-500 transition-colors"
+                                                title="Delete">
+                                                <span class="material-symbols-outlined text-xl">delete</span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- Row 3 -->
+                                <tr class="hover:bg-primary/5 transition-colors group">
+                                    <td class="px-6 py-5">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="size-10 rounded-full bg-primary/10 flex items-center justify-center overflow-hidden">
+                                                <img alt="Michael Chen" data-alt="Portrait of Michael Chen in circles"
+                                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXk38tnoqnIW9V5X0fS33uHxJRrX3aykO70DiRrvJnf2z-b-0umhv-WcChY1hhwtskphrNHlxBwWQHZK3KHY-427AH-Mpq0XN788BIlEYaMtrx0Gxd2eCKzsOTbGaXfGX8iGwhLFwWr4Z-qlsrqwJqD6PpikOTG9SHGVuDkEPJx2dNWsJxrx_k4naJBo_Nl4owasqbxnYf-B1rC673PDEK1kvL_6KpGhXI1Y4iDXQRAKvc2QuiXGeVC3H5kqSN2CS9jXWMNIC_glIP" />
+                                            </div>
+                                            <div>
+                                                <p class="text-sm font-bold text-slate-900 dark:text-white">Michael Chen
+                                                </p>
+                                                <p class="text-xs text-slate-500">m.chen@globallogistics.com</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-5">
+                                        <span class="text-sm font-medium">Global Logistics</span>
+                                    </td>
+                                    <td class="px-6 py-5">
+                                        <span
+                                            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">
+                                            <span class="size-1.5 rounded-full bg-green-500"></span>
+                                            Active
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-5 text-sm font-medium">5 Projects</td>
+                                    <td class="px-6 py-5 text-sm font-bold text-primary">$45,000.00</td>
+                                    <td class="px-6 py-5 text-right">
+                                        <div
+                                            class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                            <button class="p-2 text-slate-400 hover:text-primary transition-colors"
+                                                title="View">
+                                                <span class="material-symbols-outlined text-xl">visibility</span>
+                                            </button>
+                                            <button class="p-2 text-slate-400 hover:text-primary transition-colors"
+                                                title="Edit">
+                                                <span class="material-symbols-outlined text-xl">edit</span>
+                                            </button>
+                                            <button class="p-2 text-slate-400 hover:text-red-500 transition-colors"
+                                                title="Delete">
+                                                <span class="material-symbols-outlined text-xl">delete</span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- Row 4 -->
+                                <tr class="hover:bg-primary/5 transition-colors group">
+                                    <td class="px-6 py-5">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="size-10 rounded-full bg-primary/10 flex items-center justify-center overflow-hidden">
+                                                <img alt="Emma Rodriguez"
+                                                    data-alt="Portrait of Emma Rodriguez in circles"
+                                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc4jH84qKomQJSSFc0kdtLV-AnGNlh2Y86vtd0icyArR1J6TO94lxbVmtF_Z-W14_d0RdHYHsavaXM6-wZjdpDhs4ZPGJf-SX2871T-GU3FI187vYlD7p9d3wR7TYqPw04HeQjtaqn7a1Jd7_3bvmbXyRFY5kyEOibQ80zIvMutoCvyJl7NQsF4-jywS5e0eOOz1fixRUcubAxRkfUSOn6tjko1jljLn_UnTdGlv8EIMjIBfpaY8CYI9Dt10fKLMG07KZ6GI1jKZM6" />
+                                            </div>
+                                            <div>
+                                                <p class="text-sm font-bold text-slate-900 dark:text-white">Emma
+                                                    Rodriguez</p>
+                                                <p class="text-xs text-slate-500">emma.r@stellar.co</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-5">
+                                        <span class="text-sm font-medium">Stellar Retail</span>
+                                    </td>
+                                    <td class="px-6 py-5">
+                                        <span
+                                            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400">
+                                            <span class="size-1.5 rounded-full bg-slate-400"></span>
+                                            Inactive
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-5 text-sm font-medium">0 Projects</td>
+                                    <td class="px-6 py-5 text-sm font-bold text-primary">$8,900.00</td>
+                                    <td class="px-6 py-5 text-right">
+                                        <div
+                                            class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                            <button class="p-2 text-slate-400 hover:text-primary transition-colors"
+                                                title="View">
+                                                <span class="material-symbols-outlined text-xl">visibility</span>
+                                            </button>
+                                            <button class="p-2 text-slate-400 hover:text-primary transition-colors"
+                                                title="Edit">
+                                                <span class="material-symbols-outlined text-xl">edit</span>
+                                            </button>
+                                            <button class="p-2 text-slate-400 hover:text-red-500 transition-colors"
+                                                title="Delete">
+                                                <span class="material-symbols-outlined text-xl">delete</span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- Row 5 -->
+                                <tr class="hover:bg-primary/5 transition-colors group">
+                                    <td class="px-6 py-5">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="size-10 rounded-full bg-primary/10 flex items-center justify-center overflow-hidden">
+                                                <img alt="David Smith" data-alt="Portrait of David Smith in circles"
+                                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTS0B_LgyIj-YIXmXrY68Xezseww2L5Wg90BvzPWeJZ8dVih-jLsIp_znHPGxg7kCdo6cvTdjLhmpTcv0L2LITf0Ah9VG6E-hYIS4DzeWpn_a738TQ89xX2XfPaHLa-wIDXk8oZLv9NL6OZI23AJo25KMWDeh62bWo8Hq9M9xfUe-WSAvRvjBfMU0Kmc80EjFAxJJAlokSDmF72U-QJzTME6sp4cCwQ-JGrRq1N1VXKSTSypm22NPmr0FMagSxpF_CCuqSXYHHSVoq" />
+                                            </div>
+                                            <div>
+                                                <p class="text-sm font-bold text-slate-900 dark:text-white">David Smith
+                                                </p>
+                                                <p class="text-xs text-slate-500">david@apexsolutions.net</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-5">
+                                        <span class="text-sm font-medium">Apex Solutions</span>
+                                    </td>
+                                    <td class="px-6 py-5">
+                                        <span
+                                            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">
+                                            <span class="size-1.5 rounded-full bg-green-500"></span>
+                                            Active
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-5 text-sm font-medium">2 Projects</td>
+                                    <td class="px-6 py-5 text-sm font-bold text-primary">$15,300.00</td>
+                                    <td class="px-6 py-5 text-right">
+                                        <div
+                                            class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                            <button class="p-2 text-slate-400 hover:text-primary transition-colors"
+                                                title="View">
+                                                <span class="material-symbols-outlined text-xl">visibility</span>
+                                            </button>
+                                            <button class="p-2 text-slate-400 hover:text-primary transition-colors"
+                                                title="Edit">
+                                                <span class="material-symbols-outlined text-xl">edit</span>
+                                            </button>
+                                            <button class="p-2 text-slate-400 hover:text-red-500 transition-colors"
+                                                title="Delete">
+                                                <span class="material-symbols-outlined text-xl">delete</span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Pagination -->
+                    <div
+                        class="px-6 py-4 flex items-center justify-between border-t border-primary/10 bg-slate-50/50 dark:bg-slate-800/50">
+                        <p class="text-xs text-slate-500 font-medium">Showing <span
+                                class="text-slate-900 dark:text-white">1</span> to <span
+                                class="text-slate-900 dark:text-white">5</span> of <span
+                                class="text-slate-900 dark:text-white">42</span> results</p>
+                        <div class="flex gap-1">
+                            <button
+                                class="size-8 flex items-center justify-center rounded-lg border border-primary/10 text-slate-400 hover:bg-white hover:text-primary transition-all">
+                                <span class="material-symbols-outlined text-lg">chevron_left</span>
+                            </button>
+                            <button
+                                class="size-8 flex items-center justify-center rounded-lg bg-primary text-white text-xs font-bold shadow-sm">1</button>
+                            <button
+                                class="size-8 flex items-center justify-center rounded-lg border border-primary/10 text-slate-600 dark:text-slate-300 text-xs font-bold hover:bg-white hover:text-primary transition-all">2</button>
+                            <button
+                                class="size-8 flex items-center justify-center rounded-lg border border-primary/10 text-slate-600 dark:text-slate-300 text-xs font-bold hover:bg-white hover:text-primary transition-all">3</button>
+                            <span class="px-2 self-center text-slate-400">...</span>
+                            <button
+                                class="size-8 flex items-center justify-center rounded-lg border border-primary/10 text-slate-600 dark:text-slate-300 text-xs font-bold hover:bg-white hover:text-primary transition-all">8</button>
+                            <button
+                                class="size-8 flex items-center justify-center rounded-lg border border-primary/10 text-slate-400 hover:bg-white hover:text-primary transition-all">
+                                <span class="material-symbols-outlined text-lg">chevron_right</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body>
+
+</html>

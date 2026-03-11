@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>PrimeLabs - Project Management</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+    <div class="flex h-screen overflow-hidden">
+        <!-- Sidebar -->
+        <aside
+            class="w-64 flex-shrink-0 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 hidden md:flex flex-col">
+            <div class="p-6">
+                <div class="flex items-center gap-3">
+                    <div class="bg-primary size-10 rounded-lg flex items-center justify-center text-white">
+                        <span class="material-symbols-outlined">rocket_launch</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h1 class="text-slate-900 dark:text-white text-base font-bold leading-none">PrimeLabs</h1>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Business Solution</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="flex-1 px-4 space-y-1 overflow-y-auto">
+                <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    <span class="text-sm font-medium">Dashboard</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2 bg-primary/10 text-primary rounded-lg transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">work</span>
+                    <span class="text-sm font-bold">Projects</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined">group</span>
+                    <span class="text-sm font-medium">Teams</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined">bar_chart</span>
+                    <span class="text-sm font-medium">Reports</span>
+                </a>
+                <div class="pt-4 pb-2 px-3">
+                    <p class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Administration</p>
+                </div>
+                <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined">settings</span>
+                    <span class="text-sm font-medium">Settings</span>
+                </a>
+            </nav>
+            <div class="p-4 border-t border-slate-200 dark:border-slate-800">
+                <div class="flex items-center gap-3 p-2 bg-slate-50 dark:bg-slate-800/50 rounded-xl">
+                    <img alt="User" class="size-8 rounded-full" data-alt="User profile avatar smiling businessman"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn70YQeP_FDyRs6HZmSbEpxDS1yXDUAmycI1WMIrtTOAwy-MYcDA2IJ2_hIEFk4TRVOfdRCKS6mmXNx3nMmHEYXJ1XeiimpYjaVdXoRgofUpgwySExLQ4zZIMmNsGrrNDdjJA1XDklgNB6fI3a8ZWio80DXDzvgOXXtJhVjNqIiMJ456peI6x6jOyKdCcW5ZvjhxeEycdxpb3DWRzZ561zYoG6l-I7GkMMRE9RC0y9zdoNXeIS2iYN3ipjI2DktTBde-NQV9Gd1EA0" />
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm font-semibold truncate">Alex Rivera</p>
+                        <p class="text-xs text-slate-500 truncate">Project Lead</p>
+                    </div>
+                    <span class="material-symbols-outlined text-slate-400 text-sm">unfold_more</span>
+                </div>
+            </div>
+        </aside>
+        <!-- Main Content -->
+        <main class="flex-1 flex flex-col min-w-0 overflow-hidden">
+            <!-- Header -->
+            <header
+                class="h-16 flex items-center justify-between px-8 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+                <div class="flex items-center gap-4">
+                    <button class="md:hidden text-slate-600">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                    <h2 class="text-lg font-bold tracking-tight">Project Management</h2>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="relative hidden sm:block">
+                        <span
+                            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+                        <input
+                            class="pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm w-64 focus:ring-2 focus:ring-primary/50"
+                            placeholder="Search projects..." type="text" />
+                    </div><button
+                        class="flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary/90 transition-colors whitespace-nowrap ml-4">
+                        <span class="material-symbols-outlined text-sm">add</span>
+                        Quick Add Project
+                    </button><button
+                        class="flex items-center gap-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors whitespace-nowrap ml-2">
+                        <span class="material-symbols-outlined text-sm">calendar_today</span>
+                        Last 30 Days
+                    </button>
+                    <button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full relative">
+                        <span class="material-symbols-outlined">notifications</span>
+                        <span
+                            class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-white dark:border-slate-900"></span>
+                    </button>
+                    <div class="h-8 w-px bg-slate-200 dark:border-slate-800"></div>
+                </div>
+            </header>
+            <!-- Page Content -->
+            <div class="flex-1 overflow-y-auto p-8">
+                <!-- Stats Row -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <div
+                        class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="p-2 bg-blue-50 dark:bg-blue-900/20 text-blue-600 rounded-lg">
+                                <span class="material-symbols-outlined">assignment</span>
+                            </div>
+                            <span
+                                class="text-xs font-bold text-emerald-600 bg-emerald-50 dark:bg-emerald-900/20 px-2 py-1 rounded">+12%</span>
+                        </div>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Total Projects</p>
+                        <h3 class="text-2xl font-bold mt-1">42</h3>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="p-2 bg-amber-50 dark:bg-amber-900/20 text-amber-600 rounded-lg">
+                                <span class="material-symbols-outlined">running_with_errors</span>
+                            </div>
+                            <span
+                                class="text-xs font-bold text-amber-600 bg-amber-50 dark:bg-amber-900/20 px-2 py-1 rounded">Active</span>
+                        </div>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">In Progress</p>
+                        <h3 class="text-2xl font-bold mt-1">18</h3>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="p-2 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 rounded-lg">
+                                <span class="material-symbols-outlined">check_circle</span>
+                            </div>
+                            <span
+                                class="text-xs font-bold text-emerald-600 bg-emerald-50 dark:bg-emerald-900/20 px-2 py-1 rounded">+5%</span>
+                        </div>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Efficiency</p>
+                        <h3 class="text-2xl font-bold mt-1">94%</h3>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="p-2 bg-primary/10 text-primary rounded-lg">
+                                <span class="material-symbols-outlined">trending_up</span>
+                            </div>
+                            <span class="text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded">Goal: 45</span>
+                        </div>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Upcoming Deadlines</p>
+                        <h3 class="text-2xl font-bold mt-1">08</h3>
+                    </div>
+                </div>
+                <!-- Tabs & Filters -->
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
+                    <div class="flex bg-slate-200 dark:bg-slate-800 p-1 rounded-xl w-full sm:w-auto">
+                        <button
+                            class="flex-1 sm:flex-none px-6 py-2 bg-white dark:bg-slate-700 text-slate-900 dark:text-white text-sm font-bold rounded-lg shadow-sm">All
+                            Projects</button>
+                        <button
+                            class="flex-1 sm:flex-none px-6 py-2 text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-slate-900 dark:hover:text-white">Active</button>
+                        <button
+                            class="flex-1 sm:flex-none px-6 py-2 text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-slate-900 dark:hover:text-white">Completed</button>
+                        <button
+                            class="flex-1 sm:flex-none px-6 py-2 text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-slate-900 dark:hover:text-white">Drafts</button>
+                    </div>
+                    <div class="flex items-center gap-2 w-full sm:w-auto">
+                        <button
+                            class="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg text-sm font-medium">
+                            <span class="material-symbols-outlined text-sm">filter_list</span>
+                            Filter
+                        </button>
+                        <button
+                            class="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg text-sm font-medium">
+                            <span class="material-symbols-outlined text-sm">sort</span>
+                            Sort
+                        </button>
+                    </div>
+                </div>
+                <!-- Projects Table -->
+                <div
+                    class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr
+                                    class="bg-slate-50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-800">
+                                    <th
+                                        class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                                        Project Name</th>
+                                    <th
+                                        class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                                        Client</th>
+                                    <th
+                                        class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                                        Assigned Team</th>
+                                    <th
+                                        class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                                        Progress</th>
+                                    <th
+                                        class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                                        Deadline</th>
+                                    <th
+                                        class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                                        Status</th>
+                                    <th
+                                        class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+                                <!-- Row 1 -->
+                                <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+                                    <td class="px-6 py-4">
+                                        <div class="flex flex-col">
+                                            <span class="text-sm font-bold text-slate-900 dark:text-white">Cloud
+                                                Migration Phase 2</span>
+                                            <span class="text-xs text-slate-500">ID: PRJ-00124</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400 font-medium">
+                                        TechGlobal Inc.</td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex -space-x-2">
+                                            <img class="size-7 rounded-full border-2 border-white dark:border-slate-900"
+                                                data-alt="Team member profile picture young woman"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_dfVYiT_GftPTF1_D1wKPk00AMO1-waL4rnsdIVDIJeUj36pLIfBJdMonZPQjFqEgp_x76zR39HV_S07Ch5mLSLJrigW4jmKOEBeLpiFnKxqIVVd8rpp6u0pkqrmHygBNA7kCBIMEPB1CU9nh5Q7KoAKynhBGf7U5XOtxG59cu09-yORDGXiwEgbFk-f4YiKyeJDQJzrEGZRwKSsumo9BzoeGk4GfLbwycHh3CAXaLVfvff1UrDV1M6enag--Fh_zn3h0-KAmh5cr" />
+                                            <img class="size-7 rounded-full border-2 border-white dark:border-slate-900"
+                                                data-alt="Team member profile picture smiling man"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfterc_QZ3Vxf4-YZZLom5llTIsp-n3GpFwApkY-UaJHz1GEo11VfibVS_OSEz4RpA0M0wxuLpw0VOPPpg0jSYzQXK-KUS-S6HT3M1JycfVmFL2fjpkS3S6OtQ4JMjQAPwTk7dFbU_SWQLzy6R_zSBtjEtJXyHakEN_vil-MkZ_m1X5-nSAKVVMmN6deS06FcbeQ2a0_p8mZlbpKmk4b0vYRbf5-T6eT5MNpAtMA-IUgNo6iCfPATwMz5iip_-O52F-slKRFHoflZz" />
+                                            <div
+                                                class="size-7 rounded-full border-2 border-white dark:border-slate-900 bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-[10px] font-bold">
+                                                +3</div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 min-w-[140px]">
+                                        <div class="flex flex-col gap-1.5">
+                                            <div class="flex justify-between text-[10px] font-bold text-slate-500">
+                                                <span>75%</span>
+                                            </div>
+                                            <div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-1.5">
+                                                <div class="bg-primary h-1.5 rounded-full" style="width: 75%"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">Oct 24, 2023</td>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300">
+                                            In Progress
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 text-right">
+                                        <button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+                                            <span class="material-symbols-outlined">more_vert</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <!-- Row 2 -->
+                                <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+                                    <td class="px-6 py-4">
+                                        <div class="flex flex-col">
+                                            <span class="text-sm font-bold text-slate-900 dark:text-white">E-Commerce
+                                                Redesign</span>
+                                            <span class="text-xs text-slate-500">ID: PRJ-00125</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400 font-medium">
+                                        Velocity Retail</td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex -space-x-2">
+                                            <img class="size-7 rounded-full border-2 border-white dark:border-slate-900"
+                                                data-alt="Team member profile picture man with glasses"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXmv5JDGmZldkF4uioR_FDBTLHab5beVSH6wtdQXBtu0RZynVX11TJb2bIqt05geO0ChGwuXwiz8l8lAaSOZkTXRgXOJ67CKwqJiOCgocpyRo-bhl6ks95cg0aMz4ODCyhY5Idrbro11X25cdQx6zle23-kTAnRIB-5lgvXZ4dzSj2SgPtg6HA1FRXL0pub0J-xwkwnRe42_pkuNLYznq3Z2vaXlowaa5OubDRLT0UnED8VW1MZQYq8wo1WFQnIS88kJu5gWfC_nOa" />
+                                            <img class="size-7 rounded-full border-2 border-white dark:border-slate-900"
+                                                data-alt="Team member profile picture woman"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQG79xdi5WvxS34MDFxfLHCH6v6MG52O53WYNt2ifZ8tEBf-cfcD1Sd-sZsduUS63ESSXLNL_0TMh-nnHXonbYx_wT3cfI13Czzr65IyIC5StZ4mHc3GsC0dXuCyeQyHk33N-GW0rq5_QM16zDbJZTknpTXMApT3EFsjhMp3_qTAjBAEXiIm6AcGUFeS9Rm0hbSHnonCoSzCuVJQzGRKnxjpYNSU_G66GBD1qwpXIFEXWkOCdFdWzjLpkuEcCTAEXiBDKJ8RWAW9Ac" />
+                                            <div
+                                                class="size-7 rounded-full border-2 border-white dark:border-slate-900 bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-[10px] font-bold">
+                                                +1</div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 min-w-[140px]">
+                                        <div class="flex flex-col gap-1.5">
+                                            <div class="flex justify-between text-[10px] font-bold text-slate-500">
+                                                <span>100%</span>
+                                            </div>
+                                            <div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-1.5">
+                                                <div class="bg-emerald-500 h-1.5 rounded-full" style="width: 100%">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">Sep 15, 2023</td>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300">
+                                            Completed
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 text-right">
+                                        <button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+                                            <span class="material-symbols-outlined">more_vert</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <!-- Row 3 -->
+                                <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+                                    <td class="px-6 py-4">
+                                        <div class="flex flex-col">
+                                            <span class="text-sm font-bold text-slate-900 dark:text-white">Legacy API
+                                                Integration</span>
+                                            <span class="text-xs text-slate-500">ID: PRJ-00126</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400 font-medium">Capital
+                                        One Partners</td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex -space-x-2">
+                                            <img class="size-7 rounded-full border-2 border-white dark:border-slate-900"
+                                                data-alt="Team member profile picture man with beard"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9Hg1Jl7vPL8OmHP0l841MF6DPDcq6-5OFIJwVXJj-hTN0c8gOCmHkIIwBhbsw9IKnPS4YF890CWFNPHOxu_8F2eLntCatwmcHulcTgikMEdog9SNCrc-xL2-ZVB98Mg_4BfHePwJUkaHcC85Qp7bzXlvaIP_-7vHXkb-kZujcSs4VkcPsZsTxH7aFYUlSp7Bl6xZ9r-oMVfDug9-oxA52IHZlq7DsHsRXiEVipjWLipFKU9Ux1dNdFX_lZE71RtVZx6JK_IMmQubA" />
+                                            <div
+                                                class="size-7 rounded-full border-2 border-white dark:border-slate-900 bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-[10px] font-bold">
+                                                +2</div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 min-w-[140px]">
+                                        <div class="flex flex-col gap-1.5">
+                                            <div class="flex justify-between text-[10px] font-bold text-slate-500">
+                                                <span>40%</span>
+                                            </div>
+                                            <div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-1.5">
+                                                <div class="bg-amber-500 h-1.5 rounded-full" style="width: 40%"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">Nov 12, 2023</td>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300">
+                                            On Hold
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 text-right">
+                                        <button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+                                            <span class="material-symbols-outlined">more_vert</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <!-- Row 4 -->
+                                <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+                                    <td class="px-6 py-4">
+                                        <div class="flex flex-col">
+                                            <span class="text-sm font-bold text-slate-900 dark:text-white">Security
+                                                Infrastructure Audit</span>
+                                            <span class="text-xs text-slate-500">ID: PRJ-00127</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400 font-medium">Nexus
+                                        Systems</td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex -space-x-2">
+                                            <img class="size-7 rounded-full border-2 border-white dark:border-slate-900"
+                                                data-alt="Team member profile picture woman with short hair"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcjkg_4kycZcsWvGkLSDWPNNj-t68jCJWrJAVyMfWXJdUQSqyuas6ueVYTviWD9ULdpg-v5EApINkGmoQ_ukSXmimnHnK1Q3c2Ms_a8OYVd0llb8ggkVxkh5hMlKi-Gt5NIzdTEtM22SpoFiWMLS5dRvuAmnDLL6wGAIOdBfdi7PnCsK9ntNiZqpqAJ9miP49ihUvp9sC35sZYXJpveYzoXnBV6WR1CuZj8yro8DN7rRAoXUP9_53LHSUHHa-2MKbB52k2fKBpdScu" />
+                                            <img class="size-7 rounded-full border-2 border-white dark:border-slate-900"
+                                                data-alt="Team member profile picture thoughtful man"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIoZZkKTjs-takoT9wKe8wsFdMnTBqoC9389KOcU7ptrxrYMPTMq8m4Vh2idGcGhnIBKNMHAELM896gRs4gQ6RJ_08rKd1BRqcLyNMG4_TvFmclyF-eyNwPO8fJjxFJ3B5KkHsMd7_u1D45lE2jszhR8uR2kVXWxoLFKb1gr_eahANyq7Cu_XTRCQft1dNnpL8JKOOiItuHdUoAYiquI5X_L7MCmWVL_oRbKU4-K1Pu80rCs13fF13SBQIMsNxJUE8JL4wGfKCrOhW" />
+                                            <div
+                                                class="size-7 rounded-full border-2 border-white dark:border-slate-900 bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-[10px] font-bold">
+                                                +4</div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 min-w-[140px]">
+                                        <div class="flex flex-col gap-1.5">
+                                            <div class="flex justify-between text-[10px] font-bold text-slate-500">
+                                                <span>15%</span>
+                                            </div>
+                                            <div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-1.5">
+                                                <div class="bg-primary h-1.5 rounded-full" style="width: 15%"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">Dec 05, 2023</td>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300">
+                                            In Progress
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 text-right">
+                                        <button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+                                            <span class="material-symbols-outlined">more_vert</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Pagination -->
+                    <div
+                        class="flex items-center justify-between px-6 py-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-200 dark:border-slate-800">
+                        <p class="text-xs text-slate-500 font-medium">Showing 1 to 4 of 42 results</p>
+                        <div class="flex items-center gap-2">
+                            <button
+                                class="px-3 py-1 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded text-xs font-bold disabled:opacity-50">Previous</button>
+                            <button class="px-3 py-1 bg-primary text-white rounded text-xs font-bold">1</button>
+                            <button
+                                class="px-3 py-1 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded text-xs font-bold hover:bg-slate-50">2</button>
+                            <button
+                                class="px-3 py-1 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded text-xs font-bold hover:bg-slate-50">3</button>
+                            <button
+                                class="px-3 py-1 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded text-xs font-bold hover:bg-slate-50">Next</button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="mt-8 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+                    <div
+                        class="px-6 py-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                        <h3 class="text-sm font-bold text-slate-900 dark:text-white">Recent Drafts</h3>
+                        <button class="text-xs font-bold text-primary hover:underline">View All Drafts</button>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr
+                                    class="bg-slate-50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-800">
+                                    <th
+                                        class="px-6 py-3 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                                        Project Name</th>
+                                    <th
+                                        class="px-6 py-3 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                                        Date Saved</th>
+                                    <th
+                                        class="px-6 py-3 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-right">
+                                        Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+                                <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+                                    <td class="px-6 py-4">
+                                        <div class="flex flex-col">
+                                            <span class="text-sm font-medium text-slate-900 dark:text-white">Q4
+                                                Marketing Assets</span>
+                                            <span class="text-[10px] text-slate-400">Last edited by you</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">Oct 28, 2023</td>
+                                    <td class="px-6 py-4 text-right">
+                                        <button
+                                            class="inline-flex items-center gap-1 px-3 py-1 bg-primary/10 text-primary hover:bg-primary/20 rounded text-xs font-bold transition-colors">
+                                            <span class="material-symbols-outlined text-xs">edit</span>
+                                            Continue
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+                                    <td class="px-6 py-4">
+                                        <div class="flex flex-col">
+                                            <span class="text-sm font-medium text-slate-900 dark:text-white">API
+                                                Documentation Refresh</span>
+                                            <span class="text-[10px] text-slate-400">Draft #2</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">Oct 25, 2023</td>
+                                    <td class="px-6 py-4 text-right">
+                                        <button
+                                            class="inline-flex items-center gap-1 px-3 py-1 bg-primary/10 text-primary hover:bg-primary/20 rounded text-xs font-bold transition-colors">
+                                            <span class="material-symbols-outlined text-xs">edit</span>
+                                            Continue
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

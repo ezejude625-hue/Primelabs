@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex flex-col">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 lg:px-10 py-4">
+                <div class="flex items-center gap-3 text-slate-900 dark:text-slate-100">
+                    <div class="size-8 flex items-center justify-center bg-primary rounded-lg text-white">
+                        <span class="material-symbols-outlined text-xl">account_tree</span>
+                    </div>
+                    <h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight">
+                        PrimeLabs</h2>
+                </div>
+                <div class="flex flex-1 justify-end gap-8">
+                    <div class="flex items-center gap-4">
+                        <a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors flex items-center gap-1"
+                            href="#">
+                            <span class="material-symbols-outlined text-sm">arrow_back</span>
+                            Back
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <main class="flex flex-1 items-center justify-center p-4 sm:p-6 lg:p-10">
+                <div
+                    class="layout-content-container flex flex-col max-w-[480px] w-full bg-white dark:bg-slate-900 p-8 sm:p-12 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800">
+                    <div class="flex flex-col gap-2 mb-8 text-center">
+                        <div class="mx-auto size-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-primary text-3xl">mark_email_unread</span>
+                        </div>
+                        <h1 class="text-slate-900 dark:text-slate-100 text-3xl font-bold tracking-tight">Verify your
+                            account</h1>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                            We've sent a 6-digit verification code to <span
+                                class="font-semibold text-slate-900 dark:text-slate-100">m***@primelabs.io</span>.
+                            Please enter it below.
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-6">
+                        <div class="flex justify-between gap-2 sm:gap-3">
+                            <input
+                                class="otp-input w-12 h-14 sm:w-14 sm:h-16 text-center text-2xl font-bold bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 focus:outline-none transition-all"
+                                maxlength="1" placeholder="•" type="text" />
+                            <input
+                                class="otp-input w-12 h-14 sm:w-14 sm:h-16 text-center text-2xl font-bold bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 focus:outline-none transition-all"
+                                maxlength="1" placeholder="•" type="text" />
+                            <input
+                                class="otp-input w-12 h-14 sm:w-14 sm:h-16 text-center text-2xl font-bold bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 focus:outline-none transition-all"
+                                maxlength="1" placeholder="•" type="text" />
+                            <input
+                                class="otp-input w-12 h-14 sm:w-14 sm:h-16 text-center text-2xl font-bold bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 focus:outline-none transition-all"
+                                maxlength="1" placeholder="•" type="text" />
+                            <input
+                                class="otp-input w-12 h-14 sm:w-14 sm:h-16 text-center text-2xl font-bold bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 focus:outline-none transition-all"
+                                maxlength="1" placeholder="•" type="text" />
+                            <input
+                                class="otp-input w-12 h-14 sm:w-14 sm:h-16 text-center text-2xl font-bold bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 focus:outline-none transition-all"
+                                maxlength="1" placeholder="•" type="text" />
+                        </div>
+                        <button
+                            class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+                            <span>Verify Code</span>
+                            <span class="material-symbols-outlined text-lg">verified_user</span>
+                        </button>
+                        <div class="flex flex-col gap-4 text-center">
+                            <p class="text-slate-500 dark:text-slate-400 text-sm">
+                                Didn't receive the code?
+                                <button
+                                    class="text-primary font-semibold hover:underline decoration-2 underline-offset-4 ml-1">Resend
+                                    Code</button>
+                            </p>
+                            <div
+                                class="flex items-center justify-center gap-2 text-xs text-slate-400 dark:text-slate-500 uppercase tracking-widest">
+                                <span class="material-symbols-outlined text-xs">timer</span>
+                                <span>Code expires in 04:59</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 flex justify-center gap-6">
+                        <div class="flex items-center gap-2 text-slate-400 dark:text-slate-500 text-xs">
+                            <span class="material-symbols-outlined text-sm">lock</span>
+                            <span>Secure Verification</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-slate-400 dark:text-slate-500 text-xs">
+                            <span class="material-symbols-outlined text-sm">shield</span>
+                            <span>Privacy Protected</span>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="p-6 text-center">
+                <p class="text-slate-400 dark:text-slate-600 text-xs">© 2024 PrimeLabs Corporate. All rights reserved.
+                </p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
