@@ -22,51 +22,83 @@
     <div class="flex h-screen overflow-hidden">
         <!-- Side Navigation -->
         <aside
-            class="w-64 flex-shrink-0 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col">
-            <div class="p-6 flex items-center gap-3">
-                <div class="size-10 rounded-full bg-primary flex items-center justify-center text-white">
-                    <span class="material-symbols-outlined">rocket_launch</span>
+                class="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col shrink-0 h-screen sticky top-0 overflow-y-auto">
+                <div class="p-6">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-primary size-10 rounded-lg flex items-center justify-center text-white">
+                            <span class="material-symbols-outlined">rocket_launch</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <h1 class="text-slate-900 dark:text-white text-base font-bold leading-none">PrimeLabs</h1>
+                            <p class="text-slate-500 dark:text-slate-400 text-xs font-normal">Business Solution</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex flex-col">
-                    <h1 class="text-base font-bold leading-tight">PrimeLabs</h1>
-                    <p class="text-slate-500 dark:text-slate-400 text-xs">Business Solution</p>
+                <nav class="flex-1 px-4 space-y-1">
+                    <a class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                            href="dashboard.html">
+                            <span class="material-symbols-outlined text-slate-500 dark:text-slate-400">dashboard</span>
+                            <span class="text-sm font-medium">Dashboard</span>
+                        </a>
+
+			<a class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                            href="project.html">
+                            <span
+                                class="material-symbols-outlined text-slate-500 dark:text-slate-400">business_center</span>
+                            <span class="text-sm font-medium">Projects</span>
+                        </a>
+
+			<a class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                            href="clientmanagement.html">
+                            <span
+                                class="material-symbols-outlined text-slate-500 dark:text-slate-400">groups</span>
+                            <span class="text-sm font-medium">Clients</span>
+                        </a>
+                        
+			<a class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                            href="monthly-service-mag.html">
+                            <span
+                                class="material-symbols-outlined text-slate-500 dark:text-slate-400">autorenew</span>
+                            <span class="text-sm font-medium">Monthly Service</span>
+                        </a>
+
+			<a class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                            href="staff-management.html">
+                            <span class="material-symbols-outlined text-slate-500 dark:text-slate-400">badge</span>
+                            <span class="text-sm font-medium">Staff</span>
+                        </a>
+
+			<a class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                            href="expenses-mag.html">
+                            <span class="material-symbols-outlined text-slate-500 dark:text-slate-400">payments</span>
+                            <span class="text-sm font-medium">Expenses</span>
+                        </a>
+
+			<a class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                            href="financial-mag.html">
+                            <span class="material-symbols-outlined text-slate-500 dark:text-slate-400">account_balance</span>
+                            <span class="text-sm font-medium">Finance</span>
+                        </a>
+
+                        <a class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                            href="report.html">
+                            <span class="material-symbols-outlined text-slate-500 dark:text-slate-400">bar_chart</span>
+                            <span class="text-sm font-medium">Reports</span>
+                        </a>
+                </nav>
+                <div class="p-4 border-t border-slate-200 dark:border-slate-800 space-y-1">
+                    <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined">settings</span>
+                        <span class="text-sm font-medium">Settings</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined">logout</span>
+                        <span class="text-sm font-medium">Logout</span>
+                    </a>
                 </div>
-            </div>
-            <nav class="flex-1 px-4 space-y-1 mt-4">
-                <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
-                    href="#">
-                    <span class="material-symbols-outlined">dashboard</span>
-                    <span class="text-sm font-medium">Dashboard</span>
-                </a>
-                <a class="flex items-center gap-3 px-3 py-2 bg-primary/10 text-primary rounded-lg transition-colors"
-                    href="#">
-                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">folder</span>
-                    <span class="text-sm font-medium">Projects</span>
-                </a>
-                <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
-                    href="#">
-                    <span class="material-symbols-outlined">group</span>
-                    <span class="text-sm font-medium">Team</span>
-                </a>
-                <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
-                    href="#">
-                    <span class="material-symbols-outlined">account_circle</span>
-                    <span class="text-sm font-medium">Clients</span>
-                </a>
-                <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
-                    href="#">
-                    <span class="material-symbols-outlined">bar_chart</span>
-                    <span class="text-sm font-medium">Reports</span>
-                </a>
-            </nav>
-            <div class="p-4 border-t border-slate-200 dark:border-slate-800">
-                <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
-                    href="#">
-                    <span class="material-symbols-outlined">settings</span>
-                    <span class="text-sm font-medium">Settings</span>
-                </a>
-            </div>
-        </aside>
+            </aside>
         <!-- Main Content Area -->
         <main class="flex-1 flex flex-col overflow-hidden">
             <!-- Header -->

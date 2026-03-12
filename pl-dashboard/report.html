@@ -22,47 +22,83 @@
   <div class="flex min-h-screen">
     <!-- Sidebar Navigation -->
     <aside
-      class="w-64 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col fixed h-full">
-      <div class="p-6 flex flex-col h-full">
-        <div class="flex items-center gap-3 mb-8">
-          <div class="bg-primary rounded-full size-10 flex items-center justify-center text-white">
-            <span class="material-symbols-outlined">analytics</span>
-          </div>
-          <div class="flex flex-col">
-            <h1 class="text-slate-900 dark:text-slate-100 text-base font-bold leading-none">PrimeLabs</h1>
-            <p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Analytics Portal</p>
-          </div>
-        </div>
-        <nav class="flex flex-col gap-1 grow">
-          <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-            href="#">
-            <span class="material-symbols-outlined text-xl">dashboard</span>
-            <span class="text-sm font-medium">Dashboard</span>
-          </a>
-          <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-            href="#">
-            <span class="material-symbols-outlined text-xl">business_center</span>
-            <span class="text-sm font-medium">Projects</span>
-          </a>
-          <a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary transition-colors" href="#">
-            <span class="material-symbols-outlined text-xl fill-current">bar_chart</span>
-            <span class="text-sm font-semibold">Reports</span>
-          </a>
-          <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-            href="#">
-            <span class="material-symbols-outlined text-xl">group</span>
-            <span class="text-sm font-medium">Team</span>
-          </a>
-          <div class="mt-auto">
-            <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-              href="#">
-              <span class="material-symbols-outlined text-xl">settings</span>
-              <span class="text-sm font-medium">Settings</span>
-            </a>
-          </div>
-        </nav>
-      </div>
-    </aside>
+                class="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col shrink-0 h-screen sticky top-0 overflow-y-auto">
+                <div class="p-6">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-primary size-10 rounded-lg flex items-center justify-center text-white">
+                            <span class="material-symbols-outlined">rocket_launch</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <h1 class="text-slate-900 dark:text-white text-base font-bold leading-none">PrimeLabs</h1>
+                            <p class="text-slate-500 dark:text-slate-400 text-xs font-normal">Business Solution</p>
+                        </div>
+                    </div>
+                </div>
+                <nav class="flex-1 px-4 space-y-1">
+                    <a class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                            href="dashboard.html">
+                            <span class="material-symbols-outlined text-slate-500 dark:text-slate-400">dashboard</span>
+                            <span class="text-sm font-medium">Dashboard</span>
+                        </a>
+
+			<a class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                            href="project.html">
+                            <span
+                                class="material-symbols-outlined text-slate-500 dark:text-slate-400">business_center</span>
+                            <span class="text-sm font-medium">Projects</span>
+                        </a>
+
+			<a class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                            href="clientmanagement.html">
+                            <span
+                                class="material-symbols-outlined text-slate-500 dark:text-slate-400">groups</span>
+                            <span class="text-sm font-medium">Clients</span>
+                        </a>
+                        
+			<a class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                            href="monthly-service-mag.html">
+                            <span
+                                class="material-symbols-outlined text-slate-500 dark:text-slate-400">autorenew</span>
+                            <span class="text-sm font-medium">Monthly Service</span>
+                        </a>
+
+			<a class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                            href="staff-management.html">
+                            <span class="material-symbols-outlined text-slate-500 dark:text-slate-400">badge</span>
+                            <span class="text-sm font-medium">Staff</span>
+                        </a>
+
+			<a class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                            href="expenses-mag.html">
+                            <span class="material-symbols-outlined text-slate-500 dark:text-slate-400">payments</span>
+                            <span class="text-sm font-medium">Expenses</span>
+                        </a>
+
+			<a class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                            href="financial-mag.html">
+                            <span class="material-symbols-outlined text-slate-500 dark:text-slate-400">account_balance</span>
+                            <span class="text-sm font-medium">Finance</span>
+                        </a>
+
+                        <a class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                            href="report.html">
+                            <span class="material-symbols-outlined text-slate-500 dark:text-slate-400">bar_chart</span>
+                            <span class="text-sm font-medium">Reports</span>
+                        </a>
+                </nav>
+                <div class="p-4 border-t border-slate-200 dark:border-slate-800 space-y-1">
+                    <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined">settings</span>
+                        <span class="text-sm font-medium">Settings</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined">logout</span>
+                        <span class="text-sm font-medium">Logout</span>
+                    </a>
+                </div>
+            </aside>
     <!-- Main Content -->
     <main class="flex-1 ml-64">
       <!-- Header -->
