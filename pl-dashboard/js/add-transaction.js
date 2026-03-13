@@ -19,3 +19,27 @@ tailwind.config = {
     },
   },
 };
+
+/*
+async function loadModal() {
+  const response = await fetch('modal-folder/modal.html');
+  const html = await response.text();
+  document.getElementById('modal-placeholder').innerHTML = html;
+
+  // Now that it's loaded, add your event listeners
+  setupModalLogic();
+}
+
+function setupModalLogic() {
+  const modal = document.getElementById('myModal');
+  const btn = document.getElementById('open-modal-btn');
+  
+  btn.onclick = () => modal.style.display = "block";
+  // Add closing logic here...
+}
+
+loadModal();
+/*
+<!-- Placeholder where the modal will be loaded -->
+<div id="modal-placeholder"></div>
+<button id="open-modal-btn">Open Modal</button>*/

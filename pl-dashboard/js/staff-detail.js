@@ -19,3 +19,9 @@ tailwind.config = {
     },
   },
 };
+
+const makePayment = document.getElementById("makePayment");
+
+makePayment.addEventListener("click", () => {
+  window.location.href = "modals/conform-staff-payement.html";
+});
