@@ -20,8 +20,14 @@ tailwind.config = {
   },
 };
 
-const makePayment = document.getElementById("makePayment");
+function openModal(modalName) {
+  fetch("modals/" + modalName + ".html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("modal-container").innerHTML = data;
+    });
+}
 
-makePayment.addEventListener("click", () => {
-  window.location.href = "modals/conform-staff-payement.html";
-});
+function closeModal() {
+  document.getElementById("modal-container").innerHTML = "";
+}

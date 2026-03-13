@@ -19,3 +19,7 @@ tailwind.config = {
     },
   },
 };
+
+function closeModal() {
+  document.getElementById("myModal").remove();
+}
